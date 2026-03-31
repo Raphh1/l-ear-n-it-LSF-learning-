@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lsf-api", "lsf-api", "{A0C5E19F-0B9D-04FB-2EE2-4CD0392CE480}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{61E47E18-3E8F-EB81-CA10-D3926860BB8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LsfApi", "lsf-api\src\LsfApi\LsfApi.csproj", "{617113D7-33E7-DEA7-AC1B-5467AEFB5A78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617113D7-33E7-DEA7-AC1B-5467AEFB5A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617113D7-33E7-DEA7-AC1B-5467AEFB5A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617113D7-33E7-DEA7-AC1B-5467AEFB5A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617113D7-33E7-DEA7-AC1B-5467AEFB5A78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61E47E18-3E8F-EB81-CA10-D3926860BB8B} = {A0C5E19F-0B9D-04FB-2EE2-4CD0392CE480}
+		{617113D7-33E7-DEA7-AC1B-5467AEFB5A78} = {61E47E18-3E8F-EB81-CA10-D3926860BB8B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE303120-C463-4D55-9C8B-041F0C12DC46}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@LsfApi_HostAddress = http://localhost:5097
+
+GET {{LsfApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

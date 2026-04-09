@@ -294,6 +294,24 @@ namespace LsfApi.Data.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserFavorite", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SignId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("UserId", "SignId");
+
+                    b.HasIndex("SignId");
+
+                    b.ToTable("UserFavorites");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.UserLessonCompletion", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -425,6 +443,25 @@ namespace LsfApi.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserFavorite", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Sign", "Sign")
+                        .WithMany()
+                        .HasForeignKey("SignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("Favorites")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sign");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.UserLessonCompletion", b =>
                 {
                     b.HasOne("LsfApi.Domain.Lesson", "Lesson")
@@ -490,6 +527,8 @@ namespace LsfApi.Data.Migrations
 
             modelBuilder.Entity("LsfApi.Domain.User", b =>
                 {
+                    b.Navigation("Favorites");
+
                     b.Navigation("LessonCompletions");
 
                     b.Navigation("Progress");

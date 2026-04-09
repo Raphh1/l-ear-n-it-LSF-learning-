@@ -15,4 +15,9 @@ public record LoginRequest(
 
 public record AuthResponse(string Token, UserDto User);
 
-public record UserDto(Guid Id, string Email, string Username, string Role);
+public record UserDto(Guid Id, string Email, string Username, string Role, DateTime CreatedAt);
+
+public record UpdateProfileRequest(
+    [Required, MinLength(3)] string Username,
+    [Required, EmailAddress] string Email
+);

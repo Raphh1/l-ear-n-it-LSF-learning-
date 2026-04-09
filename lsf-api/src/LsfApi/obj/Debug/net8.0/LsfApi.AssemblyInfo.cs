@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LsfApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abcb6a466d893415570f10c477afc5d8c8b9e152")]
 [assembly: System.Reflection.AssemblyProductAttribute("LsfApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LsfApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

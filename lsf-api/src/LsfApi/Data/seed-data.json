@@ -1,0 +1,1535 @@
+[
+  {
+    "category": { "name": "Alphabet", "slug": "alphabet", "sortOrder": 1 },
+    "module": {
+      "title": "L'alphabet LSF",
+      "description": "Apprenez à épeler chaque lettre de l'alphabet en Langue des Signes Française.",
+      "level": 1,
+      "sortOrder": 1
+    },
+    "lessons": [
+      {
+        "title": "Les 26 lettres",
+        "description": "Maîtrisez la dactylologie : la représentation manuelle de chaque lettre de A à Z.",
+        "sortOrder": 1,
+        "xpReward": 50,
+        "tags": ["alphabet", "dactylologie"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "A", "slug": "lettre-a", "definition": "Poing fermé, pouce sur le côté.", "thumbnailUrl": "/signs/lettre-a.png" },
+          { "word": "B", "slug": "lettre-b", "definition": "Quatre doigts tendus et serrés, pouce replié.", "thumbnailUrl": "/signs/lettre-b.png" },
+          { "word": "C", "slug": "lettre-c", "definition": "Main en forme de C, doigts écartés légèrement.", "thumbnailUrl": "/signs/lettre-c.png" },
+          { "word": "D", "slug": "lettre-d", "definition": "Index pointé, autres doigts formant un O avec le pouce.", "thumbnailUrl": "/signs/lettre-d.png" },
+          { "word": "E", "slug": "lettre-e", "definition": "Doigts repliés sur le pouce.", "thumbnailUrl": "/signs/lettre-e.png" },
+          { "word": "F", "slug": "lettre-f", "definition": "Pouce et index formant un cercle, autres doigts tendus.", "thumbnailUrl": "/signs/lettre-f.png" },
+          { "word": "G", "slug": "lettre-g", "definition": "Index et pouce pointés horizontalement.", "thumbnailUrl": "/signs/lettre-g.png" },
+          { "word": "H", "slug": "lettre-h", "definition": "Index et majeur tendus horizontalement.", "thumbnailUrl": "/signs/lettre-h.png" },
+          { "word": "I", "slug": "lettre-i", "definition": "Auriculaire tendu, autres doigts repliés.", "thumbnailUrl": "/signs/lettre-i.png" },
+          { "word": "J", "slug": "lettre-j", "definition": "Auriculaire tendu, mouvement en J dans l'air.", "thumbnailUrl": "/signs/lettre-j.png" },
+          { "word": "K", "slug": "lettre-k", "definition": "Index et majeur tendus en V, pouce entre les deux.", "thumbnailUrl": "/signs/lettre-k.png" },
+          { "word": "L", "slug": "lettre-l", "definition": "Index tendu vers le haut, pouce tendu sur le côté.", "thumbnailUrl": "/signs/lettre-l.png" },
+          { "word": "M", "slug": "lettre-m", "definition": "Trois doigts repliés sur le pouce.", "thumbnailUrl": "/signs/lettre-m.png" },
+          { "word": "N", "slug": "lettre-n", "definition": "Deux doigts repliés sur le pouce.", "thumbnailUrl": "/signs/lettre-n.png" },
+          { "word": "O", "slug": "lettre-o", "definition": "Doigts et pouce formant un O.", "thumbnailUrl": "/signs/lettre-o.png" },
+          { "word": "P", "slug": "lettre-p", "definition": "Index pointé vers le bas, majeur et pouce formant un cercle.", "thumbnailUrl": "/signs/lettre-p.png" },
+          { "word": "Q", "slug": "lettre-q", "definition": "Pouce et index pointés vers le bas.", "thumbnailUrl": "/signs/lettre-q.png" },
+          { "word": "R", "slug": "lettre-r", "definition": "Index et majeur croisés.", "thumbnailUrl": "/signs/lettre-r.png" },
+          { "word": "S", "slug": "lettre-s", "definition": "Poing fermé, pouce devant les doigts.", "thumbnailUrl": "/signs/lettre-s.png" },
+          { "word": "T", "slug": "lettre-t", "definition": "Pouce glissé entre index et majeur.", "thumbnailUrl": "/signs/lettre-t.png" },
+          { "word": "U", "slug": "lettre-u", "definition": "Index et majeur tendus et serrés vers le haut.", "thumbnailUrl": "/signs/lettre-u.png" },
+          { "word": "V", "slug": "lettre-v", "definition": "Index et majeur tendus en V.", "thumbnailUrl": "/signs/lettre-v.png" },
+          { "word": "W", "slug": "lettre-w", "definition": "Index, majeur et annulaire tendus.", "thumbnailUrl": "/signs/lettre-w.png" },
+          { "word": "X", "slug": "lettre-x", "definition": "Index recourbé en crochet.", "thumbnailUrl": "/signs/lettre-x.png" },
+          { "word": "Y", "slug": "lettre-y", "definition": "Pouce et auriculaire tendus, autres doigts repliés.", "thumbnailUrl": "/signs/lettre-y.png" },
+          { "word": "Z", "slug": "lettre-z", "definition": "Index traçant un Z dans l'air.", "thumbnailUrl": "/signs/lettre-z.png" }
+        ,
+  {
+    "category": { "name": "Sports & Loisirs", "slug": "sports", "sortOrder": 20 },
+    "module": {
+      "title": "Sports et loisirs",
+      "description": "Le vocabulaire du sport et des activités en LSF.",
+      "level": 2,
+      "sortOrder": 20
+    },
+    "lessons": [
+      {
+        "title": "Activités sportives",
+        "description": "Football, natation, tennis et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["sport", "loisirs"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "sport",        "slug": "sport",        "definition": "Une activité physique qu'on pratique pour le plaisir ou la compétition." },
+          { "word": "football",     "slug": "football",     "definition": "On court après un ballon rond avec les pieds." },
+          { "word": "basketball",   "slug": "basketball",   "definition": "On lance un ballon dans un panier." },
+          { "word": "tennis",       "slug": "tennis",       "definition": "On frappe une balle avec une raquette." },
+          { "word": "natation",     "slug": "natation",     "definition": "Nager dans une piscine ou la mer." },
+          { "word": "vélo",         "slug": "velo-sport",   "definition": "Pédaler sur deux roues, en compétition ou pour le plaisir." },
+          { "word": "course",       "slug": "course",       "definition": "Courir le plus vite possible." },
+          { "word": "gym",          "slug": "gym",          "definition": "Des exercices pour muscler le corps." },
+          { "word": "danse",        "slug": "danse",        "definition": "Bouger son corps en rythme avec la musique." },
+          { "word": "yoga",         "slug": "yoga",         "definition": "Des postures et de la respiration pour se détendre." },
+          { "word": "ski",          "slug": "ski",          "definition": "Glisser sur la neige avec des planches aux pieds." },
+          { "word": "escalade",     "slug": "escalade",     "definition": "Grimper sur un rocher ou un mur." },
+          { "word": "jeux vidéo",   "slug": "jeux-video",   "definition": "Jouer sur une console ou un ordinateur." },
+          { "word": "lecture",      "slug": "lecture",      "definition": "Lire un livre pour le plaisir." },
+          { "word": "cinéma",       "slug": "cinema",       "definition": "Regarder un film sur grand écran." },
+          { "word": "musée",        "slug": "musee",        "definition": "Un endroit pour voir des œuvres d'art ou d'histoire." },
+          { "word": "photographie", "slug": "photographie", "definition": "Prendre des photos avec un appareil." },
+          { "word": "jardinage",    "slug": "jardinage",    "definition": "Planter et s'occuper de fleurs et de légumes." },
+          { "word": "pêche",        "slug": "peche",        "definition": "Attraper des poissons avec une canne." },
+          { "word": "randonnée",    "slug": "randonnee",    "definition": "Marcher longtemps dans la nature." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Maison & Meubles", "slug": "maison-meubles", "sortOrder": 21 },
+    "module": {
+      "title": "La maison",
+      "description": "Les pièces et les meubles de la maison en LSF.",
+      "level": 1,
+      "sortOrder": 21
+    },
+    "lessons": [
+      {
+        "title": "Pièces et meubles",
+        "description": "Salon, cuisine, lit, canapé et tout ce qui meuble la maison.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["maison", "meubles"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "salon",        "slug": "salon",        "definition": "La pièce principale, avec le canapé et la télé." },
+          { "word": "cuisine",      "slug": "cuisine",      "definition": "La pièce où on prépare à manger." },
+          { "word": "chambre",      "slug": "chambre",      "definition": "La pièce où on dort." },
+          { "word": "salle de bain","slug": "salle-de-bain","definition": "La pièce avec la douche et le lavabo." },
+          { "word": "toilettes",    "slug": "toilettes",    "definition": "La pièce avec les WC." },
+          { "word": "jardin",       "slug": "jardin",       "definition": "L'espace vert dehors, autour de la maison." },
+          { "word": "garage",       "slug": "garage",       "definition": "Là où on range la voiture." },
+          { "word": "lit",          "slug": "lit",          "definition": "Sur quoi on dort la nuit." },
+          { "word": "canapé",       "slug": "canape",       "definition": "Le grand siège confortable du salon." },
+          { "word": "table",        "slug": "table",        "definition": "On mange dessus, on travaille dessus." },
+          { "word": "chaise",       "slug": "chaise",       "definition": "On s'assoit dessus." },
+          { "word": "armoire",      "slug": "armoire",      "definition": "Un grand meuble pour ranger les vêtements." },
+          { "word": "fenêtre",      "slug": "fenetre",      "definition": "Une ouverture dans le mur pour laisser entrer la lumière." },
+          { "word": "porte",        "slug": "porte",        "definition": "On l'ouvre pour entrer ou sortir d'une pièce." },
+          { "word": "lampe",        "slug": "lampe",        "definition": "Elle éclaire la pièce quand il fait noir." },
+          { "word": "télévision",   "slug": "television",   "definition": "Le grand écran du salon pour regarder des films." },
+          { "word": "réfrigérateur","slug": "refrigerateur","definition": "La machine froide qui conserve les aliments." },
+          { "word": "four",         "slug": "four",         "definition": "La machine chaude pour cuisiner." },
+          { "word": "escalier",     "slug": "escalier",     "definition": "Des marches pour monter ou descendre d'un étage." },
+          { "word": "toit",         "slug": "toit",         "definition": "Le dessus de la maison, au-dessus de nos têtes." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Santé & Médecine", "slug": "sante", "sortOrder": 22 },
+    "module": {
+      "title": "La santé",
+      "description": "Le vocabulaire médical et du bien-être en LSF.",
+      "level": 2,
+      "sortOrder": 22
+    },
+    "lessons": [
+      {
+        "title": "Le corps qui souffre",
+        "description": "Maux de tête, fièvre, médicaments et consultations.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["sante", "medecine"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "mal",           "slug": "mal",           "definition": "Quand quelque chose fait souffrir." },
+          { "word": "mal de tête",   "slug": "mal-de-tete",   "definition": "La tête qui fait mal." },
+          { "word": "fièvre",        "slug": "fievre",        "definition": "Quand le corps est trop chaud, à plus de 38°." },
+          { "word": "toux",          "slug": "toux",          "definition": "Quand on tousse, souvent lors d'un rhume." },
+          { "word": "rhume",         "slug": "rhume",         "definition": "Le nez qui coule et la gorge qui gratte." },
+          { "word": "grippe",        "slug": "grippe",        "definition": "Comme un rhume très fort, avec de la fièvre." },
+          { "word": "allergie",      "slug": "allergie",      "definition": "Quand le corps réagit mal à un aliment ou au pollen." },
+          { "word": "blessure",      "slug": "blessure",      "definition": "Quand on se fait mal, une coupure ou un bleu." },
+          { "word": "médicament",    "slug": "medicament",    "definition": "Ce qu'on prend pour guérir quand on est malade." },
+          { "word": "opération",     "slug": "operation",     "definition": "Quand le chirurgien ouvre le corps pour soigner." },
+          { "word": "urgences",      "slug": "urgences",      "definition": "L'endroit à l'hôpital pour les cas graves." },
+          { "word": "ordonnance",    "slug": "ordonnance",    "definition": "Le papier que le médecin donne pour acheter des médicaments." },
+          { "word": "rendez-vous",   "slug": "rendez-vous",   "definition": "Un moment fixé à l'avance pour voir quelqu'un." },
+          { "word": "vaccin",        "slug": "vaccin",        "definition": "Une piqûre pour se protéger d'une maladie." },
+          { "word": "sang",          "slug": "sang",          "definition": "Le liquide rouge qui circule dans le corps." },
+          { "word": "douleur",       "slug": "douleur",       "definition": "La sensation désagréable quand ça fait mal." },
+          { "word": "guérir",        "slug": "guerir",        "definition": "Retrouver la santé après une maladie." },
+          { "word": "repos",         "slug": "repos",         "definition": "Ne rien faire pour récupérer de l'énergie." },
+          { "word": "handicap",      "slug": "handicap",      "definition": "Une difficulté physique ou mentale au quotidien." },
+          { "word": "sourd",         "slug": "sourd",         "definition": "Qui n'entend pas ou entend mal." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Technologie", "slug": "technologie", "sortOrder": 23 },
+    "module": {
+      "title": "Technologie & Numérique",
+      "description": "Internet, téléphones et outils numériques en LSF.",
+      "level": 2,
+      "sortOrder": 23
+    },
+    "lessons": [
+      {
+        "title": "Écrans et connectivité",
+        "description": "Smartphone, internet, réseaux sociaux et plus encore.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["technologie", "numerique"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "téléphone",     "slug": "telephone",    "definition": "L'appareil pour appeler et envoyer des messages." },
+          { "word": "internet",      "slug": "internet",     "definition": "Le réseau mondial qui connecte tous les ordinateurs." },
+          { "word": "email",         "slug": "email",        "definition": "Un message envoyé par internet." },
+          { "word": "mot de passe",  "slug": "mot-de-passe", "definition": "Le code secret pour accéder à un compte." },
+          { "word": "application",   "slug": "application",  "definition": "Un programme sur son téléphone ou ordinateur." },
+          { "word": "écran",         "slug": "ecran",        "definition": "La surface qui affiche des images." },
+          { "word": "clavier",       "slug": "clavier",      "definition": "Les touches pour taper du texte." },
+          { "word": "souris",        "slug": "souris",       "definition": "Le petit appareil pour déplacer le curseur sur l'écran." },
+          { "word": "caméra",        "slug": "camera",       "definition": "L'objectif qui filme ou prend des photos." },
+          { "word": "batterie",      "slug": "batterie",     "definition": "Ce qui donne de l'énergie au téléphone ou à l'ordinateur." },
+          { "word": "wifi",          "slug": "wifi",         "definition": "La connexion internet sans fil." },
+          { "word": "vidéo",         "slug": "video",        "definition": "Des images animées qu'on regarde sur un écran." },
+          { "word": "photo",         "slug": "photo",        "definition": "Une image prise avec un appareil." },
+          { "word": "message",       "slug": "message",      "definition": "Un texte court envoyé à quelqu'un." },
+          { "word": "réseau social", "slug": "reseau-social","definition": "Une plateforme pour partager et discuter en ligne." },
+          { "word": "imprimante",    "slug": "imprimante",   "definition": "La machine qui imprime des documents sur papier." },
+          { "word": "intelligence artificielle", "slug": "ia","definition": "Des machines capables d'apprendre et de penser." },
+          { "word": "robot",         "slug": "robot",        "definition": "Une machine programmée pour faire des tâches." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Nature & Environnement", "slug": "nature", "sortOrder": 24 },
+    "module": {
+      "title": "La nature",
+      "description": "Arbres, fleurs, animaux sauvages et écologie en LSF.",
+      "level": 2,
+      "sortOrder": 24
+    },
+    "lessons": [
+      {
+        "title": "La nature autour de nous",
+        "description": "Forêt, rivière, fleurs et environnement.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["nature", "environnement"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "arbre",        "slug": "arbre",        "definition": "Une grande plante avec un tronc et des branches." },
+          { "word": "fleur",        "slug": "fleur",        "definition": "La partie colorée d'une plante, souvent parfumée." },
+          { "word": "forêt",        "slug": "foret",        "definition": "Un grand espace plein d'arbres." },
+          { "word": "rivière",      "slug": "riviere",      "definition": "Un cours d'eau plus petit qu'un fleuve." },
+          { "word": "lac",          "slug": "lac",          "definition": "Une étendue d'eau entourée de terre." },
+          { "word": "désert",       "slug": "desert",       "definition": "Une grande zone sèche, souvent de sable." },
+          { "word": "île",          "slug": "ile",          "definition": "Une terre entourée d'eau de tous les côtés." },
+          { "word": "volcan",       "slug": "volcan",       "definition": "Une montagne qui crache du feu et de la lave." },
+          { "word": "herbe",        "slug": "herbe",        "definition": "Les petites plantes vertes du sol." },
+          { "word": "feuille",      "slug": "feuille",      "definition": "La partie plate et verte d'un arbre." },
+          { "word": "fruit sauvage","slug": "fruit-sauvage","definition": "Des fruits qui poussent dans la nature sans être cultivés." },
+          { "word": "champignon",   "slug": "champignon",   "definition": "Une plante sans feuilles qui pousse dans les forêts." },
+          { "word": "soleil",       "slug": "soleil-nature","definition": "L'étoile qui réchauffe la Terre." },
+          { "word": "terre",        "slug": "terre",        "definition": "Le sol sous nos pieds, ou notre planète." },
+          { "word": "eau",          "slug": "eau-nature",   "definition": "Le liquide indispensable à toute vie." },
+          { "word": "pollution",    "slug": "pollution",    "definition": "Quand l'air, l'eau ou la terre sont salis par l'homme." },
+          { "word": "recyclage",    "slug": "recyclage",    "definition": "Transformer les déchets pour les réutiliser." },
+          { "word": "écologie",     "slug": "ecologie",     "definition": "Prendre soin de la nature et de la planète." },
+          { "word": "feu",          "slug": "feu",          "definition": "La flamme chaude et lumineuse qui brûle." },
+          { "word": "pierre",       "slug": "pierre",       "definition": "Un morceau de roche, solide et dur." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Musique & Arts", "slug": "musique", "sortOrder": 25 },
+    "module": {
+      "title": "Musique et arts",
+      "description": "Instruments, styles musicaux et arts visuels en LSF.",
+      "level": 2,
+      "sortOrder": 25
+    },
+    "lessons": [
+      {
+        "title": "Sons et créations",
+        "description": "Piano, guitare, peinture et tout ce qui crée.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["musique", "arts"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "musique",      "slug": "musique",      "definition": "Des sons organisés pour créer quelque chose de beau." },
+          { "word": "chanson",      "slug": "chanson",      "definition": "De la musique avec des paroles chantées." },
+          { "word": "piano",        "slug": "piano",        "definition": "Un instrument avec des touches noires et blanches." },
+          { "word": "guitare",      "slug": "guitare",      "definition": "Un instrument à cordes qu'on pince ou gratte." },
+          { "word": "tambour",      "slug": "tambour",      "definition": "Un instrument qu'on frappe avec des baguettes." },
+          { "word": "flûte",        "slug": "flute",        "definition": "Un instrument à vent qu'on souffle." },
+          { "word": "violon",       "slug": "violon",       "definition": "Un instrument à cordes qu'on frotte avec un archet." },
+          { "word": "concert",      "slug": "concert",      "definition": "Un spectacle de musique en direct." },
+          { "word": "chanter",      "slug": "chanter",      "definition": "Produire de la musique avec sa voix." },
+          { "word": "rythme",       "slug": "rythme",       "definition": "La régularité des sons dans la musique." },
+          { "word": "peinture",     "slug": "peinture",     "definition": "Créer des images avec des couleurs sur une surface." },
+          { "word": "dessin",       "slug": "dessin",       "definition": "Faire des formes avec un crayon ou un stylo." },
+          { "word": "sculpture",    "slug": "sculpture",    "definition": "Créer des formes en 3D avec de l'argile ou de la pierre." },
+          { "word": "théâtre",      "slug": "theatre",      "definition": "Des acteurs qui jouent une histoire sur scène." },
+          { "word": "film",         "slug": "film",         "definition": "Une histoire racontée en images animées." },
+          { "word": "poésie",       "slug": "poesie",       "definition": "Des mots écrits pour exprimer des émotions." },
+          { "word": "couleur",      "slug": "couleur-art",  "definition": "Rouge, bleu, vert... ce qui donne de la vie à une œuvre." },
+          { "word": "artiste",      "slug": "artiste",      "definition": "Quelqu'un qui crée des œuvres d'art." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Voyages & Tourisme", "slug": "voyages", "sortOrder": 26 },
+    "module": {
+      "title": "Voyages et tourisme",
+      "description": "Partir en vacances, visiter des pays en LSF.",
+      "level": 2,
+      "sortOrder": 26
+    },
+    "lessons": [
+      {
+        "title": "En route pour l'aventure",
+        "description": "Valise, passeport, hôtel et tout pour voyager.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["voyage", "tourisme"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "voyage",       "slug": "voyage",       "definition": "Se déplacer loin pour découvrir de nouveaux endroits." },
+          { "word": "vacances",     "slug": "vacances",     "definition": "Les jours de repos sans école ni travail." },
+          { "word": "valise",       "slug": "valise",       "definition": "Le grand sac pour ranger ses affaires en voyage." },
+          { "word": "passeport",    "slug": "passeport",    "definition": "Le document officiel pour voyager à l'étranger." },
+          { "word": "billet",       "slug": "billet",       "definition": "Le ticket pour prendre le train, l'avion ou le bus." },
+          { "word": "hôtel",        "slug": "hotel",        "definition": "Un bâtiment où on dort quand on voyage." },
+          { "word": "chambre d'hôtel","slug": "chambre-hotel","definition": "La pièce dans un hôtel où on dort." },
+          { "word": "réservation",  "slug": "reservation",  "definition": "Retenir une place ou une chambre à l'avance." },
+          { "word": "carte",        "slug": "carte",        "definition": "Un plan pour s'orienter dans un endroit." },
+          { "word": "touriste",     "slug": "touriste",     "definition": "Quelqu'un qui visite un endroit pour le plaisir." },
+          { "word": "guide",        "slug": "guide",        "definition": "Quelqu'un qui explique les monuments aux touristes." },
+          { "word": "monument",     "slug": "monument",     "definition": "Un bâtiment ou une statue historique." },
+          { "word": "frontière",    "slug": "frontiere",    "definition": "La limite entre deux pays." },
+          { "word": "douane",       "slug": "douane",       "definition": "Le contrôle à la frontière d'un pays." },
+          { "word": "camping",      "slug": "camping",      "definition": "Dormir dans une tente dans la nature." },
+          { "word": "auberge",      "slug": "auberge",      "definition": "Un hôtel moins cher, souvent pour jeunes." },
+          { "word": "souvenir",     "slug": "souvenir",     "definition": "Un petit objet qu'on ramène d'un voyage." },
+          { "word": "office de tourisme", "slug": "office-tourisme", "definition": "Un endroit qui donne des infos aux visiteurs." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Fêtes & Événements", "slug": "fetes", "sortOrder": 27 },
+    "module": {
+      "title": "Fêtes et célébrations",
+      "description": "Anniversaires, Noël, mariages et toutes les fêtes en LSF.",
+      "level": 1,
+      "sortOrder": 27
+    },
+    "lessons": [
+      {
+        "title": "Jours de fête",
+        "description": "Anniversaire, Noël, fête nationale et autres célébrations.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["fetes", "celebrations"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "fête",          "slug": "fete",          "definition": "Un moment de joie et de partage avec d'autres personnes." },
+          { "word": "anniversaire",  "slug": "anniversaire",  "definition": "Le jour où on fête la naissance de quelqu'un chaque année." },
+          { "word": "cadeau",        "slug": "cadeau",        "definition": "Un présent qu'on offre à quelqu'un." },
+          { "word": "gâteau",        "slug": "gateau",        "definition": "Un dessert sucré, souvent avec des bougies pour les anniversaires." },
+          { "word": "bougie",        "slug": "bougie",        "definition": "On la souffle pour faire un vœu à l'anniversaire." },
+          { "word": "Noël",          "slug": "noel",          "definition": "La grande fête du 25 décembre avec cadeaux et sapin." },
+          { "word": "Pâques",        "slug": "paques",        "definition": "La fête avec les œufs en chocolat cachés dans le jardin." },
+          { "word": "mariage",       "slug": "mariage",       "definition": "La cérémonie où deux personnes s'unissent pour la vie." },
+          { "word": "invitation",    "slug": "invitation",    "definition": "Un message pour demander à quelqu'un de venir." },
+          { "word": "félicitations", "slug": "felicitations", "definition": "Ce qu'on dit pour féliciter quelqu'un d'heureux." },
+          { "word": "bonne année",   "slug": "bonne-annee",   "definition": "Ce qu'on dit le 1er janvier pour souhaiter une belle année." },
+          { "word": "feu d'artifice","slug": "feu-artifice",  "definition": "Des explosions colorées dans le ciel pour les fêtes." },
+          { "word": "bal",           "slug": "bal",           "definition": "Une grande soirée où tout le monde danse." },
+          { "word": "décoration",    "slug": "decoration",    "definition": "Ce qu'on met pour embellir un endroit pour une fête." },
+          { "word": "réveillon",     "slug": "reveillon",     "definition": "La soirée de fête le soir du 24 ou du 31 décembre." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Professions", "slug": "professions", "sortOrder": 28 },
+    "module": {
+      "title": "Les métiers",
+      "description": "Découvrez les noms de métiers en LSF.",
+      "level": 2,
+      "sortOrder": 28
+    },
+    "lessons": [
+      {
+        "title": "Qui fait quoi ?",
+        "description": "Architecte, ingénieur, avocat et plein d'autres métiers.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["metiers", "professions"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "architecte",   "slug": "architecte",   "definition": "Il dessine et conçoit les bâtiments." },
+          { "word": "ingénieur",    "slug": "ingenieur",    "definition": "Il résout des problèmes techniques et construit des machines." },
+          { "word": "avocat",       "slug": "avocat",       "definition": "Il défend les gens en justice." },
+          { "word": "juge",         "slug": "juge",         "definition": "Il rend des décisions au tribunal." },
+          { "word": "journaliste",  "slug": "journaliste",  "definition": "Il recueille et diffuse des informations." },
+          { "word": "acteur",       "slug": "acteur",       "definition": "Il joue des rôles dans des films ou au théâtre." },
+          { "word": "chanteur",     "slug": "chanteur",     "definition": "Il fait de la musique avec sa voix." },
+          { "word": "sportif",      "slug": "sportif",      "definition": "Il pratique un sport de façon professionnelle." },
+          { "word": "scientifique", "slug": "scientifique", "definition": "Il fait des recherches pour comprendre le monde." },
+          { "word": "traducteur",   "slug": "traducteur",   "definition": "Il traduit des textes d'une langue à une autre." },
+          { "word": "interprète LSF","slug": "interprete-lsf","definition": "Il traduit entre le français et la langue des signes." },
+          { "word": "éducateur",    "slug": "educateur",    "definition": "Il accompagne et aide des personnes en difficulté." },
+          { "word": "vétérinaire",  "slug": "veterinaire",  "definition": "Le médecin pour les animaux." },
+          { "word": "chauffeur",    "slug": "chauffeur",    "definition": "Il conduit un véhicule professionnel." },
+          { "word": "plombier",     "slug": "plombier",     "definition": "Il répare les tuyaux et les canalisations." },
+          { "word": "électricien",  "slug": "electricien",  "definition": "Il installe et répare les circuits électriques." },
+          { "word": "vendeur",      "slug": "vendeur",      "definition": "Il aide les clients dans un magasin." },
+          { "word": "agriculteur",  "slug": "agriculteur",  "definition": "Il cultive la terre et élève des animaux." },
+          { "word": "directeur",    "slug": "directeur",    "definition": "Il dirige une entreprise ou une école." },
+          { "word": "bénévole",     "slug": "benevole",     "definition": "Il travaille gratuitement pour aider les autres." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Géographie & Pays", "slug": "geographie", "sortOrder": 29 },
+    "module": {
+      "title": "Géographie et pays",
+      "description": "Les continents, pays et capitales en LSF.",
+      "level": 2,
+      "sortOrder": 29
+    },
+    "lessons": [
+      {
+        "title": "Le monde en signes",
+        "description": "Europe, Afrique, Amérique... et les pays du monde.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["geographie", "pays"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "monde",        "slug": "monde",        "definition": "La planète Terre entière avec tous ses habitants." },
+          { "word": "Europe",       "slug": "europe",       "definition": "Le continent avec la France, l'Allemagne, l'Espagne..." },
+          { "word": "Afrique",      "slug": "afrique",      "definition": "Le continent avec l'Égypte, le Sénégal, le Congo..." },
+          { "word": "Amérique",     "slug": "amerique",     "definition": "Le continent avec les États-Unis, le Brésil, le Mexique..." },
+          { "word": "Asie",         "slug": "asie",         "definition": "Le plus grand continent avec la Chine, le Japon, l'Inde..." },
+          { "word": "Océanie",      "slug": "oceanie",      "definition": "Le continent avec l'Australie et la Nouvelle-Zélande." },
+          { "word": "France",       "slug": "france-geo",   "definition": "Notre pays, en Europe." },
+          { "word": "Allemagne",    "slug": "allemagne",    "definition": "Le pays voisin à l'est de la France." },
+          { "word": "Espagne",      "slug": "espagne",      "definition": "Le pays voisin au sud de la France." },
+          { "word": "Italie",       "slug": "italie",       "definition": "Le pays en forme de botte au sud de l'Europe." },
+          { "word": "États-Unis",   "slug": "etats-unis",   "definition": "Le grand pays d'Amérique du Nord." },
+          { "word": "Chine",        "slug": "chine",        "definition": "Le pays le plus peuplé du monde, en Asie." },
+          { "word": "Japon",        "slug": "japon",        "definition": "Le pays du soleil levant, en Asie." },
+          { "word": "Brésil",       "slug": "bresil",       "definition": "Le grand pays d'Amérique du Sud." },
+          { "word": "Maroc",        "slug": "maroc",        "definition": "Le pays d'Afrique du Nord, voisin de l'Espagne." },
+          { "word": "capitale",     "slug": "capitale",     "definition": "La ville principale d'un pays où se trouve le gouvernement." },
+          { "word": "Paris",        "slug": "paris",        "definition": "La capitale de la France." },
+          { "word": "nord",         "slug": "nord",         "definition": "La direction vers le pôle nord." },
+          { "word": "sud",          "slug": "sud",          "definition": "La direction vers le pôle sud." },
+          { "word": "est",          "slug": "est",          "definition": "La direction où le soleil se lève." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Cuisine & Ustensiles", "slug": "cuisine-ustensiles", "sortOrder": 30 },
+    "module": {
+      "title": "En cuisine",
+      "description": "Cuisiner, les recettes et les ustensiles en LSF.",
+      "level": 2,
+      "sortOrder": 30
+    },
+    "lessons": [
+      {
+        "title": "Préparer un repas",
+        "description": "Couteau, casserole, cuire, couper et tout faire à manger.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["cuisine", "ustensiles"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "couteau",      "slug": "couteau",      "definition": "Un outil tranchant pour couper les aliments." },
+          { "word": "fourchette",   "slug": "fourchette",   "definition": "L'ustensile à dents pour piquer les aliments." },
+          { "word": "cuillère",     "slug": "cuillere",     "definition": "L'ustensile creux pour manger la soupe." },
+          { "word": "assiette",     "slug": "assiette",     "definition": "Le plat rond sur lequel on mange." },
+          { "word": "bol",          "slug": "bol",          "definition": "Un récipient creux pour le café ou les céréales." },
+          { "word": "verre",        "slug": "verre",        "definition": "Le récipient transparent pour boire." },
+          { "word": "casserole",    "slug": "casserole",    "definition": "Un récipient avec un manche pour faire cuire sur le feu." },
+          { "word": "poêle",        "slug": "poele",        "definition": "Un plat plat pour faire frire les aliments." },
+          { "word": "couper",       "slug": "couper",       "definition": "Séparer un aliment en morceaux avec un couteau." },
+          { "word": "cuire",        "slug": "cuire",        "definition": "Chauffer un aliment pour le préparer à manger." },
+          { "word": "mélanger",     "slug": "melanger",     "definition": "Combiner plusieurs ingrédients ensemble." },
+          { "word": "bouillir",     "slug": "bouillir",     "definition": "Chauffer de l'eau jusqu'à ce qu'elle fasse des bulles." },
+          { "word": "recette",      "slug": "recette",      "definition": "Les instructions pour préparer un plat." },
+          { "word": "ingrédient",   "slug": "ingredient",   "definition": "Ce dont on a besoin pour faire un plat." },
+          { "word": "épice",        "slug": "epice",        "definition": "Une substance pour donner du goût aux aliments." },
+          { "word": "huile",        "slug": "huile",        "definition": "Un liquide gras pour cuisiner." },
+          { "word": "beurre",       "slug": "beurre",       "definition": "Une matière grasse jaune faite avec du lait." },
+          { "word": "farine",       "slug": "farine",       "definition": "La poudre blanche pour faire du pain ou des gâteaux." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Matières scolaires", "slug": "matieres", "sortOrder": 31 },
+    "module": {
+      "title": "Les matières à l'école",
+      "description": "Maths, histoire, sport et toutes les matières scolaires en LSF.",
+      "level": 2,
+      "sortOrder": 31
+    },
+    "lessons": [
+      {
+        "title": "Ce qu'on apprend en classe",
+        "description": "Mathématiques, français, sciences et plus encore.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["matieres", "ecole"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "mathématiques","slug": "mathematiques", "definition": "Les chiffres, les calculs et les équations." },
+          { "word": "français",     "slug": "francais",      "definition": "La langue qu'on parle et qu'on écrit en France." },
+          { "word": "anglais",      "slug": "anglais",       "definition": "La langue internationale parlée dans le monde entier." },
+          { "word": "histoire",     "slug": "histoire",      "definition": "Ce qui s'est passé dans le passé." },
+          { "word": "géographie",   "slug": "geographie-mat","definition": "L'étude des pays, des continents et des paysages." },
+          { "word": "sciences",     "slug": "sciences",      "definition": "L'étude de la nature, des animaux et de la physique." },
+          { "word": "biologie",     "slug": "biologie",      "definition": "L'étude des êtres vivants." },
+          { "word": "physique",     "slug": "physique",      "definition": "L'étude des forces, de l'énergie et de la matière." },
+          { "word": "chimie",       "slug": "chimie",        "definition": "L'étude des substances et de leurs réactions." },
+          { "word": "art",          "slug": "art-mat",       "definition": "Le dessin, la peinture et les créations à l'école." },
+          { "word": "musique",      "slug": "musique-mat",   "definition": "Chanter et jouer d'un instrument en classe." },
+          { "word": "sport",        "slug": "sport-mat",     "definition": "L'éducation physique, courir et jouer en équipe." },
+          { "word": "philosophie",  "slug": "philosophie",   "definition": "Réfléchir aux grandes questions de la vie." },
+          { "word": "informatique", "slug": "informatique",  "definition": "Apprendre à utiliser les ordinateurs et programmer." },
+          { "word": "examen",       "slug": "examen",        "definition": "Un test pour vérifier ce qu'on a appris." },
+          { "word": "note",         "slug": "note",          "definition": "La note qu'on reçoit après un examen, de 0 à 20." },
+          { "word": "devoir",       "slug": "devoir",        "definition": "Le travail à faire à la maison pour le lendemain." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Objets du quotidien", "slug": "objets", "sortOrder": 32 },
+    "module": {
+      "title": "Les objets du quotidien",
+      "description": "Les objets qu'on utilise tous les jours en LSF.",
+      "level": 1,
+      "sortOrder": 32
+    },
+    "lessons": [
+      {
+        "title": "Ce qu'on utilise chaque jour",
+        "description": "Clé, sac, montre, argent et tous les objets du quotidien.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["objets", "quotidien"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "sac",          "slug": "sac",          "definition": "On y met ses affaires pour les transporter." },
+          { "word": "clé",          "slug": "cle",          "definition": "Elle ouvre les portes." },
+          { "word": "montre",       "slug": "montre",       "definition": "On la porte au poignet pour voir l'heure." },
+          { "word": "portefeuille", "slug": "portefeuille", "definition": "Le petit étui pour ranger ses billets et ses cartes." },
+          { "word": "parapluie",    "slug": "parapluie",    "definition": "On l'ouvre quand il pleut pour ne pas se mouiller." },
+          { "word": "crayon",       "slug": "crayon",       "definition": "On l'utilise pour écrire ou dessiner, et on peut l'effacer." },
+          { "word": "gomme",        "slug": "gomme",        "definition": "Elle efface ce qu'on a écrit au crayon." },
+          { "word": "ciseaux",      "slug": "ciseaux",      "definition": "Deux lames pour couper du papier ou du tissu." },
+          { "word": "colle",        "slug": "colle",        "definition": "Elle fait adhérer deux surfaces ensemble." },
+          { "word": "miroir",       "slug": "miroir",       "definition": "Une surface qui reflète notre image." },
+          { "word": "brosse à dents","slug": "brosse-dents","definition": "On l'utilise pour se laver les dents matin et soir." },
+          { "word": "savon",        "slug": "savon",        "definition": "Pour se laver les mains et le corps." },
+          { "word": "serviette",    "slug": "serviette",    "definition": "Un tissu pour se sécher après la douche." },
+          { "word": "réveil",       "slug": "reveil",       "definition": "Il sonne le matin pour nous réveiller." },
+          { "word": "livre",        "slug": "livre-obj",    "definition": "Des pages reliées, pour lire une histoire." },
+          { "word": "journal",      "slug": "journal",      "definition": "Un cahier pour écrire ses pensées chaque jour." },
+          { "word": "bouteille",    "slug": "bouteille",    "definition": "Un récipient en verre ou plastique pour les boissons." },
+          { "word": "boîte",        "slug": "boite",        "definition": "Un récipient fermé pour ranger des objets." }
+        ]
+      }
+    ]
+  }
+]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Salutations", "slug": "salutations", "sortOrder": 2 },
+    "module": {
+      "title": "Salutations & Politesse",
+      "description": "Les premiers mots à connaître pour communiquer poliment en LSF.",
+      "level": 1,
+      "sortOrder": 2
+    },
+    "lessons": [
+      {
+        "title": "Bonjour, merci et compagnie",
+        "description": "Les mots de politesse essentiels pour débuter.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["salutations", "politesse"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "bonjour",         "slug": "bonjour",        "definition": "Ce qu'on dit en arrivant le matin." },
+          { "word": "bonsoir",         "slug": "bonsoir",        "definition": "Ce qu'on dit quand la nuit tombe." },
+          { "word": "au revoir",       "slug": "au-revoir",      "definition": "Ce qu'on dit en partant." },
+          { "word": "merci",           "slug": "merci",          "definition": "Pour remercier quelqu'un." },
+          { "word": "s'il vous plaît", "slug": "sil-vous-plait", "definition": "Pour demander poliment." },
+          { "word": "oui",             "slug": "oui",            "definition": "Pour dire que tu es d'accord." },
+          { "word": "non",             "slug": "non",            "definition": "Pour dire que tu n'es pas d'accord." },
+          { "word": "pardon",          "slug": "pardon",         "definition": "Pour s'excuser." },
+          { "word": "excusez-moi",     "slug": "excusez-moi",    "definition": "Pour attirer l'attention de quelqu'un." },
+          { "word": "de rien",         "slug": "de-rien",        "definition": "La réponse à un merci." },
+          { "word": "comment ça va",   "slug": "comment-ca-va",  "definition": "Pour savoir si quelqu'un va bien." },
+          { "word": "ça va",           "slug": "ca-va",          "definition": "Tout va bien !" },
+          { "word": "je m'appelle",    "slug": "je-mappelle",    "definition": "Pour dire ton prénom." },
+          { "word": "enchanté",        "slug": "enchante",       "definition": "Pour dire que tu es content de rencontrer quelqu'un." },
+          { "word": "bonne nuit",      "slug": "bonne-nuit",     "definition": "Ce qu'on dit avant de dormir." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Famille", "slug": "famille", "sortOrder": 3 },
+    "module": {
+      "title": "La famille",
+      "description": "Apprenez à désigner les membres de votre famille en LSF.",
+      "level": 1,
+      "sortOrder": 3
+    },
+    "lessons": [
+      {
+        "title": "Les membres de la famille",
+        "description": "Mère, père, frère, sœur et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["famille"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "mère",       "slug": "mere",       "definition": "La femme qui t'a mis au monde." },
+          { "word": "père",       "slug": "pere",       "definition": "L'homme qui t'a mis au monde." },
+          { "word": "frère",      "slug": "frere",      "definition": "Le garçon avec qui tu as grandi." },
+          { "word": "sœur",       "slug": "soeur",      "definition": "La fille avec qui tu as grandi." },
+          { "word": "enfant",     "slug": "enfant",     "definition": "Un garçon ou une fille." },
+          { "word": "bébé",       "slug": "bebe",       "definition": "Un tout petit enfant." },
+          { "word": "famille",    "slug": "famille",    "definition": "Ceux qu'on aime depuis toujours." },
+          { "word": "grand-père", "slug": "grand-pere", "definition": "Le père de ta mère ou de ton père." },
+          { "word": "grand-mère", "slug": "grand-mere", "definition": "La mère de ta mère ou de ton père." },
+          { "word": "oncle",      "slug": "oncle",      "definition": "Le frère de ton père ou de ta mère." },
+          { "word": "tante",      "slug": "tante",      "definition": "La sœur de ton père ou de ta mère." },
+          { "word": "cousin",     "slug": "cousin",     "definition": "Le fils de ton oncle ou de ta tante." },
+          { "word": "mari",       "slug": "mari",       "definition": "L'homme marié à une femme." },
+          { "word": "femme",      "slug": "femme",      "definition": "La femme mariée à un homme." },
+          { "word": "ami",        "slug": "ami",        "definition": "Quelqu'un qu'on apprécie beaucoup." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Chiffres", "slug": "chiffres", "sortOrder": 4 },
+    "module": {
+      "title": "Les chiffres et nombres",
+      "description": "Comptez de 0 à 100 en Langue des Signes Française.",
+      "level": 1,
+      "sortOrder": 4
+    },
+    "lessons": [
+      {
+        "title": "De 0 à 20",
+        "description": "Les chiffres de base pour communiquer au quotidien.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["chiffres", "nombres"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "zéro",     "slug": "zero",     "definition": "Rien du tout, 0." },
+          { "word": "un",       "slug": "un",       "definition": "Un seul, 1." },
+          { "word": "deux",     "slug": "deux",     "definition": "Une paire, 2." },
+          { "word": "trois",    "slug": "trois",    "definition": "3, comme les trois petits cochons." },
+          { "word": "quatre",   "slug": "quatre",   "definition": "4, comme les pattes d'un chien." },
+          { "word": "cinq",     "slug": "cinq",     "definition": "5, comme les doigts d'une main." },
+          { "word": "six",      "slug": "six",      "definition": "6." },
+          { "word": "sept",     "slug": "sept",     "definition": "7." },
+          { "word": "huit",     "slug": "huit",     "definition": "8." },
+          { "word": "neuf",     "slug": "neuf",     "definition": "9." },
+          { "word": "dix",      "slug": "dix",      "definition": "10, comme tes doigts en tout." },
+          { "word": "onze",     "slug": "onze",     "definition": "11." },
+          { "word": "douze",    "slug": "douze",    "definition": "12, comme les mois de l'année." },
+          { "word": "treize",   "slug": "treize",   "definition": "13." },
+          { "word": "quatorze", "slug": "quatorze", "definition": "14." },
+          { "word": "quinze",   "slug": "quinze",   "definition": "15." },
+          { "word": "seize",    "slug": "seize",    "definition": "16." },
+          { "word": "vingt",    "slug": "vingt",    "definition": "20." },
+          { "word": "cent",     "slug": "cent",     "definition": "100." },
+          { "word": "mille",    "slug": "mille",    "definition": "1000." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Couleurs", "slug": "couleurs", "sortOrder": 5 },
+    "module": {
+      "title": "Les couleurs",
+      "description": "Apprenez à exprimer les couleurs en LSF.",
+      "level": 1,
+      "sortOrder": 5
+    },
+    "lessons": [
+      {
+        "title": "Les couleurs essentielles",
+        "description": "Rouge, bleu, vert et toutes les couleurs du quotidien.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "tags": ["couleurs"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "rouge",  "slug": "rouge",  "definition": "Rouge comme une pomme." },
+          { "word": "bleu",   "slug": "bleu",   "definition": "Bleu comme le ciel." },
+          { "word": "vert",   "slug": "vert",   "definition": "Vert comme l'herbe." },
+          { "word": "jaune",  "slug": "jaune",  "definition": "Jaune comme le soleil." },
+          { "word": "orange", "slug": "orange", "definition": "Orange comme le fruit." },
+          { "word": "violet", "slug": "violet", "definition": "Violet comme les lavandes." },
+          { "word": "rose",   "slug": "rose",   "definition": "Rose comme les flamants roses." },
+          { "word": "blanc",  "slug": "blanc",  "definition": "Blanc comme la neige." },
+          { "word": "noir",   "slug": "noir",   "definition": "Noir comme la nuit." },
+          { "word": "gris",   "slug": "gris",   "definition": "Gris comme les nuages de pluie." },
+          { "word": "marron", "slug": "marron", "definition": "Marron comme le chocolat." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Questions", "slug": "questions", "sortOrder": 6 },
+    "module": {
+      "title": "Poser des questions",
+      "description": "Apprenez à formuler des questions en LSF.",
+      "level": 1,
+      "sortOrder": 6
+    },
+    "lessons": [
+      {
+        "title": "Les mots interrogatifs",
+        "description": "Qui, quoi, où, quand, comment, pourquoi.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["questions"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "qui",      "slug": "qui",      "definition": "Pour demander de qui il s'agit." },
+          { "word": "quoi",     "slug": "quoi",     "definition": "Pour demander de quoi il s'agit." },
+          { "word": "où",       "slug": "ou",       "definition": "Pour demander dans quel endroit." },
+          { "word": "quand",    "slug": "quand",    "definition": "Pour demander à quel moment." },
+          { "word": "comment",  "slug": "comment",  "definition": "Pour demander de quelle façon." },
+          { "word": "pourquoi", "slug": "pourquoi", "definition": "Pour demander la raison." },
+          { "word": "combien",  "slug": "combien",  "definition": "Pour demander une quantité." },
+          { "word": "lequel",   "slug": "lequel",   "definition": "Pour choisir entre plusieurs choses." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Actions", "slug": "actions", "sortOrder": 7 },
+    "module": {
+      "title": "Les verbes du quotidien",
+      "description": "Les actions indispensables pour s'exprimer en LSF.",
+      "level": 2,
+      "sortOrder": 7
+    },
+    "lessons": [
+      {
+        "title": "Verbes essentiels",
+        "description": "Manger, boire, dormir et les actions du quotidien.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["verbes", "actions"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "manger",     "slug": "manger",     "definition": "Ce qu'on fait avec un sandwich." },
+          { "word": "boire",      "slug": "boire",      "definition": "Ce qu'on fait avec un verre d'eau." },
+          { "word": "dormir",     "slug": "dormir",     "definition": "Ce qu'on fait la nuit dans son lit." },
+          { "word": "travailler", "slug": "travailler", "definition": "Ce qu'on fait pour gagner sa vie." },
+          { "word": "jouer",      "slug": "jouer",      "definition": "Ce qu'on fait avec des jouets ou des amis." },
+          { "word": "parler",     "slug": "parler",     "definition": "Ce qu'on fait avec sa bouche ou ses mains en LSF." },
+          { "word": "écouter",    "slug": "ecouter",    "definition": "Ce qu'on fait avec ses oreilles." },
+          { "word": "regarder",   "slug": "regarder",   "definition": "Ce qu'on fait avec ses yeux." },
+          { "word": "aimer",      "slug": "aimer",      "definition": "Ce qu'on ressent pour ceux qui nous sont chers." },
+          { "word": "vouloir",    "slug": "vouloir",    "definition": "Avoir envie de quelque chose." },
+          { "word": "pouvoir",    "slug": "pouvoir",    "definition": "Être capable de faire quelque chose." },
+          { "word": "savoir",     "slug": "savoir",     "definition": "Avoir la connaissance de quelque chose." },
+          { "word": "aller",      "slug": "aller",      "definition": "Se déplacer vers un endroit." },
+          { "word": "venir",      "slug": "venir",      "definition": "Arriver vers quelqu'un." },
+          { "word": "comprendre", "slug": "comprendre", "definition": "Quand ça rentre dans la tête !" },
+          { "word": "répéter",    "slug": "repeter",    "definition": "Dire ou faire une deuxième fois." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Pronoms", "slug": "pronoms", "sortOrder": 8 },
+    "module": {
+      "title": "Les pronoms",
+      "description": "Désignez les personnes en LSF.",
+      "level": 1,
+      "sortOrder": 8
+    },
+    "lessons": [
+      {
+        "title": "Pronoms personnels",
+        "description": "Je, tu, il, elle et les autres.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "tags": ["pronoms"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "je",    "slug": "je",    "definition": "Moi, la personne qui parle." },
+          { "word": "tu",    "slug": "tu",    "definition": "La personne à qui on parle." },
+          { "word": "il",    "slug": "il",    "definition": "Un garçon ou un homme dont on parle." },
+          { "word": "elle",  "slug": "elle",  "definition": "Une fille ou une femme dont on parle." },
+          { "word": "nous",  "slug": "nous",  "definition": "Moi et les autres." },
+          { "word": "vous",  "slug": "vous",  "definition": "Plusieurs personnes à qui on parle." },
+          { "word": "ils",   "slug": "ils",   "definition": "Plusieurs garçons ou hommes." },
+          { "word": "elles", "slug": "elles", "definition": "Plusieurs filles ou femmes." },
+          { "word": "moi",   "slug": "moi",   "definition": "Moi, moi et personne d'autre !" },
+          { "word": "toi",   "slug": "toi",   "definition": "Toi, la personne en face." },
+          { "word": "lui",   "slug": "lui",   "definition": "Lui, un homme en particulier." },
+          { "word": "eux",   "slug": "eux",   "definition": "Eux, plusieurs hommes." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Corps humain", "slug": "corps", "sortOrder": 9 },
+    "module": {
+      "title": "Le corps humain",
+      "description": "Les parties du corps en LSF.",
+      "level": 1,
+      "sortOrder": 9
+    },
+    "lessons": [
+      {
+        "title": "Les parties du corps",
+        "description": "Tête, mains, pieds et tout le reste.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["corps", "anatomie"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "tête",    "slug": "tete",    "definition": "La partie tout en haut, avec le cerveau." },
+          { "word": "main",    "slug": "main",    "definition": "Ce qui tient les objets, cinq doigts." },
+          { "word": "bras",    "slug": "bras",    "definition": "Relie l'épaule à la main." },
+          { "word": "jambe",   "slug": "jambe",   "definition": "Relie la hanche au pied." },
+          { "word": "pied",    "slug": "pied",    "definition": "Ce sur quoi on marche." },
+          { "word": "œil",     "slug": "oeil",    "definition": "Ce qui voit." },
+          { "word": "oreille", "slug": "oreille", "definition": "Ce qui entend." },
+          { "word": "nez",     "slug": "nez",     "definition": "Ce qui sent les odeurs." },
+          { "word": "bouche",  "slug": "bouche",  "definition": "Ce qui mange et parle." },
+          { "word": "dent",    "slug": "dent",    "definition": "Blanc, dur, dans la bouche." },
+          { "word": "dos",     "slug": "dos",     "definition": "Le derrière du corps." },
+          { "word": "ventre",  "slug": "ventre",  "definition": "Là où ça gargouille quand on a faim." },
+          { "word": "cœur",    "slug": "coeur",   "definition": "Il bat sans jamais s'arrêter." },
+          { "word": "doigt",   "slug": "doigt",   "definition": "Une des cinq parties de la main." },
+          { "word": "cheveux", "slug": "cheveux", "definition": "Ce qui pousse sur la tête." },
+          { "word": "visage",  "slug": "visage",  "definition": "Yeux, nez, bouche — tout ça ensemble." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Émotions", "slug": "emotions", "sortOrder": 10 },
+    "module": {
+      "title": "Les émotions",
+      "description": "Exprimez vos sentiments en LSF.",
+      "level": 1,
+      "sortOrder": 10
+    },
+    "lessons": [
+      {
+        "title": "Sentiments et émotions",
+        "description": "Heureux, triste, fatigué et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["emotions", "sentiments"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "heureux", "slug": "heureux", "definition": "Le sourire jusqu'aux oreilles." },
+          { "word": "triste",  "slug": "triste",  "definition": "Les larmes aux yeux." },
+          { "word": "fatigué", "slug": "fatigue", "definition": "On a envie de dormir." },
+          { "word": "fâché",   "slug": "fache",   "definition": "On a envie de crier !" },
+          { "word": "peur",    "slug": "peur",    "definition": "Le cœur qui s'emballe devant quelque chose d'effrayant." },
+          { "word": "amour",   "slug": "amour",   "definition": "Ce qu'on ressent pour les gens qu'on adore." },
+          { "word": "content", "slug": "content", "definition": "Satisfait, tout va bien." },
+          { "word": "surpris", "slug": "surpris", "definition": "Les yeux qui s'ouvrent grand !" },
+          { "word": "calme",   "slug": "calme",   "definition": "Tranquille, rien ne perturbe." },
+          { "word": "stressé", "slug": "stresse", "definition": "Trop de choses à faire, pas assez de temps." },
+          { "word": "jaloux",  "slug": "jaloux",  "definition": "On veut ce que l'autre a." },
+          { "word": "fier",    "slug": "fier",    "definition": "On est content de soi ou de quelqu'un." },
+          { "word": "honte",   "slug": "honte",   "definition": "On voudrait disparaître." },
+          { "word": "ennui",   "slug": "ennui",   "definition": "Rien à faire, le temps n'avance pas." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Temps & Calendrier", "slug": "temps", "sortOrder": 11 },
+    "module": {
+      "title": "Le temps et le calendrier",
+      "description": "Parlez du temps et des dates en LSF.",
+      "level": 1,
+      "sortOrder": 11
+    },
+    "lessons": [
+      {
+        "title": "Jours, mois et moments",
+        "description": "Hier, aujourd'hui, demain et les jours de la semaine.",
+        "sortOrder": 1,
+        "xpReward": 40,
+        "tags": ["temps", "calendrier"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "aujourd'hui", "slug": "aujourd-hui", "definition": "En ce moment, ce jour-ci." },
+          { "word": "demain",      "slug": "demain",      "definition": "Le jour après aujourd'hui." },
+          { "word": "hier",        "slug": "hier",        "definition": "Le jour avant aujourd'hui." },
+          { "word": "matin",       "slug": "matin",       "definition": "Au réveil, avant midi." },
+          { "word": "midi",        "slug": "midi",        "definition": "12h, heure du déjeuner." },
+          { "word": "soir",        "slug": "soir",        "definition": "Après 18h, quand il fait nuit." },
+          { "word": "nuit",        "slug": "nuit",        "definition": "Quand tout le monde dort." },
+          { "word": "semaine",     "slug": "semaine",     "definition": "7 jours, de lundi à dimanche." },
+          { "word": "mois",        "slug": "mois",        "definition": "Environ 30 jours." },
+          { "word": "année",       "slug": "annee",       "definition": "365 jours." },
+          { "word": "lundi",       "slug": "lundi",       "definition": "Le premier jour de la semaine." },
+          { "word": "mardi",       "slug": "mardi",       "definition": "Après lundi." },
+          { "word": "mercredi",    "slug": "mercredi",    "definition": "Le milieu de la semaine." },
+          { "word": "jeudi",       "slug": "jeudi",       "definition": "Avant vendredi." },
+          { "word": "vendredi",    "slug": "vendredi",    "definition": "Le dernier jour de travail !" },
+          { "word": "samedi",      "slug": "samedi",      "definition": "Le premier jour du week-end." },
+          { "word": "dimanche",    "slug": "dimanche",    "definition": "Le dernier jour du week-end." },
+          { "word": "maintenant",  "slug": "maintenant",  "definition": "À cet instant précis." },
+          { "word": "après",       "slug": "apres",       "definition": "Plus tard, dans un moment." },
+          { "word": "avant",       "slug": "avant",       "definition": "Plus tôt, dans le passé." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Lieux", "slug": "lieux", "sortOrder": 12 },
+    "module": {
+      "title": "Les lieux",
+      "description": "Décrivez les endroits en LSF.",
+      "level": 1,
+      "sortOrder": 12
+    },
+    "lessons": [
+      {
+        "title": "Endroits du quotidien",
+        "description": "Maison, école, hôpital et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["lieux"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "maison",       "slug": "maison",       "definition": "Là où on habite." },
+          { "word": "école",        "slug": "ecole",        "definition": "Là où on apprend." },
+          { "word": "hôpital",      "slug": "hopital",      "definition": "Là où on va quand on est malade." },
+          { "word": "magasin",      "slug": "magasin",      "definition": "Là où on achète des choses." },
+          { "word": "restaurant",   "slug": "restaurant",   "definition": "Là où on mange sans cuisiner." },
+          { "word": "rue",          "slug": "rue",          "definition": "Le chemin entre les bâtiments." },
+          { "word": "ville",        "slug": "ville",        "definition": "Beaucoup de maisons et de gens ensemble." },
+          { "word": "pays",         "slug": "pays",         "definition": "La France, l'Allemagne, l'Espagne..." },
+          { "word": "France",       "slug": "france",       "definition": "Le pays où on parle français." },
+          { "word": "bibliothèque", "slug": "bibliotheque", "definition": "Là où on emprunte des livres." },
+          { "word": "pharmacie",    "slug": "pharmacie",    "definition": "Là où on achète des médicaments." },
+          { "word": "parc",         "slug": "parc",         "definition": "Un grand espace vert pour se promener." },
+          { "word": "plage",        "slug": "plage",        "definition": "Le sable au bord de la mer." },
+          { "word": "montagne",     "slug": "montagne",     "definition": "Très haut, avec de la neige au sommet." },
+          { "word": "mer",          "slug": "mer",          "definition": "Une grande étendue d'eau salée." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Nourriture", "slug": "nourriture", "sortOrder": 13 },
+    "module": {
+      "title": "La nourriture",
+      "description": "Parlez de ce que vous mangez en LSF.",
+      "level": 1,
+      "sortOrder": 13
+    },
+    "lessons": [
+      {
+        "title": "Aliments et boissons",
+        "description": "Pain, eau, fruits et tout ce qui se mange.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["nourriture", "alimentation"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "pain",      "slug": "pain",      "definition": "Ce qu'on met dans le grille-pain le matin." },
+          { "word": "eau",       "slug": "eau",       "definition": "Le liquide transparent qu'on boit tous les jours." },
+          { "word": "lait",      "slug": "lait",      "definition": "La boisson blanche du petit-déjeuner." },
+          { "word": "café",      "slug": "cafe",      "definition": "La boisson noire et chaude du matin." },
+          { "word": "thé",       "slug": "the",       "definition": "Une infusion chaude dans une tasse." },
+          { "word": "fruit",     "slug": "fruit",     "definition": "Pomme, banane, orange... sucré et bon." },
+          { "word": "légume",    "slug": "legume",    "definition": "Carotte, courgette, haricot..." },
+          { "word": "viande",    "slug": "viande",    "definition": "Bœuf, poulet, porc..." },
+          { "word": "poisson",   "slug": "poisson",   "definition": "Ce qui nage et qu'on mange aussi." },
+          { "word": "fromage",   "slug": "fromage",   "definition": "Fabriqué avec du lait, il en existe des centaines." },
+          { "word": "œuf",       "slug": "oeuf",      "definition": "Un ovale blanc pondu par une poule." },
+          { "word": "pomme",     "slug": "pomme",     "definition": "Un fruit rond et croquant." },
+          { "word": "banane",    "slug": "banane",    "definition": "Un fruit jaune et courbé." },
+          { "word": "chocolat",  "slug": "chocolat",  "definition": "Le meilleur dessert du monde." },
+          { "word": "sucre",     "slug": "sucre",     "definition": "Blanc et doux, dans les gâteaux." },
+          { "word": "sel",       "slug": "sel",       "definition": "Blanc aussi, mais pas sucré du tout !" },
+          { "word": "riz",       "slug": "riz",       "definition": "Des petits grains qu'on fait cuire dans l'eau." },
+          { "word": "jus",       "slug": "jus",       "definition": "Le liquide qu'on extrait d'un fruit." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Animaux", "slug": "animaux", "sortOrder": 14 },
+    "module": {
+      "title": "Les animaux",
+      "description": "Nommez les animaux en LSF.",
+      "level": 1,
+      "sortOrder": 14
+    },
+    "lessons": [
+      {
+        "title": "Animaux familiers et sauvages",
+        "description": "Chiens, chats, lions et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["animaux"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "chien",     "slug": "chien",         "definition": "Le meilleur ami de l'homme." },
+          { "word": "chat",      "slug": "chat",          "definition": "Il ronronne et adore dormir." },
+          { "word": "oiseau",    "slug": "oiseau",        "definition": "Il a des plumes et peut voler." },
+          { "word": "poisson",   "slug": "poisson-animal","definition": "Il vit dans l'eau et a des écailles." },
+          { "word": "cheval",    "slug": "cheval",        "definition": "Grand et rapide, on peut le monter." },
+          { "word": "lapin",     "slug": "lapin",         "definition": "Grandes oreilles, il saute partout." },
+          { "word": "lion",      "slug": "lion",          "definition": "Le roi de la savane." },
+          { "word": "éléphant",  "slug": "elephant",      "definition": "Le plus grand animal terrestre, avec une longue trompe." },
+          { "word": "singe",     "slug": "singe",         "definition": "Il se balance dans les arbres." },
+          { "word": "vache",     "slug": "vache",         "definition": "Elle donne du lait et dit meuh." },
+          { "word": "cochon",    "slug": "cochon",        "definition": "Il dit groin et adore la boue." },
+          { "word": "mouton",    "slug": "mouton",        "definition": "Il a de la laine et dit bêê." },
+          { "word": "serpent",   "slug": "serpent",       "definition": "Il n'a pas de pattes et rampe." },
+          { "word": "araignée",  "slug": "araignee",      "definition": "Huit pattes, elle tisse des toiles." },
+          { "word": "papillon",  "slug": "papillon",      "definition": "Des ailes colorées, il vole de fleur en fleur." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Vêtements", "slug": "vetements", "sortOrder": 15 },
+    "module": {
+      "title": "Les vêtements",
+      "description": "Décrivez ce que vous portez en LSF.",
+      "level": 1,
+      "sortOrder": 15
+    },
+    "lessons": [
+      {
+        "title": "Habits et accessoires",
+        "description": "Pantalon, robe, chaussures et accessoires.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["vetements"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "pantalon",   "slug": "pantalon",   "definition": "Ce qui couvre les jambes." },
+          { "word": "chemise",    "slug": "chemise",    "definition": "Un haut avec des boutons." },
+          { "word": "robe",       "slug": "robe",       "definition": "Un vêtement féminin d'une seule pièce." },
+          { "word": "chaussure",  "slug": "chaussure",  "definition": "Ce qu'on met aux pieds pour marcher." },
+          { "word": "chapeau",    "slug": "chapeau",    "definition": "Ce qu'on met sur la tête." },
+          { "word": "manteau",    "slug": "manteau",    "definition": "Ce qu'on porte en hiver pour avoir chaud." },
+          { "word": "pull",       "slug": "pull",       "definition": "Un haut tricoté et chaud." },
+          { "word": "veste",      "slug": "veste",      "definition": "Un haut avec des manches, plus léger qu'un manteau." },
+          { "word": "jupe",       "slug": "jupe",       "definition": "Un vêtement qui couvre à partir de la taille." },
+          { "word": "chaussette", "slug": "chaussette", "definition": "Ce qu'on met entre le pied et la chaussure." },
+          { "word": "écharpe",    "slug": "echarpe",    "definition": "Ce qu'on enroule autour du cou quand il fait froid." },
+          { "word": "gant",       "slug": "gant",       "definition": "Ce qu'on met sur les mains en hiver." },
+          { "word": "lunettes",   "slug": "lunettes",   "definition": "Deux verres pour mieux voir." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Adjectifs", "slug": "adjectifs", "sortOrder": 16 },
+    "module": {
+      "title": "Les adjectifs",
+      "description": "Décrivez le monde qui vous entoure en LSF.",
+      "level": 2,
+      "sortOrder": 16
+    },
+    "lessons": [
+      {
+        "title": "Qualités et caractéristiques",
+        "description": "Grand, petit, beau, rapide et bien d'autres.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["adjectifs", "description"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "grand",     "slug": "grand",     "definition": "Comme une girafe." },
+          { "word": "petit",     "slug": "petit",     "definition": "Comme une fourmi." },
+          { "word": "beau",      "slug": "beau",      "definition": "Agréable à regarder." },
+          { "word": "laid",      "slug": "laid",      "definition": "Pas agréable à regarder." },
+          { "word": "rapide",    "slug": "rapide",    "definition": "Comme un guépard." },
+          { "word": "lent",      "slug": "lent",      "definition": "Comme une tortue." },
+          { "word": "fort",      "slug": "fort",      "definition": "Comme un haltérophile." },
+          { "word": "faible",    "slug": "faible",    "definition": "Qui manque de force." },
+          { "word": "chaud",     "slug": "chaud",     "definition": "Comme le sable en été." },
+          { "word": "froid",     "slug": "froid",     "definition": "Comme la glace." },
+          { "word": "vieux",     "slug": "vieux",     "definition": "Qui existe depuis longtemps." },
+          { "word": "jeune",     "slug": "jeune",     "definition": "Qui a peu d'années." },
+          { "word": "riche",     "slug": "riche",     "definition": "Qui a beaucoup d'argent." },
+          { "word": "pauvre",    "slug": "pauvre",    "definition": "Qui manque d'argent." },
+          { "word": "propre",    "slug": "propre",    "definition": "Lavé, sans saleté." },
+          { "word": "sale",      "slug": "sale",      "definition": "Avec de la saleté dessus." },
+          { "word": "facile",    "slug": "facile",    "definition": "Pas compliqué." },
+          { "word": "difficile", "slug": "difficile", "definition": "Qui demande des efforts." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Météo", "slug": "meteo", "sortOrder": 17 },
+    "module": {
+      "title": "La météo",
+      "description": "Parlez du temps qu'il fait en LSF.",
+      "level": 1,
+      "sortOrder": 17
+    },
+    "lessons": [
+      {
+        "title": "Le temps qu'il fait",
+        "description": "Soleil, pluie, neige et tous les temps.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "tags": ["meteo"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "soleil",      "slug": "soleil",      "definition": "La boule de feu dans le ciel qui nous réchauffe." },
+          { "word": "pluie",       "slug": "pluie",       "definition": "L'eau qui tombe des nuages." },
+          { "word": "neige",       "slug": "neige",       "definition": "Des flocons blancs qui tombent en hiver." },
+          { "word": "vent",        "slug": "vent",        "definition": "L'air qui souffle et fait bouger les arbres." },
+          { "word": "nuage",       "slug": "nuage",       "definition": "Les masses blanches ou grises dans le ciel." },
+          { "word": "orage",       "slug": "orage",       "definition": "Tonnerre, éclairs et pluie forte." },
+          { "word": "brouillard",  "slug": "brouillard",  "definition": "Un nuage au sol, on ne voit pas loin." },
+          { "word": "arc-en-ciel", "slug": "arc-en-ciel", "definition": "7 couleurs dans le ciel après la pluie." },
+          { "word": "tempête",     "slug": "tempete",     "definition": "Un vent très violent et dangereux." },
+          { "word": "grêle",       "slug": "grele",       "definition": "Des petites billes de glace qui tombent du ciel." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "École & Travail", "slug": "ecole", "sortOrder": 18 },
+    "module": {
+      "title": "École et travail",
+      "description": "Le vocabulaire scolaire et professionnel en LSF.",
+      "level": 2,
+      "sortOrder": 18
+    },
+    "lessons": [
+      {
+        "title": "À l'école et au bureau",
+        "description": "Livres, stylos, professeurs et collègues.",
+        "sortOrder": 1,
+        "xpReward": 35,
+        "tags": ["ecole", "travail", "metiers"],
+        "difficulty": 2,
+        "signs": [
+          { "word": "livre",      "slug": "livre",      "definition": "Des pages avec des mots et des images." },
+          { "word": "stylo",      "slug": "stylo",      "definition": "Ce qu'on utilise pour écrire." },
+          { "word": "professeur", "slug": "professeur", "definition": "La personne qui t'apprend des choses en classe." },
+          { "word": "élève",      "slug": "eleve",      "definition": "Toi, à l'école." },
+          { "word": "classe",     "slug": "classe",     "definition": "La salle où on apprend, avec le tableau et les bureaux." },
+          { "word": "tableau",    "slug": "tableau",    "definition": "La grande surface où le prof écrit." },
+          { "word": "ordinateur", "slug": "ordinateur", "definition": "La machine pour travailler et surfer sur internet." },
+          { "word": "médecin",    "slug": "medecin",    "definition": "La personne qui soigne quand tu es malade." },
+          { "word": "infirmier",  "slug": "infirmier",  "definition": "Il aide le médecin à soigner les patients." },
+          { "word": "pompier",    "slug": "pompier",    "definition": "Il éteint les incendies et sauve des vies." },
+          { "word": "policier",   "slug": "policier",   "definition": "Il maintient l'ordre et protège les gens." },
+          { "word": "cuisinier",  "slug": "cuisinier",  "definition": "Il prépare les repas dans un restaurant." },
+          { "word": "argent",     "slug": "argent",     "definition": "Les pièces et les billets pour acheter." },
+          { "word": "travail",    "slug": "travail",    "definition": "Ce qu'on fait pour gagner sa vie." },
+          { "word": "réunion",    "slug": "reunion",    "definition": "Des gens qui se retrouvent pour discuter." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Transport", "slug": "transport", "sortOrder": 19 },
+    "module": {
+      "title": "Les transports",
+      "description": "Les moyens de déplacement en LSF.",
+      "level": 1,
+      "sortOrder": 19
+    },
+    "lessons": [
+      {
+        "title": "Se déplacer en LSF",
+        "description": "Voiture, train, avion et tous les transports.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "tags": ["transport"],
+        "difficulty": 1,
+        "signs": [
+          { "word": "voiture",   "slug": "voiture",  "definition": "4 roues, un moteur, on conduit." },
+          { "word": "bus",       "slug": "bus",      "definition": "Un grand véhicule qui transporte beaucoup de gens." },
+          { "word": "train",     "slug": "train",    "definition": "Il roule sur des rails." },
+          { "word": "vélo",      "slug": "velo",     "definition": "2 roues, pas de moteur, on pédale." },
+          { "word": "avion",     "slug": "avion",    "definition": "Il vole dans les airs." },
+          { "word": "métro",     "slug": "metro",    "definition": "Le train qui roule sous la ville." },
+          { "word": "bateau",    "slug": "bateau",   "definition": "Il flotte sur l'eau." },
+          { "word": "taxi",      "slug": "taxi",     "definition": "Une voiture qu'on loue avec un chauffeur." },
+          { "word": "moto",      "slug": "moto",     "definition": "2 roues avec un moteur." },
+          { "word": "gare",      "slug": "gare",     "definition": "Là où s'arrêtent les trains." },
+          { "word": "aéroport",  "slug": "aeroport", "definition": "Là où partent et arrivent les avions." }
+        ]
+      }
+    ]
+  },
+  {
+    "category": { "name": "Sports & Loisirs", "slug": "sports", "sortOrder": 20 },
+    "module": { "title": "Sports et loisirs", "description": "Le vocabulaire du sport et des activités en LSF.", "level": 2, "sortOrder": 20 },
+    "lessons": [{
+      "title": "Activités sportives", "description": "Football, natation, tennis et bien d'autres.", "sortOrder": 1, "xpReward": 35, "tags": ["sport", "loisirs"], "difficulty": 2,
+      "signs": [
+        { "word": "sport",        "slug": "sport",        "definition": "Une activité physique qu'on pratique pour le plaisir." },
+        { "word": "football",     "slug": "football",     "definition": "On court après un ballon rond avec les pieds." },
+        { "word": "basketball",   "slug": "basketball",   "definition": "On lance un ballon dans un panier." },
+        { "word": "tennis",       "slug": "tennis",       "definition": "On frappe une balle avec une raquette." },
+        { "word": "natation",     "slug": "natation",     "definition": "Nager dans une piscine ou la mer." },
+        { "word": "course",       "slug": "course",       "definition": "Courir le plus vite possible." },
+        { "word": "gym",          "slug": "gym",          "definition": "Des exercices pour muscler le corps." },
+        { "word": "danse",        "slug": "danse",        "definition": "Bouger son corps en rythme avec la musique." },
+        { "word": "yoga",         "slug": "yoga",         "definition": "Des postures et de la respiration pour se détendre." },
+        { "word": "ski",          "slug": "ski",          "definition": "Glisser sur la neige avec des planches aux pieds." },
+        { "word": "escalade",     "slug": "escalade",     "definition": "Grimper sur un rocher ou un mur." },
+        { "word": "jeux vidéo",   "slug": "jeux-video",   "definition": "Jouer sur une console ou un ordinateur." },
+        { "word": "lecture",      "slug": "lecture",      "definition": "Lire un livre pour le plaisir." },
+        { "word": "cinéma",       "slug": "cinema",       "definition": "Regarder un film sur grand écran." },
+        { "word": "photographie", "slug": "photographie", "definition": "Prendre des photos avec un appareil." },
+        { "word": "jardinage",    "slug": "jardinage",    "definition": "Planter et s'occuper de fleurs et de légumes." },
+        { "word": "pêche",        "slug": "peche",        "definition": "Attraper des poissons avec une canne." },
+        { "word": "randonnée",    "slug": "randonnee",    "definition": "Marcher longtemps dans la nature." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Maison & Meubles", "slug": "maison-meubles", "sortOrder": 21 },
+    "module": { "title": "La maison", "description": "Les pièces et les meubles de la maison en LSF.", "level": 1, "sortOrder": 21 },
+    "lessons": [{
+      "title": "Pièces et meubles", "description": "Salon, cuisine, lit, canapé et tout ce qui meuble la maison.", "sortOrder": 1, "xpReward": 35, "tags": ["maison", "meubles"], "difficulty": 1,
+      "signs": [
+        { "word": "salon",         "slug": "salon",         "definition": "La pièce principale, avec le canapé et la télé." },
+        { "word": "cuisine",       "slug": "cuisine",       "definition": "La pièce où on prépare à manger." },
+        { "word": "chambre",       "slug": "chambre",       "definition": "La pièce où on dort." },
+        { "word": "salle de bain", "slug": "salle-de-bain", "definition": "La pièce avec la douche et le lavabo." },
+        { "word": "toilettes",     "slug": "toilettes",     "definition": "La pièce avec les WC." },
+        { "word": "jardin",        "slug": "jardin",        "definition": "L'espace vert dehors, autour de la maison." },
+        { "word": "garage",        "slug": "garage",        "definition": "Là où on range la voiture." },
+        { "word": "lit",           "slug": "lit",           "definition": "Sur quoi on dort la nuit." },
+        { "word": "canapé",        "slug": "canape",        "definition": "Le grand siège confortable du salon." },
+        { "word": "table",         "slug": "table",         "definition": "On mange dessus, on travaille dessus." },
+        { "word": "chaise",        "slug": "chaise",        "definition": "On s'assoit dessus." },
+        { "word": "armoire",       "slug": "armoire",       "definition": "Un grand meuble pour ranger les vêtements." },
+        { "word": "fenêtre",       "slug": "fenetre",       "definition": "Une ouverture dans le mur pour laisser entrer la lumière." },
+        { "word": "porte",         "slug": "porte",         "definition": "On l'ouvre pour entrer ou sortir d'une pièce." },
+        { "word": "lampe",         "slug": "lampe",         "definition": "Elle éclaire la pièce quand il fait noir." },
+        { "word": "télévision",    "slug": "television",    "definition": "Le grand écran du salon pour regarder des films." },
+        { "word": "réfrigérateur", "slug": "refrigerateur", "definition": "La machine froide qui conserve les aliments." },
+        { "word": "four",          "slug": "four",          "definition": "La machine chaude pour cuisiner." },
+        { "word": "escalier",      "slug": "escalier",      "definition": "Des marches pour monter ou descendre d'un étage." },
+        { "word": "toit",          "slug": "toit",          "definition": "Le dessus de la maison, au-dessus de nos têtes." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Santé & Médecine", "slug": "sante", "sortOrder": 22 },
+    "module": { "title": "La santé", "description": "Le vocabulaire médical et du bien-être en LSF.", "level": 2, "sortOrder": 22 },
+    "lessons": [{
+      "title": "Le corps qui souffre", "description": "Maux de tête, fièvre, médicaments et consultations.", "sortOrder": 1, "xpReward": 40, "tags": ["sante", "medecine"], "difficulty": 2,
+      "signs": [
+        { "word": "mal",           "slug": "mal",           "definition": "Quand quelque chose fait souffrir." },
+        { "word": "mal de tête",   "slug": "mal-de-tete",   "definition": "La tête qui fait mal." },
+        { "word": "fièvre",        "slug": "fievre",        "definition": "Quand le corps est trop chaud, à plus de 38°." },
+        { "word": "toux",          "slug": "toux",          "definition": "Quand on tousse, souvent lors d'un rhume." },
+        { "word": "rhume",         "slug": "rhume",         "definition": "Le nez qui coule et la gorge qui gratte." },
+        { "word": "grippe",        "slug": "grippe",        "definition": "Comme un rhume très fort, avec de la fièvre." },
+        { "word": "allergie",      "slug": "allergie",      "definition": "Quand le corps réagit mal à un aliment ou au pollen." },
+        { "word": "blessure",      "slug": "blessure",      "definition": "Quand on se fait mal, une coupure ou un bleu." },
+        { "word": "médicament",    "slug": "medicament",    "definition": "Ce qu'on prend pour guérir quand on est malade." },
+        { "word": "urgences",      "slug": "urgences",      "definition": "L'endroit à l'hôpital pour les cas graves." },
+        { "word": "ordonnance",    "slug": "ordonnance",    "definition": "Le papier que le médecin donne pour acheter des médicaments." },
+        { "word": "rendez-vous",   "slug": "rendez-vous",   "definition": "Un moment fixé à l'avance pour voir quelqu'un." },
+        { "word": "vaccin",        "slug": "vaccin",        "definition": "Une piqûre pour se protéger d'une maladie." },
+        { "word": "sang",          "slug": "sang",          "definition": "Le liquide rouge qui circule dans le corps." },
+        { "word": "douleur",       "slug": "douleur",       "definition": "La sensation désagréable quand ça fait mal." },
+        { "word": "guérir",        "slug": "guerir",        "definition": "Retrouver la santé après une maladie." },
+        { "word": "repos",         "slug": "repos",         "definition": "Ne rien faire pour récupérer de l'énergie." },
+        { "word": "sourd",         "slug": "sourd",         "definition": "Qui n'entend pas ou entend mal." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Technologie", "slug": "technologie", "sortOrder": 23 },
+    "module": { "title": "Technologie & Numérique", "description": "Internet, téléphones et outils numériques en LSF.", "level": 2, "sortOrder": 23 },
+    "lessons": [{
+      "title": "Écrans et connectivité", "description": "Smartphone, internet, réseaux sociaux et plus encore.", "sortOrder": 1, "xpReward": 35, "tags": ["technologie", "numerique"], "difficulty": 2,
+      "signs": [
+        { "word": "téléphone",    "slug": "telephone",    "definition": "L'appareil pour appeler et envoyer des messages." },
+        { "word": "internet",     "slug": "internet",     "definition": "Le réseau mondial qui connecte tous les ordinateurs." },
+        { "word": "email",        "slug": "email",        "definition": "Un message envoyé par internet." },
+        { "word": "mot de passe", "slug": "mot-de-passe", "definition": "Le code secret pour accéder à un compte." },
+        { "word": "application",  "slug": "application",  "definition": "Un programme sur son téléphone ou ordinateur." },
+        { "word": "écran",        "slug": "ecran",        "definition": "La surface qui affiche des images." },
+        { "word": "clavier",      "slug": "clavier",      "definition": "Les touches pour taper du texte." },
+        { "word": "souris",       "slug": "souris-ordi",  "definition": "Le petit appareil pour déplacer le curseur sur l'écran." },
+        { "word": "caméra",       "slug": "camera",       "definition": "L'objectif qui filme ou prend des photos." },
+        { "word": "batterie",     "slug": "batterie",     "definition": "Ce qui donne de l'énergie au téléphone ou à l'ordinateur." },
+        { "word": "wifi",         "slug": "wifi",         "definition": "La connexion internet sans fil." },
+        { "word": "vidéo",        "slug": "video",        "definition": "Des images animées qu'on regarde sur un écran." },
+        { "word": "photo",        "slug": "photo",        "definition": "Une image prise avec un appareil." },
+        { "word": "message",      "slug": "message",      "definition": "Un texte court envoyé à quelqu'un." },
+        { "word": "imprimante",   "slug": "imprimante",   "definition": "La machine qui imprime des documents sur papier." },
+        { "word": "robot",        "slug": "robot",        "definition": "Une machine programmée pour faire des tâches." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Nature & Environnement", "slug": "nature", "sortOrder": 24 },
+    "module": { "title": "La nature", "description": "Arbres, fleurs et écologie en LSF.", "level": 2, "sortOrder": 24 },
+    "lessons": [{
+      "title": "La nature autour de nous", "description": "Forêt, rivière, fleurs et environnement.", "sortOrder": 1, "xpReward": 35, "tags": ["nature", "environnement"], "difficulty": 2,
+      "signs": [
+        { "word": "arbre",       "slug": "arbre",       "definition": "Une grande plante avec un tronc et des branches." },
+        { "word": "fleur",       "slug": "fleur",       "definition": "La partie colorée d'une plante, souvent parfumée." },
+        { "word": "forêt",       "slug": "foret",       "definition": "Un grand espace plein d'arbres." },
+        { "word": "rivière",     "slug": "riviere",     "definition": "Un cours d'eau plus petit qu'un fleuve." },
+        { "word": "lac",         "slug": "lac",         "definition": "Une étendue d'eau entourée de terre." },
+        { "word": "désert",      "slug": "desert",      "definition": "Une grande zone sèche, souvent de sable." },
+        { "word": "île",         "slug": "ile",         "definition": "Une terre entourée d'eau de tous les côtés." },
+        { "word": "volcan",      "slug": "volcan",      "definition": "Une montagne qui crache du feu et de la lave." },
+        { "word": "herbe",       "slug": "herbe",       "definition": "Les petites plantes vertes du sol." },
+        { "word": "feuille",     "slug": "feuille",     "definition": "La partie plate et verte d'un arbre." },
+        { "word": "champignon",  "slug": "champignon",  "definition": "Une plante sans feuilles qui pousse dans les forêts." },
+        { "word": "terre",       "slug": "terre",       "definition": "Le sol sous nos pieds, ou notre planète." },
+        { "word": "feu",         "slug": "feu",         "definition": "La flamme chaude et lumineuse qui brûle." },
+        { "word": "pierre",      "slug": "pierre",      "definition": "Un morceau de roche, solide et dur." },
+        { "word": "pollution",   "slug": "pollution",   "definition": "Quand l'air, l'eau ou la terre sont salis par l'homme." },
+        { "word": "recyclage",   "slug": "recyclage",   "definition": "Transformer les déchets pour les réutiliser." },
+        { "word": "écologie",    "slug": "ecologie",    "definition": "Prendre soin de la nature et de la planète." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Musique & Arts", "slug": "musique", "sortOrder": 25 },
+    "module": { "title": "Musique et arts", "description": "Instruments, styles musicaux et arts visuels en LSF.", "level": 2, "sortOrder": 25 },
+    "lessons": [{
+      "title": "Sons et créations", "description": "Piano, guitare, peinture et tout ce qui crée.", "sortOrder": 1, "xpReward": 35, "tags": ["musique", "arts"], "difficulty": 2,
+      "signs": [
+        { "word": "musique",   "slug": "musique",   "definition": "Des sons organisés pour créer quelque chose de beau." },
+        { "word": "chanson",   "slug": "chanson",   "definition": "De la musique avec des paroles chantées." },
+        { "word": "piano",     "slug": "piano",     "definition": "Un instrument avec des touches noires et blanches." },
+        { "word": "guitare",   "slug": "guitare",   "definition": "Un instrument à cordes qu'on pince ou gratte." },
+        { "word": "tambour",   "slug": "tambour",   "definition": "Un instrument qu'on frappe avec des baguettes." },
+        { "word": "flûte",     "slug": "flute",     "definition": "Un instrument à vent qu'on souffle." },
+        { "word": "violon",    "slug": "violon",    "definition": "Un instrument à cordes qu'on frotte avec un archet." },
+        { "word": "concert",   "slug": "concert",   "definition": "Un spectacle de musique en direct." },
+        { "word": "chanter",   "slug": "chanter",   "definition": "Produire de la musique avec sa voix." },
+        { "word": "peinture",  "slug": "peinture",  "definition": "Créer des images avec des couleurs sur une surface." },
+        { "word": "dessin",    "slug": "dessin",    "definition": "Faire des formes avec un crayon ou un stylo." },
+        { "word": "sculpture", "slug": "sculpture", "definition": "Créer des formes en 3D avec de l'argile ou de la pierre." },
+        { "word": "théâtre",   "slug": "theatre",   "definition": "Des acteurs qui jouent une histoire sur scène." },
+        { "word": "film",      "slug": "film",      "definition": "Une histoire racontée en images animées." },
+        { "word": "poésie",    "slug": "poesie",    "definition": "Des mots écrits pour exprimer des émotions." },
+        { "word": "artiste",   "slug": "artiste",   "definition": "Quelqu'un qui crée des œuvres d'art." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Voyages & Tourisme", "slug": "voyages", "sortOrder": 26 },
+    "module": { "title": "Voyages et tourisme", "description": "Partir en vacances, visiter des pays en LSF.", "level": 2, "sortOrder": 26 },
+    "lessons": [{
+      "title": "En route pour l'aventure", "description": "Valise, passeport, hôtel et tout pour voyager.", "sortOrder": 1, "xpReward": 40, "tags": ["voyage", "tourisme"], "difficulty": 2,
+      "signs": [
+        { "word": "voyage",      "slug": "voyage",      "definition": "Se déplacer loin pour découvrir de nouveaux endroits." },
+        { "word": "vacances",    "slug": "vacances",    "definition": "Les jours de repos sans école ni travail." },
+        { "word": "valise",      "slug": "valise",      "definition": "Le grand sac pour ranger ses affaires en voyage." },
+        { "word": "passeport",   "slug": "passeport",   "definition": "Le document officiel pour voyager à l'étranger." },
+        { "word": "billet",      "slug": "billet",      "definition": "Le ticket pour prendre le train, l'avion ou le bus." },
+        { "word": "hôtel",       "slug": "hotel",       "definition": "Un bâtiment où on dort quand on voyage." },
+        { "word": "réservation", "slug": "reservation", "definition": "Retenir une place ou une chambre à l'avance." },
+        { "word": "carte",       "slug": "carte",       "definition": "Un plan pour s'orienter dans un endroit." },
+        { "word": "touriste",    "slug": "touriste",    "definition": "Quelqu'un qui visite un endroit pour le plaisir." },
+        { "word": "guide",       "slug": "guide",       "definition": "Quelqu'un qui explique les monuments aux touristes." },
+        { "word": "monument",    "slug": "monument",    "definition": "Un bâtiment ou une statue historique." },
+        { "word": "frontière",   "slug": "frontiere",   "definition": "La limite entre deux pays." },
+        { "word": "camping",     "slug": "camping",     "definition": "Dormir dans une tente dans la nature." },
+        { "word": "souvenir",    "slug": "souvenir",    "definition": "Un petit objet qu'on ramène d'un voyage." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Fêtes & Événements", "slug": "fetes", "sortOrder": 27 },
+    "module": { "title": "Fêtes et célébrations", "description": "Anniversaires, Noël, mariages et toutes les fêtes en LSF.", "level": 1, "sortOrder": 27 },
+    "lessons": [{
+      "title": "Jours de fête", "description": "Anniversaire, Noël, fête nationale et autres célébrations.", "sortOrder": 1, "xpReward": 30, "tags": ["fetes", "celebrations"], "difficulty": 1,
+      "signs": [
+        { "word": "fête",          "slug": "fete",          "definition": "Un moment de joie et de partage avec d'autres personnes." },
+        { "word": "anniversaire",  "slug": "anniversaire",  "definition": "Le jour où on fête la naissance de quelqu'un chaque année." },
+        { "word": "cadeau",        "slug": "cadeau",        "definition": "Un présent qu'on offre à quelqu'un." },
+        { "word": "gâteau",        "slug": "gateau",        "definition": "Un dessert sucré, souvent avec des bougies pour les anniversaires." },
+        { "word": "bougie",        "slug": "bougie",        "definition": "On la souffle pour faire un vœu à l'anniversaire." },
+        { "word": "Noël",          "slug": "noel",          "definition": "La grande fête du 25 décembre avec cadeaux et sapin." },
+        { "word": "Pâques",        "slug": "paques",        "definition": "La fête avec les œufs en chocolat cachés dans le jardin." },
+        { "word": "mariage",       "slug": "mariage",       "definition": "La cérémonie où deux personnes s'unissent pour la vie." },
+        { "word": "invitation",    "slug": "invitation",    "definition": "Un message pour demander à quelqu'un de venir." },
+        { "word": "félicitations", "slug": "felicitations", "definition": "Ce qu'on dit pour féliciter quelqu'un d'heureux." },
+        { "word": "bonne année",   "slug": "bonne-annee",   "definition": "Ce qu'on dit le 1er janvier pour souhaiter une belle année." },
+        { "word": "feu d'artifice","slug": "feu-artifice",  "definition": "Des explosions colorées dans le ciel pour les fêtes." },
+        { "word": "décoration",    "slug": "decoration",    "definition": "Ce qu'on met pour embellir un endroit pour une fête." },
+        { "word": "réveillon",     "slug": "reveillon",     "definition": "La soirée de fête le soir du 24 ou du 31 décembre." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Professions", "slug": "professions", "sortOrder": 28 },
+    "module": { "title": "Les métiers", "description": "Découvrez les noms de métiers en LSF.", "level": 2, "sortOrder": 28 },
+    "lessons": [{
+      "title": "Qui fait quoi ?", "description": "Architecte, ingénieur, avocat et plein d'autres métiers.", "sortOrder": 1, "xpReward": 40, "tags": ["metiers", "professions"], "difficulty": 2,
+      "signs": [
+        { "word": "architecte",    "slug": "architecte",    "definition": "Il dessine et conçoit les bâtiments." },
+        { "word": "ingénieur",     "slug": "ingenieur",     "definition": "Il résout des problèmes techniques et construit des machines." },
+        { "word": "avocat",        "slug": "avocat",        "definition": "Il défend les gens en justice." },
+        { "word": "juge",          "slug": "juge",          "definition": "Il rend des décisions au tribunal." },
+        { "word": "journaliste",   "slug": "journaliste",   "definition": "Il recueille et diffuse des informations." },
+        { "word": "acteur",        "slug": "acteur",        "definition": "Il joue des rôles dans des films ou au théâtre." },
+        { "word": "chanteur",      "slug": "chanteur",      "definition": "Il fait de la musique avec sa voix." },
+        { "word": "scientifique",  "slug": "scientifique",  "definition": "Il fait des recherches pour comprendre le monde." },
+        { "word": "interprète LSF","slug": "interprete-lsf","definition": "Il traduit entre le français et la langue des signes." },
+        { "word": "éducateur",     "slug": "educateur",     "definition": "Il accompagne et aide des personnes en difficulté." },
+        { "word": "vétérinaire",   "slug": "veterinaire",   "definition": "Le médecin pour les animaux." },
+        { "word": "chauffeur",     "slug": "chauffeur",     "definition": "Il conduit un véhicule professionnel." },
+        { "word": "plombier",      "slug": "plombier",      "definition": "Il répare les tuyaux et les canalisations." },
+        { "word": "électricien",   "slug": "electricien",   "definition": "Il installe et répare les circuits électriques." },
+        { "word": "vendeur",       "slug": "vendeur",       "definition": "Il aide les clients dans un magasin." },
+        { "word": "agriculteur",   "slug": "agriculteur",   "definition": "Il cultive la terre et élève des animaux." },
+        { "word": "bénévole",      "slug": "benevole",      "definition": "Il travaille gratuitement pour aider les autres." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Géographie & Pays", "slug": "geographie", "sortOrder": 29 },
+    "module": { "title": "Géographie et pays", "description": "Les continents, pays et capitales en LSF.", "level": 2, "sortOrder": 29 },
+    "lessons": [{
+      "title": "Le monde en signes", "description": "Europe, Afrique, Amérique... et les pays du monde.", "sortOrder": 1, "xpReward": 40, "tags": ["geographie", "pays"], "difficulty": 2,
+      "signs": [
+        { "word": "monde",      "slug": "monde",      "definition": "La planète Terre entière avec tous ses habitants." },
+        { "word": "Europe",     "slug": "europe",     "definition": "Le continent avec la France, l'Allemagne, l'Espagne..." },
+        { "word": "Afrique",    "slug": "afrique",    "definition": "Le continent avec l'Égypte, le Sénégal, le Congo..." },
+        { "word": "Amérique",   "slug": "amerique",   "definition": "Le continent avec les États-Unis, le Brésil, le Mexique..." },
+        { "word": "Asie",       "slug": "asie",       "definition": "Le plus grand continent avec la Chine, le Japon, l'Inde..." },
+        { "word": "Océanie",    "slug": "oceanie",    "definition": "Le continent avec l'Australie et la Nouvelle-Zélande." },
+        { "word": "Allemagne",  "slug": "allemagne",  "definition": "Le pays voisin à l'est de la France." },
+        { "word": "Espagne",    "slug": "espagne",    "definition": "Le pays voisin au sud de la France." },
+        { "word": "Italie",     "slug": "italie",     "definition": "Le pays en forme de botte au sud de l'Europe." },
+        { "word": "États-Unis", "slug": "etats-unis", "definition": "Le grand pays d'Amérique du Nord." },
+        { "word": "Chine",      "slug": "chine",      "definition": "Le pays le plus peuplé du monde, en Asie." },
+        { "word": "Japon",      "slug": "japon",      "definition": "Le pays du soleil levant, en Asie." },
+        { "word": "Brésil",     "slug": "bresil",     "definition": "Le grand pays d'Amérique du Sud." },
+        { "word": "Maroc",      "slug": "maroc",      "definition": "Le pays d'Afrique du Nord, voisin de l'Espagne." },
+        { "word": "capitale",   "slug": "capitale",   "definition": "La ville principale d'un pays où se trouve le gouvernement." },
+        { "word": "Paris",      "slug": "paris",      "definition": "La capitale de la France." },
+        { "word": "nord",       "slug": "nord",       "definition": "La direction vers le pôle nord." },
+        { "word": "sud",        "slug": "sud",        "definition": "La direction vers le pôle sud." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Cuisine & Ustensiles", "slug": "cuisine-ustensiles", "sortOrder": 30 },
+    "module": { "title": "En cuisine", "description": "Cuisiner, les recettes et les ustensiles en LSF.", "level": 2, "sortOrder": 30 },
+    "lessons": [{
+      "title": "Préparer un repas", "description": "Couteau, casserole, cuire, couper et tout faire à manger.", "sortOrder": 1, "xpReward": 35, "tags": ["cuisine", "ustensiles"], "difficulty": 2,
+      "signs": [
+        { "word": "couteau",    "slug": "couteau",    "definition": "Un outil tranchant pour couper les aliments." },
+        { "word": "fourchette", "slug": "fourchette", "definition": "L'ustensile à dents pour piquer les aliments." },
+        { "word": "cuillère",   "slug": "cuillere",   "definition": "L'ustensile creux pour manger la soupe." },
+        { "word": "assiette",   "slug": "assiette",   "definition": "Le plat rond sur lequel on mange." },
+        { "word": "bol",        "slug": "bol",        "definition": "Un récipient creux pour le café ou les céréales." },
+        { "word": "verre",      "slug": "verre",      "definition": "Le récipient transparent pour boire." },
+        { "word": "casserole",  "slug": "casserole",  "definition": "Un récipient avec un manche pour faire cuire sur le feu." },
+        { "word": "poêle",      "slug": "poele",      "definition": "Un plat plat pour faire frire les aliments." },
+        { "word": "couper",     "slug": "couper",     "definition": "Séparer un aliment en morceaux avec un couteau." },
+        { "word": "cuire",      "slug": "cuire",      "definition": "Chauffer un aliment pour le préparer à manger." },
+        { "word": "mélanger",   "slug": "melanger",   "definition": "Combiner plusieurs ingrédients ensemble." },
+        { "word": "bouillir",   "slug": "bouillir",   "definition": "Chauffer de l'eau jusqu'à ce qu'elle fasse des bulles." },
+        { "word": "recette",    "slug": "recette",    "definition": "Les instructions pour préparer un plat." },
+        { "word": "ingrédient", "slug": "ingredient", "definition": "Ce dont on a besoin pour faire un plat." },
+        { "word": "épice",      "slug": "epice",      "definition": "Une substance pour donner du goût aux aliments." },
+        { "word": "huile",      "slug": "huile",      "definition": "Un liquide gras pour cuisiner." },
+        { "word": "beurre",     "slug": "beurre",     "definition": "Une matière grasse jaune faite avec du lait." },
+        { "word": "farine",     "slug": "farine",     "definition": "La poudre blanche pour faire du pain ou des gâteaux." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Matières scolaires", "slug": "matieres", "sortOrder": 31 },
+    "module": { "title": "Les matières à l'école", "description": "Maths, histoire, sport et toutes les matières scolaires en LSF.", "level": 2, "sortOrder": 31 },
+    "lessons": [{
+      "title": "Ce qu'on apprend en classe", "description": "Mathématiques, français, sciences et plus encore.", "sortOrder": 1, "xpReward": 35, "tags": ["matieres", "ecole"], "difficulty": 2,
+      "signs": [
+        { "word": "mathématiques", "slug": "mathematiques", "definition": "Les chiffres, les calculs et les équations." },
+        { "word": "français",      "slug": "francais",      "definition": "La langue qu'on parle et qu'on écrit en France." },
+        { "word": "anglais",       "slug": "anglais",       "definition": "La langue internationale parlée dans le monde entier." },
+        { "word": "histoire",      "slug": "histoire",      "definition": "Ce qui s'est passé dans le passé." },
+        { "word": "sciences",      "slug": "sciences",      "definition": "L'étude de la nature, des animaux et de la physique." },
+        { "word": "biologie",      "slug": "biologie",      "definition": "L'étude des êtres vivants." },
+        { "word": "physique",      "slug": "physique",      "definition": "L'étude des forces, de l'énergie et de la matière." },
+        { "word": "chimie",        "slug": "chimie",        "definition": "L'étude des substances et de leurs réactions." },
+        { "word": "informatique",  "slug": "informatique",  "definition": "Apprendre à utiliser les ordinateurs et programmer." },
+        { "word": "examen",        "slug": "examen",        "definition": "Un test pour vérifier ce qu'on a appris." },
+        { "word": "note",          "slug": "note",          "definition": "La note qu'on reçoit après un examen, de 0 à 20." },
+        { "word": "devoir",        "slug": "devoir",        "definition": "Le travail à faire à la maison pour le lendemain." }
+      ]
+    }]
+  },
+  {
+    "category": { "name": "Objets du quotidien", "slug": "objets", "sortOrder": 32 },
+    "module": { "title": "Les objets du quotidien", "description": "Les objets qu'on utilise tous les jours en LSF.", "level": 1, "sortOrder": 32 },
+    "lessons": [{
+      "title": "Ce qu'on utilise chaque jour", "description": "Clé, sac, montre, argent et tous les objets du quotidien.", "sortOrder": 1, "xpReward": 30, "tags": ["objets", "quotidien"], "difficulty": 1,
+      "signs": [
+        { "word": "sac",           "slug": "sac",           "definition": "On y met ses affaires pour les transporter." },
+        { "word": "clé",           "slug": "cle",           "definition": "Elle ouvre les portes." },
+        { "word": "montre",        "slug": "montre",        "definition": "On la porte au poignet pour voir l'heure." },
+        { "word": "portefeuille",  "slug": "portefeuille",  "definition": "Le petit étui pour ranger ses billets et ses cartes." },
+        { "word": "parapluie",     "slug": "parapluie",     "definition": "On l'ouvre quand il pleut pour ne pas se mouiller." },
+        { "word": "crayon",        "slug": "crayon",        "definition": "On l'utilise pour écrire ou dessiner, et on peut l'effacer." },
+        { "word": "gomme",         "slug": "gomme",         "definition": "Elle efface ce qu'on a écrit au crayon." },
+        { "word": "ciseaux",       "slug": "ciseaux",       "definition": "Deux lames pour couper du papier ou du tissu." },
+        { "word": "miroir",        "slug": "miroir",        "definition": "Une surface qui reflète notre image." },
+        { "word": "brosse à dents","slug": "brosse-dents",  "definition": "On l'utilise pour se laver les dents matin et soir." },
+        { "word": "savon",         "slug": "savon",         "definition": "Pour se laver les mains et le corps." },
+        { "word": "serviette",     "slug": "serviette",     "definition": "Un tissu pour se sécher après la douche." },
+        { "word": "réveil",        "slug": "reveil",        "definition": "Il sonne le matin pour nous réveiller." },
+        { "word": "bouteille",     "slug": "bouteille",     "definition": "Un récipient en verre ou plastique pour les boissons." },
+        { "word": "boîte",         "slug": "boite",         "definition": "Un récipient fermé pour ranger des objets." }
+      ]
+    }]
+  }
+]

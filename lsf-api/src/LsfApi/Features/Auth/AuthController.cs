@@ -60,5 +60,28 @@ public class AuthController(AppDbContext db, PasswordService passwords, JwtServi
         return Ok(ToDto(user));
     }
 
-    private static UserDto ToDto(User u) => new(u.Id, u.Email, u.Username, u.Role);
+    [Authorize]
+    [HttpPut("me")]
+    public async Task<IActionResult> UpdateMe(UpdateProfileRequest req)
+    {
+        var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        var user = await db.Users.FindAsync(userId);
+
+        if (user is null) return NotFound();
+
+        if (req.Email.ToLower() != user.Email && await db.Users.AnyAsync(u => u.Email == req.Email.ToLower()))
+            return Conflict(new { error = "email_taken", message = "Cet email est déjà utilisé." });
+
+        if (req.Username != user.Username && await db.Users.AnyAsync(u => u.Username == req.Username))
+            return Conflict(new { error = "username_taken", message = "Ce nom d'utilisateur est déjà pris." });
+
+        user.Username = req.Username;
+        user.Email = req.Email.ToLower();
+
+        await db.SaveChangesAsync();
+
+        return Ok(ToDto(user));
+    }
+
+    private static UserDto ToDto(User u) => new(u.Id, u.Email, u.Username, u.Role, u.CreatedAt);
 }

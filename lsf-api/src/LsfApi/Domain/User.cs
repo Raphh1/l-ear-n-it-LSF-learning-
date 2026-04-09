@@ -12,4 +12,5 @@ public class User
     public UserProgress? Progress { get; set; }
     public ICollection<UserLessonCompletion> LessonCompletions { get; set; } = [];
     public ICollection<QuizAttempt> QuizAttempts { get; set; } = [];
+    public ICollection<UserFavorite> Favorites { get; set; } = [];
 }

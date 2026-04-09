@@ -1,6 +1,10 @@
 using System.Text;
 using LsfApi.Data;
 using LsfApi.Features.Auth;
+using LsfApi.Features.Categories;
+using LsfApi.Features.Lessons;
+using LsfApi.Features.Modules;
+using LsfApi.Features.Signs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -33,7 +37,18 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
 builder.Services.AddControllers();
+
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Frontend", policy =>
+        policy
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 
 // Base de données
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -42,6 +57,21 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Auth services
 builder.Services.AddScoped<PasswordService>();
 builder.Services.AddScoped<JwtService>();
+
+// Feature services
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<ModuleService>();
+builder.Services.AddScoped<LessonService>();
+builder.Services.AddScoped<SignService>();
+builder.Services.AddScoped<LsfApi.Features.Progress.ProgressService>();
+builder.Services.AddScoped<LsfApi.Features.Favorites.FavoritesService>();
+
+// Elix LSF API
+builder.Services.AddHttpClient<ElixService>(client =>
+{
+    client.BaseAddress = new Uri("https://api.elix-lsf.fr/");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+});
 
 // JWT
 var jwtSecret = builder.Configuration["Jwt:Secret"]!;
@@ -72,8 +102,17 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("Frontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-app.Run();
+// Seed en développement
+if (app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await DatabaseSeeder.SeedAsync(db);
+}
+
+await app.RunAsync();

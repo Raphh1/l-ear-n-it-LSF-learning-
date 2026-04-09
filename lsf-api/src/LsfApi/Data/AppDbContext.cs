@@ -16,6 +16,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<QuizAttempt> QuizAttempts => Set<QuizAttempt>();
     public DbSet<UserProgress> UserProgress => Set<UserProgress>();
     public DbSet<UserLessonCompletion> UserLessonCompletions => Set<UserLessonCompletion>();
+    public DbSet<UserFavorite> UserFavorites => Set<UserFavorite>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -125,6 +126,18 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             e.HasOne(ulc => ulc.Lesson)
              .WithMany(l => l.UserCompletions)
              .HasForeignKey(ulc => ulc.LessonId);
+        });
+
+        // UserFavorite (clé composite)
+        modelBuilder.Entity<UserFavorite>(e =>
+        {
+            e.HasKey(f => new { f.UserId, f.SignId });
+            e.HasOne(f => f.User)
+             .WithMany(u => u.Favorites)
+             .HasForeignKey(f => f.UserId);
+            e.HasOne(f => f.Sign)
+             .WithMany()
+             .HasForeignKey(f => f.SignId);
         });
     }
 }

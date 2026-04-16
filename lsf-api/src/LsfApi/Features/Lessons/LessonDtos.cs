@@ -17,5 +17,6 @@ public record LessonDetailDto(
     string? Description,
     int SortOrder,
     int XpReward,
+    string LessonType,
     IEnumerable<SignInLessonDto> Signs
 );

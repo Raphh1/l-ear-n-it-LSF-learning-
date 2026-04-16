@@ -13,4 +13,8 @@ public class User
     public ICollection<UserLessonCompletion> LessonCompletions { get; set; } = [];
     public ICollection<QuizAttempt> QuizAttempts { get; set; } = [];
     public ICollection<UserFavorite> Favorites { get; set; } = [];
+    public ICollection<UserBadge> Badges { get; set; } = [];
+    public ICollection<GameScore> GameScores { get; set; } = [];
+    public ICollection<UserSignStat> SignStats { get; set; } = [];
+    public ICollection<UserDailyAttempt> DailyAttempts { get; set; } = [];
 }

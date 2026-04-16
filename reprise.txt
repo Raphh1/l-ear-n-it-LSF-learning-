@@ -1,0 +1,24 @@
+Stack
+Backend : ASP.NET Core 8, EF Core, PostgreSQL — lsf-api/src/LsfApi/
+Frontend : Next.js 14, TypeScript, Tailwind — lsf-web/src/
+Ports : backend 5097, frontend 3000
+À faire (par priorité)
+1. Signes manquants dans les phrases
+Fichier : lsf-api/src/LsfApi/Data/seed-phrases.json
+Les mots nom, bien, habiter, âge, gentil, faim, soif, bon, chercher, jeu vidéo, inquiet, colère, malade, urgence, long n'existent pas dans la table Signs. Ces phrases ont donc des signes manquants dans le constructeur. Soit ajouter ces signes en base, soit remplacer ces mots dans seed-phrases.json par des équivalents existants et relancer le seeder.
+
+2. Jeu Révision — vérifier que ça marche
+Route : /jeux/revision/[lessonId]
+Ce jeu est censé ne montrer que les signes ratés par l'utilisateur. Vérifier que la page existe, que l'API GET /api/revision/lesson/{lessonId} fonctionne, et que les signes ratés sont bien récupérés depuis la table UserSignStats.
+
+3. Homepage — mentionner les phrases
+Fichier : lsf-web/src/app/page.tsx
+La page d'accueil ne parle pas du tout du système de phrases. Ajouter une section ou une card CTA qui pointe vers /modules avec un texte du type "Apprends aussi à construire des phrases en LSF".
+
+4. Constructeur — afficher le GIF/vidéo au survol
+Fichier : lsf-web/src/app/jeux/constructeur/[lessonId]/page.tsx
+Actuellement les signes dans le pool affichent juste le thumbnail statique. Amélioration : au survol d'un signe, afficher le GIF (sign.gifUrl) à la place du thumbnail pour voir le mouvement.
+
+5. Page leçon phrases — navigation clavier
+Fichier : lsf-web/src/app/lecon-phrases/[id]/page.tsx
+Ajouter un useEffect avec keydown pour naviguer avec les flèches gauche/droite entre les phrases.

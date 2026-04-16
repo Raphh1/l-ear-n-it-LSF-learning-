@@ -1,0 +1,1574 @@
+[
+  {
+    "module": {
+      "title": "Salutations et présentations",
+      "description": "Les premières phrases pour se saluer et se présenter en LSF.",
+      "level": 1,
+      "sortOrder": 100
+    },
+    "lessons": [
+      {
+        "title": "Premiers contacts",
+        "description": "Se saluer et engager une conversation.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Bonjour, comment tu t'appelles ?",
+            "textLsf": "BONJOUR TOI NOM QUOI",
+            "difficulty": 1,
+            "tags": ["salutation", "présentation"],
+            "signWords": ["bonjour", "toi", "nom", "quoi"]
+          },
+          {
+            "textFr": "Bonjour, je m'appelle Marie.",
+            "textLsf": "BONJOUR MOI JE M'APPELLE",
+            "difficulty": 1,
+            "tags": ["salutation", "présentation"],
+            "signWords": ["bonjour", "moi", "je m'appelle"]
+          },
+          {
+            "textFr": "Comment tu vas aujourd'hui ?",
+            "textLsf": "AUJOURD'HUI TOI COMMENT ÇA VA",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["aujourd'hui", "toi", "comment ça va"]
+          },
+          {
+            "textFr": "Ça va bien, merci !",
+            "textLsf": "ÇA VA BIEN MERCI",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["ça va", "bien", "merci"]
+          },
+          {
+            "textFr": "Enchanté, au revoir !",
+            "textLsf": "ENCHANTÉ MOI AU REVOIR",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["enchanté", "moi", "au revoir"]
+          },
+          {
+            "textFr": "Bonsoir, ça va ?",
+            "textLsf": "BONSOIR TOI ÇA VA",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["bonsoir", "toi", "ça va"]
+          },
+          {
+            "textFr": "Au revoir, merci, à bientôt !",
+            "textLsf": "AU REVOIR MERCI BIENTÔT",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["au revoir", "merci", "bientôt"]
+          },
+          {
+            "textFr": "Bonne nuit, dors bien !",
+            "textLsf": "BONNE NUIT BIEN DORMIR",
+            "difficulty": 1,
+            "tags": ["salutation"],
+            "signWords": ["bonne nuit", "bien", "dormir"]
+          }
+        ]
+      },
+      {
+        "title": "Se présenter",
+        "description": "Parler de soi et poser des questions personnelles.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Tu habites où ?",
+            "textLsf": "TOI OÙ HABITER",
+            "difficulty": 1,
+            "tags": ["présentation"],
+            "signWords": ["toi", "où", "habiter"]
+          },
+          {
+            "textFr": "J'habite à Paris.",
+            "textLsf": "MOI PARIS HABITER",
+            "difficulty": 1,
+            "tags": ["présentation"],
+            "signWords": ["moi", "Paris", "habiter"]
+          },
+          {
+            "textFr": "Tu as quel âge ?",
+            "textLsf": "TOI ÂGE COMBIEN",
+            "difficulty": 1,
+            "tags": ["présentation"],
+            "signWords": ["toi", "âge", "combien"]
+          },
+          {
+            "textFr": "J'ai vingt ans.",
+            "textLsf": "MOI VINGT ÂGE",
+            "difficulty": 1,
+            "tags": ["présentation"],
+            "signWords": ["moi", "vingt", "âge"]
+          },
+          {
+            "textFr": "Je viens de France.",
+            "textLsf": "MOI FRANCE VENIR",
+            "difficulty": 1,
+            "tags": ["présentation"],
+            "signWords": ["moi", "France", "venir"]
+          },
+          {
+            "textFr": "Tu parles quelle langue ?",
+            "textLsf": "TOI LANGUE PARLER QUOI",
+            "difficulty": 1,
+            "tags": ["présentation", "langue"],
+            "signWords": ["toi", "langue", "parler", "quoi"]
+          },
+          {
+            "textFr": "Je suis sourd, je signe.",
+            "textLsf": "MOI SOURD SIGNER",
+            "difficulty": 1,
+            "tags": ["présentation", "surdité"],
+            "signWords": ["moi", "sourd", "signer"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "La famille en LSF",
+      "description": "Parler de sa famille et de ses proches en LSF.",
+      "level": 1,
+      "sortOrder": 102
+    },
+    "lessons": [
+      {
+        "title": "Les membres de la famille",
+        "description": "Présenter les membres de sa famille.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "J'ai un frère.",
+            "textLsf": "MOI FRÈRE UN",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["moi", "frère", "un"]
+          },
+          {
+            "textFr": "J'ai une sœur.",
+            "textLsf": "MOI SŒUR UN",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["moi", "sœur", "un"]
+          },
+          {
+            "textFr": "Ma mère est médecin.",
+            "textLsf": "MÈRE MOI MÉDECIN",
+            "difficulty": 1,
+            "tags": ["famille", "métier"],
+            "signWords": ["mère", "moi", "médecin"]
+          },
+          {
+            "textFr": "Mon père travaille beaucoup.",
+            "textLsf": "PÈRE MOI TRAVAILLER BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["père", "moi", "travailler", "beaucoup"]
+          },
+          {
+            "textFr": "Mon grand-père est vieux.",
+            "textLsf": "GRAND-PÈRE MOI VIEUX",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["grand-père", "moi", "vieux"]
+          },
+          {
+            "textFr": "Ma grand-mère est gentille.",
+            "textLsf": "GRAND-MÈRE MOI GENTIL",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["grand-mère", "moi", "gentil"]
+          },
+          {
+            "textFr": "Mon cousin habite loin.",
+            "textLsf": "COUSIN MOI LOIN HABITER",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["cousin", "moi", "loin", "habiter"]
+          },
+          {
+            "textFr": "Ma famille est grande.",
+            "textLsf": "FAMILLE MOI GRAND",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["famille", "moi", "grand"]
+          }
+        ]
+      },
+      {
+        "title": "Relations familiales",
+        "description": "Décrire les relations dans sa famille.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je suis avec ma famille.",
+            "textLsf": "MOI FAMILLE ENSEMBLE",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["moi", "famille", "ensemble"]
+          },
+          {
+            "textFr": "Mon frère est jeune.",
+            "textLsf": "FRÈRE MOI JEUNE",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["frère", "moi", "jeune"]
+          },
+          {
+            "textFr": "Ma sœur est belle.",
+            "textLsf": "SŒUR MOI BEAU",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["sœur", "moi", "beau"]
+          },
+          {
+            "textFr": "J'aime ma famille.",
+            "textLsf": "MOI FAMILLE AIMER",
+            "difficulty": 1,
+            "tags": ["famille", "émotions"],
+            "signWords": ["moi", "famille", "aimer"]
+          },
+          {
+            "textFr": "Mon père est fort.",
+            "textLsf": "PÈRE MOI FORT",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["père", "moi", "fort"]
+          },
+          {
+            "textFr": "Ma sœur a un bébé.",
+            "textLsf": "SŒUR MOI BÉBÉ UN",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["sœur", "moi", "bébé", "un"]
+          },
+          {
+            "textFr": "Nous sommes ensemble en famille.",
+            "textLsf": "NOUS FAMILLE ENSEMBLE",
+            "difficulty": 1,
+            "tags": ["famille"],
+            "signWords": ["nous", "famille", "ensemble"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Nourriture et repas",
+      "description": "Phrases pour parler de la nourriture et des repas en LSF.",
+      "level": 1,
+      "sortOrder": 104
+    },
+    "lessons": [
+      {
+        "title": "Au restaurant",
+        "description": "Commander et parler de la nourriture au restaurant.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Tu veux du café ?",
+            "textLsf": "CAFÉ TOI VOULOIR",
+            "difficulty": 1,
+            "tags": ["nourriture", "restaurant"],
+            "signWords": ["café", "toi", "vouloir"]
+          },
+          {
+            "textFr": "J'ai faim, je veux manger.",
+            "textLsf": "MOI FAIM MANGER VOULOIR",
+            "difficulty": 1,
+            "tags": ["nourriture"],
+            "signWords": ["moi", "faim", "manger", "vouloir"]
+          },
+          {
+            "textFr": "J'ai soif, je veux de l'eau.",
+            "textLsf": "MOI SOIF EAU VOULOIR",
+            "difficulty": 1,
+            "tags": ["nourriture"],
+            "signWords": ["moi", "soif", "eau", "vouloir"]
+          },
+          {
+            "textFr": "Je veux payer l'addition.",
+            "textLsf": "MOI ADDITION PAYER VOULOIR",
+            "difficulty": 1,
+            "tags": ["restaurant"],
+            "signWords": ["moi", "addition", "payer", "vouloir"]
+          },
+          {
+            "textFr": "Ce restaurant est trop cher.",
+            "textLsf": "RESTAURANT TROP CHER",
+            "difficulty": 1,
+            "tags": ["restaurant", "argent"],
+            "signWords": ["restaurant", "trop", "cher"]
+          },
+          {
+            "textFr": "J'aime beaucoup le chocolat.",
+            "textLsf": "MOI CHOCOLAT AIMER BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["nourriture"],
+            "signWords": ["moi", "chocolat", "aimer", "beaucoup"]
+          },
+          {
+            "textFr": "Je prends du vin et du fromage.",
+            "textLsf": "MOI VIN FROMAGE PRENDRE",
+            "difficulty": 1,
+            "tags": ["nourriture", "restaurant"],
+            "signWords": ["moi", "vin", "fromage", "prendre"]
+          },
+          {
+            "textFr": "Je n'aime pas les légumes.",
+            "textLsf": "MOI LÉGUMES AIMER NON",
+            "difficulty": 2,
+            "tags": ["nourriture"],
+            "signWords": ["moi", "légume", "aimer", "non"]
+          }
+        ]
+      },
+      {
+        "title": "Faire les courses",
+        "description": "Acheter de la nourriture au marché ou au supermarché.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je veux acheter du pain.",
+            "textLsf": "MOI PAIN ACHETER VOULOIR",
+            "difficulty": 1,
+            "tags": ["courses", "nourriture"],
+            "signWords": ["moi", "pain", "acheter", "vouloir"]
+          },
+          {
+            "textFr": "La pomme est rouge et bonne.",
+            "textLsf": "POMME ROUGE BON",
+            "difficulty": 1,
+            "tags": ["nourriture", "couleurs"],
+            "signWords": ["pomme", "rouge", "bon"]
+          },
+          {
+            "textFr": "Je prends du lait et du beurre.",
+            "textLsf": "MOI LAIT BEURRE PRENDRE",
+            "difficulty": 1,
+            "tags": ["courses", "nourriture"],
+            "signWords": ["moi", "lait", "beurre", "prendre"]
+          },
+          {
+            "textFr": "Tu veux une banane ?",
+            "textLsf": "TOI BANANE VOULOIR",
+            "difficulty": 1,
+            "tags": ["nourriture"],
+            "signWords": ["toi", "banane", "vouloir"]
+          },
+          {
+            "textFr": "Je cherche les carottes.",
+            "textLsf": "MOI CAROTTE CHERCHER",
+            "difficulty": 1,
+            "tags": ["courses", "nourriture"],
+            "signWords": ["moi", "carotte", "chercher"]
+          },
+          {
+            "textFr": "Ce magasin n'est pas cher.",
+            "textLsf": "MAGASIN PAS CHER BIEN",
+            "difficulty": 1,
+            "tags": ["courses", "argent"],
+            "signWords": ["magasin", "pas cher", "bien"]
+          },
+          {
+            "textFr": "Je veux acheter du fromage.",
+            "textLsf": "MOI FROMAGE ACHETER VOULOIR",
+            "difficulty": 1,
+            "tags": ["courses", "nourriture"],
+            "signWords": ["moi", "fromage", "acheter", "vouloir"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "La vie quotidienne",
+      "description": "Phrases pour parler des activités et déplacements du quotidien.",
+      "level": 1,
+      "sortOrder": 106
+    },
+    "lessons": [
+      {
+        "title": "Les activités du jour",
+        "description": "Raconter ce qu'on fait dans la journée.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Aujourd'hui j'ai école.",
+            "textLsf": "AUJOURD'HUI ÉCOLE MOI",
+            "difficulty": 1,
+            "tags": ["quotidien", "école"],
+            "signWords": ["aujourd'hui", "école", "moi"]
+          },
+          {
+            "textFr": "Ce matin je me lève.",
+            "textLsf": "MATIN MOI LEVER",
+            "difficulty": 1,
+            "tags": ["quotidien"],
+            "signWords": ["matin", "moi", "lever"]
+          },
+          {
+            "textFr": "Je vais au travail.",
+            "textLsf": "MOI TRAVAIL ALLER",
+            "difficulty": 1,
+            "tags": ["quotidien", "travail"],
+            "signWords": ["moi", "travail", "aller"]
+          },
+          {
+            "textFr": "Je lis un livre.",
+            "textLsf": "MOI LIVRE LIRE",
+            "difficulty": 1,
+            "tags": ["quotidien", "loisirs"],
+            "signWords": ["moi", "livre", "lire"]
+          },
+          {
+            "textFr": "J'écoute de la musique.",
+            "textLsf": "MOI MUSIQUE ÉCOUTER",
+            "difficulty": 1,
+            "tags": ["quotidien", "loisirs"],
+            "signWords": ["moi", "musique", "écouter"]
+          },
+          {
+            "textFr": "Je regarde un film.",
+            "textLsf": "MOI FILM REGARDER",
+            "difficulty": 1,
+            "tags": ["quotidien", "loisirs"],
+            "signWords": ["moi", "film", "regarder"]
+          },
+          {
+            "textFr": "Je joue à un jeu vidéo.",
+            "textLsf": "MOI JEU VIDÉO JOUER",
+            "difficulty": 1,
+            "tags": ["quotidien", "loisirs"],
+            "signWords": ["moi", "jeu vidéo", "jouer"]
+          },
+          {
+            "textFr": "La nuit je dors bien.",
+            "textLsf": "NUIT MOI BIEN DORMIR",
+            "difficulty": 1,
+            "tags": ["quotidien"],
+            "signWords": ["nuit", "moi", "bien", "dormir"]
+          }
+        ]
+      },
+      {
+        "title": "Se déplacer en ville",
+        "description": "Prendre les transports et se repérer en ville.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je prends le bus.",
+            "textLsf": "MOI BUS PRENDRE",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["moi", "bus", "prendre"]
+          },
+          {
+            "textFr": "Je vais à l'école en vélo.",
+            "textLsf": "MOI ÉCOLE VÉLO ALLER",
+            "difficulty": 1,
+            "tags": ["transport", "école"],
+            "signWords": ["moi", "école", "vélo", "aller"]
+          },
+          {
+            "textFr": "Je cherche la gare.",
+            "textLsf": "MOI GARE CHERCHER",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["moi", "gare", "chercher"]
+          },
+          {
+            "textFr": "Je prends le train.",
+            "textLsf": "MOI TRAIN PRENDRE",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["moi", "train", "prendre"]
+          },
+          {
+            "textFr": "Tu vas où ?",
+            "textLsf": "TOI OÙ ALLER",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["toi", "où", "aller"]
+          },
+          {
+            "textFr": "Je prends ma voiture.",
+            "textLsf": "MOI VOITURE PRENDRE",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["moi", "voiture", "prendre"]
+          },
+          {
+            "textFr": "Je prends le taxi, c'est rapide.",
+            "textLsf": "MOI TAXI PRENDRE RAPIDE",
+            "difficulty": 1,
+            "tags": ["transport"],
+            "signWords": ["moi", "taxi", "prendre", "rapide"]
+          },
+          {
+            "textFr": "Je voyage en avion.",
+            "textLsf": "MOI AVION VOYAGE",
+            "difficulty": 1,
+            "tags": ["transport", "voyage"],
+            "signWords": ["moi", "avion", "voyage"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Les émotions en LSF",
+      "description": "Exprimer ses sentiments et ses états émotionnels en LSF.",
+      "level": 1,
+      "sortOrder": 108
+    },
+    "lessons": [
+      {
+        "title": "Sentiments positifs",
+        "description": "Exprimer la joie, l'amour et le bonheur.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Aujourd'hui je suis heureux.",
+            "textLsf": "AUJOURD'HUI MOI HEUREUX",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["aujourd'hui", "moi", "heureux"]
+          },
+          {
+            "textFr": "Je t'aime.",
+            "textLsf": "MOI TOI AIMER",
+            "difficulty": 1,
+            "tags": ["émotions", "amour"],
+            "signWords": ["moi", "toi", "aimer"]
+          },
+          {
+            "textFr": "Je suis content ici.",
+            "textLsf": "MOI ICI CONTENT",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "ici", "content"]
+          },
+          {
+            "textFr": "Je t'aime beaucoup.",
+            "textLsf": "MOI TOI AIMER BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["émotions", "amour"],
+            "signWords": ["moi", "toi", "aimer", "beaucoup"]
+          },
+          {
+            "textFr": "Ce cadeau me surprend.",
+            "textLsf": "CADEAU MOI SURPRIS",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["cadeau", "moi", "surpris"]
+          },
+          {
+            "textFr": "Je suis fier de toi.",
+            "textLsf": "MOI TOI FIER",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "toi", "fier"]
+          },
+          {
+            "textFr": "Tu travailles bien !",
+            "textLsf": "TOI TRAVAILLER BIEN",
+            "difficulty": 1,
+            "tags": ["émotions", "travail"],
+            "signWords": ["toi", "travailler", "bien"]
+          },
+          {
+            "textFr": "Je suis calme et heureux.",
+            "textLsf": "MOI CALME HEUREUX",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "calme", "heureux"]
+          }
+        ]
+      },
+      {
+        "title": "Sentiments difficiles",
+        "description": "Exprimer la tristesse, la peur et le stress.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Aujourd'hui je suis triste.",
+            "textLsf": "AUJOURD'HUI MOI TRISTE",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["aujourd'hui", "moi", "triste"]
+          },
+          {
+            "textFr": "J'ai peur, je suis inquiet.",
+            "textLsf": "MOI PEUR INQUIET",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "peur", "inquiet"]
+          },
+          {
+            "textFr": "Je suis très en colère.",
+            "textLsf": "MOI COLÈRE BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "colère", "beaucoup"]
+          },
+          {
+            "textFr": "Je suis fatigué, je veux dormir.",
+            "textLsf": "MOI FATIGUÉ DORMIR VOULOIR",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "fatigué", "dormir", "vouloir"]
+          },
+          {
+            "textFr": "L'examen me stresse.",
+            "textLsf": "EXAMEN MOI STRESSÉ",
+            "difficulty": 1,
+            "tags": ["émotions", "école"],
+            "signWords": ["examen", "moi", "stressé"]
+          },
+          {
+            "textFr": "J'ai honte, je suis jaloux.",
+            "textLsf": "MOI JALOUX HONTE",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "jaloux", "honte"]
+          },
+          {
+            "textFr": "Je suis seul et triste.",
+            "textLsf": "MOI SEUL TRISTE",
+            "difficulty": 1,
+            "tags": ["émotions"],
+            "signWords": ["moi", "seul", "triste"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Santé et urgences",
+      "description": "Phrases essentielles pour parler de sa santé et réagir aux urgences.",
+      "level": 2,
+      "sortOrder": 110
+    },
+    "lessons": [
+      {
+        "title": "Chez le médecin",
+        "description": "Décrire ses symptômes et demander des soins.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "J'ai très mal à la tête.",
+            "textLsf": "MOI MAL DE TÊTE BEAUCOUP",
+            "difficulty": 2,
+            "tags": ["santé", "médecin"],
+            "signWords": ["moi", "mal de tête", "beaucoup"]
+          },
+          {
+            "textFr": "Je suis malade, j'ai de la fièvre.",
+            "textLsf": "MOI MALADE FIÈVRE",
+            "difficulty": 2,
+            "tags": ["santé"],
+            "signWords": ["moi", "malade", "fièvre"]
+          },
+          {
+            "textFr": "Je tousse beaucoup.",
+            "textLsf": "MOI TOUX BEAUCOUP",
+            "difficulty": 2,
+            "tags": ["santé"],
+            "signWords": ["moi", "toux", "beaucoup"]
+          },
+          {
+            "textFr": "Je veux voir un médecin.",
+            "textLsf": "MOI MÉDECIN VOULOIR",
+            "difficulty": 2,
+            "tags": ["santé", "médecin"],
+            "signWords": ["moi", "médecin", "vouloir"]
+          },
+          {
+            "textFr": "J'ai une allergie, je veux un médecin.",
+            "textLsf": "MOI ALLERGIE MÉDECIN VOULOIR",
+            "difficulty": 2,
+            "tags": ["santé", "urgence"],
+            "signWords": ["moi", "allergie", "médecin", "vouloir"]
+          },
+          {
+            "textFr": "Le médecin écrit une ordonnance.",
+            "textLsf": "MÉDECIN ORDONNANCE ÉCRIRE",
+            "difficulty": 2,
+            "tags": ["santé", "médecin"],
+            "signWords": ["médecin", "ordonnance", "écrire"]
+          },
+          {
+            "textFr": "Je prends mes médicaments.",
+            "textLsf": "MOI MÉDICAMENT PRENDRE",
+            "difficulty": 2,
+            "tags": ["santé"],
+            "signWords": ["moi", "médicament", "prendre"]
+          },
+          {
+            "textFr": "Je dois aller à la pharmacie.",
+            "textLsf": "MOI PHARMACIE ALLER",
+            "difficulty": 2,
+            "tags": ["santé"],
+            "signWords": ["moi", "pharmacie", "aller"]
+          }
+        ]
+      },
+      {
+        "title": "Situations d'urgence",
+        "description": "Réagir rapidement en cas d'urgence.",
+        "sortOrder": 2,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "C'est une urgence, venez vite !",
+            "textLsf": "URGENCE VENIR VITE",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["urgence", "venir", "vite"]
+          },
+          {
+            "textFr": "Il y a un accident, j'ai besoin d'aide.",
+            "textLsf": "ACCIDENT MOI AIDE",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["accident", "moi", "aide"]
+          },
+          {
+            "textFr": "J'ai besoin d'une ambulance maintenant.",
+            "textLsf": "MOI AMBULANCE MAINTENANT",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["moi", "ambulance", "maintenant"]
+          },
+          {
+            "textFr": "Je suis blessé, j'ai besoin d'aide.",
+            "textLsf": "MOI BLESSÉ AIDE",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["moi", "blessé", "aide"]
+          },
+          {
+            "textFr": "Il y a un incendie, appelez les pompiers !",
+            "textLsf": "INCENDIE POMPIER VENIR",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["incendie", "pompier", "venir"]
+          },
+          {
+            "textFr": "Je dois aller aux urgences.",
+            "textLsf": "MOI URGENCES ALLER",
+            "difficulty": 2,
+            "tags": ["urgence", "santé"],
+            "signWords": ["moi", "urgences", "aller"]
+          },
+          {
+            "textFr": "Il y a quelqu'un de blessé ici.",
+            "textLsf": "BLESSÉ ICI AIDE VENIR",
+            "difficulty": 2,
+            "tags": ["urgence"],
+            "signWords": ["blessé", "ici", "aide", "venir"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "À l'école et au travail",
+      "description": "Phrases pour la vie scolaire et professionnelle en LSF.",
+      "level": 2,
+      "sortOrder": 112
+    },
+    "lessons": [
+      {
+        "title": "En classe",
+        "description": "Communiquer avec son professeur et ses camarades.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je comprends bien.",
+            "textLsf": "MOI COMPRENDRE BIEN",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["moi", "comprendre", "bien"]
+          },
+          {
+            "textFr": "Je ne comprends pas.",
+            "textLsf": "MOI COMPRENDRE NON",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["moi", "comprendre", "non"]
+          },
+          {
+            "textFr": "Tu peux répéter, s'il te plaît ?",
+            "textLsf": "TOI RÉPÉTER S'IL VOUS PLAÎT",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["toi", "répéter", "s'il vous plaît"]
+          },
+          {
+            "textFr": "J'apprends la LSF.",
+            "textLsf": "MOI LSF APPRENDRE",
+            "difficulty": 1,
+            "tags": ["école", "langue"],
+            "signWords": ["moi", "LSF", "apprendre"]
+          },
+          {
+            "textFr": "Le professeur parle, j'écoute.",
+            "textLsf": "PROFESSEUR PARLER MOI ÉCOUTER",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["professeur", "parler", "moi", "écouter"]
+          },
+          {
+            "textFr": "J'ai un examen demain.",
+            "textLsf": "DEMAIN EXAMEN MOI",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["demain", "examen", "moi"]
+          },
+          {
+            "textFr": "Je suis élève, j'apprends.",
+            "textLsf": "MOI ÉLÈVE APPRENDRE",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["moi", "élève", "apprendre"]
+          },
+          {
+            "textFr": "J'écris dans mon livre.",
+            "textLsf": "MOI LIVRE ÉCRIRE",
+            "difficulty": 1,
+            "tags": ["école"],
+            "signWords": ["moi", "livre", "écrire"]
+          }
+        ]
+      },
+      {
+        "title": "Au travail",
+        "description": "Communiquer dans un contexte professionnel.",
+        "sortOrder": 2,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "Je travaille ici.",
+            "textLsf": "MOI ICI TRAVAILLER",
+            "difficulty": 1,
+            "tags": ["travail"],
+            "signWords": ["moi", "ici", "travailler"]
+          },
+          {
+            "textFr": "Je suis ingénieur, je travaille beaucoup.",
+            "textLsf": "MOI INGÉNIEUR TRAVAILLER BEAUCOUP",
+            "difficulty": 2,
+            "tags": ["travail", "métier"],
+            "signWords": ["moi", "ingénieur", "travailler", "beaucoup"]
+          },
+          {
+            "textFr": "Mon travail est difficile.",
+            "textLsf": "TRAVAIL MOI DIFFICILE",
+            "difficulty": 1,
+            "tags": ["travail"],
+            "signWords": ["travail", "moi", "difficile"]
+          },
+          {
+            "textFr": "J'ai une réunion maintenant.",
+            "textLsf": "MAINTENANT MOI RÉUNION",
+            "difficulty": 2,
+            "tags": ["travail"],
+            "signWords": ["maintenant", "moi", "réunion"]
+          },
+          {
+            "textFr": "Je cherche du travail.",
+            "textLsf": "MOI TRAVAIL CHERCHER",
+            "difficulty": 1,
+            "tags": ["travail"],
+            "signWords": ["moi", "travail", "chercher"]
+          },
+          {
+            "textFr": "Mon salaire est bon.",
+            "textLsf": "SALAIRE MOI BON",
+            "difficulty": 2,
+            "tags": ["travail", "argent"],
+            "signWords": ["salaire", "moi", "bon"]
+          },
+          {
+            "textFr": "Je veux finir le travail.",
+            "textLsf": "TRAVAIL MOI FINIR VOULOIR",
+            "difficulty": 1,
+            "tags": ["travail"],
+            "signWords": ["travail", "moi", "finir", "vouloir"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "La météo et les saisons",
+      "description": "Parler du temps qu'il fait et des saisons en LSF.",
+      "level": 1,
+      "sortOrder": 114
+    },
+    "lessons": [
+      {
+        "title": "Le temps qu'il fait",
+        "description": "Décrire la météo au quotidien.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Aujourd'hui il fait très froid.",
+            "textLsf": "AUJOURD'HUI FROID BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["aujourd'hui", "froid", "beaucoup"]
+          },
+          {
+            "textFr": "Aujourd'hui il fait très chaud.",
+            "textLsf": "AUJOURD'HUI CHAUD BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["aujourd'hui", "chaud", "beaucoup"]
+          },
+          {
+            "textFr": "Aujourd'hui il pleut beaucoup.",
+            "textLsf": "AUJOURD'HUI PLUIE BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["aujourd'hui", "pluie", "beaucoup"]
+          },
+          {
+            "textFr": "Il neige, il fait froid.",
+            "textLsf": "NEIGE FROID AUJOURD'HUI",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["neige", "froid", "aujourd'hui"]
+          },
+          {
+            "textFr": "Il y a du soleil, c'est beau.",
+            "textLsf": "SOLEIL AUJOURD'HUI BEAU",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["soleil", "aujourd'hui", "beau"]
+          },
+          {
+            "textFr": "Aujourd'hui l'orage est fort.",
+            "textLsf": "AUJOURD'HUI ORAGE FORT",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["aujourd'hui", "orage", "fort"]
+          },
+          {
+            "textFr": "Ce matin il y a beaucoup de brouillard.",
+            "textLsf": "MATIN BROUILLARD BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["matin", "brouillard", "beaucoup"]
+          },
+          {
+            "textFr": "Aujourd'hui le vent est fort.",
+            "textLsf": "AUJOURD'HUI VENT FORT",
+            "difficulty": 1,
+            "tags": ["météo"],
+            "signWords": ["aujourd'hui", "vent", "fort"]
+          }
+        ]
+      },
+      {
+        "title": "Les quatre saisons",
+        "description": "Parler des saisons et de leurs caractéristiques.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "J'aime l'hiver, il neige.",
+            "textLsf": "MOI HIVER AIMER NEIGE",
+            "difficulty": 1,
+            "tags": ["saisons", "météo"],
+            "signWords": ["moi", "hiver", "aimer", "neige"]
+          },
+          {
+            "textFr": "J'aime l'été, il fait chaud.",
+            "textLsf": "MOI ÉTÉ AIMER CHAUD",
+            "difficulty": 1,
+            "tags": ["saisons", "météo"],
+            "signWords": ["moi", "été", "aimer", "chaud"]
+          },
+          {
+            "textFr": "Au printemps les fleurs sont belles.",
+            "textLsf": "PRINTEMPS FLEUR BEAU",
+            "difficulty": 1,
+            "tags": ["saisons"],
+            "signWords": ["printemps", "fleur", "beau"]
+          },
+          {
+            "textFr": "En automne les feuilles tombent.",
+            "textLsf": "AUTOMNE FEUILLES MORTES TOMBER",
+            "difficulty": 1,
+            "tags": ["saisons"],
+            "signWords": ["automne", "feuilles mortes", "tomber"]
+          },
+          {
+            "textFr": "J'aime beaucoup le printemps.",
+            "textLsf": "MOI PRINTEMPS AIMER BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["saisons"],
+            "signWords": ["moi", "printemps", "aimer", "beaucoup"]
+          },
+          {
+            "textFr": "En été je pars en vacances.",
+            "textLsf": "ÉTÉ MOI VACANCES ALLER",
+            "difficulty": 1,
+            "tags": ["saisons", "voyage"],
+            "signWords": ["été", "moi", "vacances", "aller"]
+          },
+          {
+            "textFr": "Au printemps il y a du soleil.",
+            "textLsf": "PRINTEMPS BEAU SOLEIL",
+            "difficulty": 1,
+            "tags": ["saisons", "météo"],
+            "signWords": ["printemps", "beau", "soleil"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Sports et loisirs",
+      "description": "Phrases pour parler de sport, de culture et de loisirs en LSF.",
+      "level": 2,
+      "sortOrder": 116
+    },
+    "lessons": [
+      {
+        "title": "Les sports",
+        "description": "Parler de ses sports et activités physiques.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je joue au football.",
+            "textLsf": "MOI FOOTBALL JOUER",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["moi", "football", "jouer"]
+          },
+          {
+            "textFr": "Tu aimes le sport ?",
+            "textLsf": "TOI SPORT AIMER",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["toi", "sport", "aimer"]
+          },
+          {
+            "textFr": "J'aime la natation.",
+            "textLsf": "MOI NATATION AIMER",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["moi", "natation", "aimer"]
+          },
+          {
+            "textFr": "Je cours chaque matin.",
+            "textLsf": "MATIN MOI COURIR",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["matin", "moi", "courir"]
+          },
+          {
+            "textFr": "J'aime jouer au basketball.",
+            "textLsf": "MOI BASKETBALL JOUER AIMER",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["moi", "basketball", "jouer", "aimer"]
+          },
+          {
+            "textFr": "Le match est long et bon.",
+            "textLsf": "MATCH LONG BON",
+            "difficulty": 1,
+            "tags": ["sport"],
+            "signWords": ["match", "long", "bon"]
+          },
+          {
+            "textFr": "Je regarde le match à la télévision.",
+            "textLsf": "MOI MATCH TÉLÉVISION REGARDER",
+            "difficulty": 1,
+            "tags": ["sport", "loisirs"],
+            "signWords": ["moi", "match", "télévision", "regarder"]
+          }
+        ]
+      },
+      {
+        "title": "Loisirs et culture",
+        "description": "Parler de ses activités culturelles et créatives.",
+        "sortOrder": 2,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Je lis des livres.",
+            "textLsf": "MOI LIVRE LIRE",
+            "difficulty": 1,
+            "tags": ["loisirs"],
+            "signWords": ["moi", "livre", "lire"]
+          },
+          {
+            "textFr": "J'aime la musique.",
+            "textLsf": "MOI MUSIQUE AIMER",
+            "difficulty": 1,
+            "tags": ["loisirs", "musique"],
+            "signWords": ["moi", "musique", "aimer"]
+          },
+          {
+            "textFr": "Je vais au cinéma.",
+            "textLsf": "MOI CINÉMA ALLER",
+            "difficulty": 1,
+            "tags": ["loisirs"],
+            "signWords": ["moi", "cinéma", "aller"]
+          },
+          {
+            "textFr": "Je joue de la guitare.",
+            "textLsf": "MOI GUITARE JOUER",
+            "difficulty": 1,
+            "tags": ["loisirs", "musique"],
+            "signWords": ["moi", "guitare", "jouer"]
+          },
+          {
+            "textFr": "Je vais au concert.",
+            "textLsf": "MOI CONCERT ALLER",
+            "difficulty": 1,
+            "tags": ["loisirs", "musique"],
+            "signWords": ["moi", "concert", "aller"]
+          },
+          {
+            "textFr": "Le film est beau et bon.",
+            "textLsf": "FILM BEAU BON",
+            "difficulty": 1,
+            "tags": ["loisirs"],
+            "signWords": ["film", "beau", "bon"]
+          },
+          {
+            "textFr": "Je dessine et je peins.",
+            "textLsf": "MOI DESSINER PEINDRE",
+            "difficulty": 1,
+            "tags": ["loisirs", "art"],
+            "signWords": ["moi", "dessiner", "peindre"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Voyages et tourisme",
+      "description": "Phrases pour voyager, se repérer et découvrir de nouveaux endroits.",
+      "level": 2,
+      "sortOrder": 118
+    },
+    "lessons": [
+      {
+        "title": "À l'hôtel et en voyage",
+        "description": "Réserver, s'orienter et communiquer en voyage.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "Je veux réserver une chambre.",
+            "textLsf": "MOI CHAMBRE RÉSERVER VOULOIR",
+            "difficulty": 2,
+            "tags": ["voyage", "hôtel"],
+            "signWords": ["moi", "chambre", "réserver", "vouloir"]
+          },
+          {
+            "textFr": "Où est l'hôtel, s'il vous plaît ?",
+            "textLsf": "HÔTEL OÙ S'IL VOUS PLAÎT",
+            "difficulty": 1,
+            "tags": ["voyage", "hôtel"],
+            "signWords": ["hôtel", "où", "s'il vous plaît"]
+          },
+          {
+            "textFr": "Je cherche un taxi.",
+            "textLsf": "MOI TAXI CHERCHER",
+            "difficulty": 1,
+            "tags": ["voyage", "transport"],
+            "signWords": ["moi", "taxi", "chercher"]
+          },
+          {
+            "textFr": "Où est la sortie ?",
+            "textLsf": "SORTIE OÙ",
+            "difficulty": 1,
+            "tags": ["voyage"],
+            "signWords": ["sortie", "où"]
+          },
+          {
+            "textFr": "Je suis perdu, je cherche la gare.",
+            "textLsf": "MOI PERDU GARE CHERCHER",
+            "difficulty": 2,
+            "tags": ["voyage", "transport"],
+            "signWords": ["moi", "perdu", "gare", "chercher"]
+          },
+          {
+            "textFr": "Le voyage en avion est long.",
+            "textLsf": "AVION VOYAGE LONG",
+            "difficulty": 1,
+            "tags": ["voyage", "transport"],
+            "signWords": ["avion", "voyage", "long"]
+          },
+          {
+            "textFr": "Je visite un musée.",
+            "textLsf": "MOI MUSÉE VISITER",
+            "difficulty": 1,
+            "tags": ["voyage", "culture"],
+            "signWords": ["moi", "musée", "visiter"]
+          },
+          {
+            "textFr": "Ce pays est magnifique.",
+            "textLsf": "PAYS MAGNIFIQUE",
+            "difficulty": 1,
+            "tags": ["voyage"],
+            "signWords": ["pays", "magnifique"]
+          }
+        ]
+      },
+      {
+        "title": "Découvrir une ville",
+        "description": "Explorer une ville et demander des informations touristiques.",
+        "sortOrder": 2,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "Où est le centre-ville ?",
+            "textLsf": "CENTRE-VILLE OÙ",
+            "difficulty": 1,
+            "tags": ["voyage", "ville"],
+            "signWords": ["centre-ville", "où"]
+          },
+          {
+            "textFr": "Je veux visiter la tour Eiffel.",
+            "textLsf": "MOI TOUR EIFFEL VISITER VOULOIR",
+            "difficulty": 2,
+            "tags": ["voyage", "tourisme"],
+            "signWords": ["moi", "tour Eiffel", "visiter", "vouloir"]
+          },
+          {
+            "textFr": "J'adore cette ville, elle est belle.",
+            "textLsf": "VILLE BELLE MOI AIMER BEAUCOUP",
+            "difficulty": 1,
+            "tags": ["voyage", "ville"],
+            "signWords": ["ville", "belle", "moi", "aimer", "beaucoup"]
+          },
+          {
+            "textFr": "Je prends des photos.",
+            "textLsf": "MOI PHOTO PRENDRE",
+            "difficulty": 1,
+            "tags": ["voyage", "tourisme"],
+            "signWords": ["moi", "photo", "prendre"]
+          },
+          {
+            "textFr": "Le musée est ouvert aujourd'hui ?",
+            "textLsf": "AUJOURD'HUI MUSÉE OUVERT",
+            "difficulty": 1,
+            "tags": ["voyage", "culture"],
+            "signWords": ["aujourd'hui", "musée", "ouvert"]
+          },
+          {
+            "textFr": "Je veux acheter un souvenir.",
+            "textLsf": "MOI SOUVENIR ACHETER VOULOIR",
+            "difficulty": 1,
+            "tags": ["voyage", "courses"],
+            "signWords": ["moi", "souvenir", "acheter", "vouloir"]
+          },
+          {
+            "textFr": "On va à la plage demain.",
+            "textLsf": "DEMAIN PLAGE ALLER",
+            "difficulty": 1,
+            "tags": ["voyage", "vacances"],
+            "signWords": ["demain", "plage", "aller"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Les achats et l'argent",
+      "description": "Faire des achats, gérer son argent et négocier en LSF.",
+      "level": 1,
+      "sortOrder": 120
+    },
+    "lessons": [
+      {
+        "title": "En magasin",
+        "description": "Acheter des vêtements, des objets et négocier les prix.",
+        "sortOrder": 1,
+        "xpReward": 25,
+        "phrases": [
+          {
+            "textFr": "Combien ça coûte ?",
+            "textLsf": "PRIX COMBIEN",
+            "difficulty": 1,
+            "tags": ["achats", "argent"],
+            "signWords": ["prix", "combien"]
+          },
+          {
+            "textFr": "C'est trop cher pour moi.",
+            "textLsf": "TROP CHER MOI",
+            "difficulty": 1,
+            "tags": ["achats", "argent"],
+            "signWords": ["trop", "cher", "moi"]
+          },
+          {
+            "textFr": "Je veux essayer ce vêtement.",
+            "textLsf": "MOI VÊTEMENT ESSAYER VOULOIR",
+            "difficulty": 1,
+            "tags": ["achats", "vêtements"],
+            "signWords": ["moi", "vêtement", "essayer", "vouloir"]
+          },
+          {
+            "textFr": "Est-ce que vous avez une réduction ?",
+            "textLsf": "RÉDUCTION VOUS",
+            "difficulty": 2,
+            "tags": ["achats", "argent"],
+            "signWords": ["réduction", "vous"]
+          },
+          {
+            "textFr": "Je paye par carte.",
+            "textLsf": "MOI CARTE PAYER",
+            "difficulty": 1,
+            "tags": ["achats", "argent"],
+            "signWords": ["moi", "carte", "payer"]
+          },
+          {
+            "textFr": "Je veux un reçu, s'il vous plaît.",
+            "textLsf": "MOI REÇU VOULOIR S'IL VOUS PLAÎT",
+            "difficulty": 2,
+            "tags": ["achats"],
+            "signWords": ["moi", "reçu", "vouloir", "s'il vous plaît"]
+          },
+          {
+            "textFr": "Ce vêtement est trop grand.",
+            "textLsf": "VÊTEMENT TROP GRAND",
+            "difficulty": 1,
+            "tags": ["achats", "vêtements"],
+            "signWords": ["vêtement", "trop", "grand"]
+          },
+          {
+            "textFr": "J'aime ce magasin.",
+            "textLsf": "MOI MAGASIN AIMER",
+            "difficulty": 1,
+            "tags": ["achats"],
+            "signWords": ["moi", "magasin", "aimer"]
+          }
+        ]
+      },
+      {
+        "title": "La banque et l'argent",
+        "description": "Gérer son argent, retirer de l'argent et faire des paiements.",
+        "sortOrder": 2,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "Je veux retirer de l'argent.",
+            "textLsf": "MOI ARGENT RETIRER VOULOIR",
+            "difficulty": 2,
+            "tags": ["argent", "banque"],
+            "signWords": ["moi", "argent", "retirer", "vouloir"]
+          },
+          {
+            "textFr": "Je n'ai plus d'argent.",
+            "textLsf": "MOI ARGENT NON",
+            "difficulty": 1,
+            "tags": ["argent"],
+            "signWords": ["moi", "argent", "non"]
+          },
+          {
+            "textFr": "La banque est fermée aujourd'hui.",
+            "textLsf": "AUJOURD'HUI BANQUE FERMÉE",
+            "difficulty": 1,
+            "tags": ["argent", "banque"],
+            "signWords": ["aujourd'hui", "banque", "fermée"]
+          },
+          {
+            "textFr": "Je veux ouvrir un compte.",
+            "textLsf": "MOI COMPTE OUVRIR VOULOIR",
+            "difficulty": 2,
+            "tags": ["argent", "banque"],
+            "signWords": ["moi", "compte", "ouvrir", "vouloir"]
+          },
+          {
+            "textFr": "Je veux envoyer de l'argent.",
+            "textLsf": "MOI ARGENT ENVOYER VOULOIR",
+            "difficulty": 2,
+            "tags": ["argent"],
+            "signWords": ["moi", "argent", "envoyer", "vouloir"]
+          },
+          {
+            "textFr": "Mon solde est faible.",
+            "textLsf": "MOI SOLDE PEU",
+            "difficulty": 2,
+            "tags": ["argent", "banque"],
+            "signWords": ["moi", "solde", "peu"]
+          },
+          {
+            "textFr": "Je veux économiser.",
+            "textLsf": "MOI ÉCONOMISER VOULOIR",
+            "difficulty": 1,
+            "tags": ["argent"],
+            "signWords": ["moi", "économiser", "vouloir"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": {
+      "title": "Technologies et communication",
+      "description": "Parler des technologies, d'internet et des moyens de communication en LSF.",
+      "level": 2,
+      "sortOrder": 122
+    },
+    "lessons": [
+      {
+        "title": "Le téléphone et internet",
+        "description": "Communiquer par téléphone, internet et réseaux sociaux.",
+        "sortOrder": 1,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "Tu as un téléphone portable ?",
+            "textLsf": "TOI TÉLÉPHONE PORTABLE",
+            "difficulty": 1,
+            "tags": ["technologie", "téléphone"],
+            "signWords": ["toi", "téléphone", "portable"]
+          },
+          {
+            "textFr": "Je veux envoyer un message.",
+            "textLsf": "MOI MESSAGE ENVOYER VOULOIR",
+            "difficulty": 1,
+            "tags": ["technologie", "communication"],
+            "signWords": ["moi", "message", "envoyer", "vouloir"]
+          },
+          {
+            "textFr": "La connexion internet est lente.",
+            "textLsf": "INTERNET CONNEXION LENTE",
+            "difficulty": 2,
+            "tags": ["technologie", "internet"],
+            "signWords": ["internet", "connexion", "lente"]
+          },
+          {
+            "textFr": "Je regarde des vidéos sur internet.",
+            "textLsf": "MOI INTERNET VIDÉO REGARDER",
+            "difficulty": 1,
+            "tags": ["technologie", "internet"],
+            "signWords": ["moi", "internet", "vidéo", "regarder"]
+          },
+          {
+            "textFr": "Mon téléphone est cassé.",
+            "textLsf": "TÉLÉPHONE MOI CASSÉ",
+            "difficulty": 1,
+            "tags": ["technologie", "téléphone"],
+            "signWords": ["téléphone", "moi", "cassé"]
+          },
+          {
+            "textFr": "Je veux appeler ma famille.",
+            "textLsf": "MOI FAMILLE APPELER VOULOIR",
+            "difficulty": 1,
+            "tags": ["technologie", "famille"],
+            "signWords": ["moi", "famille", "appeler", "vouloir"]
+          },
+          {
+            "textFr": "Tu utilises les réseaux sociaux ?",
+            "textLsf": "TOI RÉSEAUX SOCIAUX UTILISER",
+            "difficulty": 2,
+            "tags": ["technologie", "internet"],
+            "signWords": ["toi", "réseaux sociaux", "utiliser"]
+          },
+          {
+            "textFr": "Je cherche sur internet.",
+            "textLsf": "MOI INTERNET CHERCHER",
+            "difficulty": 1,
+            "tags": ["technologie", "internet"],
+            "signWords": ["moi", "internet", "chercher"]
+          }
+        ]
+      },
+      {
+        "title": "L'ordinateur et le numérique",
+        "description": "Travailler sur ordinateur et utiliser les outils numériques.",
+        "sortOrder": 2,
+        "xpReward": 30,
+        "phrases": [
+          {
+            "textFr": "J'utilise un ordinateur au travail.",
+            "textLsf": "MOI TRAVAIL ORDINATEUR UTILISER",
+            "difficulty": 1,
+            "tags": ["technologie", "travail"],
+            "signWords": ["moi", "travail", "ordinateur", "utiliser"]
+          },
+          {
+            "textFr": "Je veux imprimer ce document.",
+            "textLsf": "MOI DOCUMENT IMPRIMER VOULOIR",
+            "difficulty": 2,
+            "tags": ["technologie", "travail"],
+            "signWords": ["moi", "document", "imprimer", "vouloir"]
+          },
+          {
+            "textFr": "L'écran est trop petit.",
+            "textLsf": "ÉCRAN TROP PETIT",
+            "difficulty": 1,
+            "tags": ["technologie"],
+            "signWords": ["écran", "trop", "petit"]
+          },
+          {
+            "textFr": "Je dois recharger mon téléphone.",
+            "textLsf": "MOI TÉLÉPHONE RECHARGER",
+            "difficulty": 1,
+            "tags": ["technologie", "téléphone"],
+            "signWords": ["moi", "téléphone", "recharger"]
+          },
+          {
+            "textFr": "Tu peux m'envoyer l'email ?",
+            "textLsf": "TOI EMAIL MOI ENVOYER",
+            "difficulty": 2,
+            "tags": ["technologie", "communication"],
+            "signWords": ["toi", "email", "moi", "envoyer"]
+          },
+          {
+            "textFr": "Ce logiciel est difficile à utiliser.",
+            "textLsf": "LOGICIEL DIFFICILE UTILISER",
+            "difficulty": 2,
+            "tags": ["technologie"],
+            "signWords": ["logiciel", "difficile", "utiliser"]
+          },
+          {
+            "textFr": "Mon ordinateur est lent aujourd'hui.",
+            "textLsf": "AUJOURD'HUI ORDINATEUR MOI LENT",
+            "difficulty": 1,
+            "tags": ["technologie"],
+            "signWords": ["aujourd'hui", "ordinateur", "moi", "lent"]
+          }
+        ]
+      }
+    ]
+  }
+]

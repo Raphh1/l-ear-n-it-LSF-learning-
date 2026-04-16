@@ -1,0 +1,1360 @@
+# ============================================================
+# words.txt — Mots à importer depuis l'API Elix LSF
+# Format : [Catégorie] puis un mot par ligne
+# Lancer : python scripts/import_words.py scripts/words.txt
+# ============================================================
+
+# ── Mots de base / pronoms / questions ──────────────────────
+[Pronoms & Mots de base]
+moi
+toi
+lui
+elle
+nous
+vous
+eux
+ici
+là
+quoi
+où
+comment
+pourquoi
+combien
+quand
+qui
+oui
+non
+peut-être
+
+# ── Salutations ─────────────────────────────────────────────
+[Salutations]
+bonjour
+bonsoir
+bonne nuit
+au revoir
+bientôt
+merci
+s'il vous plaît
+enchanté
+pardon
+excusez-moi
+de rien
+
+# ── Famille ─────────────────────────────────────────────────
+[Famille]
+père
+mère
+frère
+sœur
+fils
+fille
+bébé
+mari
+femme
+famille
+grand-père
+grand-mère
+oncle
+tante
+cousin
+neveu
+nièce
+ensemble
+jeune
+vieux
+
+# ── Émotions & états ────────────────────────────────────────
+[Émotions]
+heureux
+triste
+content
+colère
+peur
+surpris
+fatigué
+inquiet
+jaloux
+honte
+seul
+calme
+fier
+bien
+mal
+stressé
+
+# ── Nourriture & boissons ───────────────────────────────────
+[Nourriture]
+manger
+boire
+faim
+soif
+café
+eau
+lait
+pain
+fromage
+vin
+chocolat
+légume
+pomme
+banane
+carotte
+beurre
+prendre
+bon
+mauvais
+
+# ── Restaurant & courses ────────────────────────────────────
+[Restaurant & Courses]
+restaurant
+magasin
+addition
+payer
+cher
+acheter
+pas cher
+vouloir
+
+# ── Vie quotidienne ─────────────────────────────────────────
+[Vie Quotidienne]
+aujourd'hui
+matin
+soir
+nuit
+lever
+dormir
+travailler
+école
+travail
+livre
+lire
+musique
+écouter
+film
+regarder
+jouer
+
+# ── Transport ───────────────────────────────────────────────
+[Transport]
+bus
+train
+voiture
+vélo
+avion
+taxi
+gare
+aller
+prendre
+vite
+rapide
+voyage
+
+# ── Santé ───────────────────────────────────────────────────
+[Santé]
+médecin
+malade
+fièvre
+toux
+médicament
+pharmacie
+ordonnance
+allergie
+urgence
+ambulance
+blessé
+accident
+aide
+venir
+mal de tête
+
+# ── École & Travail ─────────────────────────────────────────
+[École & Travail]
+professeur
+élève
+apprendre
+comprendre
+répéter
+examen
+demain
+ingénieur
+réunion
+salaire
+finir
+difficile
+LSF
+
+# ── Météo & Saisons ─────────────────────────────────────────
+[Météo & Saisons]
+froid
+chaud
+pluie
+neige
+soleil
+vent
+orage
+brouillard
+fort
+hiver
+été
+printemps
+automne
+fleur
+vacances
+
+# ── Sports ──────────────────────────────────────────────────
+[Sports]
+football
+natation
+basketball
+courir
+match
+guitare
+concert
+dessiner
+peindre
+télévision
+
+# ── Voyages ─────────────────────────────────────────────────
+[Voyages & Tourisme]
+hôtel
+chambre
+réserver
+perdu
+musée
+visiter
+ville
+plage
+photo
+souvenir
+ouvert
+magnifique
+pays
+centre-ville
+
+# ── Achats & Argent ─────────────────────────────────────────
+[Achats & Argent]
+prix
+réduction
+carte
+vêtement
+essayer
+grand
+petit
+argent
+banque
+économiser
+solde
+compte
+
+# ── Technologies ────────────────────────────────────────────
+[Technologies]
+téléphone
+portable
+internet
+message
+envoyer
+vidéo
+cassé
+appeler
+ordinateur
+email
+écran
+lent
+recharger
+
+# ── Animaux de compagnie ────────────────────────────────────
+[Animaux de Compagnie]
+chien
+chat
+lapin
+hamster
+perroquet
+tortue
+poisson rouge
+perruche
+furet
+canari
+cochon d'Inde
+rat
+cheval
+vétérinaire
+
+# ── Architecture ────────────────────────────────────────────
+[Architecture & Bâtiments]
+pont
+tour
+cathédrale
+château
+palais
+stade
+mairie
+tribunal
+prison
+usine
+phare
+mosquée
+synagogue
+temple
+fontaine
+immeuble
+
+# ── Sciences ────────────────────────────────────────────────
+[Sciences & Biologie]
+expérience
+laboratoire
+microscope
+atome
+cellule
+ADN
+évolution
+gravité
+énergie
+lumière
+chimie
+oxygène
+virus
+bactérie
+planète
+température
+
+# ── Médias ──────────────────────────────────────────────────
+[Médias & Presse]
+journal
+magazine
+radio
+journaliste
+reportage
+actualité
+interview
+publicité
+émission
+débat
+élection
+liberté
+information
+opinion
+vérité
+mensonge
+
+# ── Verbes de mouvement ─────────────────────────────────────
+[Verbes de Mouvement]
+marcher
+sauter
+nager
+grimper
+tomber
+pousser
+tirer
+tourner
+entrer
+sortir
+monter
+descendre
+traverser
+reculer
+s'asseoir
+s'arrêter
+
+# ── Bijoux & Accessoires ────────────────────────────────────
+[Bijoux & Accessoires]
+bague
+bracelet
+collier
+montre
+sac à main
+ceinture
+chapeau
+casquette
+lunettes
+écharpe
+gants
+parapluie
+sac à dos
+portefeuille
+pendentif
+alliance
+
+# ── Électroménager ──────────────────────────────────────────
+[Électroménager]
+aspirateur
+lave-linge
+micro-ondes
+grille-pain
+bouilloire
+cafetière
+congélateur
+sèche-linge
+fer à repasser
+ventilateur
+climatiseur
+radiateur
+mixeur
+alarme
+
+# ── Relations sociales ──────────────────────────────────────
+[Relations Sociales]
+ami
+voisin
+collègue
+inconnu
+rencontrer
+dispute
+confiance
+trahison
+soutien
+solitude
+communauté
+respect
+politesse
+invitation
+rendez-vous
+cadeau
+félicitations
+
+# ── Histoire ────────────────────────────────────────────────
+[Histoire & Civilisations]
+roi
+reine
+empire
+révolution
+esclavage
+colonisation
+indépendance
+siècle
+résistance
+monument
+archéologie
+civilisation
+tradition
+patrimoine
+guerre
+paix
+soldat
+armée
+victoire
+défaite
+président
+gouvernement
+loi
+démocratie
+vote
+citoyen
+liberté
+égalité
+justice
+constitution
+
+# ── Corps humain ─────────────────────────────────────────────
+[Corps Humain]
+tête
+visage
+œil
+nez
+bouche
+oreille
+cheveux
+dent
+langue
+main
+bras
+jambe
+pied
+dos
+ventre
+épaule
+genou
+doigt
+pouce
+cœur
+poumon
+estomac
+foie
+cerveau
+peau
+os
+muscle
+sang
+gorge
+front
+joue
+lèvre
+menton
+cou
+poignet
+cheville
+talon
+orteil
+hanche
+poitrine
+
+# ── Adjectifs descriptifs ────────────────────────────────────
+[Adjectifs]
+grand
+petit
+gros
+mince
+long
+court
+large
+étroit
+rond
+carré
+beau
+laid
+propre
+sale
+neuf
+cassé
+ouvert
+fermé
+lourd
+léger
+dur
+mou
+lisse
+rugueux
+chaud
+froid
+rapide
+lent
+facile
+difficile
+possible
+impossible
+vrai
+faux
+important
+urgent
+dangereux
+sûr
+libre
+occupé
+disponible
+absent
+présent
+
+# ── Verbes courants ──────────────────────────────────────────
+[Verbes Courants]
+aimer
+détester
+vouloir
+pouvoir
+devoir
+savoir
+croire
+penser
+sentir
+voir
+entendre
+parler
+dire
+répondre
+demander
+chercher
+trouver
+perdre
+gagner
+commencer
+finir
+continuer
+arrêter
+changer
+rester
+partir
+revenir
+attendre
+aider
+donner
+recevoir
+envoyer
+apporter
+montrer
+expliquer
+oublier
+se souvenir
+comprendre
+apprendre
+enseigner
+travailler
+cuisiner
+nettoyer
+ranger
+construire
+réparer
+ouvrir
+fermer
+acheter
+vendre
+
+# ── Nombres & quantités ──────────────────────────────────────
+[Nombres & Quantités]
+zéro
+un
+deux
+trois
+quatre
+cinq
+six
+sept
+huit
+neuf
+dix
+onze
+douze
+treize
+quatorze
+quinze
+seize
+dix-sept
+dix-huit
+dix-neuf
+vingt
+trente
+quarante
+cinquante
+soixante
+cent
+mille
+premier
+deuxième
+dernier
+beaucoup
+peu
+assez
+trop
+très
+plus
+moins
+tout
+rien
+quelque chose
+quelqu'un
+personne
+
+# ── Temps & calendrier ───────────────────────────────────────
+[Temps & Calendrier]
+lundi
+mardi
+mercredi
+jeudi
+vendredi
+samedi
+dimanche
+janvier
+février
+mars
+avril
+mai
+juin
+juillet
+août
+septembre
+octobre
+novembre
+décembre
+heure
+minute
+seconde
+hier
+après-demain
+semaine
+mois
+année
+maintenant
+bientôt
+tard
+tôt
+toujours
+jamais
+souvent
+parfois
+longtemps
+vite
+midi
+minuit
+après-midi
+
+# ── Lieux & orientation ──────────────────────────────────────
+[Lieux & Orientation]
+maison
+appartement
+rue
+avenue
+quartier
+centre
+droite
+gauche
+tout droit
+loin
+proche
+devant
+derrière
+à côté
+entre
+supermarché
+boulangerie
+boucherie
+poste
+poste de police
+pompiers
+hôpital
+clinique
+dentiste
+église
+cimetière
+parc
+jardin public
+piscine
+salle de sport
+théâtre
+opéra
+zoo
+aéroport
+port
+autoroute
+carrefour
+
+# ── Météo avancée ────────────────────────────────────────────
+[Météo Avancée]
+nuage
+pluie fine
+grêle
+tempête
+arc-en-ciel
+gel
+verglas
+humide
+sec
+doux
+frais
+ensoleillé
+couvert
+brumeux
+orageux
+saison
+chaleur
+fraîcheur
+
+# ── Vêtements ────────────────────────────────────────────────
+[Vêtements]
+chemise
+t-shirt
+pull
+veste
+manteau
+robe
+jupe
+costume
+pyjama
+imperméable
+pantalon
+jean
+short
+chaussure
+botte
+chaussette
+sous-vêtement
+maillot de bain
+bonnet
+cravate
+tablier
+uniforme
+taille
+couleur
+rouge
+bleu
+vert
+jaune
+blanc
+noir
+orange
+rose
+violet
+marron
+gris
+
+# ── Nourriture avancée ───────────────────────────────────────
+[Nourriture Avancée]
+viande
+poulet
+poisson
+œuf
+riz
+pâtes
+soupe
+pizza
+sandwich
+salade
+dessert
+gâteau
+glace
+confiture
+miel
+sel
+sucre
+poivre
+huile
+sauce
+farine
+biscuit
+chips
+bonbon
+noix
+champignon
+ail
+oignon
+tomate
+courgette
+haricot
+concombre
+laitue
+épinard
+pomme de terre
+maïs
+petit pois
+fraise
+raisin
+citron
+kiwi
+pêche
+poire
+abricot
+cerise
+melon
+pastèque
+ananas
+mangue
+
+# ── Boissons ─────────────────────────────────────────────────
+[Boissons]
+eau minérale
+jus d'orange
+jus de pomme
+thé
+tisane
+chocolat chaud
+bière
+vin blanc
+vin rouge
+champagne
+soda
+limonade
+sirop
+smoothie
+cocktail
+
+# ── Professions ──────────────────────────────────────────────
+[Professions]
+médecin
+infirmier
+pompier
+policier
+cuisinier
+architecte
+avocat
+ingénieur
+acteur
+journaliste
+professeur
+directeur
+secrétaire
+comptable
+électricien
+plombier
+menuisier
+mécanicien
+agriculteur
+pêcheur
+artiste
+musicien
+chanteur
+danseur
+écrivain
+photographe
+traducteur
+interprète
+psychologue
+dentiste
+chirurgien
+pharmacien
+vétérinaire
+coiffeur
+vendeur
+caissier
+livreur
+chauffeur
+pilote
+marin
+soldat
+pompiste
+jardinier
+
+# ── Matières scolaires ───────────────────────────────────────
+[Matières Scolaires]
+mathématiques
+français
+histoire
+géographie
+science
+physique
+chimie
+biologie
+philosophie
+dessin
+éducation physique
+informatique
+anglais
+espagnol
+latin
+musique scolaire
+technologie
+exercice
+devoir
+examen
+note
+résultat
+erreur
+correct
+question
+réponse
+tableau noir
+craie
+stylo
+crayon
+gomme
+règle
+compas
+calculatrice
+cahier
+cartable
+bureau
+salle de classe
+récréation
+cantine
+internat
+diplôme
+université
+
+# ── Animaux ──────────────────────────────────────────────────
+[Animaux Sauvages]
+lion
+éléphant
+girafe
+singe
+ours
+loup
+renard
+cerf
+tigre
+léopard
+zèbre
+rhinocéros
+hippopotame
+crocodile
+serpent
+aigle
+perroquet sauvage
+flamant rose
+cigogne
+hibou
+chauve-souris
+écureuil
+lapin sauvage
+hérisson
+taupe
+sanglier
+chevreuil
+bison
+panda
+kangourou
+koala
+pingouin sauvage
+manchot
+autruche
+chameau
+dromadaire
+lama
+alpaga
+gorille
+chimpanzé
+dauphin sauvage
+baleine
+requin sauvage
+pieuvre
+
+# ── Musique & Arts ───────────────────────────────────────────
+[Musique & Arts]
+chanter
+guitare
+piano
+batterie
+violon
+flûte
+trompette
+saxophone
+accordéon
+concert
+chanson
+rythme
+mélodie
+paroles
+compositeur
+chef d'orchestre
+opéra
+rap
+jazz
+rock
+classique
+tableau
+sculpture
+exposition
+peinture
+aquarelle
+dessin animé
+cinéma
+acteur
+réalisateur
+scénario
+applaudir
+bis
+musée d'art
+
+# ── Nature & Environnement ───────────────────────────────────
+[Nature & Environnement]
+mer
+montagne
+rivière
+forêt
+plage
+île
+désert
+vallée
+colline
+lac
+océan
+volcan
+glacier
+jungle
+savane
+prairie
+marais
+cascade
+grotte
+falaise
+arbre
+fleur
+herbe
+feuille
+racine
+branche
+tronc
+rose
+tulipe
+tournesol
+cactus
+mousse
+algue
+champignon sauvage
+terre
+sable
+pierre
+rocher
+or
+fer
+pollution
+recyclage
+énergie solaire
+énergie éolienne
+déforestation
+biodiversité
+espèce protégée
+extinction
+réserve naturelle
+parc national
+
+# ── Géographie & Pays ───────────────────────────────────────
+[Géographie & Pays]
+France
+Espagne
+Allemagne
+Italie
+Angleterre
+Portugal
+Belgique
+Suisse
+Pays-Bas
+Pologne
+Russie
+Ukraine
+Grèce
+Turquie
+Maroc
+Algérie
+Tunisie
+Sénégal
+Côte d'Ivoire
+Cameroun
+Égypte
+Afrique du Sud
+Brésil
+Argentine
+Mexique
+États-Unis
+Canada
+Chine
+Japon
+Inde
+Australie
+Europe
+Afrique
+Asie
+Amérique
+continent
+capitale
+frontière
+montagne haute
+fleuve
+carte
+
+# ── Fêtes & Événements ──────────────────────────────────────
+[Fêtes & Événements]
+Noël
+Pâques
+Nouvel An
+anniversaire
+fête
+cadeau
+gâteau
+bougie
+champagne
+félicitations
+bonne année
+saint-valentin
+halloween
+carnaval
+mariage
+fiançailles
+naissance
+baptême
+communion
+bar-mitsva
+retraite
+diplôme
+cérémonie
+invité
+toast
+fleurs
+ballon
+confettis
+décoration
+guirlande
+père Noël
+sapin de Noël
+
+# ── Maison & Intérieur ───────────────────────────────────────
+[Maison & Intérieur]
+salon
+cuisine
+salle de bain
+toilettes
+couloir
+cave
+grenier
+balcon
+terrasse
+toit
+mur
+sol
+plafond
+escalier
+ascenseur
+porte d'entrée
+boîte aux lettres
+sonnette
+volet
+rideau
+tapis
+tableau mural
+miroir
+étagère
+bibliothèque
+bureau meuble
+placard
+tiroir
+canapé
+fauteuil
+chaise longue
+table basse
+table à manger
+réfrigérateur
+cuisinière
+évier
+baignoire
+douche
+lavabo
+robinet
+serviette
+savon
+brosse à dents
+dentifrice
+
+# ── Santé avancée ────────────────────────────────────────────
+[Santé Avancée]
+rhume
+grippe
+angine
+bronchite
+asthme
+diabète
+cancer
+fracture
+entorse
+brûlure
+infection
+inflammation
+douleur chronique
+opération
+chirurgien
+anesthésie
+piqûre
+pansement
+plâtre
+béquilles
+fauteuil roulant
+prothèse
+implant cochléaire
+appareillage auditif
+malentendant
+sourd-muet
+dyslexie
+autisme
+handicap
+rééducation
+kinésithérapeute
+ostéopathe
+psychologue
+psychiatre
+antidépresseur
+somnifère
+antibiothique
+aspirine
+sirop contre la toux
+tension artérielle
+cholestérol
+obésité
+anorexie
+
+# ── Technologies avancées ────────────────────────────────────
+[Technologies Avancées]
+smartphone
+tablette
+ordinateur portable
+imprimante
+scanner
+photocopieuse
+disque dur
+clé USB
+casque
+écouteurs
+enceinte bluetooth
+télécommande
+console de jeux
+manette
+réseau social
+site web
+mot de passe
+connexion
+téléchargement
+mise à jour
+bug
+application mobile
+intelligence artificielle
+robot
+drone
+satellite
+GPS
+code-barres
+QR code
+paiement sans contact
+cryptomonnaie
+blockchain
+cloud
+serveur
+base de données
+cybersécurité
+hacker
+virus informatique
+
+# ── Politique & Société ──────────────────────────────────────
+[Politique & Société]
+parlement
+sénat
+assemblée
+maire
+préfet
+ambassadeur
+syndicat
+grève
+manifestation
+impôt
+budget
+chômage
+retraite
+sécurité sociale
+assurance maladie
+allocations
+aide sociale
+logement social
+sans-abri
+pauvreté
+inégalité
+discrimination
+racisme
+sexisme
+féminisme
+écologie politique
+climatisation
+migration
+réfugié
+asile
+intégration
+laïcité
+censure
+propagande
+corruption
+transparence
+droits de l'homme
+ONU
+Union Européenne
+
+# ── Communauté Sourde ────────────────────────────────────────
+[Communauté Sourde]
+sourd
+malentendant
+entendant
+interprète LSF
+langue des signes
+LSF
+signer
+lecture labiale
+implant cochléaire
+appareillage
+communauté sourde
+culture sourde
+identité sourde
+bilinguisme
+inclusion
+accessibilité
+sous-titrage
+boucle magnétique
+CODA
+sourd de naissance
+devenu sourd
+surdité profonde
+surdité partielle
+audioprothèse
+audiologiste
+orthophoniste
+école pour sourds
+éducation bilingue
+fierté sourde

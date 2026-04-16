@@ -17,6 +17,7 @@ public class LessonService(AppDbContext db)
                 l.Description,
                 l.SortOrder,
                 l.XpReward,
+                l.LessonType,
                 l.LessonSigns
                     .OrderBy(ls => ls.SortOrder)
                     .Select(ls => new SignInLessonDto(

@@ -22,6 +22,38 @@ namespace LsfApi.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("LsfApi.Domain.Badge", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Badges");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -52,6 +84,39 @@ namespace LsfApi.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.GameScore", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("GameType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("LessonId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("PlayedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LessonId");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("GameType", "LessonId");
+
+                    b.ToTable("GameScores");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.Lesson", b =>
                 {
                     b.Property<Guid>("Id")
@@ -63,6 +128,10 @@ namespace LsfApi.Data.Migrations
 
                     b.Property<bool>("IsPublished")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("LessonType")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("ModuleId")
                         .HasColumnType("integer");
@@ -82,6 +151,24 @@ namespace LsfApi.Data.Migrations
                     b.HasIndex("ModuleId");
 
                     b.ToTable("Lessons");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.LessonPhrase", b =>
+                {
+                    b.Property<Guid>("LessonId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("PhraseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("integer");
+
+                    b.HasKey("LessonId", "PhraseId");
+
+                    b.HasIndex("PhraseId");
+
+                    b.ToTable("LessonPhrases");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.LessonSign", b =>
@@ -129,6 +216,59 @@ namespace LsfApi.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Modules");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.Phrase", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<short>("Difficulty")
+                        .HasColumnType("smallint");
+
+                    b.Property<string>("GifUrl")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("boolean");
+
+                    b.Property<string[]>("Tags")
+                        .IsRequired()
+                        .HasColumnType("text[]");
+
+                    b.Property<string>("TextFr")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TextLsf")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("VideoUrl")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Phrases");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.PhraseSign", b =>
+                {
+                    b.Property<Guid>("PhraseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SignId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Position")
+                        .HasColumnType("integer");
+
+                    b.HasKey("PhraseId", "SignId");
+
+                    b.HasIndex("SignId");
+
+                    b.ToTable("PhraseSigns");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.Quiz", b =>
@@ -294,6 +434,48 @@ namespace LsfApi.Data.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserBadge", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("BadgeId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("EarnedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("UserId", "BadgeId");
+
+                    b.HasIndex("BadgeId");
+
+                    b.ToTable("UserBadges");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.UserDailyAttempt", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime>("AnsweredAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("SignId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("UserId", "Date");
+
+                    b.HasIndex("SignId");
+
+                    b.ToTable("UserDailyAttempts");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.UserFavorite", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -355,6 +537,49 @@ namespace LsfApi.Data.Migrations
                     b.ToTable("UserProgress");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserSignStat", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SignId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("CorrectCount")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("LastAttemptAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("WrongCount")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "SignId");
+
+                    b.HasIndex("SignId");
+
+                    b.ToTable("UserSignStats");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.GameScore", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Lesson", "Lesson")
+                        .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("GameScores")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.Lesson", b =>
                 {
                     b.HasOne("LsfApi.Domain.Module", "Module")
@@ -364,6 +589,25 @@ namespace LsfApi.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.LessonPhrase", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Lesson", "Lesson")
+                        .WithMany("LessonPhrases")
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.Phrase", "Phrase")
+                        .WithMany("LessonPhrases")
+                        .HasForeignKey("PhraseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+
+                    b.Navigation("Phrase");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.LessonSign", b =>
@@ -381,6 +625,25 @@ namespace LsfApi.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Lesson");
+
+                    b.Navigation("Sign");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.PhraseSign", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Phrase", "Phrase")
+                        .WithMany("PhraseSigns")
+                        .HasForeignKey("PhraseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.Sign", "Sign")
+                        .WithMany()
+                        .HasForeignKey("SignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Phrase");
 
                     b.Navigation("Sign");
                 });
@@ -443,6 +706,44 @@ namespace LsfApi.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserBadge", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Badge", "Badge")
+                        .WithMany("UserBadges")
+                        .HasForeignKey("BadgeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("Badges")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Badge");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.UserDailyAttempt", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Sign", "Sign")
+                        .WithMany()
+                        .HasForeignKey("SignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("DailyAttempts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sign");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.UserFavorite", b =>
                 {
                     b.HasOne("LsfApi.Domain.Sign", "Sign")
@@ -492,6 +793,30 @@ namespace LsfApi.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.UserSignStat", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Sign", "Sign")
+                        .WithMany()
+                        .HasForeignKey("SignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("SignStats")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sign");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.Badge", b =>
+                {
+                    b.Navigation("UserBadges");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.Category", b =>
                 {
                     b.Navigation("Signs");
@@ -499,6 +824,8 @@ namespace LsfApi.Data.Migrations
 
             modelBuilder.Entity("LsfApi.Domain.Lesson", b =>
                 {
+                    b.Navigation("LessonPhrases");
+
                     b.Navigation("LessonSigns");
 
                     b.Navigation("Quizzes");
@@ -509,6 +836,13 @@ namespace LsfApi.Data.Migrations
             modelBuilder.Entity("LsfApi.Domain.Module", b =>
                 {
                     b.Navigation("Lessons");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.Phrase", b =>
+                {
+                    b.Navigation("LessonPhrases");
+
+                    b.Navigation("PhraseSigns");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.Quiz", b =>
@@ -527,13 +861,21 @@ namespace LsfApi.Data.Migrations
 
             modelBuilder.Entity("LsfApi.Domain.User", b =>
                 {
+                    b.Navigation("Badges");
+
+                    b.Navigation("DailyAttempts");
+
                     b.Navigation("Favorites");
+
+                    b.Navigation("GameScores");
 
                     b.Navigation("LessonCompletions");
 
                     b.Navigation("Progress");
 
                     b.Navigation("QuizAttempts");
+
+                    b.Navigation("SignStats");
                 });
 #pragma warning restore 612, 618
         }

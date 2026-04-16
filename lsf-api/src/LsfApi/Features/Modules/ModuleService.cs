@@ -17,7 +17,8 @@ public class ModuleService(AppDbContext db)
                 m.Description,
                 m.Level,
                 m.SortOrder,
-                m.Lessons.Count(l => l.IsPublished)
+                m.Lessons.Count(l => l.IsPublished),
+                m.Lessons.Any(l => l.IsPublished && l.LessonType == "phrases")
             ))
             .ToListAsync();
     }
@@ -41,7 +42,9 @@ public class ModuleService(AppDbContext db)
                         l.Description,
                         l.SortOrder,
                         l.XpReward,
-                        l.LessonSigns.Count
+                        l.LessonSigns.Count,
+                        l.LessonType,
+                        l.LessonPhrases.Count
                     ))
             ))
             .FirstOrDefaultAsync();

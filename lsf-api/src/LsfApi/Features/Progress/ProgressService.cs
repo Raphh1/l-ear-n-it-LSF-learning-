@@ -1,10 +1,11 @@
 using LsfApi.Data;
 using LsfApi.Domain;
+using LsfApi.Features.Badges;
 using Microsoft.EntityFrameworkCore;
 
 namespace LsfApi.Features.Progress;
 
-public class ProgressService(AppDbContext db)
+public class ProgressService(AppDbContext db, BadgeService badgeService)
 {
     public async Task<ProgressResponse?> GetProgressAsync(Guid userId)
     {
@@ -67,7 +68,34 @@ public class ProgressService(AppDbContext db)
         progress.LastActivity = today;
 
         await db.SaveChangesAsync();
+        await badgeService.AwardEligibleBadgesAsync(userId);
 
         return new CompleteLessonResponse(xpEarned, isFirst, progress.XpTotal, progress.StreakDays);
+    }
+
+    /// <summary>
+    /// Attribue des XP directement (pour les jeux sans leçon à compléter).
+    /// Met aussi à jour le streak et déclenche la vérification des badges.
+    /// </summary>
+    public async Task<AwardXpResponse?> AwardXpAsync(Guid userId, int amount)
+    {
+        if (amount <= 0) return null;
+
+        var progress = await db.UserProgress.FindAsync(userId);
+        if (progress is null) return null;
+
+        progress.XpTotal += amount;
+
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+        if (progress.LastActivity is null || progress.LastActivity < today.AddDays(-1))
+            progress.StreakDays = 1;
+        else if (progress.LastActivity == today.AddDays(-1))
+            progress.StreakDays += 1;
+        progress.LastActivity = today;
+
+        await db.SaveChangesAsync();
+        await badgeService.AwardEligibleBadgesAsync(userId);
+
+        return new AwardXpResponse(amount, progress.XpTotal, progress.StreakDays);
     }
 }

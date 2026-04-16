@@ -1,9 +1,14 @@
 using System.Text;
 using LsfApi.Data;
 using LsfApi.Features.Auth;
+using LsfApi.Features.Badges;
 using LsfApi.Features.Categories;
+using LsfApi.Features.Daily;
+using LsfApi.Features.Phrases;
 using LsfApi.Features.Lessons;
 using LsfApi.Features.Modules;
+using LsfApi.Features.Revision;
+using LsfApi.Features.Scores;
 using LsfApi.Features.Signs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -65,6 +70,11 @@ builder.Services.AddScoped<LessonService>();
 builder.Services.AddScoped<SignService>();
 builder.Services.AddScoped<LsfApi.Features.Progress.ProgressService>();
 builder.Services.AddScoped<LsfApi.Features.Favorites.FavoritesService>();
+builder.Services.AddScoped<BadgeService>();
+builder.Services.AddScoped<ScoreService>();
+builder.Services.AddScoped<RevisionService>();
+builder.Services.AddScoped<DailyService>();
+builder.Services.AddScoped<PhraseService>();
 
 // Elix LSF API
 builder.Services.AddHttpClient<ElixService>(client =>
@@ -101,7 +111,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsDevelopment())
+    app.UseHttpsRedirection();
+
 app.UseCors("Frontend");
 app.UseAuthentication();
 app.UseAuthorization();

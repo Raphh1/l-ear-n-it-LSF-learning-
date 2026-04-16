@@ -17,6 +17,14 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<UserProgress> UserProgress => Set<UserProgress>();
     public DbSet<UserLessonCompletion> UserLessonCompletions => Set<UserLessonCompletion>();
     public DbSet<UserFavorite> UserFavorites => Set<UserFavorite>();
+    public DbSet<Badge> Badges => Set<Badge>();
+    public DbSet<UserBadge> UserBadges => Set<UserBadge>();
+    public DbSet<GameScore> GameScores => Set<GameScore>();
+    public DbSet<UserSignStat> UserSignStats => Set<UserSignStat>();
+    public DbSet<UserDailyAttempt> UserDailyAttempts => Set<UserDailyAttempt>();
+    public DbSet<Phrase> Phrases => Set<Phrase>();
+    public DbSet<PhraseSign> PhraseSigns => Set<PhraseSign>();
+    public DbSet<LessonPhrase> LessonPhrases => Set<LessonPhrase>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -138,6 +146,93 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             e.HasOne(f => f.Sign)
              .WithMany()
              .HasForeignKey(f => f.SignId);
+        });
+
+        // Badge
+        modelBuilder.Entity<Badge>(e =>
+        {
+            e.HasKey(b => b.Id);
+            e.HasIndex(b => b.Slug).IsUnique();
+        });
+
+        // UserBadge (clé composite)
+        modelBuilder.Entity<UserBadge>(e =>
+        {
+            e.HasKey(ub => new { ub.UserId, ub.BadgeId });
+            e.HasOne(ub => ub.User)
+             .WithMany(u => u.Badges)
+             .HasForeignKey(ub => ub.UserId);
+            e.HasOne(ub => ub.Badge)
+             .WithMany(b => b.UserBadges)
+             .HasForeignKey(ub => ub.BadgeId);
+        });
+
+        // GameScore
+        modelBuilder.Entity<GameScore>(e =>
+        {
+            e.HasKey(gs => gs.Id);
+            e.HasOne(gs => gs.User)
+             .WithMany(u => u.GameScores)
+             .HasForeignKey(gs => gs.UserId);
+            e.HasOne(gs => gs.Lesson)
+             .WithMany()
+             .HasForeignKey(gs => gs.LessonId);
+            e.HasIndex(gs => new { gs.GameType, gs.LessonId });
+        });
+
+        // UserDailyAttempt (clé composite UserId + Date)
+        modelBuilder.Entity<UserDailyAttempt>(e =>
+        {
+            e.HasKey(a => new { a.UserId, a.Date });
+            e.HasOne(a => a.User)
+             .WithMany(u => u.DailyAttempts)
+             .HasForeignKey(a => a.UserId);
+            e.HasOne(a => a.Sign)
+             .WithMany()
+             .HasForeignKey(a => a.SignId);
+        });
+
+        // Phrase
+        modelBuilder.Entity<Phrase>(e =>
+        {
+            e.HasKey(p => p.Id);
+            e.Property(p => p.Tags).HasColumnType("text[]");
+        });
+
+        // PhraseSign (clé composite)
+        modelBuilder.Entity<PhraseSign>(e =>
+        {
+            e.HasKey(ps => new { ps.PhraseId, ps.SignId });
+            e.HasOne(ps => ps.Phrase)
+             .WithMany(p => p.PhraseSigns)
+             .HasForeignKey(ps => ps.PhraseId);
+            e.HasOne(ps => ps.Sign)
+             .WithMany()
+             .HasForeignKey(ps => ps.SignId);
+        });
+
+        // LessonPhrase (clé composite)
+        modelBuilder.Entity<LessonPhrase>(e =>
+        {
+            e.HasKey(lp => new { lp.LessonId, lp.PhraseId });
+            e.HasOne(lp => lp.Lesson)
+             .WithMany(l => l.LessonPhrases)
+             .HasForeignKey(lp => lp.LessonId);
+            e.HasOne(lp => lp.Phrase)
+             .WithMany(p => p.LessonPhrases)
+             .HasForeignKey(lp => lp.PhraseId);
+        });
+
+        // UserSignStat (clé composite)
+        modelBuilder.Entity<UserSignStat>(e =>
+        {
+            e.HasKey(uss => new { uss.UserId, uss.SignId });
+            e.HasOne(uss => uss.User)
+             .WithMany(u => u.SignStats)
+             .HasForeignKey(uss => uss.UserId);
+            e.HasOne(uss => uss.Sign)
+             .WithMany()
+             .HasForeignKey(uss => uss.SignId);
         });
     }
 }

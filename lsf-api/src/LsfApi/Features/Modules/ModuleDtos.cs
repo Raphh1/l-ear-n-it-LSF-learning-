@@ -6,7 +6,8 @@ public record ModuleDto(
     string? Description,
     short Level,
     int SortOrder,
-    int LessonCount
+    int LessonCount,
+    bool HasPhraseLessons
 );
 
 public record LessonSummaryDto(
@@ -15,7 +16,9 @@ public record LessonSummaryDto(
     string? Description,
     int SortOrder,
     int XpReward,
-    int SignCount
+    int SignCount,
+    string LessonType,
+    int PhraseCount
 );
 
 public record ModuleDetailDto(

@@ -24,4 +24,12 @@ public class ProgressController(ProgressService progressService) : ControllerBas
         var result = await progressService.CompleteLessonAsync(userId, lessonId, req.Score, req.Total);
         return result is null ? NotFound() : Ok(result);
     }
+
+    [HttpPost("xp")]
+    public async Task<IActionResult> AwardXp([FromBody] AwardXpRequest req)
+    {
+        var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        var result = await progressService.AwardXpAsync(userId, req.Amount);
+        return result is null ? NotFound() : Ok(result);
+    }
 }

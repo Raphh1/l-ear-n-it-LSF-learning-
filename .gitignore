@@ -1,0 +1,21 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+lsf-web/.next/
+lsf-web/out/
+lsf-web/build/
+
+# .NET build artifacts
+lsf-api/src/**/obj/
+lsf-api/src/**/bin/
+
+# Misc
+.DS_Store
+*.pem
+*.user
+.env.local
+.env*.local

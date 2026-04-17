@@ -10,8 +10,12 @@ lsf-web/out/
 lsf-web/build/
 
 # .NET build artifacts
-lsf-api/src/**/obj/
-lsf-api/src/**/bin/
+lsf-api/obj/
+lsf-api/bin/
+
+# TypeScript
+*.tsbuildinfo
+lsf-web/next-env.d.ts
 
 # Misc
 .DS_Store

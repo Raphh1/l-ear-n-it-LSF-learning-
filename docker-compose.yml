@@ -1,0 +1,53 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: lsfdb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d lsfdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./lsf-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Default: "Host=postgres;Port=5432;Database=lsfdb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
+      Jwt__Secret: ${JWT_SECRET}
+      Jwt__Issuer: lsf-api
+      Jwt__Audience: lsf-web
+      Jwt__ExpiresInDays: 7
+      EmailSettings__SendGridApiKey: ${SENDGRID_API_KEY}
+      EmailSettings__FromEmail: ${EMAIL_FROM}
+      EmailSettings__FromName: "Learn-it LSF"
+      EmailSettings__BaseUrl: ${FRONTEND_URL}
+      AllowedOrigins__0: ${FRONTEND_URL}
+    ports:
+      - "5097:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./lsf-web
+      args:
+        NEXT_PUBLIC_API_URL: ${API_URL}
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: ${API_URL}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

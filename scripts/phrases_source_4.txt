@@ -1,0 +1,458 @@
+# Lot 4 : phrases couvrant les signes encore inutilisés
+
+## Nature & Environnement
+L'air est frais. | AIR FRAIS | 1
+L'arbre a une grosse branche. | ARBRE BRANCHE GROS | 1
+On voit la baie. | BAIE VOIR | 2
+Le barrage retient l'eau. | EAU BARRAGE RETENIR | 2
+Les poissons nagent dans le bassin. | BASSIN POISSON NAGER | 1
+Je t'offre un bouquet. | MOI TOI BOUQUET DONNER | 1
+Il lance un caillou. | LUI CAILLOU LANCER | 1
+Le bateau suit le canal. | CANAL BATEAU SUIVRE | 2
+On explore la caverne. | CAVERNE EXPLORER | 2
+Il reste des cendres. | CENDRE RESTER | 2
+Je cueille des champignons. | MOI CHAMPIGNON CUEILLIR | 1
+Le charbon brûle. | CHARBON BRÛLER | 2
+Le chêne est un arbre. | CHÊNE ARBRE | 1
+On monte la colline. | COLLINE MONTER | 1
+Le delta du fleuve. | FLEUVE DELTA | 3
+La falaise est haute. | FALAISE HAUT | 1
+La flamme danse. | FLAMME DANSER | 2
+Il creuse une fosse. | LUI FOSSE CREUSER | 3
+La grotte est sombre. | GROTTE NOIR | 1
+La jungle est dense. | JUNGLE | 1
+Le lis est une fleur. | LIS FLEUR | 2
+Une lueur dans la nuit. | NUIT LUEUR | 2
+La lumière est forte. | LUMIÈRE FORT | 1
+La marée monte. | MARÉE MONTER | 2
+Il travaille à la mine. | LUI MINE TRAVAILLER | 2
+Le mont est enneigé. | MONT NEIGE | 2
+La mousse pousse sur la pierre. | PIERRE MOUSSE POUSSER | 2
+Le chat voit dans l'obscurité. | OBSCURITÉ CHAT VOIR | 2
+Quelle bonne odeur ! | ODEUR BON | 1
+Le pic de la montagne. | MONTAGNE PIC | 2
+Le pin reste vert. | PIN VERT | 1
+Une jeune pousse. | POUSSE JEUNE | 2
+L'eau du puits est fraîche. | PUITS EAU FRAIS | 2
+Le pétrole est polluant. | PÉTROLE POLLUANT | 2
+Un rayon de soleil. | SOLEIL RAYON | 1
+Le recyclage est utile. | RECYCLAGE UTILE | 1
+Le reflet dans l'eau. | EAU REFLET | 2
+On marche sur le rivage. | RIVAGE MARCHER | 2
+La roche est dure. | ROCHE DUR | 1
+Il grimpe sur le rocher. | LUI ROCHER GRIMPER | 1
+Le ruisseau coule. | RUISSEAU COULER | 1
+Le tronc de l'arbre. | ARBRE TRONC | 1
+Les ténèbres tombent. | TÉNÈBRES TOMBER | 3
+La vague est grande. | VAGUE GRAND | 1
+L'écologie nous concerne. | ÉCOLOGIE NOUS | 2
+
+## Sentiments & Émotions avancés
+Il a de l'affection pour toi. | LUI TOI AFFECTION | 2
+Je suis à l'aise. | MOI AISE | 2
+L'angoisse me serre. | ANGOISSE MOI | 2
+Il y a une confusion. | CONFUSION | 2
+J'ai une crainte. | MOI CRAINTE AVOIR | 2
+Il ressent de la culpabilité. | LUI CULPABILITÉ RESSENTIR | 3
+C'est du délire ! | DÉLIRE | 2
+Il est parti par dépit. | LUI DÉPIT PARTIR | 3
+Elle est en détresse. | ELLE DÉTRESSE | 3
+C'est un fantasme. | FANTASME | 3
+J'ai un frisson. | MOI FRISSON AVOIR | 1
+J'entends un gémissement. | GÉMISSEMENT MOI ENTENDRE | 3
+La haine détruit. | HAINE DÉTRUIRE | 2
+Quelle horreur ! | HORREUR | 1
+Il ressent une humiliation. | LUI HUMILIATION RESSENTIR | 3
+J'ai hâte de te voir. | TOI VOIR MOI HÂTE | 1
+L'impatience me gagne. | IMPATIENCE MOI | 2
+J'ai l'impression qu'il pleut. | PLUIE MOI IMPRESSION | 2
+Ton inquiétude est normale. | TOI INQUIÉTUDE NORMAL | 2
+Quel malheur ! | MALHEUR | 2
+Il a le moral. | LUI MORAL | 2
+C'est une obsession. | OBSESSION | 3
+Sa passion est la danse. | LUI PASSION DANSE | 1
+J'ai de la peine. | MOI PEINE AVOIR | 2
+Il a pitié de lui. | LUI PITIÉ | 2
+Elle est en pleurs. | ELLE PLEUR | 2
+Il est fou de rage. | LUI RAGE | 2
+Il garde une rancune. | LUI RANCUNE GARDER | 3
+J'ai un regret. | MOI REGRET AVOIR | 2
+Il a des remords. | LUI REMORDS AVOIR | 3
+Quelle satisfaction ! | SATISFACTION | 2
+Une sensation étrange. | SENSATION BIZARRE | 2
+La solitude me pèse. | SOLITUDE MOI PESER | 2
+J'ai un souci. | MOI SOUCI AVOIR | 1
+Sa souffrance est grande. | LUI SOUFFRANCE GRAND | 2
+Elle a de la tendresse. | ELLE TENDRESSE | 2
+La tension monte. | TENSION MONTER | 2
+Résiste à la tentation. | TENTATION RÉSISTER | 3
+La terreur règne. | TERREUR | 3
+Un tourment sans fin. | TOURMENT FIN | 3
+J'ai le trac. | MOI TRAC AVOIR | 2
+Sa tristesse est profonde. | LUI TRISTESSE PROFOND | 2
+Il y a un trouble. | TROUBLE | 2
+Il veut sa vengeance. | LUI VENGEANCE VOULOIR | 2
+
+## Professions
+L'acteur joue un rôle. | ACTEUR RÔLE JOUER | 1
+L'agent attend. | AGENT ATTENDRE | 2
+L'agriculteur travaille aux champs. | AGRICULTEUR CHAMP TRAVAILLER | 1
+L'architecte dessine une maison. | ARCHITECTE MAISON DESSINER | 1
+Mon assistant est absent. | MOI ASSISTANT ABSENCE | 2
+L'avocat défend le client. | AVOCAT CLIENT DÉFENDRE | 2
+La baby-sitter garde l'enfant. | BABY-SITTER ENFANT GARDER | 1
+Le barman sert un verre. | BARMAN VERRE SERVIR | 1
+Le boucher coupe la viande. | BOUCHER VIANDE COUPER | 1
+Il est bénévole. | LUI BÉNÉVOLE | 2
+Le chanteur chante bien. | CHANTEUR CHANTER BIEN | 1
+Le chauffeur conduit. | CHAUFFEUR CONDUIRE | 1
+Le comptable compte l'argent. | COMPTABLE ARGENT COMPTER | 2
+Le concierge a les clés. | CONCIERGE CLÉ AVOIR | 2
+Le conseiller m'aide. | CONSEILLER MOI AIDER | 2
+Le contrôleur vérifie les billets. | CONTRÔLEUR BILLET VÉRIFIER | 2
+Le directeur est en réunion. | DIRECTEUR RÉUNION | 1
+Il est domestique. | LUI DOMESTIQUE | 3
+C'est un expert. | EXPERT | 2
+Il est fonctionnaire. | LUI FONCTIONNAIRE | 2
+Le gardien ferme le parc. | GARDIEN PARC FERMER | 1
+Le géomètre mesure le terrain. | GÉOMÈTRE TERRAIN MESURER | 3
+L'hôtesse accueille les passagers. | HÔTESSE PASSAGER ACCUEILLIR | 2
+L'instituteur enseigne. | INSTITUTEUR ENSEIGNER | 2
+Le juge décide. | JUGE DÉCIDER | 2
+Elle est mannequin. | ELLE MANNEQUIN | 2
+Le marin part en mer. | MARIN MER PARTIR | 1
+Le messager apporte une lettre. | MESSAGER LETTRE APPORTER | 2
+Le mineur travaille sous terre. | MINEUR TERRE TRAVAILLER | 2
+La nourrice garde le bébé. | NOURRICE BÉBÉ GARDER | 2
+L'opérateur répond. | OPÉRATEUR RÉPONDRE | 2
+L'ouvrier construit un mur. | OUVRIER MUR CONSTRUIRE | 1
+Le plombier répare le robinet. | PLOMBIER ROBINET RÉPARER | 1
+Le porteur prend la valise. | PORTEUR VALISE PRENDRE | 2
+Le pêcheur attrape un poisson. | PÊCHEUR POISSON ATTRAPER | 1
+Le scientifique fait une découverte. | SCIENTIFIQUE DÉCOUVERTE FAIRE | 2
+Il est très sportif. | LUI SPORTIF TRÈS | 1
+C'est un spécialiste. | SPÉCIALISTE | 2
+Le tailleur coud un costume. | TAILLEUR COSTUME COUDRE | 2
+Le technicien répare la machine. | TECHNICIEN MACHINE RÉPARER | 2
+Le traducteur traduit le texte. | TRADUCTEUR TEXTE TRADUIRE | 2
+Le vendeur est gentil. | VENDEUR GENTIL | 1
+Le vétérinaire soigne le chien. | VÉTÉRINAIRE CHIEN SOIGNER | 1
+L'éducateur aide les jeunes. | ÉDUCATEUR JEUNE AIDER | 2
+L'électricien répare la lampe. | ÉLECTRICIEN LAMPE RÉPARER | 1
+
+## Objets du quotidien
+Craque une allumette. | ALLUMETTE CRAQUER | 1
+Monte sur la balance. | BALANCE MONTER | 1
+Le bébé boit son biberon. | BÉBÉ BIBERON BOIRE | 1
+Le bidon est plein. | BIDON PLEIN | 2
+Prends un bloc de papier. | PAPIER BLOC PRENDRE | 2
+Mets le bouchon. | BOUCHON METTRE | 1
+Une boule de neige. | NEIGE BOULE | 1
+Ouvre la bouteille. | BOUTEILLE OUVRIR | 1
+Ferme la boîte. | BOÎTE FERMER | 1
+Une bulle de savon. | SAVON BULLE | 1
+Il marche avec une canne. | LUI CANNE MARCHER | 2
+Une capsule de café. | CAFÉ CAPSULE | 2
+Range ton casier. | TOI CASIER RANGER | 2
+J'ai oublié une chose. | MOI CHOSE OUBLIER | 1
+Il fume un cigare. | LUI CIGARE FUMER | 2
+Coupe avec les ciseaux. | CISEAUX COUPER | 1
+Le ciseau du sculpteur. | CISEAU | 3
+La cloche sonne. | CLOCHE SONNER | 1
+Il fume une clope. | LUI CLOPE FUMER | 2
+Où est la clé ? | CLÉ OÙ | 1
+Le coffre est fermé. | COFFRE FERMER | 1
+J'ai besoin de colle. | MOI COLLE BESOIN | 1
+Le cordon est trop court. | CORDON COURT | 2
+Change la couche du bébé. | BÉBÉ COUCHE CHANGER | 1
+Bats les œufs au fouet. | ŒUF FOUET BATTRE | 2
+Prête-moi ta gomme. | TOI GOMME MOI PRÊTER | 1
+C'est quoi ce machin ? | MACHIN QUOI | 2
+Regarde-toi dans le miroir. | MIROIR REGARDER | 1
+Ma montre est en retard. | MOI MONTRE RETARD | 1
+Ramasse cet objet. | OBJET RAMASSER | 1
+Prends ton parapluie. | TOI PARAPLUIE PRENDRE | 1
+Grand-père fume la pipe. | GRAND-PÈRE PIPE FUMER | 2
+La plaque est chaude. | PLAQUE CHAUD | 2
+J'ai perdu mon portefeuille. | MOI PORTEFEUILLE PERDU | 1
+Le réveil sonne. | RÉVEIL SONNER | 1
+Lave-toi avec du savon. | SAVON LAVER | 1
+Un rouleau de scotch. | SCOTCH | 1
+Remplis le seau. | SEAU REMPLIR | 1
+Prends une serviette. | SERVIETTE PRENDRE | 1
+Le tabac est mauvais. | TABAC MAUVAIS | 1
+Allume la torche. | TORCHE ALLUMER | 2
+C'est quoi ce truc ? | TRUC QUOI | 1
+Un tube de dentifrice. | DENTIFRICE TUBE | 1
+Mets les fleurs dans le vase. | FLEUR VASE METTRE | 1
+Une épingle à nourrice. | ÉPINGLE | 2
+
+## Politique & Société
+L'administration est fermée. | ADMINISTRATION FERMER | 2
+Une alliance entre pays. | PAYS ALLIANCE | 3
+L'ambassadeur est à l'ambassade. | AMBASSADEUR AMBASSADE | 2
+Il demande l'asile. | LUI ASILE DEMANDER | 3
+Je suis dans une association. | MOI ASSOCIATION | 2
+Il respecte l'autorité. | LUI AUTORITÉ RESPECTER | 2
+C'est un bourgeois. | BOURGEOIS | 3
+La guerre civile. | GUERRE CIVIL | 3
+Le comité se réunit. | COMITÉ RÉUNIR | 3
+La commission décide. | COMMISSION DÉCIDER | 3
+Il est communiste. | LUI COMMUNISTE | 3
+Le congrès commence. | CONGRÈS COMMENCER | 3
+J'habite dans ce département. | DÉPARTEMENT MOI HABITER | 2
+Protégeons l'environnement. | ENVIRONNEMENT PROTÉGER | 1
+Le régime était fasciste. | RÉGIME FASCISTE | 3
+Le gouverneur parle. | GOUVERNEUR PARLER | 3
+Le pays a gagné son indépendance. | PAYS INDÉPENDANCE GAGNER | 3
+Une institution publique. | INSTITUTION | 3
+La libération de Paris. | PARIS LIBÉRATION | 3
+La majorité a voté. | MAJORITÉ VOTER | 2
+Son mandat est fini. | LUI MANDAT FINI | 3
+Le ministre parle. | MINISTRE PARLER | 2
+La nation est unie. | NATION UNIR | 3
+Les nazis ont perdu la guerre. | NAZI GUERRE PERDRE | 3
+L'opposition critique. | OPPOSITION CRITIQUER | 3
+Ils signent un pacte. | PACTE SIGNER | 3
+La pauvreté augmente. | PAUVRETÉ AUGMENTER | 2
+Le politicien fait de la politique. | POLITICIEN POLITIQUE | 2
+La population grandit. | POPULATION GRANDIR | 2
+C'est un privilège. | PRIVILÈGE | 3
+Il vit en province. | LUI PROVINCE VIVRE | 2
+Le préfet décide. | PRÉFET DÉCIDER | 3
+Non au racisme ! | RACISME NON | 1
+Le rebelle se cache. | REBELLE CACHER | 3
+Le réfugié cherche un abri. | RÉFUGIÉ ABRI CHERCHER | 2
+J'aime ma région. | MOI RÉGION AIMER | 1
+Le peuple fait une révolte. | PEUPLE RÉVOLTE | 3
+Le sénateur vote. | SÉNATEUR VOTER | 3
+Le territoire est grand. | TERRITOIRE GRAND | 2
+L'union fait la force. | UNION FORCE | 2
+Le vice-président parle. | VICE-PRÉSIDENT PARLER | 3
+L'élite du pays. | PAYS ÉLITE | 3
+
+## Nourriture
+Une bonne alimentation. | ALIMENTATION BON | 1
+J'aime l'andouille. | ANDOUILLE MOI AIMER | 3
+Bon appétit ! | APPÉTIT BON | 1
+Je mange un beignet. | MOI BEIGNET MANGER | 1
+Un biscuit au chocolat. | CHOCOLAT BISCUIT | 1
+L'enfant veut un bonbon. | ENFANT BONBON VOULOIR | 1
+La bouffe est bonne. | BOUFFE BON | 2
+Des boulettes de viande. | VIANDE BOULETTE | 2
+Le buffet est prêt. | BUFFET PRÊT | 2
+J'aime les cacahuètes. | CACAHUÈTE MOI AIMER | 1
+Le caviar est cher. | CAVIAR CHER | 2
+Un paquet de chips. | CHIPS PAQUET | 1
+Je cuisine le chou. | CHOU MOI CUISINER | 1
+Le lait de coco. | COCO LAIT | 1
+De la confiture de fraise. | FRAISE CONFITURE | 1
+Une boîte de conserve. | CONSERVE BOÎTE | 2
+Je mange un cookie. | MOI COOKIE MANGER | 1
+La croûte du pain. | PAIN CROÛTE | 2
+On déjeune à midi. | MIDI DÉJEUNER | 1
+Le dîner est prêt. | DÎNER PRÊT | 1
+La figue est sucrée. | FIGUE SUCRÉ | 2
+Je mange un fruit. | MOI FRUIT MANGER | 1
+Trop de graisse. | GRAISSE TROP | 2
+Un hamburger et des frites. | HAMBURGER FRITE | 1
+Je mange un hot-dog. | MOI HOT-DOG MANGER | 1
+Un sandwich au jambon. | JAMBON SANDWICH | 1
+Un jus d'orange. | ORANGE JUS | 1
+Un thé à la menthe. | MENTHE THÉ | 1
+Le menu, s'il vous plaît. | MENU | 1
+J'aime les noix. | NOIX MOI AIMER | 1
+Une olive verte. | OLIVE VERT | 1
+Des patates au four. | PATATE FOUR | 1
+Des petits pois. | POIS PETIT | 1
+De la purée de pommes de terre. | POMME DE TERRE PURÉE | 1
+Une pâte à tarte. | TARTE PÂTE | 2
+Attention aux pépins. | PÉPIN ATTENTION | 2
+Du riz blanc. | RIZ BLANC | 1
+Une saucisse grillée. | SAUCISSE GRILLER | 1
+On soupe ce soir. | SOIR SOUPER | 2
+Un steak bien cuit. | STEAK CUIT | 1
+Une tarte aux pommes. | POMME TARTE | 1
+Une tranche de pain. | PAIN TRANCHE | 1
+
+## Corps humain
+L'artère transporte le sang. | ARTÈRE SANG | 3
+Il a une bosse sur la tête. | LUI TÊTE BOSSE | 1
+Ouvre la bouche. | BOUCHE OUVRIR | 1
+La chair de poule. | CHAIR POULE | 2
+J'ai mal au cou. | MOI COU MAL | 1
+Le crâne protège le cerveau. | CRÂNE CERVEAU PROTÉGER | 2
+J'ai mal à la cuisse. | MOI CUISSE MAL | 1
+Mon cœur bat vite. | MOI CŒUR BATTRE VITE | 1
+J'ai mal à une dent. | MOI DENT MAL | 1
+Je me suis coupé le doigt. | MOI DOIGT COUPER | 1
+Il tombe sur les fesses. | LUI FESSE TOMBER | 1
+Lave-toi la figure. | FIGURE LAVER | 1
+Il a un grand front. | LUI FRONT GRAND | 1
+Il a mauvaise haleine. | LUI HALEINE MAUVAIS | 2
+J'ai mal à la jambe. | MOI JAMBE MAL | 1
+Il a un menton pointu. | LUI MENTON | 2
+Il a mal à la mâchoire. | LUI MÂCHOIRE MAL | 2
+Mon nez coule. | MOI NEZ COULER | 1
+J'ai mal à la nuque. | MOI NUQUE MAL | 2
+J'ai mal à l'oreille. | MOI OREILLE MAL | 1
+Le cœur est un organe. | CŒUR ORGANE | 2
+Je veux faire pipi. | MOI PIPI VOULOIR | 1
+J'ai mal au pied. | MOI PIED MAL | 1
+Le chat perd ses poils. | CHAT POIL PERDRE | 1
+Il serre le poing. | LUI POING SERRER | 2
+J'ai mal à la poitrine. | MOI POITRINE MAL | 1
+Il lève le pouce. | LUI POUCE LEVER | 1
+Il a un beau regard. | LUI REGARD BEAU | 1
+Sa respiration est calme. | LUI RESPIRATION CALME | 2
+Il a de bons réflexes. | LUI RÉFLEXE BON | 2
+Reprends ton souffle. | SOUFFLE REPRENDRE | 2
+Il lève un sourcil. | LUI SOURCIL LEVER | 1
+Le squelette du dinosaure. | DINOSAURE SQUELETTE | 2
+Il est en sueur. | LUI SUEUR | 2
+Une analyse d'urine. | URINE ANALYSE | 3
+La veine est bleue. | VEINE BLEU | 2
+J'ai mal au ventre. | MOI VENTRE MAL | 1
+Ma vision baisse. | MOI VISION BAISSER | 2
+Il a une bonne vue. | LUI VUE BON | 1
+J'ai une poussière dans l'œil. | MOI ŒIL POUSSIÈRE | 1
+
+## Religion & Spiritualité
+Il est bouddhiste. | LUI BOUDDHISTE | 2
+Le prêtre donne la bénédiction. | PRÊTRE BÉNÉDICTION DONNER | 3
+Le cardinal est à Rome. | CARDINAL | 3
+Elle est catholique. | ELLE CATHOLIQUE | 2
+On prie à la chapelle. | CHAPELLE PRIER | 2
+Il est chrétien. | LUI CHRÉTIEN | 2
+La première communion. | COMMUNION PREMIER | 3
+Il va à la confession. | LUI CONFESSION ALLER | 3
+Une croix en bois. | BOIS CROIX | 1
+Chacun a sa croyance. | CROYANCE | 2
+Le culte commence. | CULTE COMMENCER | 3
+Le curé sonne la cloche. | CURÉ CLOCHE SONNER | 2
+Le diable et le démon. | DIABLE DÉMON | 2
+Il croit en Dieu. | LUI DIEU CROIRE | 1
+Le disciple suit le maître. | DISCIPLE MAÎTRE SUIVRE | 3
+Une déesse grecque. | DÉESSE GREC | 2
+Le paradis et l'enfer. | PARADIS ENFER | 2
+Par la grâce de Dieu. | DIEU GRÂCE | 3
+Il est juif. | LUI JUIF | 2
+Jésus est né à Noël. | NOËL JÉSUS NAÎTRE | 2
+Elle est musulmane. | ELLE MUSULMAN | 2
+Le pasteur parle. | PASTEUR PARLER | 3
+Elle fait une prière. | ELLE PRIÈRE FAIRE | 2
+Le prophète parle. | PROPHÈTE PARLER | 3
+Le rabbin lit. | RABBIN LIRE | 3
+La religion est personnelle. | RELIGION PERSONNEL | 2
+Un rite ancien. | RITE ANCIEN | 3
+Le rituel du matin. | MATIN RITUEL | 2
+Une révélation ! | RÉVÉLATION | 3
+Un sacrifice pour les dieux. | DIEU SACRIFICE | 3
+C'est un saint. | SAINT | 2
+Le sermon est long. | SERMON LONG | 3
+La Vierge Marie. | VIERGE | 3
+Il a une belle âme. | LUI ÂME BEAU | 2
+Pour l'éternité. | ÉTERNITÉ | 3
+L'évêque arrive. | ÉVÊQUE ARRIVER | 3
+
+## Argent & Finances
+J'ai eu une augmentation. | MOI AUGMENTATION | 1
+Je signe le bail. | BAIL MOI SIGNER | 3
+Les prix sont en baisse. | PRIX BAISSE | 2
+Il joue en bourse. | LUI BOURSE JOUER | 2
+Le capital de l'entreprise. | ENTREPRISE CAPITAL | 3
+Je paie la caution. | CAUTION MOI PAYER | 2
+Ça coûte un centime. | CENTIME UN | 1
+Le bureau de change. | CHANGE BUREAU | 2
+J'ai un crédit. | MOI CRÉDIT AVOIR | 2
+Combien de dollars ? | DOLLAR COMBIEN | 1
+Je fais un don. | MOI DON FAIRE | 2
+Je fais un dépôt à la banque. | BANQUE DÉPÔT FAIRE | 2
+Une vente aux enchères. | VENTE ENCHÈRE | 3
+L'entreprise fait faillite. | ENTREPRISE FAILLITE | 3
+Le franc suisse. | FRANC SUISSE | 2
+Un gain d'argent. | ARGENT GAIN | 2
+La garantie dure deux ans. | GARANTIE AN DEUX | 2
+Un bon investissement. | INVESTISSEMENT BON | 3
+Un louis d'or. | LOUIS OR | 3
+Ils vivent dans le luxe. | LUXE VIVRE | 2
+Ils vivent dans la misère. | MISÈRE VIVRE | 2
+Quel est le montant ? | MONTANT QUOI | 2
+Le paiement est fait. | PAIEMENT FINI | 2
+Il touche sa pension. | LUI PENSION | 3
+C'est une perte de temps. | TEMPS PERTE | 2
+Il a du pognon. | LUI POGNON AVOIR | 2
+C'est ma possession. | MOI POSSESSION | 3
+J'ai reçu une prime. | MOI PRIME RECEVOIR | 2
+Il fait du profit. | LUI PROFIT | 2
+J'attends le remboursement. | REMBOURSEMENT MOI ATTENDRE | 2
+La richesse du pays. | PAYS RICHESSE | 2
+Le rouble est russe. | ROUBLE RUSSE | 3
+Je n'ai pas un sou. | MOI SOU PAS | 2
+Quel est le tarif ? | TARIF QUOI | 2
+Un transfert d'argent. | ARGENT TRANSFERT | 2
+Je fais des économies. | MOI ÉCONOMIE FAIRE | 1
+
+## Caractère & Qualités
+Il a de l'allure. | LUI ALLURE | 2
+L'apparence compte peu. | APPARENCE PEU | 2
+Il travaille avec ardeur. | LUI ARDEUR TRAVAILLER | 3
+Quelle audace ! | AUDACE | 2
+La beauté de la nature. | NATURE BEAUTÉ | 1
+Sa bonté est grande. | LUI BONTÉ GRAND | 2
+C'est un caprice. | CAPRICE | 2
+Son comportement est bizarre. | LUI COMPORTEMENT BIZARRE | 2
+La cruauté est terrible. | CRUAUTÉ TERRIBLE | 3
+Parle avec douceur. | DOUCEUR PARLER | 2
+Tout le monde a des défauts. | TOUT DÉFAUT AVOIR | 2
+C'est sa faiblesse. | LUI FAIBLESSE | 2
+C'est de la folie ! | FOLIE | 2
+Il a de la force. | LUI FORCE AVOIR | 1
+J'aime sa franchise. | LUI FRANCHISE MOI AIMER | 2
+C'est un génie ! | GÉNIE | 1
+C'est une habitude. | HABITUDE | 1
+L'honnêteté est importante. | HONNÊTETÉ IMPORTANT | 2
+L'ignorance est dangereuse. | IGNORANCE DANGEREUX | 3
+Il a de l'imagination. | LUI IMAGINATION | 1
+Suis ton instinct. | TOI INSTINCT SUIVRE | 2
+Elle a de l'intelligence. | ELLE INTELLIGENCE | 2
+J'ai une intuition. | MOI INTUITION AVOIR | 2
+J'ai une bonne mémoire. | MOI MÉMOIRE BON | 1
+Il a trop d'orgueil. | LUI ORGUEIL TROP | 3
+La perfection n'existe pas. | PERFECTION EXISTER PAS | 2
+Il a une forte personnalité. | LUI PERSONNALITÉ FORT | 2
+La pureté de l'eau. | EAU PURETÉ | 3
+Le renard a de la ruse. | RENARD RUSE | 2
+Il a une bonne réputation. | LUI RÉPUTATION BON | 2
+Il garde son sang-froid. | LUI SANG-FROID GARDER | 3
+Elle a une grande sensibilité. | ELLE SENSIBILITÉ GRAND | 2
+Quelle splendeur ! | SPLENDEUR | 3
+Il a de la volonté. | LUI VOLONTÉ | 2
+
+## Famille
+L'adolescent devient adulte. | ADOLESCENT ADULTE DEVENIR | 1
+Nos ancêtres. | NOUS ANCÊTRE | 2
+Mon beau-frère et mon beau-père. | MOI BEAU-FRÈRE BEAU-PÈRE | 1
+C'est le cadet de la famille. | FAMILLE CADET | 2
+C'est mon copain. | MOI COPAIN | 1
+C'est sa femme. | LUI FEMME | 1
+J'ai une fille et un fils. | MOI FILLE FILS AVOIR | 1
+La fillette joue. | FILLETTE JOUER | 1
+Le gamin court. | GAMIN COURIR | 1
+Le garçon est grand. | GARÇON GRAND | 1
+Les générations changent. | GÉNÉRATION CHANGER | 2
+C'est l'héritier. | HÉRITIER | 3
+La jeunesse est belle. | JEUNESSE BEAU | 2
+Elle a une sœur jumelle. | ELLE SŒUR JUMELLE | 1
+Maman est là. | MAMAN LÀ | 1
+La mémé fait un gâteau. | MÉMÉ GÂTEAU FAIRE | 1
+Mon neveu et ma nièce. | MOI NEVEU NIÈCE | 1
+Mon oncle et ma tante. | MOI ONCLE TANTE | 1
+L'orphelin cherche une famille. | ORPHELIN FAMILLE CHERCHER | 2
+Papi et papy jouent aux cartes. | PAPI CARTE JOUER | 1
+Mon papy est gentil. | MOI PAPY GENTIL | 1
+Mon parrain m'offre un cadeau. | MOI PARRAIN CADEAU DONNER | 1
+Mon petit enfant est né. | MOI PETIT ENFANT NAÎTRE | 2
+Mon petit-fils et ma petite-fille. | MOI PETIT-FILS PETITE-FILLE | 1
+Il est veuf. | LUI VEUF | 2
+Mon époux travaille. | MOI ÉPOUX TRAVAILLER | 2

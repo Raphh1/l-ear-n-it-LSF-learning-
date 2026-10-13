@@ -30,6 +30,7 @@ import sys
 import time
 import unicodedata
 import uuid
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -48,6 +49,7 @@ ELIX_BASE     = "https://api.elix-lsf.fr"
 ELIX_DELAY    = 0.35   # secondes entre chaque appel API (respecte le rate-limit)
 ELIX_TIMEOUT  = 10     # timeout requête en secondes
 CAT_SORT_BASE = 200    # les nouvelles catégories reçoivent un sort_order ≥ 200
+NO_VIDEO_FILE = Path(__file__).parent / "no_video.txt"  # mots sans vidéo Elix, à ne plus chercher
 
 # ── Slugification ──────────────────────────────────────────────────────────────
 
@@ -94,20 +96,20 @@ def parse_words_file(path: str) -> list[tuple[str, str]]:
 def fetch_elix(word: str) -> dict | None:
     """
     Interroge l'API Elix et retourne les infos du premier signe pertinent.
-    Retourne None si le mot est introuvable ou en cas d'erreur réseau.
+    Retourne None uniquement en cas d'erreur réseau (le mot pourra être retenté).
     """
     url = f"{ELIX_BASE}/words?{urlencode({'q': word})}"
     try:
         req = Request(url, headers={"Accept": "application/json"})
         with urlopen(req, timeout=ELIX_TIMEOUT) as resp:
             data = json.loads(resp.read().decode())
-    except (HTTPError, URLError, json.JSONDecodeError) as e:
+    except (HTTPError, URLError, json.JSONDecodeError, OSError, TimeoutError) as e:
         print(f"  ⚠  Elix erreur réseau ({word!r}): {e}", file=sys.stderr)
         return None
 
     words = data.get("data") or []
     if not words:
-        return None
+        return {"word": word, "definition": None, "videoUrl": None, "thumbnailUrl": None}
 
     # Préfère une entrée qui possède des vidéos de signe
     best = next(
@@ -188,6 +190,33 @@ def upsert_sign(cur, word: str, slug: str, elix: dict | None, category_id: int) 
     )
     return "created"
 
+# ── Mise à jour du fichier de mots ─────────────────────────────────────────────
+
+def update_words_file(path: str, words_to_keep: list[tuple[str, str]]) -> None:
+    """
+    Réécrit le fichier words.txt en ne gardant que les mots de words_to_keep.
+    Préserve la structure [Catégorie] et les commentaires.
+    """
+    if not words_to_keep:
+        # Aucun mot à garder : le fichier devrait être vide
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("# Tous les mots ont été importés avec succès !\n")
+        return
+
+    # Organiser les mots par catégorie (ordre d'origine conservé = tri par fréquence)
+    by_cat: dict[str, list[str]] = {}
+    for word, cat in words_to_keep:
+        by_cat.setdefault(cat, [])
+        if word not in by_cat[cat]:
+            by_cat[cat].append(word)
+
+    # Réécrire le fichier
+    with open(path, "w", encoding="utf-8") as f:
+        for cat_name, words in by_cat.items():
+            f.write(f"\n[{cat_name}]\n")
+            for word in words:
+                f.write(f"{word}\n")
+
 # ── Point d'entrée ─────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -201,6 +230,7 @@ def main() -> None:
     parser.add_argument("--dry-run",  action="store_true", help="Simule sans écrire en base")
     parser.add_argument("--no-elix",  action="store_true", help="N'appelle pas Elix (insère sans vidéo/image)")
     parser.add_argument("--delay", type=float, default=ELIX_DELAY, help=f"Délai entre requêtes Elix (défaut: {ELIX_DELAY}s)")
+    parser.add_argument("--keep-words", action="store_true", help="Ne pas supprimer les mots traités du fichier")
     args = parser.parse_args()
 
     entries = parse_words_file(args.words_file)
@@ -219,13 +249,25 @@ def main() -> None:
 
     stats = {"created": 0, "updated": 0, "skipped": 0, "elix_video": 0, "elix_nodata": 0}
     cat_cache: dict[str, int] = {}
+    words_to_keep: list[tuple[str, str]] = []  # (word, category) à conserver
+    no_video_words: list[str] = []             # à ajouter dans no_video.txt
 
     conn = None if args.dry_run else psycopg2.connect(args.db)
+    i = 1
 
     try:
         for i, (word, cat_name) in enumerate(entries, 1):
             slug = slugify(word)
             prefix = f"[{i:>{len(str(total))}}/{total}]"
+
+            # ── Check en base pour éviter un appel Elix si le mot existe déjà ──
+            if not args.dry_run:
+                with conn.cursor() as cur:
+                    cur.execute('SELECT "Id" FROM "Signs" WHERE "Slug" = %s', (slug,))
+                    if cur.fetchone():
+                        print(f"{prefix} –  🔄  {word!r}  [{cat_name}] (déjà en base, ignoré)")
+                        stats["skipped"] += 1
+                        continue
 
             # ── Appel Elix ──
             elix = None
@@ -240,6 +282,18 @@ def main() -> None:
                 icon = "🎥" if has_video else ("📷" if elix and elix.get("thumbnailUrl") else "❌")
                 print(f"{prefix} {icon}  {word!r}  [{cat_name}]")
                 stats["created"] += 1
+                words_to_keep.append((word, cat_name))
+                continue
+
+            if not args.no_elix and not has_video:
+                stats["skipped"] += 1
+                if elix is None:
+                    # Erreur réseau : on garde le mot pour réessayer plus tard
+                    print(f"{prefix} –  ⚠  {word!r}  [{cat_name}] (erreur réseau, gardé)")
+                    words_to_keep.append((word, cat_name))
+                else:
+                    print(f"{prefix} –  ❌  {word!r}  [{cat_name}] (pas de vidéo → no_video.txt)")
+                    no_video_words.append(word)
                 continue
 
             # ── Upsert en base ──
@@ -256,9 +310,13 @@ def main() -> None:
             action_icon = {"created": "✅", "updated": "🔄", "skipped": "–"}.get(action, "?")
             elix_icon   = "🎥" if has_video else ("📷" if elix and elix.get("thumbnailUrl") else "❌")
             print(f"{prefix} {action_icon} {elix_icon}  {word!r}  [{cat_name}]")
+            
+            # On ne garde PAS les mots créés ou mis à jour (ils seront supprimés du fichier)
 
     except KeyboardInterrupt:
         print("\n\n⚠  Interrompu par l'utilisateur.")
+        # Les mots non traités restent dans words.txt
+        words_to_keep.extend(entries[i - 1:])
         if conn:
             conn.rollback()
     finally:
@@ -272,7 +330,19 @@ def main() -> None:
     print(f"  🎥 Vidéo Elix   : {stats['elix_video']}")
     print(f"  ❌ Sans vidéo   : {stats['elix_nodata']}")
     print(f"{'─'*55}")
-    if not args.dry_run:
+    
+    # ── Mémorise les mots sans vidéo pour ne plus les chercher ──
+    if not args.dry_run and no_video_words:
+        with open(NO_VIDEO_FILE, "a", encoding="utf-8") as f:
+            for word in no_video_words:
+                f.write(f"{word}\n")
+        print(f"  🚫 {len(no_video_words)} mot(s) ajouté(s) à {NO_VIDEO_FILE.name}")
+
+    # ── Mise à jour du fichier words.txt ──
+    if not args.dry_run and not args.keep_words and len(words_to_keep) < total:
+        update_words_file(args.words_file, words_to_keep)
+        print(f"  📝 Fichier {args.words_file} mis à jour ({len(words_to_keep)} mots conservés)\n")
+    elif not args.dry_run:
         print("  Redémarre l'API pour voir les nouveaux signes.\n")
 
 

@@ -1,0 +1,333 @@
+# Lot 2 : phrases couvrant les signes encore inutilisés (même format que phrases_source.txt)
+
+## Verbes d'action
+Je t'accompagne à la gare. | GARE MOI TOI ACCOMPAGNER | 1
+Accroche ton manteau ici. | MANTEAU ICI ACCROCHER | 1
+Les ventes vont s'accroître. | VENTE ACCROÎTRE | 2
+Il faut achever ce travail. | TRAVAIL ACHEVER FALLOIR | 2
+Cette nouvelle m'affecte beaucoup. | NOUVELLE MOI AFFECTER BEAUCOUP | 2
+L'expérience va t'aguerrir. | EXPÉRIENCE TOI AGUERRIR | 3
+Cette boisson est alcoolisée. | BOISSON ALCOOLISER | 2
+Les deux pays veulent s'allier. | PAYS DEUX ALLIER VOULOIR | 2
+Allume la lumière, s'il te plaît. | LUMIÈRE ALLUMER | 1
+Amène ton ami demain. | DEMAIN AMI AMENER | 1
+Les animaux sauvages fuient le feu. | FEU ANIMAUX SAUVAGE FUIR | 2
+Il veut approfondir le sujet. | SUJET APPROFONDIR VOULOIR | 3
+Le directeur approuve le projet. | PROJET DIRECTEUR APPROUVER | 2
+Il arrache les mauvaises herbes. | HERBE MAUVAIS ARRACHER | 2
+J'arrose le jardin le soir. | SOIR JARDIN MOI ARROSER | 1
+Il aspire la poussière. | POUSSIÈRE ASPIRER | 1
+L'assassin a fui. | ASSASSIN FUIR | 2
+J'assiste à la réunion. | RÉUNION MOI ASSISTER | 2
+Le coup l'a assommé. | COUP LUI ASSOMMER | 2
+Les couleurs sont bien assorties. | COULEUR ASSORTIR BIEN | 2
+Le bruit m'assourdit. | BRUIT MOI ASSOURDIR | 2
+Ce lait est avarié. | LAIT AVARIÉ | 2
+Le soleil m'aveugle. | SOLEIL MOI AVEUGLER | 1
+L'infirmière bande ma main. | INFIRMIÈRE MAIN BANDER | 2
+Il est banni du club. | CLUB LUI BANNIR | 3
+L'enfant barbouille son cahier. | ENFANT CAHIER BARBOUILLER | 2
+Ses cheveux blanchissent. | CHEVEU BLANCHIR | 2
+La route est bloquée. | ROUTE BLOQUER | 1
+La ville est bombardée. | VILLE BOMBARDE | 3
+Le métro est bondé. | MÉTRO BONDE | 2
+L'eau bout. | EAU BOUILLIR | 1
+Ce film m'a bouleversé. | FILM MOI BOULEVERSER | 2
+Ma grand-mère brode un mouchoir. | GRAND-MÈRE MOUCHOIR BRODER | 2
+La machine broie le café. | CAFÉ MACHINE BROYER | 2
+Ne le brusque pas. | LUI BRUSQUER PAS | 2
+Ils bâtissent une maison. | MAISON BÂTIR | 2
+Mon voisin est canadien. | MOI VOISIN CANADIEN | 1
+La pluie a causé une inondation. | PLUIE INONDATION CAUSER | 2
+Elle charme tout le monde. | ELLE TOUT CHARMER | 2
+Je chauffe la soupe. | SOUPE MOI CHAUFFER | 1
+Cette image m'a choqué. | IMAGE MOI CHOQUER | 2
+Il est bien coiffé aujourd'hui. | AUJOURD'HUI LUI COIFFÉ BIEN | 1
+Ma clé est coincée. | MOI CLÉ COINCER | 1
+La salle est comble. | SALLE COMBLE | 2
+Il a conçu ce jardin. | JARDIN LUI CONCEVOIR | 3
+Il faut concilier travail et famille. | TRAVAIL FAMILLE CONCILIER FALLOIR | 3
+Pour conclure, merci. | CONCLURE MERCI | 2
+Je confirme le rendez-vous. | RENDEZ-VOUS MOI CONFIRMER | 2
+Le professeur confisque le téléphone. | TÉLÉPHONE PROFESSEUR CONFISQUER | 2
+Je consulte mes messages. | MESSAGE MOI CONSULTER | 2
+Le bruit est continu. | BRUIT CONTINU | 2
+Ça me contrarie. | MOI CONTRARIER | 2
+Cette date me convient. | DATE MOI CONVENIR | 2
+Ne crache pas par terre. | TERRE CRACHER PAS | 1
+Le parquet craque. | PARQUET CRAQUER | 2
+Il est designer. | LUI DESIGNER | 2
+Je distingue mal la forme. | FORME MOI DISTINGUER MAL | 2
+Le bruit me distrait. | BRUIT MOI DISTRAIRE | 2
+Ce jeu me divertit. | JEU MOI DIVERTIR | 2
+Il dresse son chien. | LUI CHIEN DRESSER | 2
+La rivière déborde. | RIVIÈRE DÉBORDER | 2
+On décale la réunion. | RÉUNION DÉCALER | 2
+Elle a déchiré la lettre. | LETTRE ELLE DÉCHIRER | 1
+Il déclare son amour. | LUI AMOUR DÉCLARER | 2
+Je découpe le gâteau. | GÂTEAU MOI DÉCOUPER | 1
+Décris-moi ta maison. | TOI MAISON DÉCRIRE | 2
+L'auteur signe une dédicace. | AUTEUR DÉDICACE SIGNER | 2
+Il faut définir le mot. | MOT DÉFINIR FALLOIR | 2
+La chaleur déforme le plastique. | PLASTIQUE CHALEUR DÉFORMER | 2
+Le ballon se dégonfle. | BALLON DÉGONFLER | 1
+Le temps dégrade le mur. | MUR TEMPS DÉGRADER | 3
+La maison est délabrée. | MAISON DÉLABRER | 3
+L'arbre est dénudé en hiver. | HIVER ARBRE DÉNUDER | 3
+L'oiseau déploie ses ailes. | OISEAU AILE DÉPLOYER | 2
+On l'a dépouillé de son argent. | ARGENT LUI DÉPOUILLER | 3
+Désolé de te déranger. | TOI DÉRANGER DÉSOLÉ | 1
+On m'a dérobé mon sac. | MOI SAC DÉROBER | 3
+Bois, tu vas te déshydrater. | TOI DÉSHYDRATER BOIRE | 2
+Que désirez-vous ? | VOUS DÉSIRER QUOI | 2
+Détaille ton plan. | TOI PLAN DÉTAILLER | 2
+La musique me détend. | MUSIQUE MOI DÉTENDRE | 1
+Il détourne le regard. | LUI REGARD DÉTOURNER | 2
+La tempête a dévasté la côte. | CÔTE TEMPÊTE DÉVASTER | 3
+L'entreprise se développe. | ENTREPRISE DÉVELOPPER | 2
+Le lion dévore sa proie. | LION PROIE DÉVORER | 2
+Efface le tableau. | TABLEAU EFFACER | 1
+Le pont s'est effondré. | PONT EFFONDRER | 2
+J'emballe le cadeau. | CADEAU MOI EMBALLER | 1
+Elle embrasse son fils. | ELLE FILS EMBRASSER | 1
+Arrête de m'embêter ! | MOI EMBÊTER ARRÊTER | 1
+Ils ont emprisonné le voleur. | VOLEUR EMPRISONNER | 2
+Je peux emprunter ton stylo ? | TOI STYLO MOI EMPRUNTER POUVOIR | 1
+Il enchaîne les erreurs. | LUI ERREUR ENCHAÎNER | 2
+Mes parents m'encouragent. | MOI PARENT ENCOURAGER | 1
+Il s'est enfermé dehors. | LUI DEHORS ENFERMER | 2
+Le bois s'enflamme vite. | BOIS ENFLAMMER VITE | 2
+Ma cheville enfle. | MOI CHEVILLE ENFLER | 2
+Enfonce le clou. | CLOU ENFONCER | 2
+Le vin l'enivre. | VIN LUI ENIVRER | 3
+Le village est enseveli sous la neige. | NEIGE VILLAGE ENSEVELIR | 3
+Je ne t'entends pas. | MOI TOI ENTENDRE PAS | 1
+On enterre le trésor. | TRÉSOR ENTERRER | 2
+Entrez, s'il vous plaît. | VOUS ENTRER | 1
+Il entretient sa voiture. | LUI VOITURE ENTRETENIR | 2
+Le chien erre dans la rue. | RUE CHIEN ERRER | 2
+La foule s'exalte. | FOULE EXALTER | 3
+Le retard m'exaspère. | RETARD MOI EXASPÉRER | 3
+Le patron exige le silence. | PATRON SILENCE EXIGER | 2
+C'est facile ! | FACILE | 1
+Je me sens faible. | MOI FAIBLE SENTIR | 1
+Les fleurs fanent. | FLEUR FANER | 2
+Les étoiles me fascinent. | ÉTOILE MOI FASCINER | 2
+Il feint d'être malade. | LUI MALADE FEINDRE | 3
+Je m'en fiche. | MOI FICHER | 2
+Le temps file. | TEMPS FILER | 2
+Les prix flambent. | PRIX FLAMBER | 3
+On frappe à la porte. | PORTE FRAPPER | 1
+Ne froisse pas ta chemise. | TOI CHEMISE FROISSER PAS | 2
+Je fréquente ce café. | CAFÉ MOI FRÉQUENTER | 2
+Il ne faut pas fumer ici. | ICI FUMER PAS | 1
+Le soldat a été fusillé. | SOLDAT FUSILLER | 3
+Le verre est fêlé. | VERRE FÊLER | 2
+Attention, ça glisse ! | ATTENTION GLISSER | 1
+C'est un gros chien. | CHIEN GROS | 1
+Il a grossi. | LUI GROSSIR | 1
+Tu vas vite guérir. | TOI VITE GUÉRIR | 1
+On honore les héros. | HÉROS HONORER | 3
+Il m'a humilié. | LUI MOI HUMILIER | 2
+Ne hurle pas ! | HURLER PAS | 1
+C'est un livre illustré. | LIVRE ILLUSTRÉ | 2
+C'est important pour moi. | MOI IMPORTER | 2
+Il impose ses idées. | LUI IDÉE IMPOSER | 2
+Cette injustice m'indigne. | INJUSTICE MOI INDIGNER | 3
+La plaie est infectée. | PLAIE INFECTER | 2
+J'insiste, viens ! | MOI INSISTER VENIR | 2
+Les livres instruisent. | LIVRE INSTRUIRE | 3
+Ne m'interromps pas. | MOI INTERROMPRE PAS | 2
+Il s'est bien intégré. | LUI INTÉGRER BIEN | 2
+L'histoire m'intéresse. | HISTOIRE MOI INTÉRESSER | 1
+La fumée irrite les yeux. | FUMÉE ŒIL IRRITER | 2
+Jette ça à la poubelle. | POUBELLE JETER | 1
+Ce monstre est laid. | MONSTRE LAID | 1
+La rue est large. | RUE LARGE | 1
+Je me lasse de ce jeu. | JEU MOI LASSER | 2
+Ces deux faits sont liés. | FAIT DEUX LIER | 2
+Le voleur a ligoté le gardien. | VOLEUR GARDIEN LIGOTER | 3
+Je loue un appartement. | APPARTEMENT MOI LOUER | 1
+Le coup a meurtri son bras. | COUP BRAS MEURTRIR | 3
+Il faut modifier le texte. | TEXTE MODIFIER FALLOIR | 2
+Le chien m'a mordu. | CHIEN MOI MORDRE | 1
+On moule le plâtre. | PLÂTRE MOULER | 3
+La plante va mourir. | PLANTE MOURIR | 1
+La bière mousse. | BIÈRE MOUSSER | 2
+Il est muté à Paris. | PARIS LUI MUTER | 3
+L'accident l'a mutilé. | ACCIDENT LUI MUTILER | 3
+Ce chien est méchant. | CHIEN MÉCHANT | 1
+Ne te mêle pas de ça. | TOI MÊLER PAS | 2
+Je suis navré. | MOI NAVRER | 2
+Le ciel noircit. | CIEL NOIRCIR | 2
+On l'a nommé chef. | CHEF LUI NOMMER | 2
+Je noue mes lacets. | LACET MOI NOUER | 2
+Il faut nourrir le chat. | CHAT NOURRIR FALLOIR | 1
+Numérote les pages. | PAGE NUMÉROTER | 2
+Il néglige sa santé. | LUI SANTÉ NÉGLIGER | 2
+Il est un peu névrosé. | LUI NÉVROSÉ | 3
+J'observe les oiseaux. | OISEAU MOI OBSERVER | 1
+Je ne voulais pas t'offenser. | MOI TOI OFFENSER VOULOIR PAS | 3
+La chaleur m'oppresse. | CHALEUR MOI OPPRESSER | 3
+Le tyran opprime le peuple. | TYRAN PEUPLE OPPRIMER | 3
+Le chef ordonne de partir. | CHEF PARTIR ORDONNER | 2
+Il est pauvre. | LUI PAUVRE | 1
+Ne te penche pas. | TOI PENCHER PAS | 1
+La douleur persiste. | DOULEUR PERSISTER | 2
+Il m'a persuadé. | LUI MOI PERSUADER | 3
+Ils persécutent les minorités. | MINORITÉ PERSÉCUTER | 3
+Le bruit me perturbe. | BRUIT MOI PERTURBER | 2
+Je pèse les pommes. | POMME MOI PESER | 1
+L'aigle plane. | AIGLE PLANER | 2
+Le jour commence à poindre. | JOUR POINDRE COMMENCER | 3
+J'aime la musique pop. | MUSIQUE POP MOI AIMER | 1
+Il possède deux voitures. | VOITURE DEUX LUI POSSÉDER | 2
+Presse le citron. | CITRON PRESSER | 1
+On privilégie la sécurité. | SÉCURITÉ PRIVILÉGIER | 3
+Prouve-le ! | PROUVER | 2
+Préviens-moi demain. | DEMAIN MOI PRÉVENIR | 2
+Ça pue ici ! | ICI PUER | 1
+Le ballon a pété. | BALLON PÉTER | 2
+Il est qualifié pour la finale. | FINALE LUI QUALIFIER | 2
+Je quitte la maison. | MAISON MOI QUITTER | 1
+Il faut raisonner calmement. | CALME RAISONNER FALLOIR | 3
+Le bébé rampe. | BÉBÉ RAMPER | 1
+On recueille un chat. | CHAT RECUEILLIR | 2
+Recule un peu ! | RECULER UN PEU | 1
+Il rejette mon idée. | LUI MOI IDÉE REJETER | 2
+Je te rejoins au parc. | PARC MOI TOI REJOINDRE | 1
+Reste relax ! | RELAX | 1
+Je me relaxe le soir. | SOIR MOI RELAXER | 1
+Relève la tête. | TÊTE RELEVER | 1
+La rue est renommée. | RUE RENOMMER | 3
+Il a renversé son café. | CAFÉ LUI RENVERSER | 1
+Il se repent de son erreur. | LUI ERREUR REPENTIR | 3
+Il repousse la date. | DATE LUI REPOUSSER | 2
+Je reprends du gâteau. | GÂTEAU MOI REPRENDRE | 1
+Le train est retardé. | TRAIN RETARDER | 1
+Retiens ton souffle. | SOUFFLE RETENIR | 2
+Il est riche. | LUI RICHE | 1
+On rit beaucoup. | NOUS RIRE BEAUCOUP | 1
+Ils ont rompu. | ROMPRE | 2
+La table est ronde. | TABLE ROND | 1
+Il réalise son rêve. | LUI RÊVE RÉALISER | 2
+Le soleil réchauffe la terre. | SOLEIL TERRE RÉCHAUFFER | 2
+Je me réjouis de te voir. | MOI TOI VOIR RÉJOUIR | 2
+Ça me répugne. | MOI RÉPUGNER | 3
+Il a été rétrogradé. | LUI RÉTROGRADER | 3
+Il sacrifie ses vacances. | LUI VACANCES SACRIFIER | 3
+Saisis la corde ! | CORDE SAISIR | 2
+Tes mains sont sales. | TOI MAIN SALE | 1
+On scelle l'accord. | ACCORD SCELLER | 3
+Les étoiles scintillent. | ÉTOILE SCINTILLER | 2
+Je signale un problème. | PROBLÈME MOI SIGNALER | 2
+Où se situe la gare ? | GARE SITUER OÙ | 2
+Le téléphone sonne. | TÉLÉPHONE SONNER | 1
+Le patient est stabilisé. | PATIENT STABILISER | 3
+Je suppose qu'il viendra. | MOI SUPPOSER LUI VENIR | 2
+Il m'a surpris. | LUI MOI SURPRENDRE | 2
+Ils ont survécu. | SURVIVRE | 2
+Il veut la séduire. | LUI ELLE SÉDUIRE VOULOIR | 2
+Je tape à l'ordinateur. | ORDINATEUR MOI TAPER | 1
+Il s'est fait tatouer. | LUI TATOUER | 2
+Tiens ma main. | MOI MAIN TENIR | 1
+Le film terrorise les enfants. | FILM ENFANT TERRORISER | 3
+Tire la porte. | PORTE TIRER | 1
+Je tonds la pelouse. | PELOUSE MOI TONDRE | 2
+Il est un peu toqué. | LUI TOQUER | 3
+Il s'est tordu la cheville. | LUI CHEVILLE TORDRE | 2
+Il m'a trahi. | LUI MOI TRAHIR | 2
+On trait la vache. | VACHE TRAIRE | 2
+Ne traîne pas ! | TRAÎNER PAS | 1
+Notre équipe triomphe. | NOUS ÉQUIPE TRIOMPHER | 2
+La chaussette est trouée. | CHAUSSETTE TROUER | 1
+Le match est télévisé. | MATCH TÉLÉVISER | 2
+Ils ont vaincu l'ennemi. | ENNEMI VAINCRE | 2
+Verrouille la porte. | PORTE VERROUILLER | 1
+Je ne voulais pas te vexer. | MOI TOI VEXER VOULOIR PAS | 2
+Vise la cible. | CIBLE VISER | 2
+Vérifie ta réponse. | TOI RÉPONSE VÉRIFIER | 1
+Il est vêtu de noir. | LUI NOIR VÊTIR | 2
+Écarte-toi ! | TOI ÉCARTER | 1
+Le chat s'est échappé. | CHAT ÉCHAPPER | 1
+La lampe éclaire la pièce. | PIÈCE LAMPE ÉCLAIRER | 1
+Le ballon a éclaté. | BALLON ÉCLATER | 1
+L'eau s'écoule. | EAU ÉCOULER | 2
+Il a écrasé l'insecte. | INSECTE LUI ÉCRASER | 1
+Ce plat est écœurant. | PLAT ÉCŒURANT | 2
+Ce couloir est étroit. | COULOIR ÉTROIT | 1
+
+## Idées & Concepts
+Son absence me pèse. | LUI ABSENCE MOI PESER | 2
+L'accès est interdit. | ACCÈS INTERDIRE | 1
+C'est un acte de courage. | ACTE COURAGE | 2
+Quelle est ton activité préférée ? | TOI ACTIVITÉ PRÉFÉRER QUOI | 1
+Son approche est simple. | LUI APPROCHE SIMPLE | 2
+Merci pour ton appui. | TOI APPUI MERCI | 2
+C'est un aspect important. | ASPECT IMPORTANT | 2
+Quel est l'avantage ? | AVANTAGE QUOI | 2
+C'est la base. | BASE | 1
+Il a une grande capacité. | LUI CAPACITÉ GRAND | 2
+Dans ce cas, j'accepte. | CAS MOI ACCEPTER | 2
+Coche la case. | CASE COCHER | 1
+Choisis une catégorie. | CATÉGORIE CHOISIR | 1
+La comparaison est difficile. | COMPARAISON DIFFICILE | 2
+Il faut de la concentration. | CONCENTRATION FALLOIR | 2
+Le concept est nouveau. | CONCEPT NOUVEAU | 2
+J'accepte à une condition. | CONDITION UN MOI ACCEPTER | 2
+Il assume les conséquences. | LUI CONSÉQUENCE ASSUMER | 3
+C'est le contraire ! | CONTRAIRE | 1
+Le cycle de l'eau. | EAU CYCLE | 2
+J'ai une difficulté. | MOI DIFFICULTÉ AVOIR | 1
+C'est son domaine. | LUI DOMAINE | 2
+C'est un détail. | DÉTAIL | 1
+Le développement durable est important. | DÉVELOPPEMENT DURABLE IMPORTANT | 2
+Le développement de l'enfant. | ENFANT DÉVELOPPEMENT | 2
+Le médicament fait effet. | MÉDICAMENT EFFET | 2
+C'est une exception. | EXCEPTION | 2
+L'excès de sucre est mauvais. | SUCRE EXCÈS MAUVAIS | 2
+C'est un fait. | FAIT | 1
+La fermeture est à 20 heures. | FERMETURE HEURE VINGT | 2
+Le gâteau a une forme ronde. | GÂTEAU FORME ROND | 1
+L'impact est énorme. | IMPACT ÉNORME | 2
+Le seul inconvénient, c'est le prix. | PRIX INCONVÉNIENT SEUL | 3
+Il a beaucoup d'influence. | LUI INFLUENCE BEAUCOUP | 2
+Quel est l'intérêt ? | INTÉRÊT QUOI | 2
+Fais-le à ta manière. | TOI MANIÈRE FAIRE | 2
+Le manque de sommeil fatigue. | SOMMEIL MANQUE FATIGUE | 2
+Écris dans la marge. | MARGE ÉCRIRE | 1
+Ce modèle est joli. | MODÈLE JOLI | 1
+Quel est le motif ? | MOTIF QUOI | 2
+C'est le meilleur moyen. | MOYEN MEILLEUR | 2
+J'ai une méthode. | MOI MÉTHODE AVOIR | 2
+C'est la norme. | NORME | 2
+Je n'ai aucune notion. | MOI NOTION RIEN | 3
+C'est une nécessité. | NÉCESSITÉ | 2
+C'est une obligation. | OBLIGATION | 2
+Il y a un obstacle. | OBSTACLE | 1
+Quelle est l'origine du mot ? | MOT ORIGINE QUOI | 2
+Désolé, c'est un oubli. | OUBLI DÉSOLÉ | 2
+Voici ta part. | TOI PART | 1
+C'est une belle perspective. | PERSPECTIVE BEAU | 3
+J'ai un plan. | MOI PLAN AVOIR | 1
+Il y a une possibilité. | POSSIBILITÉ | 2
+Il a du potentiel. | LUI POTENTIEL | 2
+La santé est la priorité. | SANTÉ PRIORITÉ | 2
+Le processus est long. | PROCESSUS LONG | 3
+Tu fais des progrès. | TOI PROGRÈS FAIRE | 1
+Il faut de la précision. | PRÉCISION FALLOIR | 3
+La préparation prend du temps. | PRÉPARATION TEMPS | 2
+La ressemblance est frappante. | RESSEMBLANCE FORT | 3
+Quelle est ta réaction ? | TOI RÉACTION QUOI | 2
+J'ai de l'eau en réserve. | EAU RÉSERVE MOI AVOIR | 2
+Lis la première section. | SECTION PREMIER LIRE | 2
+Il y a toutes sortes de fruits. | FRUIT SORTE TOUT | 2
+La structure est solide. | STRUCTURE SOLIDE | 2
+Change de sujet ! | SUJET CHANGER | 1
+Le système est en panne. | SYSTÈME PANNE | 2
+Le thème de la fête. | FÊTE THÈME | 2
+À usage unique. | USAGE UNIQUE | 3
+C'est la nouvelle version. | VERSION NOUVEAU | 2
+Il manque un élément. | ÉLÉMENT UN MANQUER | 2
+Étape par étape. | ÉTAPE | 2
+C'est une évidence. | ÉVIDENCE | 2

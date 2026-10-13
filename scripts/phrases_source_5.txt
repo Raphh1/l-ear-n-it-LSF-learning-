@@ -1,0 +1,461 @@
+# Lot 5 : phrases couvrant les signes encore inutilisés
+
+## Verbes courants
+Tu as abîmé mon livre. | TOI MOI LIVRE ABÎMER | 1
+On l'accuse de vol. | LUI VOL ACCUSER | 2
+J'adjoins un document. | DOCUMENT MOI ADJOINDRE | 3
+J'archive les dossiers. | DOSSIER MOI ARCHIVER | 2
+On assemble le meuble. | MEUBLE ASSEMBLER | 2
+Mon cœur bat fort. | MOI CŒUR BATTRE FORT | 1
+Le terrain est borné. | TERRAIN BORNER | 3
+On cachète l'enveloppe. | ENVELOPPE CACHETER | 3
+La boîte contient des bonbons. | BOÎTE BONBON CONTENIR | 2
+Je me couche tôt. | MOI COUCHER TÔT | 1
+Le chien a crotté le trottoir. | CHIEN TROTTOIR CROTTER | 3
+Je descends l'escalier. | ESCALIER MOI DESCENDRE | 1
+Ils devisent au coin du feu. | FEU DEVISER | 3
+Il discourt pendant une heure. | LUI HEURE DISCOURIR | 3
+Le sportif s'est dopé. | SPORTIF DOPER | 3
+On décharge le camion. | CAMION DÉCHARGER | 2
+Il escorte le ministre. | MINISTRE ESCORTER | 3
+Il gère le magasin. | LUI MAGASIN GÉRER | 2
+Ils vont se marier. | MARIER | 1
+Je peigne mes cheveux. | MOI CHEVEU PEIGNER | 1
+Ce film me plaît. | FILM MOI PLAIRE | 1
+Mes doigts poissent. | MOI DOIGT POISSER | 3
+Il quête pour les pauvres. | LUI PAUVRE QUÊTER | 3
+Ce dessin représente un chat. | DESSIN CHAT REPRÉSENTER | 2
+La rose épine les doigts. | ROSE DOIGT ÉPINER | 3
+
+## Cinéma & Spectacle
+Je passe une audition. | MOI AUDITION | 2
+Il signe un autographe. | LUI AUTOGRAPHE SIGNER | 2
+On va au cirque. | CIRQUE ALLER | 1
+C'est un acteur comique. | ACTEUR COMIQUE | 1
+J'aime les comédies et les drames. | COMÉDIE DRAME MOI AIMER | 1
+Le décor est beau. | DÉCOR BEAU | 1
+Je suis fan de lui. | MOI LUI FAN | 1
+Il rêve de gloire. | LUI GLOIRE RÊVER | 2
+C'est mon idole. | MOI IDOLE | 1
+L'acteur est dans sa loge. | ACTEUR LOGE | 2
+Le montage du film. | FILM MONTAGE | 2
+Une vieille pellicule. | PELLICULE VIEUX | 3
+Le producteur et le réalisateur. | PRODUCTEUR RÉALISATEUR | 2
+Le projecteur est allumé. | PROJECTEUR ALLUMER | 2
+La représentation commence. | REPRÉSENTATION COMMENCER | 2
+Il oublie sa réplique. | LUI RÉPLIQUE OUBLIER | 2
+La répétition est demain. | DEMAIN RÉPÉTITION | 1
+Il lit le scénario. | LUI SCÉNARIO LIRE | 2
+Le film a des sous-titres. | FILM SOUS-TITRE | 1
+Le spectateur applaudit. | SPECTATEUR APPLAUDIR | 1
+Le studio de cinéma. | CINÉMA STUDIO | 2
+La séance commence à 20 heures. | SÉANCE HEURE VINGT COMMENCER | 1
+Une séquence émouvante. | SÉQUENCE | 2
+Je regarde une série. | MOI SÉRIE REGARDER | 1
+C'est une tragédie. | TRAGÉDIE | 2
+Elle est la vedette. | ELLE VEDETTE | 2
+Le dernier épisode. | ÉPISODE DERNIER | 1
+
+## Relations sociales
+Il a un admirateur. | LUI ADMIRATEUR AVOIR | 2
+Elle a un amant. | ELLE AMANT | 3
+Un baiser sur la joue. | JOUE BAISER | 1
+Mon bien-aimé. | MOI BIEN-AIMÉ | 2
+Une caresse au chat. | CHAT CARESSE | 1
+Bonjour mon chéri ! | BONJOUR MOI CHÉRI | 1
+Mon compagnon est gentil. | MOI COMPAGNON GENTIL | 1
+Une belle complicité. | COMPLICITÉ BEAU | 2
+Merci pour le compliment. | COMPLIMENT MERCI | 1
+C'est une connaissance. | CONNAISSANCE | 2
+Ils demandent le divorce. | DIVORCE DEMANDER | 2
+Un engagement sérieux. | ENGAGEMENT SÉRIEUX | 2
+J'ai de l'estime pour lui. | MOI LUI ESTIME | 3
+La fidélité compte. | FIDÉLITÉ IMPORTANT | 2
+Ne parle pas à un inconnu. | INCONNU PARLER PAS | 1
+Respecte son intimité. | LUI INTIMITÉ RESPECTER | 2
+Ils ont une liaison. | LIAISON | 3
+Un lien fort. | LIEN FORT | 2
+Mon partenaire de danse. | MOI DANSE PARTENAIRE | 1
+C'est promis ! | PROMIS | 1
+C'est son protégé. | LUI PROTÉGÉ | 3
+Merci pour ta reconnaissance. | TOI RECONNAISSANCE MERCI | 2
+La rupture est difficile. | RUPTURE DIFFICILE | 2
+J'ai un souhait. | MOI SOUHAIT AVOIR | 1
+Il a de la sympathie. | LUI SYMPATHIE | 2
+La séparation fait mal. | SÉPARATION MAL | 2
+C'est une trahison. | TRAHISON | 2
+Mon voisin est sympa. | MOI VOISIN SYMPA | 1
+Je fais un vœu. | MOI VŒU FAIRE | 1
+
+## Musique & Arts
+J'écoute du blues. | MOI BLUES ÉCOUTER | 2
+Quel bruit ! | BRUIT | 1
+Une vieille cassette. | CASSETTE VIEUX | 1
+Le chant des oiseaux. | OISEAU CHANT | 1
+Il chante dans le chœur. | LUI CHŒUR CHANTER | 2
+Le créateur de la création. | CRÉATEUR CRÉATION | 2
+J'achète un disque. | MOI DISQUE ACHETER | 1
+L'enregistrement commence. | ENREGISTREMENT COMMENCER | 2
+Une belle harmonie. | HARMONIE BEAU | 2
+On chante l'hymne. | HYMNE CHANTER | 2
+Une belle image. | IMAGE BEAU | 1
+Imagine un monde meilleur. | MONDE MEILLEUR IMAGINER | 2
+Je cherche l'inspiration. | MOI INSPIRATION CHERCHER | 2
+Tu joues de quel instrument ? | TOI INSTRUMENT JOUER QUOI | 1
+Le maestro dirige. | MAESTRO DIRIGER | 3
+Parle dans le micro. | MICRO PARLER | 1
+On va à l'opéra. | OPÉRA ALLER | 2
+Le pianiste joue. | PIANISTE JOUER | 1
+Prends la pose. | POSE PRENDRE | 2
+J'aime la poésie. | POÉSIE MOI AIMER | 2
+Il écoute du punk. | LUI PUNK ÉCOUTER | 2
+Du rock and roll. | ROCK ROLL | 2
+Une statue en marbre. | MARBRE STATUE | 2
+Il joue du tambour. | LUI TAMBOUR JOUER | 1
+Change de ton. | TON CHANGER | 2
+Le groupe part en tournée. | GROUPE TOURNÉE PARTIR | 2
+
+## Urgences & Sécurité
+L'alarme sonne. | ALARME SONNER | 1
+C'est un avertissement. | AVERTISSEMENT | 2
+Une brûlure à la main. | MAIN BRÛLURE | 1
+Respecte la consigne. | CONSIGNE RESPECTER | 2
+Danger, ne touche pas ! | DANGER TOUCHER PAS | 1
+Où est le défibrillateur ? | DÉFIBRILLATEUR OÙ | 2
+C'est un désastre. | DÉSASTRE | 2
+Une explosion au loin. | LOIN EXPLOSION | 2
+Ce fléau touche le pays. | PAYS FLÉAU | 3
+Le garde surveille. | GARDE SURVEILLER | 2
+L'inondation a tout détruit. | INONDATION TOUT DÉTRUIRE | 2
+Une inspection de sécurité. | SÉCURITÉ INSPECTION | 2
+L'intervention des pompiers. | POMPIER INTERVENTION | 2
+Attention à la noyade. | NOYADE ATTENTION | 2
+Mets une protection. | PROTECTION METTRE | 1
+Prends tes précautions. | PRÉCAUTION PRENDRE | 2
+Ils sont en péril. | PÉRIL | 3
+On cherche un refuge. | REFUGE CHERCHER | 2
+Le sauvetage a réussi. | SAUVETAGE RÉUSSIR | 2
+C'est mon sauveur. | MOI SAUVEUR | 2
+Appelle les secours. | SECOURS APPELER | 1
+La surveillance est forte. | SURVEILLANCE FORT | 2
+Pour ta sûreté. | TOI SÛRETÉ | 3
+Le tremblement de terre a détruit la ville. | TREMBLEMENT DE TERRE VILLE DÉTRUIRE | 2
+J'ai un tremblement. | MOI TREMBLEMENT AVOIR | 2
+L'évacuation commence. | ÉVACUATION COMMENCER | 2
+Il faut évacuer le bâtiment. | BÂTIMENT ÉVACUER FALLOIR | 2
+
+## Argot & Insultes
+Quel abruti ! | ABRUTI | 2
+Arrête de faire le bouffon. | BOUFFON ARRÊTER | 2
+Il est complètement cinglé. | LUI CINGLÉ | 2
+Il a pris une claque. | LUI CLAQUE | 2
+Arrête tes conneries. | CONNERIE ARRÊTER | 2
+C'est une crapule. | CRAPULE | 3
+Je crève de faim. | MOI FAIM CRÈVE | 2
+Quel crétin ! | CRÉTIN | 2
+C'est dingue ! | DINGUE | 1
+C'est débile. | DÉBILE | 2
+Quelle embrouille ! | EMBROUILLE | 2
+Ferme ta gueule ! | GUEULE FERMER | 2
+C'est un hypocrite. | HYPOCRITE | 2
+Quelle idiotie ! | IDIOTIE | 2
+Espèce d'imbécile ! | IMBÉCILE | 2
+C'est une insulte. | INSULTE | 1
+Un ivrogne dans la rue. | RUE IVROGNE | 2
+Il est lâche. | LUI LÂCHE | 2
+C'est minable. | MINABLE | 2
+C'est un pervers. | PERVERS | 3
+Il a pris une raclée. | LUI RACLÉE | 3
+Quel raté ! | RATÉ | 2
+Quelle sottise ! | SOTTISE | 2
+C'est stupide. | STUPIDE | 1
+Il est taré. | LUI TARÉ | 2
+C'est un traître. | TRAÎTRE | 2
+Petit vaurien ! | VAURIEN PETIT | 3
+
+## Jeux & Loisirs
+C'est un amateur. | AMATEUR | 2
+J'ai un atout. | MOI ATOUT AVOIR | 2
+Une attraction du parc. | PARC ATTRACTION | 2
+Le jeu du chat et attrape. | ATTRAPE JEU | 2
+On fait une balade. | BALADE FAIRE | 1
+On joue aux billes. | BILLE JOUER | 1
+Il joue au casino. | LUI CASINO JOUER | 2
+Je suis dans un club. | MOI CLUB | 1
+Je fais une collection. | MOI COLLECTION FAIRE | 1
+Qui donne les cartes ? | CARTE DONNE QUI | 2
+Un moment de détente. | MOMENT DÉTENTE | 2
+Il me fait une farce. | LUI MOI FARCE FAIRE | 2
+Un jeton de casino. | CASINO JETON | 2
+L'enfant joue avec son jouet. | ENFANT JOUET JOUER | 1
+On est perdus dans le labyrinthe. | LABYRINTHE PERDU | 2
+Mon loisir préféré. | MOI LOISIR PRÉFÉRER | 1
+J'ai gagné le gros lot. | MOI LOT GROS GAGNER | 2
+Il joue à la loterie. | LUI LOTERIE JOUER | 2
+Un tour de manège. | MANÈGE TOUR | 1
+Un spectacle de marionnettes. | SPECTACLE MARIONNETTE | 1
+On fait un pari. | PARI FAIRE | 2
+On fait une partie ? | PARTIE FAIRE | 1
+L'as de pique. | PIQUE | 2
+On fait un pique-nique. | PIQUE-NIQUE FAIRE | 1
+C'est une plaisanterie. | PLAISANTERIE | 2
+La roulette tourne. | ROULETTE TOURNER | 2
+Il fait semblant. | LUI SEMBLANT FAIRE | 2
+
+## Adjectifs du quotidien
+C'est un homme brave. | HOMME BRAVE | 2
+Un ami commun. | AMI COMMUN | 2
+Un train direct. | TRAIN DIRECT | 1
+C'est drôle ! | DRÔLE | 1
+Un chien fidèle. | CHIEN FIDÈLE | 1
+Il est fou. | LUI FOU | 1
+Un problème interne. | PROBLÈME INTERNE | 3
+Il est malheureux. | LUI MALHEUREUX | 1
+Il est malin. | LUI MALIN | 2
+C'est marrant. | MARRANT | 1
+Une peinture mate. | PEINTURE MAT | 3
+Un voyage merveilleux. | VOYAGE MERVEILLEUX | 2
+C'est normal. | NORMAL | 1
+C'est nécessaire. | NÉCESSAIRE | 2
+Une idée originale. | IDÉE ORIGINAL | 2
+C'est pareil. | PAREIL | 1
+La rue principale. | RUE PRINCIPAL | 2
+C'est privé. | PRIVÉ | 2
+La semaine précédente. | SEMAINE PRÉCÉDENT | 2
+C'est ridicule. | RIDICULE | 1
+Sois sage. | SAGE | 1
+Un animal sauvage. | ANIMAL SAUVAGE | 1
+Un cas semblable. | CAS SEMBLABLE | 3
+Au suivant ! | SUIVANT | 1
+Une vue superbe. | VUE SUPERBE | 1
+L'étage supérieur. | ÉTAGE SUPÉRIEUR | 2
+Il est vivant. | LUI VIVANT | 1
+
+## Alphabet
+Je m'appelle Paul. | MOI NOM P A U L | 1
+Je m'appelle Lucie. | MOI NOM L U C I E | 1
+Il s'appelle Max. | LUI NOM M A X | 1
+Elle s'appelle Zoé. | ELLE NOM Z O E | 1
+Il s'appelle Jack. | LUI NOM J A C K | 1
+Elle s'appelle Gwen. | ELLE NOM G W E N | 1
+Il s'appelle Hugo. | LUI NOM H U G O | 1
+Elle s'appelle Yasmine. | ELLE NOM Y A S M I N E | 2
+Il s'appelle Fred. | LUI NOM F R E D | 1
+Elle s'appelle Vera. | ELLE NOM V E R A | 1
+Il s'appelle Quentin. | LUI NOM Q U E N T I N | 2
+Il s'appelle Bob. | LUI NOM B O B | 1
+
+## Temps & Calendrier
+Regarde ton agenda. | TOI AGENDA REGARDER | 1
+L'attente est longue. | ATTENTE LONG | 1
+On part à l'aube. | AUBE PARTIR | 2
+Il arrive en avance. | LUI AVANCE ARRIVER | 1
+Le calendrier est au mur. | MUR CALENDRIER | 1
+Au commencement. | COMMENCEMENT | 2
+Le crépuscule tombe. | CRÉPUSCULE TOMBER | 3
+J'attends une demi-heure. | DEMI-HEURE MOI ATTENDRE | 1
+Quelle est la durée ? | DURÉE QUOI | 2
+Le début du film. | FILM DÉBUT | 1
+Quel est l'horaire du train ? | TRAIN HORAIRE QUOI | 1
+Lundi, mardi, mercredi, jeudi. | LUNDI MARDI MERCREDI JEUDI | 1
+Le lendemain matin. | LENDEMAIN MATIN | 2
+Une belle matinée. | MATINÉE BEAU | 1
+Oublie le passé. | PASSÉ OUBLIER | 2
+Vis le présent. | PRÉSENT VIVRE | 2
+On fait une pause. | PAUSE FAIRE | 1
+Une longue période. | PÉRIODE LONG | 2
+C'est la routine. | ROUTINE | 1
+Je fais la sieste. | MOI SIESTE FAIRE | 1
+La suite demain. | DEMAIN SUITE | 1
+La veille de Noël. | NOËL VEILLE | 2
+
+## Sciences & Recherche
+On fait une analyse. | ANALYSE FAIRE | 2
+L'atmosphère de la Terre. | TERRE ATMOSPHÈRE | 2
+Une cellule vivante. | CELLULE VIVANT | 2
+Le courant électrique. | COURANT ÉLECTRIQUE | 2
+Un premier essai. | ESSAI PREMIER | 1
+Une formule chimique. | FORMULE CHIMIE | 3
+La fréquence radio. | RADIO FRÉQUENCE | 3
+La fusion nucléaire. | FUSION NUCLÉAIRE | 3
+Un gaz toxique. | GAZ TOXIQUE | 2
+Un gène rare. | GÈNE RARE | 3
+Une grande invention. | INVENTION GRAND | 1
+Il travaille au labo. | LUI LABO TRAVAILLER | 2
+Un liquide bleu. | LIQUIDE BLEU | 1
+Une mutation génétique. | MUTATION | 3
+Une observation précise. | OBSERVATION PRÉCIS | 2
+Une onde sonore. | ONDE | 3
+Un organisme vivant. | ORGANISME VIVANT | 3
+La pression de l'air. | AIR PRESSION | 2
+Les radiations sont dangereuses. | RADIATION DANGEREUX | 3
+Le savant fait une découverte. | SAVANT DÉCOUVERTE FAIRE | 2
+La sonde part dans l'espace. | ESPACE SONDE PARTIR | 3
+La vapeur d'eau. | EAU VAPEUR | 2
+Un échantillon de sang. | SANG ÉCHANTILLON | 3
+La théorie de l'évolution. | ÉVOLUTION | 2
+
+## Langues & Communication
+Un appel important. | APPEL IMPORTANT | 1
+Merci pour ta compréhension. | TOI COMPRÉHENSION MERCI | 2
+J'entends un cri. | MOI CRI ENTENDRE | 1
+J'ai une demande. | MOI DEMANDE AVOIR | 1
+Fais une description. | DESCRIPTION FAIRE | 2
+Un dialogue entre amis. | AMI DIALOGUE | 2
+Une longue discussion. | DISCUSSION LONG | 1
+C'est dit ! | DIT | 1
+Une déclaration d'amour. | AMOUR DÉCLARATION | 2
+C'est de l'ironie. | IRONIE | 3
+Le langage des signes. | SIGNE LANGAGE | 1
+Il parle latin. | LUI LATIN PARLER | 2
+Je te donne ma parole. | MOI TOI PAROLE DONNER | 2
+Écris une phrase. | PHRASE ÉCRIRE | 1
+Une présentation orale. | PRÉSENTATION | 2
+C'est un ragot. | RAGOT | 3
+J'ai besoin d'un renseignement. | MOI RENSEIGNEMENT BESOIN | 2
+Attends mon signal. | MOI SIGNAL ATTENDRE | 2
+Quelle est la signification ? | SIGNIFICATION QUOI | 2
+C'est mon surnom. | MOI SURNOM | 1
+C'est un symbole. | SYMBOLE | 2
+Un terme technique. | TERME TECHNIQUE | 3
+Merci pour ton écoute. | TOI ÉCOUTE MERCI | 2
+
+## Droits & Justice
+L'accusation est grave. | ACCUSATION GRAVE | 2
+Il a des antécédents. | LUI ANTÉCÉDENT AVOIR | 3
+L'audience commence. | AUDIENCE COMMENCER | 3
+Il fait un aveu. | LUI AVEU FAIRE | 3
+L'avocat au barreau. | AVOCAT BARREAU | 3
+Le bourreau attend. | BOURREAU ATTENDRE | 3
+La condamnation est lourde. | CONDAMNATION LOURD | 3
+Le condamné est en prison. | CONDAMNÉ PRISON | 2
+Il est coupable. | LUI COUPABLE | 2
+C'est un délit. | DÉLIT | 3
+L'exécution de la peine. | EXÉCUTION | 3
+Quelle injustice ! | INJUSTICE | 2
+Le juré écoute. | JURÉ ÉCOUTER | 3
+Objection ! | OBJECTION | 2
+Je porte plainte. | MOI PLAINTE | 2
+Il est en taule. | LUI TAULE | 3
+Le procureur parle. | PROCUREUR PARLER | 3
+La procédure est longue. | PROCÉDURE LONG | 3
+Respecte le règlement. | RÈGLEMENT RESPECTER | 2
+Il prête serment. | LUI SERMENT | 3
+Tu as tort. | TOI TORT | 1
+Son témoignage compte. | LUI TÉMOIGNAGE IMPORTANT | 2
+
+## Vie scolaire
+L'académie de musique. | MUSIQUE ACADÉMIE | 3
+Mon carnet de notes. | MOI CARNET NOTE | 1
+Il va au collège. | LUI COLLÈGE ALLER | 1
+La correction est faite. | CORRECTION FINI | 2
+Écris à la craie. | CRAIE ÉCRIRE | 1
+La discipline est stricte. | DISCIPLINE | 2
+Je suis débutant. | MOI DÉBUTANT | 1
+Donne un exemple. | EXEMPLE DONNER | 1
+Je vais à la fac. | MOI FAC ALLER | 1
+La faculté de médecine. | MÉDECINE FACULTÉ | 2
+Je suis une formation. | MOI FORMATION SUIVRE | 2
+L'institut est fermé. | INSTITUT FERMER | 2
+L'instruction est importante. | INSTRUCTION IMPORTANT | 2
+J'ai ma licence. | MOI LICENCE AVOIR | 2
+Lis le manuel. | MANUEL LIRE | 1
+Quelle est ta matière préférée ? | TOI MATIÈRE PRÉFÉRER QUOI | 1
+Le maître et la maîtresse. | MAÎTRE MAÎTRESSE | 1
+Il a une punition. | LUI PUNITION AVOIR | 1
+Prends ta règle. | TOI RÈGLE PRENDRE | 1
+J'écris ma thèse. | MOI THÈSE ÉCRIRE | 3
+Ma trousse est pleine. | MOI TROUSSE PLEIN | 1
+L'éducation est un droit. | ÉDUCATION DROIT | 2
+
+## Ville & Lieux
+Une allée d'arbres. | ARBRE ALLÉE | 2
+J'habite sur l'avenue. | AVENUE MOI HABITER | 1
+On s'assoit sur le banc. | BANC ASSEOIR | 1
+Ouvre la barrière. | BARRIÈRE OUVRIR | 1
+Je vais à la boulangerie. | BOULANGERIE MOI ALLER | 1
+La cabine téléphonique. | TÉLÉPHONE CABINE | 2
+Le centre de la ville. | VILLE CENTRE | 1
+Prends ce chemin. | CHEMIN PRENDRE | 1
+La cité est calme. | CITÉ CALME | 2
+Fais la file. | FILE FAIRE | 1
+La fontaine sur la place. | PLACE FONTAINE | 1
+C'est une impasse. | IMPASSE | 2
+J'achète un livre à la librairie. | LIBRAIRIE LIVRE ACHETER | 1
+La mairie est fermée. | MAIRIE FERMER | 1
+Lis le panneau. | PANNEAU LIRE | 1
+La voiture a heurté un poteau. | VOITURE POTEAU | 2
+Mon quartier est calme. | MOI QUARTIER CALME | 1
+On va au resto. | RESTO ALLER | 1
+Une petite ruelle. | RUELLE PETIT | 2
+Le saloon du western. | WESTERN SALOON | 3
+Je vais au supermarché. | SUPERMARCHÉ MOI ALLER | 1
+L'égout est bouché. | ÉGOUT BOUCHER | 3
+
+## Architecture & Bâtiments
+Une vieille baraque. | BARAQUE VIEUX | 2
+Le mur est en béton. | MUR BÉTON | 2
+Une cabane dans l'arbre. | ARBRE CABANE | 1
+La centrale électrique. | CENTRALE ÉLECTRIQUE | 3
+Un sac de ciment. | CIMENT SAC | 2
+La clôture du jardin. | JARDIN CLÔTURE | 2
+Une colonne en marbre. | MARBRE COLONNE | 2
+La construction avance. | CONSTRUCTION AVANCER | 2
+Les enfants jouent dans la cour. | COUR ENFANT JOUER | 1
+Une dalle de pierre. | PIERRE DALLE | 3
+Une belle demeure. | DEMEURE BEAU | 3
+Il est à son domicile. | LUI DOMICILE | 2
+Ferme la grille. | GRILLE FERMER | 1
+Un hangar à avions. | AVION HANGAR | 2
+Un vieux manoir. | MANOIR VIEUX | 2
+Il a grandi à l'orphelinat. | LUI ORPHELINAT GRANDIR | 3
+Un pavillon avec jardin. | PAVILLON JARDIN | 2
+Le plâtre est sec. | PLÂTRE SEC | 2
+Ouvre le portail. | PORTAIL OUVRIR | 1
+Tiens la rampe. | RAMPE TENIR | 2
+Une résidence calme. | RÉSIDENCE CALME | 2
+La salle est pleine. | SALLE PLEIN | 1
+Un établissement scolaire. | ÉTABLISSEMENT SCOLAIRE | 3
+
+## Royauté & Histoire
+Les barbares attaquent. | BARBARE ATTAQUER | 2
+Le baron et le comte. | BARON COMTE | 3
+Une civilisation ancienne. | CIVILISATION ANCIEN | 2
+Une colonie française. | FRANÇAIS COLONIE | 3
+Le duc et le marquis. | DUC MARQUIS | 3
+L'empire romain. | EMPIRE | 2
+L'esclavage est aboli. | ESCLAVAGE | 3
+L'esclave est libre. | ESCLAVE LIBRE | 3
+Votre majesté. | MAJESTÉ | 2
+Un noble de la noblesse. | NOBLE NOBLESSE | 3
+Les pyramides d'Égypte. | PYRAMIDE ÉGYPTE | 1
+Une ruine ancienne. | RUINE ANCIEN | 2
+Un long règne. | RÈGNE LONG | 3
+Le serviteur et le valet. | SERVITEUR VALET | 3
+Le souverain règne. | SOUVERAIN | 3
+Une tribu africaine. | TRIBU AFRIQUE | 2
+Le tsar de Russie. | RUSSIE TSAR | 3
+Un tyran cruel. | TYRAN CRUEL | 3
+
+## Positions & Espace
+Une aire de jeux. | JEU AIRE | 2
+Va à l'arrière. | ARRIÈRE ALLER | 1
+Au bord de la mer. | MER BORD | 1
+La descente est raide. | DESCENTE | 2
+Quelle direction ? | DIRECTION QUOI | 1
+Un bon emplacement. | EMPLACEMENT BON | 2
+Un endroit calme. | ENDROIT CALME | 1
+Il y a de l'espace. | ESPACE | 1
+On mange à l'extérieur. | EXTÉRIEUR MANGER | 1
+En face de la gare. | GARE FACE | 1
+Sur le flanc de la montagne. | MONTAGNE FLANC | 3
+Au fond du couloir. | COULOIR FOND | 1
+Il n'y a pas d'issue. | ISSUE PAS | 2
+Un mouvement rapide. | MOUVEMENT RAPIDE | 1
+Le soleil se couche à l'ouest. | SOLEIL OUEST COUCHER | 1
+Un passage secret. | PASSAGE SECRET | 2
+La pointe du couteau. | COUTEAU POINTE | 2
+Quelle est ta position ? | TOI POSITION QUOI | 2
+Au premier rang. | RANG PREMIER | 1
+Ce secteur est fermé. | SECTEUR FERMER | 2
+Une zone dangereuse. | ZONE DANGEREUX | 1

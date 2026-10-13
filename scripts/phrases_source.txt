@@ -1,0 +1,529 @@
+# Phrases pour les modules de vocabulaire thématiques (rédigées à la main)
+# Format : "## Catégorie" puis une phrase par ligne : texte français | GLOSE LSF | difficulté (1-3)
+# Les signWords sont déduits automatiquement de la glose (mots présents en base avec vidéo).
+
+## Adjectifs du quotidien
+Ce film est incroyable. | FILM INCROYABLE | 1
+Mon grand-père est chauve. | MOI GRAND-PÈRE CHAUVE | 1
+Ce chat est mignon. | CHAT MIGNON | 1
+L'eau est claire. | EAU CLAIR | 1
+Ton idée est parfaite ! | TOI IDÉE PARFAIT | 1
+Le pain est dur, pas doux. | PAIN DUR DOUX PAS | 2
+
+## Adverbes & Prépositions
+Je vais mieux aujourd'hui. | AUJOURD'HUI MOI MIEUX | 1
+Il ne reste rien. | RIEN RESTER | 1
+C'est pire qu'hier. | HIER PIRE MAINTENANT | 2
+Je veux l'autre livre. | MOI LIVRE AUTRE VOULOIR | 1
+Il travaille sans cesse. | LUI TRAVAILLER CESSE PAS | 2
+Il y a environ dix personnes. | PERSONNE DIX ENVIRON | 2
+
+## Animaux
+L'aigle vole au-dessus de la montagne. | MONTAGNE AIGLE VOLER | 1
+Le chiot dort dans sa cage. | CHIOT CAGE DORMIR | 1
+Le perroquet parle beaucoup. | PERROQUET PARLER BEAUCOUP | 1
+Mon chien porte une laisse. | MOI CHIEN LAISSE PORTER | 1
+L'oiseau construit son nid. | OISEAU NID | 1
+Où est le tigre ? | TIGRE OÙ | 1
+
+## Architecture & Bâtiments
+Ce bâtiment est très vieux. | BÂTIMENT VIEUX | 1
+Prends l'ascenseur ! | ASCENSEUR PRENDRE | 1
+Le mur est en brique. | MUR BRIQUE | 1
+Il habite dans une villa. | LUI VILLA HABITER | 1
+La tour est grande. | TOUR GRAND | 1
+On attend dans le hall. | NOUS HALL ATTENDRE | 1
+
+## Argent & Finances
+Je paie par chèque. | MOI CHÈQUE PAYER | 1
+Le coût est cher. | COÛT CHER | 1
+Il a perdu sa fortune. | LUI FORTUNE PERDRE | 2
+Combien de pourboire ? | POURBOIRE COMBIEN | 1
+La banque m'a fait un prêt. | BANQUE MOI PRÊT DONNER | 2
+Mon assurance est chère. | MOI ASSURANCE CHER | 1
+
+## Argot & Insultes
+Arrête tes bêtises ! | TOI BÊTISE ARRÊTER | 1
+C'est un menteur. | LUI MENTEUR | 1
+J'ai fait une gaffe. | MOI GAFFE | 1
+Quelle pagaille ici ! | ICI PAGAILLE | 1
+Ne sois pas idiot. | TOI IDIOT PAS | 1
+C'est un vrai voyou. | LUI VOYOU VRAI | 2
+
+## Armée & Guerre
+Le soldat porte un fusil. | SOLDAT FUSIL PORTER | 1
+L'armée part à la guerre. | ARMÉE GUERRE PARTIR | 1
+La bataille commence demain. | DEMAIN BATAILLE COMMENCER | 2
+Le général donne un ordre. | GÉNÉRAL ORDRE DONNER | 2
+Ils veulent une trêve. | EUX TRÊVE VOULOIR | 2
+Le chevalier a une épée. | CHEVALIER ÉPÉE | 1
+
+## Beauté & Hygiène
+Je prends une douche le matin. | MATIN MOI DOUCHE | 1
+Il passe le balai. | LUI BALAI | 1
+J'aime ta coiffure. | MOI TOI COIFFURE AIMER | 1
+La poubelle est pleine. | POUBELLE PLEIN | 1
+Elle a un tatouage. | ELLE TATOUAGE | 1
+Je fais la lessive le soir. | SOIR MOI LESSIVE | 1
+
+## Boissons
+Je ne bois pas d'alcool. | MOI ALCOOL BOIRE PAS | 1
+Tu veux une boisson ? | TOI BOISSON VOULOIR | 1
+Un coca avec des glaçons. | COCA GLAÇON | 1
+Il boit une gorgée. | LUI GORGÉE BOIRE | 1
+Le whisky est fort. | WHISKY FORT | 1
+Il n'y a plus une goutte d'eau. | EAU GOUTTE RIEN | 2
+
+## Caractère & Qualités
+Elle a beaucoup de charme. | ELLE CHARME BEAUCOUP | 1
+Ta gentillesse me touche. | TOI GENTILLESSE MOI TOUCHER | 2
+Il a de l'humour. | LUI HUMOUR | 1
+La prudence est importante. | PRUDENCE IMPORTANT | 1
+Il a mauvais caractère. | LUI CARACTÈRE MAL | 1
+Son ambition est grande. | LUI AMBITION GRAND | 1
+
+## Cinéma & Spectacle
+On va au ciné ce soir ? | SOIR NOUS CINÉ ALLER | 1
+Le comédien joue bien. | COMÉDIEN JOUER BIEN | 1
+Le public applaudit. | PUBLIC APPLAUDISSEMENT | 1
+C'est une star célèbre. | STAR CÉLÉBRITÉ | 1
+Le tournage commence demain. | DEMAIN TOURNAGE COMMENCER | 2
+J'aime les westerns. | MOI WESTERN AIMER | 1
+
+## Corps humain
+Ma gorge me fait mal. | MOI GORGE MAL | 1
+Elle a de beaux cheveux. | ELLE CHEVEU BEAU | 1
+Il a une moustache. | LUI MOUSTACHE | 1
+Ton sourire est beau. | TOI SOURIRE BEAU | 1
+Je me suis cassé l'ongle. | MOI ONGLE CASSER | 2
+Une larme coule sur sa joue. | LUI JOUE LARME | 2
+
+## Couleurs
+Elle est blonde. | ELLE BLOND | 1
+Il est roux. | LUI ROUX | 1
+Le mur est blanc. | MUR BLANC | 1
+Ma sœur est brune. | MOI SŒUR BRUNE | 1
+
+## Courrier & Documents
+J'envoie une lettre. | MOI LETTRE ENVOYER | 1
+Tu as reçu le colis ? | TOI COLIS RECEVOIR | 1
+Écris ton adresse ici. | ICI TOI ADRESSE ÉCRIRE | 1
+Mets un timbre sur l'enveloppe. | ENVELOPPE TIMBRE METTRE | 2
+Il faut ta signature. | TOI SIGNATURE BESOIN | 1
+Le dossier est important. | DOSSIER IMPORTANT | 1
+
+## Crime & Police
+La police cherche le voleur. | POLICE VOLEUR CHERCHER | 1
+Le détective mène l'enquête. | DÉTECTIVE ENQUÊTE | 1
+Il y a eu un cambriolage hier. | HIER CAMBRIOLAGE | 1
+Le suspect a un alibi. | SUSPECT ALIBI | 2
+La victime parle au gendarme. | VICTIME GENDARME PARLER | 2
+Le gangster s'est échappé. | GANGSTER ÉVASION | 2
+
+## Cuisine & Ustensiles
+Le plat est chaud. | PLAT CHAUD | 1
+Je fais la vaisselle. | MOI VAISSELLE | 1
+Le lait est dans le frigo. | LAIT FRIGO | 1
+Tu veux une tasse de café ? | TOI CAFÉ TASSE VOULOIR | 1
+On fait un barbecue dimanche. | DIMANCHE NOUS BARBECUE | 2
+Mets le couvert ! | COUVERT METTRE | 1
+
+## Droits & Justice
+Le procès commence demain. | DEMAIN PROCÈS COMMENCER | 1
+Le témoin dit la vérité. | TÉMOIN VRAI DIRE | 2
+Il est innocent. | LUI INNOCENT | 1
+Le jury donne son verdict. | JURY VERDICT DONNER | 2
+Il a payé une amende. | LUI AMENDE PAYER | 1
+Où est la preuve ? | PREUVE OÙ | 1
+
+## Famille
+Mon papa travaille. | MOI PAPA TRAVAILLER | 1
+J'aime ma mamie. | MOI MAMIE AIMER | 1
+Ce sont des jumeaux. | EUX JUMEAU | 1
+Il est l'aîné de la famille. | FAMILLE LUI AÎNÉ | 2
+Mon tonton habite ici. | MOI TONTON ICI HABITER | 1
+Le bébé fait dodo. | BÉBÉ DODO | 1
+
+## Fantastique & Magie
+Le magicien fait de la magie. | MAGICIEN MAGIE | 1
+J'ai peur des fantômes. | MOI FANTÔME PEUR | 1
+Le dragon crache du feu. | DRAGON FEU | 1
+La fée est gentille. | FÉE GENTIL | 1
+C'est une légende ancienne. | LÉGENDE ANCIEN | 2
+Le vampire sort la nuit. | NUIT VAMPIRE SORTIR | 1
+
+## Ferme & Agriculture
+Le fermier travaille dans le champ. | FERMIER CHAMP TRAVAILLER | 1
+Le berger garde le troupeau. | BERGER TROUPEAU | 1
+La récolte est bonne. | RÉCOLTE BON | 1
+Il y a du foin dans la grange. | GRANGE FOIN | 1
+Le moulin est vieux. | MOULIN VIEUX | 1
+Le paysan cultive la vigne. | PAYSAN VIGNE | 2
+
+## Fêtes & Événements
+On fait une boum samedi ! | SAMEDI NOUS BOUM | 1
+J'adore le carnaval. | MOI CARNAVAL AIMER | 1
+Le festival commence demain. | DEMAIN FESTIVAL COMMENCER | 1
+L'ambiance est super. | AMBIANCE SUPER | 1
+On porte des masques. | NOUS MASQUE PORTER | 1
+On lève nos verres, un toast ! | NOUS TOAST | 1
+
+## Idées & Concepts
+J'ai une idée. | MOI IDÉE | 1
+Quel est le problème ? | PROBLÈME QUOI | 1
+On cherche une solution. | NOUS SOLUTION CHERCHER | 1
+C'est une question d'importance. | IMPORTANCE | 1
+Fais attention ! | ATTENTION | 1
+Quelle est la différence ? | DIFFÉRENCE COMMENT | 2
+
+## Jeux & Loisirs
+On joue au billard ? | NOUS BILLARD JOUER | 1
+Il a gagné au loto. | LUI LOTO GAGNER | 1
+L'enfant aime sa poupée. | ENFANT POUPÉE AIMER | 1
+On fait une promenade. | NOUS PROMENADE | 1
+Je joue au poker le soir. | SOIR MOI POKER JOUER | 1
+C'est une bonne blague ! | BLAGUE BON | 1
+
+## Langues & Communication
+On a une conversation. | NOUS CONVERSATION | 1
+Ce mot est difficile. | MOT DIFFICILE | 1
+Parle avec ta voix. | TOI VOIX PARLER | 2
+J'ai entendu une rumeur. | MOI RUMEUR | 1
+C'est un malentendu. | MALENTENDU | 1
+Le silence est total. | SILENCE TOUT | 2
+
+## Les gens
+Il y a beaucoup de gens. | GENS BEAUCOUP | 1
+La foule attend. | FOULE ATTENDRE | 1
+Bonjour monsieur ! | BONJOUR MONSIEUR | 1
+Bonjour madame ! | BONJOUR MADAME | 1
+Cette personne est gentille. | PERSONNE GENTIL | 1
+Le vieillard marche lentement. | VIEILLARD MARCHER | 2
+
+## Littérature & Écriture
+J'aime lire des romans. | MOI ROMAN LIRE AIMER | 1
+Le poète écrit un poème. | POÈTE POÈME ÉCRIRE | 1
+Quel est le titre du livre ? | LIVRE TITRE QUOI | 1
+L'écrivain est célèbre. | ÉCRIVAIN CÉLÉBRITÉ | 2
+Lis la page dix. | PAGE DIX LIRE | 1
+Ce conte est beau. | CONTE BEAU | 1
+
+## Maison & Meubles
+Le fauteuil est confortable. | FAUTEUIL CONFORT | 1
+Ferme le volet. | VOLET FERMER | 1
+La clef est sur la table. | TABLE CLEF | 1
+J'habite au deuxième étage. | MOI ÉTAGE DEUX HABITER | 2
+Range le placard ! | PLACARD RANGER | 1
+L'oreiller est doux. | OREILLER DOUX | 1
+
+## Mathématiques
+Fais le calcul. | CALCUL | 1
+Quelle est la moyenne ? | MOYENNE COMBIEN | 1
+Trace une ligne. | LIGNE ÉCRIRE | 1
+C'est le maximum. | MAXIMUM | 1
+La somme est juste. | SOMME JUSTE | 2
+Mesure l'angle. | ANGLE | 1
+
+## Matières & Textures
+La table est en bois. | TABLE BOIS | 1
+J'aime le coton. | MOI COTON AIMER | 1
+Ce sac est en cuir. | SAC CUIR | 1
+La soie est douce. | SOIE DOUX | 1
+Le fer est lourd. | FER LOURD | 1
+Le cristal est fragile. | CRISTAL FRAGILE | 2
+
+## Mesures & Quantités
+Combien de kilos ? | KILO COMBIEN | 1
+Il y a dix kilomètres. | KILOMÈTRE DIX | 1
+Un litre d'eau. | EAU LITRE UN | 1
+Quelle est ta taille ? | TOI TAILLE COMBIEN | 1
+La distance est grande. | DISTANCE GRAND | 1
+Quel poids ? | POIDS COMBIEN | 1
+
+## Monde du travail
+Mon patron est gentil. | MOI PATRON GENTIL | 1
+Je cherche un emploi. | MOI EMPLOI CHERCHER | 1
+J'ai un entretien demain. | DEMAIN MOI ENTRETIEN | 1
+Le projet est fini. | PROJET FIN | 1
+Il travaille à l'usine. | LUI USINE TRAVAILLER | 1
+Je suis en congé. | MOI CONGÉ | 1
+
+## Mort & Deuil
+Il est au cimetière. | LUI CIMETIÈRE | 1
+L'enterrement est demain. | DEMAIN ENTERREMENT | 1
+Elle est en deuil. | ELLE DEUIL | 1
+Il a laissé un testament. | LUI TESTAMENT | 2
+Je pense à toi pendant ton deuil. | TOI DEUIL MOI PENSER | 2
+La tombe est fleurie. | TOMBE FLEUR | 1
+
+## Musique & Arts
+J'écoute du rock. | MOI ROCK ÉCOUTER | 1
+Le musicien chante. | MUSICIEN CHANTER | 1
+Elle danse le tango. | ELLE TANGO | 1
+J'aime cet album. | MOI ALBUM AIMER | 1
+Le peintre fait une œuvre. | PEINTRE ŒUVRE | 1
+L'orchestre joue ce soir. | SOIR ORCHESTRE JOUER | 2
+
+## Médias & Presse
+J'ai lu l'article. | MOI ARTICLE LIRE | 1
+Tu regardes la télé ? | TOI TÉLÉ REGARDER | 1
+C'est un scandale ! | SCANDALE | 1
+Le reporter pose des questions. | REPORTER DEMANDER | 1
+J'achète un magazine. | MOI MAGAZINE ACHETER | 1
+L'émission commence. | ÉMISSION COMMENCER | 1
+
+## Météo
+Il fait chaud, quelle chaleur ! | CHALEUR | 1
+J'ai peur du tonnerre. | MOI TONNERRE PEUR | 1
+La météo annonce de la pluie. | MÉTÉO PLUIE | 1
+Il y a de la brume ce matin. | MATIN BRUME | 1
+Un ouragan arrive. | OURAGAN VENIR | 1
+La température est basse. | TEMPÉRATURE BAS | 2
+
+## Nature & Environnement
+Le ciel est bleu. | CIEL BLEU | 1
+On marche sur le sable. | NOUS SABLE MARCHER | 1
+La source est fraîche. | SOURCE FROID | 1
+Le sapin est grand. | SAPIN GRAND | 1
+Il y a de la fumée. | FUMÉE | 1
+On monte au sommet. | NOUS SOMMET MONTER | 1
+
+## Nombres avancés
+Il y a une dizaine d'enfants. | ENFANT DIZAINE | 1
+J'achète une douzaine d'œufs. | MOI ŒUF DOUZAINE ACHETER | 1
+Quel est ton numéro ? | TOI NUMÉRO COMBIEN | 1
+Une centaine de personnes. | PERSONNE CENTAINE | 1
+Je suis quatrième. | MOI QUATRIÈME | 1
+Un quart d'heure. | HEURE QUART | 1
+
+## Nourriture
+J'aime le miel. | MOI MIEL AIMER | 1
+Tu veux un dessert ? | TOI DESSERT VOULOIR | 1
+Le repas est prêt. | REPAS PRÊT | 1
+Je mange une omelette. | MOI OMELETTE MANGER | 1
+Les frites sont chaudes. | FRITE CHAUD | 1
+On mange des spaghettis ce soir. | SOIR NOUS SPAGHETTI MANGER | 1
+
+## Objets du quotidien
+Où est mon mouchoir ? | MOI MOUCHOIR OÙ | 1
+J'ai besoin d'une aiguille. | MOI AIGUILLE BESOIN | 1
+Le panier est vide. | PANIER VIDE | 1
+Il fume une cigarette. | LUI CIGARETTE | 1
+Mets tes lunettes. | TOI LUNETTE METTRE | 1
+Donne-moi le briquet. | BRIQUET MOI DONNER | 1
+
+## Opinions & Débat
+Quel est ton avis ? | TOI AVIS COMMENT | 1
+C'est mon choix. | MOI CHOIX | 1
+On a un débat. | NOUS DÉBAT | 1
+J'ai un doute. | MOI DOUTE | 1
+Il donne un conseil. | LUI CONSEIL DONNER | 1
+C'est ta décision. | TOI DÉCISION | 1
+
+## Outils & Bricolage
+Passe-moi la corde. | CORDE MOI DONNER | 1
+L'échelle est haute. | ÉCHELLE HAUT | 1
+Il coupe avec une hache. | LUI HACHE | 1
+Prends la pelle. | PELLE PRENDRE | 1
+Le tuyau est cassé. | TUYAU CASSER | 2
+J'ai mon outil. | MOI OUTIL | 1
+
+## Pays & Nationalités
+Il est italien. | LUI ITALIEN | 1
+Elle parle espagnol. | ELLE ESPAGNOL PARLER | 1
+Mon ami est japonais. | MOI AMI JAPONAIS | 1
+Je comprends l'allemand. | MOI ALLEMAND COMPRENDRE | 1
+Il est américain. | LUI AMÉRICAIN | 1
+La cuisine mexicaine est bonne. | CUISINE MEXICAIN BON | 2
+
+## Philosophie & Valeurs
+Bonne chance ! | CHANCE BON | 1
+La vie est belle. | VIE BEAU | 1
+C'est le destin. | DESTIN | 1
+C'est le hasard. | HASARD | 1
+Respecte la tradition. | TRADITION RESPECTER | 2
+Ton honneur est important. | TOI HONNEUR IMPORTANT | 1
+
+## Politique & Société
+Le maire parle aux habitants. | MAIRE HABITANT PARLER | 2
+On vote pour le député. | NOUS DÉPUTÉ VOTER | 1
+La démocratie est importante. | DÉMOCRATIE IMPORTANT | 1
+Le peuple veut la paix. | PEUPLE PAIX VOULOIR | 1
+Le drapeau est bleu, blanc, rouge. | DRAPEAU BLEU BLANC ROUGE | 1
+C'est une révolution. | RÉVOLUTION | 1
+
+## Positions & Espace
+Attends dehors. | DEHORS ATTENDRE | 1
+Assieds-toi dans le coin. | COIN TOI ASSEOIR | 2
+La sortie est ici. | SORTIE ICI | 1
+L'entrée est où ? | ENTRÉE OÙ | 1
+Mets-le en haut. | HAUT METTRE | 1
+Regarde à l'intérieur. | INTÉRIEUR REGARDER | 1
+
+## Professions
+Le facteur apporte le courrier. | FACTEUR COURRIER | 1
+Mon frère est mécanicien. | MOI FRÈRE MÉCANICIEN | 1
+Le serveur est gentil. | SERVEUR GENTIL | 1
+Elle est secrétaire. | ELLE SECRÉTAIRE | 1
+Le jardinier travaille. | JARDINIER TRAVAILLER | 1
+Il veut devenir photographe. | LUI PHOTOGRAPHE VOULOIR | 1
+
+## Relations sociales
+Fais-moi un bisou. | MOI BISOU | 1
+C'est mon camarade. | MOI CAMARADE | 1
+Je te fais un câlin. | MOI TOI CÂLIN | 1
+C'est un secret. | SECRET | 1
+Il est célibataire. | LUI CÉLIBATAIRE | 1
+Je te fais une promesse. | MOI TOI PROMESSE | 1
+
+## Religion & Spiritualité
+Le prêtre est à l'église. | PRÊTRE ÉGLISE | 1
+Elle croit aux anges. | ELLE ANGE CROIRE | 1
+C'est un miracle ! | MIRACLE | 1
+Le moine est calme. | MOINE CALME | 1
+Je lis la bible. | MOI BIBLE LIRE | 1
+Le pape vit à Rome. | PAPE ROME HABITER | 2
+
+## Royauté & Histoire
+Le roi et la reine. | ROI REINE | 1
+Le prince habite au château. | PRINCE CHÂTEAU HABITER | 1
+L'empereur est puissant. | EMPEREUR PUISSANCE | 2
+La couronne est en or. | COURONNE OR | 1
+Le chevalier protège le royaume. | CHEVALIER ROYAUME PROTÉGER | 2
+Le roi est sur son trône. | ROI TRÔNE | 1
+
+## Salutations
+Bienvenue ! | BIENVENUE | 1
+Bravo, c'est bien ! | BRAVO BIEN | 1
+Au revoir, à demain ! | REVOIR DEMAIN | 1
+Coucou ! | COUCOU | 1
+Merci pour ton accueil. | TOI ACCUEIL MERCI | 1
+Adieu, mon ami. | AMI ADIEU | 1
+
+## Santé & Médecine
+Je vais chez le docteur. | MOI DOCTEUR ALLER | 1
+J'ai une migraine. | MOI MIGRAINE | 1
+Prends ton cachet. | TOI CACHET PRENDRE | 1
+Il a un virus. | LUI VIRUS | 1
+La piqûre fait mal. | PIQÛRE MAL | 1
+Le patient attend. | PATIENT ATTENDRE | 1
+
+## Sciences & Recherche
+Le chercheur travaille au laboratoire. | CHERCHEUR LABORATOIRE TRAVAILLER | 1
+C'est une grande découverte. | DÉCOUVERTE GRAND | 1
+L'expérience est réussie. | EXPÉRIENCE BIEN | 1
+On a besoin d'oxygène. | NOUS OXYGÈNE BESOIN | 1
+L'énergie solaire. | SOLEIL ÉNERGIE | 1
+C'est une théorie. | THÉORIE | 1
+
+## Sentiments & Émotions avancés
+Je suis plein de joie. | MOI JOIE | 1
+J'ai fait un cauchemar. | MOI CAUCHEMAR | 1
+Ne panique pas ! | PANIQUE PAS | 1
+J'ai beaucoup de stress. | MOI STRESS BEAUCOUP | 1
+Il a un chagrin. | LUI CHAGRIN | 1
+Mon rêve est de voyager. | MOI RÊVE VOYAGE | 2
+
+## Shopping & Argent
+Je fais du shopping. | MOI SHOPPING | 1
+La boutique est fermée. | BOUTIQUE FERMÉ | 1
+Le client attend. | CLIENT ATTENDRE | 1
+Je vais au marché. | MOI MARCHÉ ALLER | 1
+La livraison arrive demain. | DEMAIN LIVRAISON VENIR | 1
+Garde le reçu. | REÇU GARDER | 2
+
+## Situations & Événements
+C'est une crise. | CRISE | 1
+Quel changement ! | CHANGEMENT | 1
+C'est une bonne occasion. | OCCASION BON | 1
+Il a fait une chute. | LUI CHUTE | 1
+C'est un échec. | ÉCHEC | 1
+Quelle coïncidence ! | COÏNCIDENCE | 1
+
+## Sports & Loisirs
+Je joue au basket. | MOI BASKET JOUER | 1
+Le coach est content. | COACH CONTENT | 1
+On a gagné le tournoi ! | NOUS TOURNOI GAGNER | 1
+Je vais à la piscine. | MOI PISCINE ALLER | 1
+Quel est le score ? | SCORE COMBIEN | 1
+Il a gagné une médaille. | LUI MÉDAILLE GAGNER | 1
+
+## Technologie & Internet
+Le site ne marche pas. | SITE MARCHER PAS | 1
+La machine est en panne. | MACHINE PANNE | 1
+Mon mobile sonne. | MOI MOBILE SONNERIE | 1
+Change la pile. | PILE CHANGER | 1
+Le programme est nouveau. | PROGRAMME NOUVEAU | 1
+Tape le code. | CODE ÉCRIRE | 1
+
+## Temps & Calendrier
+Je suis en retard. | MOI RETARD | 1
+Attends un instant. | INSTANT ATTENDRE | 1
+On se voit ce week-end. | WEEK-END NOUS | 1
+Regarde l'horloge. | HORLOGE REGARDER | 1
+L'avenir est beau. | AVENIR BEAU | 1
+C'est la fin de la journée. | JOURNÉE FIN | 1
+
+## Transport
+Je prends le car. | MOI CAR PRENDRE | 1
+Le camion est grand. | CAMION GRAND | 1
+L'hélicoptère décolle. | HÉLICOPTÈRE DÉCOLLAGE | 1
+Le pilote conduit l'avion. | PILOTE AVION | 1
+Ma voiture est en panne. | MOI VOITURE PANNE | 1
+Le passager attend sur le quai. | PASSAGER QUAI ATTENDRE | 2
+
+## Urgences & Sécurité
+Il y a une alerte ! | ALERTE | 1
+La sirène sonne. | SIRÈNE | 1
+C'est une catastrophe. | CATASTROPHE | 1
+La sécurité est importante. | SÉCURITÉ IMPORTANT | 1
+On cherche un abri. | NOUS ABRI CHERCHER | 1
+Attention au risque ! | RISQUE ATTENTION | 1
+
+## Verbes courants
+Je vais conduire. | MOI CONDUIRE | 1
+Il faut payer. | PAYER | 1
+Ne bouge pas ! | BOUGER PAS | 1
+J'ai oublié mes clés. | MOI CLEF OUBLIER | 1
+Tu peux porter ça ? | TOI PORTER POUVOIR | 1
+Je veux vivre ici. | MOI ICI VIVRE VOULOIR | 1
+
+## Vie scolaire
+Je vais au lycée. | MOI LYCÉE ALLER | 1
+Le prof explique la leçon. | PROF LEÇON EXPLIQUER | 1
+J'ai oublié mon cahier. | MOI CAHIER OUBLIER | 1
+Il est étudiant à l'université. | LUI UNIVERSITÉ ÉTUDIANT | 2
+J'ai eu mon bac ! | MOI BAC | 1
+Les maths sont difficiles. | MATHS DIFFICILE | 1
+
+## Ville & Lieux
+On se retrouve au bar. | NOUS BAR | 1
+Je gare la voiture au parking. | MOI VOITURE PARKING | 1
+Il habite en banlieue. | LUI BANLIEUE HABITER | 1
+Le village est petit. | VILLAGE PETIT | 1
+On va au zoo. | NOUS ZOO ALLER | 1
+Marche sur le trottoir. | TROTTOIR MARCHER | 1
+
+## Voyages & Tourisme
+Mon bagage est lourd. | MOI BAGAGE LOURD | 1
+On part en vacances. | NOUS VACANCE PARTIR | 1
+Il me faut un visa. | MOI VISA BESOIN | 1
+On dort sous la tente. | NOUS TENTE DORMIR | 1
+C'est une belle aventure. | AVENTURE BEAU | 1
+La croisière est longue. | CROISIÈRE LONG | 2
+
+## Vêtements
+Mets ta ceinture. | TOI CEINTURE METTRE | 1
+J'aime ton bonnet. | MOI TOI BONNET AIMER | 1
+Sa bague est belle. | LUI BAGUE BEAU | 1
+Il porte une cravate. | LUI CRAVATE PORTER | 1
+Ce gilet est chaud. | GILET CHAUD | 1
+Le bouton est tombé. | BOUTON TOMBER | 1
+
+## Éducation Sexuelle
+Utilise toujours une capote. | CAPOTE UTILISER TOUJOURS | 2
+Il est gay. | LUI GAY | 1
+Elle est lesbienne. | ELLE LESBIEN | 1
+Le sida est une maladie. | SIDA MALADIE | 1
+On parle de sexualité. | NOUS SEXUALITÉ PARLER | 1
+L'avortement est un droit. | AVORTEMENT DROIT | 2

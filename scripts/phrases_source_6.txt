@@ -1,0 +1,534 @@
+# Lot 6 : phrases couvrant les signes encore inutilisés
+
+## Courrier & Documents
+J'ai l'autorisation. | MOI AUTORISATION AVOIR | 2
+Un certificat médical. | CERTIFICAT MÉDICAL | 2
+J'attends la confirmation. | CONFIRMATION MOI ATTENDRE | 2
+Laisse tes coordonnées. | TOI COORDONNÉE LAISSER | 2
+Fais une copie. | COPIE FAIRE | 1
+Une longue correspondance. | CORRESPONDANCE LONG | 3
+Je fais une démarche. | MOI DÉMARCHE FAIRE | 3
+Envoie-moi un e-mail. | MOI E-MAIL ENVOYER | 1
+Un vieux fax. | FAX VIEUX | 2
+Remplis la fiche. | FICHE REMPLIR | 1
+L'identification est rapide. | IDENTIFICATION RAPIDE | 3
+Ta carte d'identité. | TOI CARTE IDENTITÉ | 1
+L'inscription est gratuite. | INSCRIPTION GRATUIT | 2
+Une feuille de papier. | PAPIER FEUILLE | 1
+J'ai reçu un paquet. | MOI PAQUET RECEVOIR | 1
+Demande la permission. | PERMISSION DEMANDER | 1
+Respecte le protocole. | PROTOCOLE RESPECTER | 3
+Signe le registre. | REGISTRE SIGNER | 3
+Ta requête est acceptée. | TOI REQUÊTE ACCEPTER | 3
+Quelle est la référence ? | RÉFÉRENCE QUOI | 2
+Un télégramme urgent. | TÉLÉGRAMME URGENT | 3
+
+## Opinions & Débat
+Il y a une alternative. | ALTERNATIVE | 2
+C'est un bon argument. | ARGUMENT BON | 2
+On trouve un arrangement. | ARRANGEMENT TROUVER | 2
+J'en ai la certitude. | MOI CERTITUDE | 3
+Pas de commentaire. | COMMENTAIRE PAS | 1
+On fait un compromis. | COMPROMIS FAIRE | 2
+Quelle est ta conclusion ? | TOI CONCLUSION QUOI | 2
+Un conflit entre voisins. | VOISIN CONFLIT | 2
+Je suis contre. | MOI CONTRE | 1
+Une critique positive. | CRITIQUE POSITIF | 2
+C'est impossible ! | IMPOSSIBLE | 1
+C'est inutile. | INUTILE | 1
+La négociation dure. | NÉGOCIATION DURER | 3
+J'ai une option. | MOI OPTION AVOIR | 2
+Quelle est ta préférence ? | TOI PRÉFÉRENCE QUOI | 2
+Une querelle de famille. | FAMILLE QUERELLE | 3
+J'ai une remarque. | MOI REMARQUE AVOIR | 2
+Il me fait des reproches. | LUI MOI REPROCHE | 2
+J'ai une suggestion. | MOI SUGGESTION AVOIR | 2
+
+## Technologie & Internet
+L'antenne est sur le toit. | TOIT ANTENNE | 1
+Un appareil photo. | PHOTO APPAREIL | 1
+Le circuit électrique. | CIRCUIT ÉLECTRIQUE | 2
+Branche le câble. | CÂBLE BRANCHER | 1
+Le distributeur de billets. | BILLET DISTRIBUTEUR | 1
+Les données sont protégées. | DONNÉE PROTÉGER | 2
+Un détecteur de fumée. | FUMÉE DÉTECTEUR | 2
+Le flash de l'appareil. | APPAREIL FLASH | 2
+Un rayon laser. | LASER RAYON | 2
+Un module de formation. | FORMATION MODULE | 2
+Branche la prise. | PRISE BRANCHER | 1
+Change ta photo de profil. | TOI PROFIL PHOTO CHANGER | 1
+Je vais publier une photo. | MOI PHOTO PUBLIER | 1
+Le radar de la police. | POLICE RADAR | 2
+Laisse un message sur le répondeur. | RÉPONDEUR MESSAGE LAISSER | 2
+Je scanne le document. | DOCUMENT MOI SCANNER | 2
+Une bonne technique. | TECHNIQUE BON | 2
+La technologie avance. | TECHNOLOGIE AVANCER | 2
+La transmission est coupée. | TRANSMISSION COUPER | 3
+
+## Littérature & Écriture
+L'auteur écrit un bouquin. | AUTEUR BOUQUIN ÉCRIRE | 1
+Lis le premier chapitre. | CHAPITRE PREMIER LIRE | 1
+Une belle citation. | CITATION BEAU | 2
+De l'encre noire. | ENCRE NOIR | 1
+Un exemplaire du livre. | LIVRE EXEMPLAIRE | 2
+J'aime la fiction. | FICTION MOI AIMER | 2
+Le héros du roman. | ROMAN HÉROS | 1
+Le lecteur aime le livre. | LECTEUR LIVRE AIMER | 1
+J'étudie la littérature. | LITTÉRATURE MOI ÉTUDIER | 2
+Un vieux manuscrit. | MANUSCRIT VIEUX | 3
+Un bel ouvrage. | OUVRAGE BEAU | 3
+Le personnage principal. | PERSONNAGE PRINCIPAL | 2
+Un récit de voyage. | VOYAGE RÉCIT | 2
+Lis le texte. | TEXTE LIRE | 1
+Un écrit important. | ÉCRIT IMPORTANT | 2
+Une belle écriture. | ÉCRITURE BEAU | 1
+L'éditeur publie l'édition. | ÉDITEUR ÉDITION PUBLIER | 3
+
+## Situations & Événements
+La casse est importante. | CASSE | 3
+Quel choc ! | CHOC | 1
+Dans ces circonstances. | CIRCONSTANCE | 3
+Un coup de chance. | CHANCE COUP | 1
+La disparition du chat. | CHAT DISPARITION | 2
+Le chien a disparu. | CHIEN DISPARU | 1
+C'est dommage. | DOMMAGE | 1
+Les dégâts sont importants. | DÉGÂT IMPORTANT | 2
+Quel désordre ! | DÉSORDRE | 1
+Un lourd fardeau. | FARDEAU LOURD | 3
+Il y a une fuite d'eau. | EAU FUITE | 1
+Quel gâchis ! | GÂCHIS | 2
+Un petit incident. | INCIDENT PETIT | 2
+Le lancement de la fusée. | FUSÉE LANCEMENT | 2
+C'est une opportunité. | OPPORTUNITÉ | 2
+L'ouverture du magasin. | MAGASIN OUVERTURE | 1
+La reprise du travail. | TRAVAIL REPRISE | 2
+Merci pour ta venue. | TOI VENUE MERCI | 2
+Un grand événement. | ÉVÉNEMENT GRAND | 1
+
+## Voyages & Tourisme
+On dort à l'auberge. | AUBERGE DORMIR | 1
+J'achète un billet. | MOI BILLET ACHETER | 1
+On monte le camp. | CAMP | 2
+On fait du camping. | CAMPING FAIRE | 1
+On part en caravane. | CARAVANE PARTIR | 1
+On passe la douane. | DOUANE PASSER | 2
+Une expédition au pôle. | EXPÉDITION | 2
+Le guide nous montre le monument. | GUIDE MONUMENT MONTRER | 1
+La malle est lourde. | MALLE LOURD | 2
+Montre ton passeport. | TOI PASSEPORT MONTRER | 1
+J'ai une réservation. | MOI RÉSERVATION AVOIR | 1
+Un bon séjour. | SÉJOUR BON | 1
+Le touriste prend des photos. | TOURISTE PHOTO PRENDRE | 1
+Fais ta valise. | TOI VALISE FAIRE | 1
+Une visite du musée. | MUSÉE VISITE | 1
+Le visiteur et le voyageur. | VISITEUR VOYAGEUR | 2
+
+## Fantastique & Magie
+Une apparition étrange. | APPARITION BIZARRE | 2
+Elle a une aura. | ELLE AURA | 3
+Une créature étrange. | CRÉATURE BIZARRE | 2
+Un monde de fantaisie. | MONDE FANTAISIE | 2
+Le géant est grand. | GÉANT GRAND | 1
+C'est une illusion. | ILLUSION | 2
+Une malédiction ! | MALÉDICTION | 2
+Ce château est maudit. | CHÂTEAU MAUDIT | 2
+Une merveille du monde. | MONDE MERVEILLE | 2
+Le monstre fait peur. | MONSTRE PEUR | 1
+C'est un mystère. | MYSTÈRE | 1
+Un mythe grec. | MYTHE GREC | 2
+Le médium parle aux esprits. | MÉDIUM ESPRIT PARLER | 3
+La sorcellerie est interdite. | SORCELLERIE INTERDIRE | 3
+Le sorcier jette un sort. | SORCIER SORT JETER | 2
+On cherche le trésor. | TRÉSOR CHERCHER | 1
+Résous l'énigme. | ÉNIGME RÉSOUDRE | 2
+
+## Les gens
+Un bonhomme de neige. | NEIGE BONHOMME | 1
+Le clan se réunit. | CLAN RÉUNIR | 2
+Une vieille dame. | DAME VIEUX | 1
+Un gars sympa. | GARS SYMPA | 1
+C'est un vrai gentleman. | GENTLEMAN | 2
+Les gitans voyagent. | GITAN VOYAGER | 2
+Un être humain. | HUMAIN | 1
+Toute l'humanité. | HUMANITÉ TOUT | 2
+Un individu suspect. | INDIVIDU SUSPECT | 2
+C'est un intellectuel. | INTELLECTUEL | 3
+Une vraie lady. | LADY | 2
+Bonjour mademoiselle. | BONJOUR MADEMOISELLE | 1
+Ce mec est grand. | MEC GRAND | 1
+Il est membre du club. | LUI CLUB MEMBRE | 1
+Le mendiant demande de l'argent. | MENDIANT ARGENT DEMANDER | 2
+Elle est Miss France. | ELLE MISS FRANCE | 2
+Ce type est bizarre. | TYPE BIZARRE | 1
+
+## Philosophie & Valeurs
+La charité aide les pauvres. | CHARITÉ PAUVRE AIDER | 2
+C'est une coutume. | COUTUME | 2
+C'est la destinée. | DESTINÉE | 3
+La dignité humaine. | HUMAIN DIGNITÉ | 3
+L'esprit d'équipe. | ÉQUIPE ESPRIT | 2
+Le sens de l'existence. | EXISTENCE SENS | 3
+C'est le karma. | KARMA | 2
+C'est logique. | LOGIQUE | 1
+Quelle malchance ! | MALCHANCE | 2
+La morale de l'histoire. | HISTOIRE MORALE | 2
+Le néant. | NÉANT | 3
+Une pensée pour toi. | TOI PENSÉE | 2
+Le philosophe réfléchit. | PHILOSOPHE RÉFLÉCHIR | 2
+C'est une question de principe. | PRINCIPE QUESTION | 2
+La réalité est dure. | RÉALITÉ DUR | 2
+Après réflexion, j'accepte. | RÉFLEXION MOI ACCEPTER | 2
+
+## Nombres avancés
+Écris le chiffre. | CHIFFRE ÉCRIRE | 1
+Le cinquième étage. | ÉTAGE CINQUIÈME | 1
+Le deuxième et le troisième. | DEUXIÈME TROISIÈME | 1
+Un double café. | CAFÉ DOUBLE | 1
+Un milliard d'euros. | EURO MILLIARD | 2
+Un millier de personnes. | PERSONNE MILLIER | 2
+Un million de fans. | FAN MILLION | 2
+Une paire de chaussures. | CHAUSSURE PAIRE | 1
+Il a quarante ans. | LUI AN QUARANTE | 1
+Quatre-vingt-dix minutes. | MINUTE QUATRE-VINGT-DIX | 2
+Une seconde ! | SECOND UN | 1
+Soixante et soixante-dix. | SOIXANTE SOIXANTE-DIX | 1
+Un tiers du gâteau. | GÂTEAU TIERS | 2
+Le prix à l'unité. | PRIX UNITÉ | 2
+
+## Shopping & Argent
+Un bon achat. | ACHAT BON | 1
+L'acheteur paie. | ACHETEUR PAYER | 2
+Ma commande est arrivée. | MOI COMMANDE ARRIVER | 1
+Je ne veux pas dépenser. | MOI DÉPENSER VOULOIR PAS | 1
+Ça coûte dix euros. | EURO DIX | 1
+Le marchand vend sa marchandise. | MARCHAND MARCHANDISE VENDRE | 2
+Quelle marque ? | MARQUE QUOI | 1
+Une pièce de deux euros. | EURO DEUX PIÈCE | 1
+Un bon produit. | PRODUIT BON | 1
+Une remise de dix pour cent. | REMISE DIX | 2
+Il n'y a plus de stock. | STOCK PLUS | 2
+La vente commence. | VENTE COMMENCER | 1
+Je regarde la vitrine. | MOI VITRINE REGARDER | 1
+Un échange gratuit. | ÉCHANGE GRATUIT | 2
+Lis l'étiquette. | ÉTIQUETTE LIRE | 1
+
+## Fêtes & Événements
+On va au bal. | BAL ALLER | 1
+Souffle les bougies. | BOUGIE SOUFFLER | 1
+La décoration est belle. | DÉCORATION BEAU | 1
+On regarde le défilé. | DÉFILÉ REGARDER | 1
+Le feu d'artifice est beau. | FEU D'ARTIFICE BEAU | 1
+On va à la foire. | FOIRE ALLER | 1
+Un gâteau d'anniversaire. | ANNIVERSAIRE GÂTEAU | 1
+Un hommage aux héros. | HÉROS HOMMAGE | 3
+Merci pour l'invitation. | INVITATION MERCI | 1
+La parade passe. | PARADE PASSER | 2
+On cherche les œufs de Pâques. | PÂQUES ŒUF CHERCHER | 1
+Un pétard a éclaté. | PÉTARD ÉCLATER | 2
+Une grande réception. | RÉCEPTION GRAND | 2
+Le réveillon de Noël. | NOËL RÉVEILLON | 1
+Un stand de crêpes. | CRÊPE STAND | 1
+
+## Beauté & Hygiène
+Je prends un bain. | MOI BAIN PRENDRE | 1
+Une brosse à cheveux. | CHEVEU BROSSE | 1
+Passe un chiffon. | CHIFFON PASSER | 1
+Le lavage des mains. | MAIN LAVAGE | 1
+J'étends le linge. | MOI LINGE ÉTENDRE | 1
+Un massage relaxant. | MASSAGE RELAXER | 1
+Une mèche de cheveux. | CHEVEU MÈCHE | 2
+Je fais le ménage. | MOI MÉNAGE FAIRE | 1
+Le nettoyage est fini. | NETTOYAGE FINI | 1
+Sors les ordures. | ORDURE SORTIR | 1
+Il porte une perruque. | LUI PERRUQUE PORTER | 2
+Il y a de la poussière. | POUSSIÈRE | 1
+Quelle saleté ! | SALETÉ | 1
+Un sèche-cheveux. | SÈCHE-CHEVEUX | 1
+Prends l'éponge. | ÉPONGE PRENDRE | 1
+
+## Mesures & Quantités
+L'altitude est haute. | ALTITUDE HAUT | 2
+Dix centimètres. | CENTIMÈTRE DIX | 1
+Il fait vingt degrés. | DEGRÉ VINGT | 1
+Quelle dimension ? | DIMENSION QUOI | 2
+Cent grammes de beurre. | BEURRE GRAMME CENT | 1
+La grandeur de l'univers. | UNIVERS GRANDEUR | 3
+Quelle hauteur ? | HAUTEUR QUOI | 1
+La masse est lourde. | MASSE LOURD | 2
+Un mètre de long. | MÈTRE UN LONG | 1
+La profondeur du lac. | LAC PROFONDEUR | 2
+Une grande quantité. | QUANTITÉ GRAND | 1
+Une tonne de sable. | SABLE TONNE | 2
+Baisse le volume. | VOLUME BAISSER | 1
+Un grand écart. | ÉCART GRAND | 2
+
+## Géographie & Pays
+L'Afrique et l'Asie. | AFRIQUE ASIE | 1
+Il vit en Allemagne. | LUI ALLEMAGNE VIVRE | 1
+Je vais en Amérique. | MOI AMÉRIQUE ALLER | 1
+Le Brésil et la Chine. | BRÉSIL CHINE | 1
+Paris est la capitale. | PARIS CAPITALE | 1
+L'Espagne et l'Italie. | ESPAGNE ITALIE | 1
+L'Europe est grande. | EUROPE GRAND | 1
+Il vient du Maroc. | LUI MAROC VENIR | 1
+Les États-Unis sont loin. | ÉTATS-UNIS LOIN | 1
+L'Angleterre et la Belgique. | ANGLETERRE BELGIQUE | 1
+La culture française. | FRANCE CULTURE | 2
+Il est grec. | LUI GREC | 1
+Elle est indienne. | ELLE INDIEN | 1
+Il est polonais. | LUI POLONAIS | 1
+Le Portugal et la Suisse. | PORTUGAL SUISSE | 1
+Il vit à l'étranger. | LUI ÉTRANGER VIVRE | 1
+
+## Cuisine & Ustensiles
+Pose l'assiette. | ASSIETTE POSER | 1
+Un bol de soupe. | SOUPE BOL | 1
+Prends un couteau et une fourchette. | COUTEAU FOURCHETTE PRENDRE | 1
+Une cuillère de sucre. | SUCRE CUILLÈRE | 1
+Ajoute de la farine. | FARINE AJOUTER | 1
+Mets la pâte dans le moule. | PÂTE MOULE METTRE | 2
+Un mélange de fruits. | FRUIT MÉLANGE | 1
+Porte le plateau. | PLATEAU PORTER | 1
+Un pot de confiture. | CONFITURE POT | 1
+Ajoute une épice. | ÉPICE AJOUTER | 1
+
+## Fruits & Légumes
+J'aime les abricots et les cerises. | ABRICOT CERISE MOI AIMER | 1
+Un ananas et une mangue. | ANANAS MANGUE | 1
+La framboise et la myrtille. | FRAMBOISE MYRTILLE | 1
+Un kiwi vert. | KIWI VERT | 1
+Le melon est sucré. | MELON SUCRÉ | 1
+Une orange et une poire. | ORANGE POIRE | 1
+La prune et la pêche. | PRUNE PÊCHE | 1
+La betterave est rouge. | BETTERAVE ROUGE | 1
+Une courgette et du céleri. | COURGETTE CÉLERI | 1
+Des haricots verts. | HARICOT VERT | 1
+Du maïs grillé. | MAÏS GRILLER | 1
+Le navet et le poireau. | NAVET POIREAU | 1
+
+## Outils & Bricolage
+Une barre de fer. | FER BARRE | 2
+Mets un crochet. | CROCHET METTRE | 2
+Une ficelle solide. | FICELLE | 1
+Un kit de réparation. | RÉPARATION KIT | 2
+La lame est coupante. | LAME COUPER | 2
+Range le matériel. | MATÉRIEL RANGER | 1
+Fais un nœud. | NŒUD FAIRE | 1
+Gonfle avec la pompe. | POMPE GONFLER | 1
+Le ressort est cassé. | RESSORT CASSER | 2
+Prends ton équipement. | TOI ÉQUIPEMENT PRENDRE | 1
+
+## Couleurs
+Le ciel est gris. | CIEL GRIS | 1
+Le soleil est jaune. | SOLEIL JAUNE | 1
+Mes yeux sont marron. | MOI ŒIL MARRON | 1
+Une fleur violette. | FLEUR VIOLET | 1
+Une bague argentée. | BAGUE ARGENTÉ | 2
+Un pantalon beige. | PANTALON BEIGE | 1
+Une robe corail. | ROBE CORAIL | 2
+Un cadre doré. | CADRE DORÉ | 2
+Un bleu indigo. | BLEU INDIGO | 3
+Une nappe ivoire. | NAPPE IVOIRE | 3
+Un pantalon kaki. | PANTALON KAKI | 2
+Un mur ocre. | MUR OCRE | 3
+Un pull saumon. | PULL SAUMON | 2
+La mer turquoise. | MER TURQUOISE | 2
+Une bague émeraude. | BAGUE ÉMERAUDE | 2
+
+## Animaux marins
+La crevette et le homard. | CREVETTE HOMARD | 1
+Le morse et le phoque. | MORSE PHOQUE | 1
+La sardine et le thon. | SARDINE THON | 1
+Le saumon remonte la rivière. | SAUMON RIVIÈRE MONTER | 2
+La tortue de mer nage. | TORTUE DE MER NAGER | 1
+Une étoile de mer sur le sable. | ÉTOILE DE MER SABLE | 1
+
+## Mort & Deuil
+Le médecin fait une autopsie. | MÉDECIN AUTOPSIE | 3
+Ils ont trouvé un cadavre. | CADAVRE TROUVER | 3
+Le cercueil est en bois. | CERCUEIL BOIS | 2
+Le décès de mon grand-père. | MOI GRAND-PÈRE DÉCÈS | 2
+Les funérailles sont demain. | DEMAIN FUNÉRAILLES | 2
+Il reçoit un héritage. | LUI HÉRITAGE RECEVOIR | 2
+Le corps est à la morgue. | CORPS MORGUE | 3
+Une blessure mortelle. | BLESSURE MORTEL | 2
+Le suicide est un drame. | SUICIDE DRAME | 3
+Le tombeau du roi. | ROI TOMBEAU | 2
+
+## Salutations
+Bienvenu chez moi ! | MOI MAISON BIENVENU | 1
+Merci ! De rien. | MERCI DE RIEN | 1
+Je te présente mes excuses. | MOI TOI EXCUSE | 1
+Pardon, je suis en retard. | PARDON MOI RETARD | 1
+La politesse est importante. | POLITESSE IMPORTANT | 1
+Un grand remerciement. | REMERCIEMENT GRAND | 2
+Salut, ça va ? | SALUT | 1
+Mes salutations. | MOI SALUTATION | 2
+
+## Ferme & Agriculture
+Le blé pousse. | BLÉ POUSSER | 1
+La charrette est pleine. | CHARRETTE PLEIN | 1
+Le fumier sent mauvais. | FUMIER SENTIR MAUVAIS | 2
+Un grain de riz. | RIZ GRAIN | 1
+Le cheval mange la paille. | CHEVAL PAILLE MANGER | 1
+Une plantation de café. | CAFÉ PLANTATION | 2
+La rizière est inondée. | RIZIÈRE | 2
+Les tomates sont dans la serre. | TOMATE SERRE | 1
+Le cheval est à l'écurie. | CHEVAL ÉCURIE | 1
+La chèvre et l'âne. | CHÈVRE ÂNE | 1
+Le dindon et le taureau. | DINDON TAUREAU | 1
+
+## Chiffres
+Onze, douze, treize. | ONZE DOUZE TREIZE | 1
+Quatorze, quinze, seize. | QUATORZE QUINZE SEIZE | 1
+Dix-sept, dix-huit, dix-neuf. | DIX-SEPT DIX-HUIT DIX-NEUF | 1
+
+## Instruments de musique
+Il joue de la basse. | LUI BASSE JOUER | 1
+Elle joue de la clarinette. | ELLE CLARINETTE JOUER | 1
+Il joue du cor. | LUI COR JOUER | 2
+Elle joue de la harpe. | ELLE HARPE JOUER | 1
+L'orgue de l'église. | ÉGLISE ORGUE | 2
+Il joue du violoncelle. | LUI VIOLONCELLE JOUER | 1
+L'enfant joue du xylophone. | ENFANT XYLOPHONE JOUER | 1
+
+## Matières & Textures
+Un pont en acier. | PONT ACIER | 2
+Une boîte en carton. | CARTON BOÎTE | 1
+La cire de la bougie. | BOUGIE CIRE | 2
+Un fil de cuivre. | CUIVRE FIL | 2
+Une fibre naturelle. | FIBRE NATUREL | 2
+Un tuyau en plomb. | PLOMB | 3
+De la poudre blanche. | POUDRE BLANC | 1
+
+## Météo
+Un arc-en-ciel dans le ciel. | CIEL ARC-EN-CIEL | 1
+Une brise légère. | BRISE LÉGER | 2
+Le climat change. | CLIMAT CHANGER | 1
+La foudre tombe. | FOUDRE TOMBER | 1
+La grêle tombe. | GRÊLE TOMBER | 1
+Un nuage gris. | NUAGE GRIS | 1
+Une tempête arrive. | TEMPÊTE ARRIVER | 1
+La prévision météo. | MÉTÉO PRÉVISION | 2
+La rosée du matin. | MATIN ROSÉE | 2
+La sécheresse dure. | SÉCHERESSE DURER | 2
+Une tornade approche. | TORNADE APPROCHER | 2
+Le gel abîme les plantes. | GEL PLANTE ABÎMER | 2
+
+## Matières scolaires
+J'étudie la biologie et la chimie. | MOI BIOLOGIE CHIMIE ÉTUDIER | 1
+J'aime la géographie et l'histoire. | GÉOGRAPHIE HISTOIRE MOI AIMER | 1
+Il étudie l'informatique. | LUI INFORMATIQUE ÉTUDIER | 1
+J'ai une bonne note en mathématiques. | MOI MATHÉMATIQUES NOTE BON | 1
+Ta réponse est correcte. | TOI RÉPONSE CORRECT | 1
+Fais l'exercice. | EXERCICE FAIRE | 1
+J'ai une question. | MOI QUESTION AVOIR | 1
+J'étudie la philosophie. | MOI PHILOSOPHIE ÉTUDIER | 2
+Je dois étudier ce soir. | SOIR MOI ÉTUDIER DEVOIR | 1
+
+## Adverbes & Prépositions
+J'ai assez mangé. | MOI MANGER ASSEZ | 1
+J'ai déjà fini. | MOI FINI DÉJÀ | 1
+Il est gentil envers moi. | LUI MOI ENVERS GENTIL | 3
+Je passe par Lyon. | MOI PAR PASSER | 2
+C'est le tien. | TIEN | 2
+Il passe à travers le mur. | MUR TRAVERS LUI PASSER | 2
+Je vais vers la gare. | GARE VERS MOI ALLER | 1
+
+## Émotions
+L'amour est beau. | AMOUR BEAU | 1
+Il ressent du dégoût. | LUI DÉGOÛT RESSENTIR | 2
+Quel ennui ! | ENNUI | 1
+Il est fâché. | LUI FÂCHÉ | 1
+J'ai sommeil. | MOI SOMMEIL AVOIR | 1
+Quelle surprise ! | SURPRISE | 1
+
+## Mathématiques
+Fais la division. | DIVISION FAIRE | 1
+C'est l'inverse. | INVERSE | 2
+Le minimum est dix. | MINIMUM DIX | 2
+Apprends la multiplication. | MULTIPLICATION APPRENDRE | 1
+Calcule le périmètre. | PÉRIMÈTRE CALCULER | 2
+Une statistique intéressante. | STATISTIQUE INTÉRESSER | 3
+
+## Médias & Presse
+Une affiche de film. | FILM AFFICHE | 1
+Lis l'annonce. | ANNONCE LIRE | 1
+Une dépêche urgente. | DÉPÊCHE URGENT | 3
+Les médias en parlent. | MÉDIA PARLER | 2
+Une pub à la télé. | TÉLÉ PUB | 1
+C'est un scoop ! | SCOOP | 2
+
+## École & Travail
+Je suis au bureau. | MOI BUREAU | 1
+Le cuisinier prépare le repas. | CUISINIER REPAS PRÉPARER | 1
+L'infirmier soigne. | INFIRMIER SOIGNER | 1
+Prête-moi un stylo. | MOI STYLO PRÊTER | 1
+
+## Technologie
+Une caméra de surveillance. | SURVEILLANCE CAMÉRA | 2
+L'imprimante est en panne. | IMPRIMANTE PANNE | 1
+Quel est le mot de passe ? | MOT DE PASSE QUOI | 1
+J'ai une tablette. | MOI TABLETTE AVOIR | 1
+Le wifi ne marche pas. | WIFI MARCHER PAS | 1
+
+## Économie & Argent
+Le bénéfice augmente. | BÉNÉFICE AUGMENTER | 2
+Une grosse dépense. | DÉPENSE GROS | 1
+Le taux d'intérêt. | INTÉRÊT | 3
+La taxe augmente. | TAXE AUGMENTER | 2
+J'ai une épargne. | MOI ÉPARGNE AVOIR | 2
+
+## Fêtes & Occasions
+Une belle cérémonie. | CÉRÉMONIE BEAU | 1
+Ils vont se fiancer. | FIANCER | 2
+Les invités arrivent. | INVITÉ ARRIVER | 1
+Il est mort hier. | HIER LUI MORT | 2
+Il part à la retraite. | LUI RETRAITE PARTIR | 2
+
+## Questions & Pronoms
+Lequel veux-tu ? | TOI LEQUEL VOULOIR | 1
+Pourquoi tu pleures ? | TOI PLEURER POURQUOI | 1
+Quand pars-tu ? | TOI PARTIR QUAND | 1
+Qui est là ? | LÀ QUI | 1
+Je suis content. | JE CONTENT | 1
+Tu viens ? | TU VENIR | 1
+Ils arrivent. | ILS ARRIVER | 1
+Elles dansent. | ELLES DANSER | 1
+
+## Temps & Saisons
+Août est chaud. | AOÛT CHAUD | 1
+Janvier est froid. | JANVIER FROID | 1
+Novembre et octobre. | OCTOBRE NOVEMBRE | 1
+Cet après-midi. | APRÈS-MIDI | 1
+À minuit. | MINUIT | 1
+Une seconde. | SECOND | 1
+Le siècle dernier. | SIÈCLE DERNIER | 2
+
+## Divers
+Une météorite tombe. | MÉTÉORITE TOMBER | 2
+Un satellite tourne. | SATELLITE TOURNER | 2
+Un trou noir dans l'espace. | ESPACE TROU NOIR | 2
+J'ai mal à la hanche. | MOI HANCHE MAL | 1
+L'intestin digère. | INTESTIN | 3
+Il s'est cassé un os. | LUI OS CASSER | 1
+Du cognac, du rhum, de la vodka. | COGNAC RHUM VODKA | 2
+Je vais à l'hôpital. | MOI HÔPITAL ALLER | 1
+On va à la mer. | MER ALLER | 1
+J'aime la charcuterie. | CHARCUTERIE MOI AIMER | 1
+Un gratin de pâtes. | PÂTE GRATIN | 1
+Il porte un appareillage auditif. | LUI APPAREILLAGE | 3
+Il est coda. | LUI CODA | 3
+Une pizza au fromage. | FROMAGE PIZZA | 1
+J'aime cuisiner. | MOI CUISINER AIMER | 1
+Chauffe au micro-ondes. | MICRO-ONDES CHAUFFER | 1
+C'est un champion. | CHAMPION | 1
+Il marque un pénalty. | LUI PÉNALTY | 1
+Évite l'isolement. | ISOLEMENT ÉVITER | 3
+J'aime l'improvisation. | IMPROVISATION MOI AIMER | 2
+Réponds-moi. | MOI RÉPONDRE | 1
+La créativité des enfants. | ENFANT CRÉATIVITÉ | 2
+Je suis au régime. | MOI RÉGIME | 1
+Un grand appartement. | APPARTEMENT GRAND | 1
+Il passe un cap. | LUI CAP PASSER | 3
+On parle de chantage. | CHANTAGE PARLER | 3

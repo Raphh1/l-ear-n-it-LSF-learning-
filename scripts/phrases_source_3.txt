@@ -1,0 +1,508 @@
+# Lot 3 : phrases couvrant les signes encore inutilisés
+
+## Animaux
+L'oiseau bat des ailes. | OISEAU AILE BATTRE | 1
+Le bec du corbeau est noir. | CORBEAU BEC NOIR | 1
+Une bestiole est dans mon lit. | MOI LIT BESTIOLE | 1
+La biche et le cerf sont dans la forêt. | FORÊT BICHE CERF | 1
+Le bœuf tire la charrette. | BOEUF CHARRETTE TIRER | 2
+Le bouc a des cornes. | BOUC CORNE AVOIR | 1
+La brebis protège son agneau. | BREBIS AGNEAU PROTÉGER | 2
+Cette bête est sauvage. | BÊTE SAUVAGE | 1
+Le chameau vit dans le désert. | DÉSERT CHAMEAU VIVRE | 1
+La chauve-souris dort le jour. | JOUR CHAUVE-SOURIS DORMIR | 1
+La colombe est blanche. | COLOMBE BLANC | 1
+Le crapaud et la grenouille aiment l'eau. | CRAPAUD GRENOUILLE EAU AIMER | 1
+Le crocodile a de grandes dents. | CROCODILE DENT GRAND | 1
+Le cygne nage sur le lac. | LAC CYGNE NAGER | 1
+On mange de la dinde à Noël. | NOËL DINDE MANGER | 1
+La femelle protège ses petits. | FEMELLE PETIT PROTÉGER | 2
+Le mâle est plus grand. | MÂLE GRAND PLUS | 2
+La fourrure de l'ours est épaisse. | OURS FOURRURE | 2
+La girafe a un long cou. | GIRAFE COU LONG | 1
+Le gorille est très fort. | GORILLE FORT TRÈS | 1
+Le chat sort ses griffes. | CHAT GRIFFE SORTIR | 1
+Mon hamster dort. | MOI HAMSTER DORMIR | 1
+Le hibou chasse la nuit. | NUIT HIBOU CHASSER | 1
+Cet insecte pique. | INSECTE PIQUER | 1
+La jument et son poulain courent. | JUMENT POULAIN COURIR | 1
+Le lion est le roi des animaux. | LION ROI ANIMAUX | 1
+Le loup hurle la nuit. | NUIT LOUP HURLER | 1
+Le lézard aime le soleil. | LÉZARD SOLEIL AIMER | 1
+La morsure du serpent est dangereuse. | SERPENT MORSURE DANGEREUX | 2
+Le mouton et la mule sont à la ferme. | FERME MOUTON MULE | 1
+L'oie et le pigeon volent. | OIE PIGEON VOLER | 1
+Le parasite vit sur le chien. | CHIEN PARASITE VIVRE | 2
+Le chien a mal à la patte. | CHIEN PATTE MAL | 1
+La plume est légère. | PLUME LÉGER | 1
+Je mange du poisson. | POISSON MOI MANGER | 1
+Le porc est rose. | PORC ROSE | 1
+L'enfant a des poux. | ENFANT POU AVOIR | 1
+Le poussin suit la poule. | POULE POUSSIN SUIVRE | 1
+Le renard cherche une proie. | RENARD PROIE CHERCHER | 2
+Le chien a une puce. | CHIEN PUCE AVOIR | 1
+Le chien remue la queue. | CHIEN QUEUE | 1
+De quelle race est ton chien ? | TOI CHIEN RACE QUOI | 1
+Le rat mange le fromage. | RAT FROMAGE MANGER | 1
+Le sanglier vit dans les bois. | BOIS SANGLIER VIVRE | 1
+Le singe grimpe à l'arbre. | ARBRE SINGE GRIMPER | 1
+La taupe creuse la terre. | TERRE TAUPE | 2
+La tortue est lente. | TORTUE LENT | 1
+Le vautour plane dans le ciel. | CIEL VAUTOUR PLANER | 2
+Le veau boit du lait. | VEAU LAIT BOIRE | 1
+Le ver est dans la pomme. | POMME VER | 1
+L'écureuil mange une noisette. | ÉCUREUIL NOIX MANGER | 1
+L'éléphant a une trompe. | ÉLÉPHANT GRAND | 1
+
+## Crime & Police
+L'agression a eu lieu hier. | HIER AGRESSION | 2
+Attention, c'est une arnaque ! | ARNAQUE ATTENTION | 1
+La police fait une arrestation. | POLICE ARRESTATION | 2
+Le meurtrier est un assassin. | MEURTRIER ASSASSIN | 2
+L'assassinat du roi. | ROI ASSASSINAT | 3
+Il y a une bagarre dans la rue. | RUE BAGARRE | 1
+La bande de bandits a fui. | BANDE BANDIT FUIR | 2
+La brigade arrive. | BRIGADE ARRIVER | 2
+La cocaïne est une drogue. | COCAÏNE DROGUE | 2
+C'est une combine. | COMBINE | 2
+Le commissaire interroge le complice. | COMMISSAIRE COMPLICE INTERROGER | 3
+C'est une conspiration. | CONSPIRATION | 3
+La corruption est un crime. | CORRUPTION CRIME | 2
+Le crack est dangereux. | CRACK DANGEREUX | 2
+Le criminel est en prison. | CRIMINEL PRISON | 1
+Le dealer vend de la drogue. | DEALER DROGUE VENDRE | 2
+C'est un deal. | DEAL | 2
+Le voleur entre par effraction. | VOLEUR EFFRACTION ENTRER | 3
+La police cherche une empreinte. | POLICE EMPREINTE CHERCHER | 2
+L'enlèvement de l'enfant. | ENFANT ENLÈVEMENT | 3
+L'escroc a volé de l'argent. | ESCROC ARGENT VOLER | 2
+L'espion a disparu. | ESPION DISPARAÎTRE | 2
+Le flic fait sa ronde. | FLIC RONDE | 2
+La fouille dure une heure. | FOUILLE HEURE DURER | 2
+La fraude est punie. | FRAUDE PUNIR | 2
+Le gang fait un hold-up. | GANG HOLD-UP | 2
+C'est un homicide. | HOMICIDE | 3
+L'inspecteur trouve un indice. | INSPECTEUR INDICE TROUVER | 2
+L'interrogatoire commence. | INTERROGATOIRE COMMENCER | 2
+Il fume un joint. | LUI JOINT FUMER | 2
+Le kidnapping a échoué. | KIDNAPPING RATER | 3
+La mafia est puissante. | MAFIA FORT | 2
+C'est une menace. | MENACE | 2
+Il y a eu un meurtre. | MEURTRE | 2
+Le mouchard a parlé. | MOUCHARD PARLER | 3
+Ils ont pris un otage. | OTAGE PRENDRE | 2
+Le pirate attaque le bateau. | BATEAU PIRATE ATTAQUER | 2
+C'est un piège ! | PIÈGE | 1
+Ils ont une planque. | PLANQUE | 3
+Le poison est mortel. | POISON MORTEL | 2
+La poursuite continue. | POURSUITE CONTINUER | 2
+Le ravisseur demande une rançon. | RAVISSEUR RANÇON DEMANDER | 3
+Le shérif arrive en ville. | VILLE SHÉRIF ARRIVER | 2
+J'ai un soupçon. | MOI SOUPÇON AVOIR | 2
+La torture est interdite. | TORTURE INTERDIRE | 3
+Il ne laisse aucune trace. | TRACE RIEN | 2
+Le trafiquant est arrêté. | TRAFIQUANT ARRÊTER | 3
+Le tueur est en fuite. | TUEUR FUITE | 2
+Le violeur est condamné. | VIOLEUR CONDAMNÉ | 3
+
+## Transport
+Quelle est l'heure d'arrivée ? | ARRIVÉE HEURE QUOI | 1
+Je descends au prochain arrêt. | ARRÊT PROCHAIN MOI DESCENDRE | 1
+L'atterrissage est prévu à midi. | MIDI ATTERRISSAGE | 2
+On prend l'autoroute. | AUTOROUTE PRENDRE | 1
+Je vais à l'aéroport en auto. | AÉROPORT AUTO MOI ALLER | 1
+Sa bagnole est vieille. | LUI BAGNOLE VIEUX | 2
+On fait un tour en barque. | BARQUE TOUR | 1
+La camionnette est pleine. | CAMIONNETTE PLEIN | 1
+Le carburant est cher. | CARBURANT CHER | 2
+Le chargement est lourd. | CHARGEMENT LOURD | 2
+Pousse le chariot. | CHARIOT POUSSER | 1
+La circulation est dense. | CIRCULATION BEAUCOUP | 2
+Le compartiment est complet. | COMPARTIMENT COMPLET | 2
+Le conducteur freine. | CONDUCTEUR FREINER | 1
+La conduite de nuit est dure. | NUIT CONDUITE DUR | 2
+Le convoi traverse la ville. | VILLE CONVOI TRAVERSER | 3
+Il y a eu un crash. | CRASH | 2
+Fais demi-tour ! | DEMI-TOUR FAIRE | 1
+Le départ est à 8 heures. | DÉPART HEURE HUIT | 1
+Le déplacement est long. | DÉPLACEMENT LONG | 2
+Cet engin est bruyant. | ENGIN BRUYANT | 2
+Je mets de l'essence. | ESSENCE MOI METTRE | 1
+Le fourgon est garé. | FOURGON GARER | 2
+Le frein ne marche pas. | FREIN MARCHER PAS | 1
+Il donne un coup de klaxon. | KLAXON | 1
+La manœuvre est difficile. | MANŒUVRE DIFFICILE | 2
+Il roule à moto. | LUI MOTO ROULER | 1
+La navette part de l'aéroport. | AÉROPORT NAVETTE PARTIR | 2
+Le navire quitte le port. | NAVIRE PORT QUITTER | 1
+J'ai un pneu crevé. | MOI PNEU CREVER | 1
+Appuie sur la pédale. | PÉDALE APPUYER | 1
+On prend un raccourci. | RACCOURCI PRENDRE | 2
+Le train roule sur le rail. | TRAIN RAIL ROULER | 2
+Il roule au ralenti. | RALENTI ROULER | 2
+Le retour est demain. | DEMAIN RETOUR | 1
+La roue tourne. | ROUE TOURNER | 1
+La route est longue. | ROUTE LONG | 1
+Le réservoir est vide. | RÉSERVOIR VIDE | 2
+Le sous-marin plonge. | SOUS-MARIN PLONGER | 2
+Il fait du stop. | LUI STOP | 1
+Le terminal est loin. | TERMINAL LOIN | 2
+Achète un ticket de bus. | BUS TICKET ACHETER | 1
+La trajectoire est droite. | TRAJECTOIRE DROIT | 3
+Le trajet dure une heure. | TRAJET HEURE DURER | 1
+Le vaisseau part dans l'espace. | ESPACE VAISSEAU PARTIR | 2
+Attention au virage ! | VIRAGE ATTENTION | 1
+Réduis ta vitesse. | TOI VITESSE RÉDUIRE | 2
+Le train est sur la voie deux. | TRAIN VOIE DEUX | 1
+Le bateau a une voile. | BATEAU VOILE | 1
+Tiens bien le volant. | VOLANT TENIR | 1
+Le véhicule est en panne. | VÉHICULE PANNE | 2
+Le wagon est plein. | WAGON PLEIN | 1
+Il a un yacht. | LUI YACHT AVOIR | 2
+
+## Sports & Loisirs
+Mon adversaire est fort. | MOI ADVERSAIRE FORT | 1
+Lance la balle ! | BALLE LANCER | 1
+Le ballon est rond. | BALLON ROND | 1
+Il joue au base-ball. | LUI BASE-BALL JOUER | 1
+Le boxeur fait de la boxe. | BOXEUR BOXE | 1
+Le cavalier monte à cheval. | CAVALIER CHEVAL | 1
+Le chasseur part à la chasse. | CHASSEUR CHASSE PARTIR | 1
+Vise le centre de la cible. | CIBLE CENTRE VISER | 2
+La compétition commence. | COMPÉTITION COMMENCER | 1
+J'ai gagné le concours. | MOI CONCOURS GAGNER | 1
+Le coureur gagne la course. | COUREUR COURSE GAGNER | 1
+C'est un défi ! | DÉFI | 1
+Fais un effort ! | EFFORT FAIRE | 1
+L'entraînement est dur. | ENTRAÎNEMENT DUR | 1
+J'aime l'escalade. | ESCALADE MOI AIMER | 1
+C'est un exploit. | EXPLOIT | 2
+Le ballon est dans le filet. | BALLON FILET | 1
+Il joue la finale. | LUI FINALE JOUER | 1
+On regarde le foot. | FOOT REGARDER | 1
+Le gagnant et le perdant se serrent la main. | GAGNANT PERDANT MAIN | 2
+Il joue au golf. | LUI GOLF JOUER | 1
+J'aime le jardinage. | JARDINAGE MOI AIMER | 1
+La lutte est un sport. | LUTTE SPORT | 2
+La nage est bonne pour la santé. | NAGE SANTÉ BON | 1
+Le parcours est long. | PARCOURS LONG | 2
+Il saute à la perche. | LUI PERCHE SAUTER | 2
+La piste de ski est fermée. | SKI PISTE FERMER | 1
+J'aime la plongée. | PLONGÉE MOI AIMER | 1
+On va à la pêche. | PÊCHE ALLER | 1
+On fait une randonnée. | RANDONNÉE FAIRE | 1
+Il bat le record. | LUI RECORD BATTRE | 2
+La course de relais. | RELAIS COURSE | 2
+Le remplaçant entre. | REMPLAÇANT ENTRER | 2
+Je veux ma revanche ! | MOI REVANCHE VOULOIR | 2
+Le dernier round. | ROUND DERNIER | 2
+Il reçoit une récompense. | LUI RÉCOMPENSE RECEVOIR | 2
+Le saut est haut. | SAUT HAUT | 1
+Il saute la barrière. | LUI BARRIÈRE SAUTE | 2
+La selle du vélo. | VÉLO SELLE | 1
+Je fais du surf. | MOI SURF | 1
+Le supporter crie. | SUPPORTER CRIER | 1
+Notre team est forte. | NOUS TEAM FORT | 2
+Je joue au tennis. | MOI TENNIS JOUER | 1
+C'est un triomphe. | TRIOMPHE | 2
+Le vainqueur reçoit le trophée. | VAINQUEUR TROPHÉE RECEVOIR | 2
+On se change au vestiaire. | VESTIAIRE CHANGER | 1
+Je fais du yoga. | MOI YOGA | 1
+Il prend son élan. | LUI ÉLAN PRENDRE | 2
+La première épreuve. | ÉPREUVE PREMIER | 2
+
+## Monde du travail
+C'est une bonne affaire. | AFFAIRE BON | 1
+Je travaille dans une agence. | AGENCE MOI TRAVAILLER | 1
+Il faut une assistance. | ASSISTANCE FALLOIR | 2
+Mon associé est malade. | MOI ASSOCIÉ MALADE | 2
+L'atelier est fermé. | ATELIER FERMER | 1
+Montre ton badge. | TOI BADGE MONTRER | 1
+On fait le bilan. | BILAN FAIRE | 2
+J'ai trouvé un boulot. | MOI BOULOT TROUVER | 1
+Il fait du business. | LUI BUSINESS | 2
+Le cabinet est fermé. | CABINET FERMER | 2
+C'est un cadre. | CADRE | 2
+Sa carrière est longue. | LUI CARRIÈRE LONG | 2
+Le chantier est bruyant. | CHANTIER BRUYANT | 1
+C'est une lourde charge. | CHARGE LOURD | 2
+Le chef est content. | CHEF CONTENT | 1
+Il est au chômage. | LUI CHÔMAGE | 2
+Merci pour cette collaboration. | COLLABORATION MERCI | 2
+La compagnie recrute. | COMPAGNIE | 2
+Il a des compétences. | LUI COMPÉTENCE AVOIR | 2
+La concurrence est forte. | CONCURRENCE FORT | 2
+Notre concurrent est fort. | NOUS CONCURRENT FORT | 2
+La conférence commence. | CONFÉRENCE COMMENCER | 1
+Je signe le contrat. | CONTRAT MOI SIGNER | 1
+Quelle corvée ! | CORVÉE | 2
+Le dirigeant parle. | DIRIGEANT PARLER | 2
+Il donne sa démission. | LUI DÉMISSION DONNER | 2
+L'employé est en retard. | EMPLOYÉ RETARD | 1
+L'entrepôt est grand. | ENTREPÔT GRAND | 2
+C'est une exigence. | EXIGENCE | 3
+La fabrique produit des jouets. | FABRIQUE JOUET PRODUIRE | 2
+Quelle est ta fonction ? | TOI FONCTION QUOI | 2
+Le fondateur de l'entreprise. | ENTREPRISE FONDATEUR | 2
+Bonne initiative ! | INITIATIVE BON | 2
+C'est un leader. | LEADER | 2
+Le manager organise la réunion. | MANAGER RÉUNION ORGANISER | 2
+J'ai une mission. | MOI MISSION AVOIR | 1
+Quelle est ton occupation ? | TOI OCCUPATION QUOI | 2
+L'organisation est bonne. | ORGANISATION BON | 2
+Je fais la permanence. | MOI PERMANENCE | 3
+Le personnel est gentil. | PERSONNEL GENTIL | 2
+C'est un pro. | PRO | 1
+La production augmente. | PRODUCTION AUGMENTER | 2
+Quelle est ta profession ? | TOI PROFESSION QUOI | 1
+Il est très professionnel. | LUI PROFESSIONNEL TRÈS | 2
+J'écris un rapport. | MOI RAPPORT ÉCRIRE | 2
+Qui est le responsable ? | RESPONSABLE QUI | 1
+Les ressources sont rares. | RESSOURCE RARE | 3
+C'est une réussite. | RÉUSSITE | 1
+Quelle est ta spécialité ? | TOI SPÉCIALITÉ QUOI | 2
+Je fais un stage. | MOI STAGE | 1
+Quel est ton statut ? | TOI STATUT QUOI | 2
+Il est volontaire. | LUI VOLONTAIRE | 2
+
+## Maison & Meubles
+L'ampoule est grillée. | AMPOULE GRILLER | 1
+Range l'armoire. | ARMOIRE RANGER | 1
+La baignoire est pleine. | BAIGNOIRE PLEIN | 1
+On mange sur le balcon. | BALCON MANGER | 1
+Le bébé dort dans son berceau. | BÉBÉ BERCEAU DORMIR | 1
+Je m'assois sur le canapé. | CANAPÉ MOI ASSEOIR | 1
+Le carreau est cassé. | CARREAU CASSER | 1
+Le vin est à la cave. | VIN CAVE | 1
+Prends une chaise. | CHAISE PRENDRE | 1
+Le feu brûle dans la cheminée. | CHEMINÉE FEU BRÛLER | 1
+Attends dans le couloir. | COULOIR ATTENDRE | 1
+Prends une couverture. | COUVERTURE PRENDRE | 1
+Le dortoir est calme. | DORTOIR CALME | 2
+Change les draps. | DRAP CHANGER | 1
+Monte l'escalier. | ESCALIER MONTER | 1
+Ouvre la fenêtre. | FENÊTRE OUVRIR | 1
+On se réchauffe au foyer. | FOYER RÉCHAUFFER | 2
+La voiture est au garage. | VOITURE GARAGE | 1
+Il y a des cartons au grenier. | GRENIER CARTON | 1
+L'installation est finie. | INSTALLATION FINI | 2
+Je plante des fleurs au jardin. | JARDIN FLEUR MOI PLANTER | 1
+Allume la lampe. | LAMPE ALLUMER | 1
+Je vais au lit. | MOI LIT ALLER | 1
+Le locataire paie le loyer. | LOCATAIRE LOYER PAYER | 2
+La location est chère. | LOCATION CHER | 2
+Je cherche un logement. | MOI LOGEMENT CHERCHER | 1
+Le matelas est dur. | MATELAS DUR | 1
+J'achète un meuble. | MOI MEUBLE ACHETER | 1
+Le plafond est haut. | PLAFOND HAUT | 1
+Le plancher craque. | PLANCHER CRAQUER | 2
+Tourne la poignée. | POIGNÉE TOURNER | 1
+Ferme la porte. | PORTE FERMER | 1
+Le propriétaire vend sa propriété. | PROPRIÉTAIRE PROPRIÉTÉ VENDRE | 2
+Ferme le rideau. | RIDEAU FERMER | 1
+Le robinet fuit. | ROBINET FUIR | 1
+Le lait est dans le réfrigérateur. | LAIT RÉFRIGÉRATEUR | 1
+On regarde la télé au salon. | SALON TÉLÉ REGARDER | 1
+La serrure est cassée. | SERRURE CASSER | 1
+Il attend sur le seuil. | SEUIL ATTENDRE | 3
+Ce siège est libre ? | SIÈGE LIBRE | 1
+La sonnette ne marche pas. | SONNETTE MARCHER PAS | 1
+Le sous-sol est humide. | SOUS-SOL HUMIDE | 2
+Le tapis est doux. | TAPIS DOUX | 1
+On mange sur la terrasse. | TERRASSE MANGER | 1
+Les clés sont dans le tiroir. | CLÉ TIROIR | 1
+Où sont les toilettes ? | TOILETTES OÙ | 1
+Le toit fuit. | TOIT FUIR | 1
+Il y a une trappe au plafond. | PLAFOND TRAPPE | 2
+Tire le verrou. | VERROU TIRER | 2
+Pose le livre sur l'étagère. | LIVRE ÉTAGÈRE POSER | 1
+
+## Éducation Sexuelle
+Les abus doivent être signalés. | ABUS SIGNALER | 3
+Il faut son accord. | LUI ACCORD FALLOIR | 2
+L'accouchement s'est bien passé. | ACCOUCHEMENT BIEN | 2
+L'amitié est précieuse. | AMITIÉ PRÉCIEUX | 1
+Il est bisexuel. | LUI BISEXUEL | 2
+Le clitoris est un organe. | CLITORIS ORGANE | 3
+La communication est importante dans le couple. | COUPLE COMMUNICATION IMPORTANT | 2
+La conception d'un bébé. | BÉBÉ CONCEPTION | 3
+Le consentement est obligatoire. | CONSENTEMENT OBLIGATION | 2
+La contraception protège. | CONTRACEPTION PROTÉGER | 2
+Il faut discuter ensemble. | ENSEMBLE DISCUTER FALLOIR | 1
+La diversité est une richesse. | DIVERSITÉ RICHESSE | 2
+Le dépistage est gratuit. | DÉPISTAGE GRATUIT | 2
+On peut se faire dépister. | DÉPISTER POUVOIR | 3
+Le désir est normal. | DÉSIR NORMAL | 2
+L'embryon devient un fœtus. | EMBRYON FŒTUS DEVENIR | 3
+Elle est enceinte. | ELLE ENCEINTE | 1
+La fécondation de l'ovule. | FÉCONDATION | 3
+Quel est ton genre ? | TOI GENRE QUOI | 2
+La grossesse dure neuf mois. | GROSSESSE MOIS NEUF | 2
+Le harcèlement est interdit. | HARCÈLEMENT INTERDIRE | 2
+Cet homme est homosexuel. | HOMME HOMOSEXUEL | 2
+Il est hétérosexuel. | LUI HÉTÉROSEXUEL | 2
+L'hygiène est importante. | HYGIÈNE IMPORTANT | 1
+L'impuissance se soigne. | IMPUISSANCE SOIGNER | 3
+L'inclusion de tous. | TOUT INCLUSION | 2
+Le médecin fait une injection. | MÉDECIN INJECTION | 2
+L'orgasme est un plaisir. | ORGASME PLAISIR | 3
+L'ovaire et l'utérus. | OVAIRE UTÉRUS | 3
+Les parents parlent aux enfants. | PARENT ENFANT PARLER | 1
+Elle prend la pilule. | ELLE PILULE PRENDRE | 2
+La prostate est un organe. | PROSTATE ORGANE | 3
+Utilise un préservatif. | PRÉSERVATIF UTILISER | 2
+La puberté change le corps. | PUBERTÉ CORPS CHANGER | 2
+Le pénis et les testicules. | PÉNIS TESTICULE | 3
+Le rapport sexuel doit être consenti. | RAPPORT SEXUEL CONSENTEMENT | 3
+Le refus doit être respecté. | REFUS RESPECTER | 2
+Le sein produit du lait. | SEIN LAIT PRODUIRE | 2
+Le sexe du bébé. | BÉBÉ SEXE | 2
+Le sperme contient des cellules. | SPERME CELLULE | 3
+Fais le test. | TEST FAIRE | 1
+Sa timidité est touchante. | LUI TIMIDITÉ | 2
+Je fais ma toilette. | MOI TOILETTE FAIRE | 1
+Le vagin est un organe. | VAGIN ORGANE | 3
+Le viol est un crime. | VIOL CRIME | 3
+Non à la violence ! | VIOLENCE NON | 1
+
+## Armée & Guerre
+L'amiral commande la flotte. | AMIRAL FLOTTE COMMANDER | 3
+Il tire à l'arc. | LUI ARC TIRER | 1
+Le chevalier porte une armure. | CHEVALIER ARMURE PORTER | 2
+L'attaque commence. | ATTAQUE COMMENCER | 1
+L'attentat a fait des victimes. | ATTENTAT VICTIME | 3
+Le bombardement dure toute la nuit. | NUIT BOMBARDEMENT DURER | 3
+La bombe explose. | BOMBE EXPLOSER | 2
+Il lève son bouclier. | LUI BOUCLIER LEVER | 2
+Quel calibre ? | CALIBRE QUOI | 3
+Le canon tire. | CANON TIRER | 2
+Le capitaine parle au caporal. | CAPITAINE CAPORAL PARLER | 2
+C'est un carnage. | CARNAGE | 3
+Il charge les cartouches. | LUI CARTOUCHE CHARGER | 3
+La cavalerie arrive. | CAVALERIE ARRIVER | 2
+Le char avance. | CHAR AVANCER | 2
+Le colonel et le commandant. | COLONEL COMMANDANT | 3
+Le combat est violent. | COMBAT VIOLENT | 2
+Le combattant est blessé. | COMBATTANT BLESSER | 2
+Il prend le commandement. | LUI COMMANDEMENT PRENDRE | 3
+La conquête du territoire. | TERRITOIRE CONQUÊTE | 3
+La destruction de la ville. | VILLE DESTRUCTION | 2
+Un duel à l'épée. | ÉPÉE DUEL | 2
+La défense est solide. | DÉFENSE FORT | 2
+L'ennemi approche. | ENNEMI APPROCHER | 1
+Il lance une flèche. | LUI FLÈCHE LANCER | 1
+La fusillade a eu lieu hier. | HIER FUSILLADE | 3
+Il lance une grenade. | LUI GRENADE LANCER | 2
+Le guerrier est courageux. | GUERRIER COURAGEUX | 2
+Le soldat tient une lance. | SOLDAT LANCE TENIR | 2
+Le lieutenant donne l'ordre. | LIEUTENANT ORDRE DONNER | 2
+La légion romaine. | LÉGION | 3
+Un massacre a eu lieu. | MASSACRE | 3
+Il est militaire. | LUI MILITAIRE | 1
+Le missile est lancé. | MISSILE LANCER | 2
+L'obus a explosé. | OBUS EXPLOSER | 3
+Il cache un pistolet et un poignard. | LUI PISTOLET POIGNARD CACHER | 2
+Le revolver est chargé. | REVOLVER CHARGER | 2
+La résistance s'organise. | RÉSISTANCE ORGANISER | 3
+Il a une bonne stratégie. | LUI STRATÉGIE BON | 2
+Le tank traverse la rivière. | RIVIÈRE TANK TRAVERSER | 2
+Le terroriste est arrêté. | TERRORISTE ARRÊTER | 2
+Le tir est précis. | TIR PRÉCIS | 2
+Le sous-marin lance une torpille. | SOUS-MARIN TORPILLE LANCER | 3
+Le soldat est dans la tranchée. | SOLDAT TRANCHÉE | 3
+Les troupes avancent. | TROUPE AVANCER | 2
+
+## Santé & Médecine
+Je prends un antibiotique. | MOI ANTIBIOTIQUE PRENDRE | 1
+Prends une aspirine. | ASPIRINE PRENDRE | 1
+Il est aveugle. | LUI AVEUGLE | 1
+La bactérie provoque une infection. | BACTÉRIE INFECTION | 2
+Sa blessure guérit. | LUI BLESSURE GUÉRIR | 2
+Le médecin donne un calmant. | MÉDECIN CALMANT DONNER | 2
+Il a un cancer. | LUI CANCER AVOIR | 2
+Le chirurgien fait une chirurgie. | CHIRURGIEN CHIRURGIE | 2
+Je vais à la clinique. | CLINIQUE MOI ALLER | 1
+Il est dans le coma. | LUI COMA | 2
+J'ai une crampe. | MOI CRAMPE AVOIR | 1
+Je vais chez le dentiste. | DENTISTE MOI ALLER | 1
+Le diagnostic est bon. | DIAGNOSTIC BON | 2
+Il est donneur de sang. | LUI SANG DONNEUR | 2
+Respecte la dose. | DOSE RESPECTER | 2
+Il a une fracture. | LUI FRACTURE AVOIR | 1
+J'ai la grippe. | MOI GRIPPE AVOIR | 1
+La guérison est rapide. | GUÉRISON RAPIDE | 2
+Il a des hallucinations. | LUI HALLUCINATION AVOIR | 3
+Il vit avec un handicap. | LUI HANDICAP VIVRE | 2
+L'hémorragie est grave. | HÉMORRAGIE GRAVE | 3
+Va à l'infirmerie. | INFIRMERIE ALLER | 1
+Je vais chez le kiné. | KINÉ MOI ALLER | 1
+Il a fait un malaise. | LUI MALAISE | 2
+Le microbe rend malade. | MICROBE MALADE | 2
+J'ai la nausée. | MOI NAUSÉE AVOIR | 2
+Il a fait une overdose. | LUI OVERDOSE | 3
+Mets un pansement. | PANSEMENT METTRE | 1
+La peste est une maladie ancienne. | PESTE MALADIE ANCIEN | 3
+Prends son pouls. | LUI POULS PRENDRE | 2
+Le psychiatre l'aide. | PSYCHIATRE LUI AIDER | 2
+J'étudie la psychologie. | PSYCHOLOGIE MOI ÉTUDIER | 2
+Il est en quarantaine. | LUI QUARANTAINE | 2
+J'ai un rhume. | MOI RHUME AVOIR | 1
+L'infirmier prend une seringue. | INFIRMIER SERINGUE PRENDRE | 2
+Il prend un somnifère. | LUI SOMNIFÈRE PRENDRE | 2
+Quels sont les symptômes ? | SYMPTÔME QUOI | 2
+C'est un syndrome rare. | SYNDROME RARE | 3
+Le traitement est long. | TRAITEMENT LONG | 2
+Il a subi un traumatisme. | LUI TRAUMATISME | 3
+La tumeur est petite. | TUMEUR PETIT | 3
+Le vaccin protège. | VACCIN PROTÉGER | 1
+J'ai le vertige. | MOI VERTIGE AVOIR | 1
+Les fruits ont des vitamines. | FRUIT VITAMINE | 1
+L'épidémie se propage. | ÉPIDÉMIE | 2
+
+## Vêtements
+Elle porte un anneau. | ELLE ANNEAU PORTER | 1
+J'aime ce bijou. | BIJOU MOI AIMER | 1
+Elle met une blouse. | ELLE BLOUSE METTRE | 1
+Mon blouson est chaud. | MOI BLOUSON CHAUD | 1
+Je mets mes bottes. | MOI BOTTE METTRE | 1
+Elle a une boucle d'oreille. | ELLE BOUCLE OREILLE | 1
+Il porte un bracelet. | LUI BRACELET PORTER | 1
+Il est en caleçon. | LUI CALEÇON | 2
+Mets ton casque. | TOI CASQUE METTRE | 1
+Il porte une casquette. | LUI CASQUETTE PORTER | 1
+Elle porte un chapeau. | ELLE CHAPEAU PORTER | 1
+J'ai perdu une chaussette. | MOI CHAUSSETTE PERDU | 1
+Ma chemise est blanche. | MOI CHEMISE BLANC | 1
+Le col est sale. | COL SALE | 1
+Elle porte un collier de perles. | ELLE COLLIER PERLE PORTER | 1
+Il met sa combinaison de ski. | LUI SKI COMBINAISON METTRE | 2
+Il porte un costume. | LUI COSTUME PORTER | 1
+J'apprends la couture. | MOI COUTURE APPRENDRE | 2
+Une culotte propre. | CULOTTE PROPRE | 1
+Le diamant brille. | DIAMANT BRILLER | 1
+Mets tes gants. | TOI GANT METTRE | 1
+Il a de beaux habits. | LUI HABIT BEAU | 1
+Prends ton imperméable. | TOI IMPERMÉABLE PRENDRE | 1
+J'aime mon jean. | MOI JEAN AIMER | 1
+Elle porte une jupe. | ELLE JUPE PORTER | 1
+Mets ton maillot de bain. | TOI MAILLOT METTRE | 1
+Ma manche est déchirée. | MOI MANCHE DÉCHIRER | 1
+Il fait froid, mets ton manteau. | FROID TOI MANTEAU METTRE | 1
+Ce pantalon est trop long. | PANTALON LONG TROP | 1
+Je mets mon peignoir. | MOI PEIGNOIR METTRE | 2
+Il y a un pli. | PLI | 2
+Mets ça dans ta poche. | TOI POCHE METTRE | 1
+Mon pull est chaud. | MOI PULL CHAUD | 1
+Je mets mon pyjama. | MOI PYJAMA METTRE | 1
+Elle a un ruban rouge. | ELLE RUBAN ROUGE | 1
+Il porte un short. | LUI SHORT PORTER | 1
+Un slip propre. | SLIP PROPRE | 1
+Mes souliers sont neufs. | MOI SOULIER NOUVEAU | 2
+Les sous-vêtements sont dans le tiroir. | SOUS-VÊTEMENT TIROIR | 1
+Elle achète un soutien-gorge. | ELLE SOUTIEN-GORGE ACHETER | 2
+J'aime ton style. | TOI STYLE MOI AIMER | 1
+Un t-shirt blanc. | T-SHIRT BLANC | 1
+Il a une belle tenue. | LUI TENUE BEAU | 1
+Il porte un uniforme. | LUI UNIFORME PORTER | 1
+Enlève ta veste. | TOI VESTE ENLEVER | 1
+Mets ton écharpe. | TOI ÉCHARPE METTRE | 1

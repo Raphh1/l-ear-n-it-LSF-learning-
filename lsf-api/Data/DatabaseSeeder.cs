@@ -72,48 +72,61 @@ public static class DatabaseSeeder
 
     private static async Task SeedEntryAsync(AppDbContext db, SeedEntry entry)
     {
-        if (await db.Categories.AnyAsync(c => c.Slug == entry.Category.Slug))
-            return;
-
-        var category = new Category
+        var category = await db.Categories.FirstOrDefaultAsync(c => c.Slug == entry.Category.Slug);
+        if (category is null)
         {
-            Name = entry.Category.Name,
-            Slug = entry.Category.Slug,
-            SortOrder = entry.Category.SortOrder,
-        };
-        db.Categories.Add(category);
-        await db.SaveChangesAsync();
+            category = new Category
+            {
+                Name = entry.Category.Name,
+                Slug = entry.Category.Slug,
+                SortOrder = entry.Category.SortOrder,
+            };
+            db.Categories.Add(category);
+            await db.SaveChangesAsync();
+        }
 
-        var module = new Module
+        var module = await db.Modules.FirstOrDefaultAsync(m => m.Title == entry.Module.Title);
+        if (module is null)
         {
-            Title = entry.Module.Title,
-            Description = entry.Module.Description,
-            Level = (short)entry.Module.Level,
-            SortOrder = entry.Module.SortOrder,
-            IsPublished = true,
-        };
-        db.Modules.Add(module);
-        await db.SaveChangesAsync();
+            module = new Module
+            {
+                Title = entry.Module.Title,
+                Description = entry.Module.Description,
+                Level = (short)entry.Module.Level,
+                SortOrder = entry.Module.SortOrder,
+                IsPublished = true,
+            };
+            db.Modules.Add(module);
+            await db.SaveChangesAsync();
+        }
 
         foreach (var lessonData in entry.Lessons)
         {
-            var lesson = new Lesson
+            var lesson = await db.Lessons.FirstOrDefaultAsync(l =>
+                l.ModuleId == module.Id && l.Title == lessonData.Title);
+            if (lesson is null)
             {
-                Id = Guid.NewGuid(),
-                ModuleId = module.Id,
-                Title = lessonData.Title,
-                Description = lessonData.Description,
-                SortOrder = lessonData.SortOrder,
-                XpReward = lessonData.XpReward,
-                IsPublished = true,
-            };
-            db.Lessons.Add(lesson);
-            await db.SaveChangesAsync();
+                lesson = new Lesson
+                {
+                    Id = Guid.NewGuid(),
+                    ModuleId = module.Id,
+                    Title = lessonData.Title,
+                    Description = lessonData.Description,
+                    SortOrder = lessonData.SortOrder,
+                    XpReward = lessonData.XpReward,
+                    IsPublished = true,
+                };
+                db.Lessons.Add(lesson);
+                await db.SaveChangesAsync();
+            }
 
             // Résout chaque signe : réutilise l'existant si le slug est déjà en base
             var resolvedSigns = new List<Sign>();
             foreach (var s in lessonData.Signs)
             {
+                if (string.IsNullOrWhiteSpace(s.Word) || string.IsNullOrWhiteSpace(s.Slug))
+                    continue;
+
                 var existing = await db.Signs.FirstOrDefaultAsync(x => x.Slug == s.Slug);
                 if (existing is not null)
                 {
@@ -142,6 +155,7 @@ public static class DatabaseSeeder
             }
 
             // N'insère la LessonSign que si elle n'existe pas déjà
+            // (et jamais pour un signe dépublié, ex. sans vidéo)
             var existingLessonSignIds = await db.LessonSigns
                 .Where(ls => ls.LessonId == lesson.Id)
                 .Select(ls => ls.SignId)
@@ -149,7 +163,7 @@ public static class DatabaseSeeder
 
             var newLessonSigns = resolvedSigns
                 .Select((s, i) => new { Sign = s, Order = i + 1 })
-                .Where(x => !existingLessonSignIds.Contains(x.Sign.Id))
+                .Where(x => x.Sign.IsPublished && !existingLessonSignIds.Contains(x.Sign.Id))
                 .Select(x => new LessonSign
                 {
                     LessonId = lesson.Id,
@@ -168,28 +182,47 @@ public static class DatabaseSeeder
 
     private static async Task SeedPhrasesAsync(AppDbContext db)
     {
-        var jsonPath = Path.Combine(AppContext.BaseDirectory, "Data", "seed-phrases.json");
-        if (!File.Exists(jsonPath))
-            jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "seed-phrases.json");
-        if (!File.Exists(jsonPath))
+        var dataDir = Directory.Exists(Path.Combine(AppContext.BaseDirectory, "Data"))
+            ? Path.Combine(AppContext.BaseDirectory, "Data")
+            : Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+        var phraseFiles = Directory.GetFiles(dataDir, "seed-phrases*.json")
+            .OrderBy(f => f)
+            .ToArray();
+
+        if (phraseFiles.Length == 0)
         {
-            Console.WriteLine("[Seeder] seed-phrases.json introuvable, skip.");
+            Console.WriteLine("[Seeder] Aucun fichier seed-phrases*.json trouvé, skip.");
             return;
         }
 
-        Console.WriteLine($"[Seeder] Lecture de : {jsonPath}");
-        await using var stream = File.OpenRead(jsonPath);
-        var phraseModules = await JsonSerializer.DeserializeAsync<List<SeedPhraseModule>>(stream, JsonOptions);
-        if (phraseModules is null) return;
+        var phraseModules = new List<SeedPhraseModule>();
+        foreach (var jsonPath in phraseFiles)
+        {
+            Console.WriteLine($"[Seeder] Lecture de : {jsonPath}");
+            await using var stream = File.OpenRead(jsonPath);
+            var modules = await JsonSerializer.DeserializeAsync<List<SeedPhraseModule>>(stream, JsonOptions);
+            if (modules is not null)
+                phraseModules.AddRange(modules);
+        }
+
+        if (phraseModules.Count == 0) return;
 
         // Build a case-insensitive word → Sign lookup from the DB
         var allSigns = await db.Signs.ToListAsync();
         var signByWord = allSigns
-            .GroupBy(s => s.Word.ToLowerInvariant())
+            .Where(s => !string.IsNullOrWhiteSpace(s.Word))
+            .GroupBy(s => s.Word.Trim().ToLowerInvariant())
             .ToDictionary(g => g.Key, g => g.First());
 
         foreach (var seedModule in phraseModules)
         {
+            if (seedModule?.Module is null || string.IsNullOrWhiteSpace(seedModule.Module.Title))
+            {
+                Console.WriteLine("[Seeder-Phrases] Module invalide (null/titre vide), entrée ignorée.");
+                continue;
+            }
+
             // Upsert module by title
             var module = await db.Modules.FirstOrDefaultAsync(m => m.Title == seedModule.Module.Title);
             if (module is null)
@@ -208,8 +241,14 @@ public static class DatabaseSeeder
             }
 
             int lessonOrder = 1;
-            foreach (var seedLesson in seedModule.Lessons)
+            foreach (var seedLesson in seedModule.Lessons ?? [])
             {
+                if (seedLesson is null || string.IsNullOrWhiteSpace(seedLesson.Title))
+                {
+                    Console.WriteLine("[Seeder-Phrases] Leçon invalide (null/titre vide), entrée ignorée.");
+                    continue;
+                }
+
                 // Upsert lesson by title + moduleId + LessonType
                 var lesson = await db.Lessons.FirstOrDefaultAsync(l =>
                     l.ModuleId == module.Id &&
@@ -237,8 +276,14 @@ public static class DatabaseSeeder
                 lessonOrder++;
 
                 int phraseOrder = 0;
-                foreach (var seedPhrase in seedLesson.Phrases)
+                foreach (var seedPhrase in seedLesson.Phrases ?? [])
                 {
+                    if (seedPhrase is null || string.IsNullOrWhiteSpace(seedPhrase.TextFr))
+                    {
+                        Console.WriteLine("[Seeder-Phrases] Phrase invalide (null/TextFr vide), entrée ignorée.");
+                        continue;
+                    }
+
                     // Upsert phrase by textFr
                     var phrase = await db.Phrases.FirstOrDefaultAsync(p => p.TextFr == seedPhrase.TextFr);
                     if (phrase is null)
@@ -254,26 +299,31 @@ public static class DatabaseSeeder
                         };
                         db.Phrases.Add(phrase);
                         await db.SaveChangesAsync();
+                    }
 
-                        // Create PhraseSign entries (ordered by position)
-                        int position = 0;
-                        foreach (var word in seedPhrase.SignWords)
+                    // Synchronise les PhraseSign avec signWords (rattache aussi les signes ajoutés après coup)
+                    var wanted = new List<PhraseSign>();
+                    int position = 0;
+                    foreach (var word in seedPhrase.SignWords ?? [])
+                    {
+                        if (!string.IsNullOrWhiteSpace(word) && signByWord.TryGetValue(word.Trim().ToLowerInvariant(), out var sign))
                         {
-                            if (signByWord.TryGetValue(word.ToLowerInvariant(), out var sign))
-                            {
-                                db.PhraseSigns.Add(new PhraseSign
-                                {
-                                    PhraseId = phrase.Id,
-                                    SignId = sign.Id,
-                                    Position = position,
-                                });
-                            }
-                            else
-                            {
-                                Console.WriteLine($"[Seeder-Phrases] Signe introuvable : '{word}' (phrase: {seedPhrase.TextFr})");
-                            }
-                            position++;
+                            if (wanted.All(w => w.SignId != sign.Id)) // clé (PhraseId, SignId)
+                                wanted.Add(new PhraseSign { PhraseId = phrase.Id, SignId = sign.Id, Position = position });
                         }
+                        else
+                            Console.WriteLine($"[Seeder-Phrases] Signe introuvable : '{word}' (phrase: {seedPhrase.TextFr})");
+                        position++;
+                    }
+
+                    var current = await db.PhraseSigns.Where(ps => ps.PhraseId == phrase.Id).ToListAsync();
+                    var same = current.Count == wanted.Count && wanted.All(w =>
+                        current.Any(c => c.SignId == w.SignId && c.Position == w.Position));
+                    if (!same)
+                    {
+                        db.PhraseSigns.RemoveRange(current);
+                        await db.SaveChangesAsync();
+                        db.PhraseSigns.AddRange(wanted);
                         await db.SaveChangesAsync();
                     }
 

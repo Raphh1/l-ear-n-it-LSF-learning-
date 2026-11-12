@@ -13,11 +13,190 @@ public static class DatabaseSeeder
 
     public static async Task SeedAsync(AppDbContext db)
     {
+        // Catalogue complet exporté de la base (scripts/export_catalog.py) : en premier pour garder
+        // les catégories à jour ; les anciens fichiers ne font ensuite qu'ajouter ce qui manque
+        await SeedCatalogAsync(db);
+
         foreach (var fileName in new[] { "seed-data.json", "seed-data-extra.json", "seed-data-elix.json" })
             await SeedFileAsync(db, fileName);
 
         await SeedBadgesAsync(db);
         await SeedPhrasesAsync(db);
+        await SeedSignMeaningsAsync(db);
+    }
+
+    private static string? FindDataFile(string fileName)
+    {
+        var path = Path.Combine(AppContext.BaseDirectory, "Data", fileName);
+        if (File.Exists(path)) return path;
+        path = Path.Combine(Directory.GetCurrentDirectory(), "Data", fileName);
+        return File.Exists(path) ? path : null;
+    }
+
+    // ── Catalogue : catégories, signes, modules et leçons de signes (insertion des manquants) ──
+
+    private static async Task SeedCatalogAsync(AppDbContext db)
+    {
+        var path = FindDataFile("seed-catalog.json");
+        if (path is null) return;
+
+        await using var stream = File.OpenRead(path);
+        var catalog = await JsonSerializer.DeserializeAsync<SeedCatalog>(stream, JsonOptions);
+        if (catalog is null) return;
+
+        // Catégories
+        var categories = await db.Categories.ToDictionaryAsync(c => c.Slug);
+        foreach (var c in catalog.Categories.Where(c => !categories.ContainsKey(c.Slug)))
+        {
+            var category = new Category { Name = c.Name, Slug = c.Slug, SortOrder = c.SortOrder };
+            db.Categories.Add(category);
+            categories[c.Slug] = category;
+        }
+        await db.SaveChangesAsync();
+
+        // Signes
+        var signs = await db.Signs.ToDictionaryAsync(s => s.Slug);
+        var addedSigns = 0;
+        foreach (var s in catalog.Signs)
+        {
+            if (signs.ContainsKey(s.Slug) || !categories.TryGetValue(s.CategorySlug, out var category))
+                continue;
+            var sign = new Sign
+            {
+                Id = Guid.NewGuid(),
+                Word = s.Word,
+                Slug = s.Slug,
+                Definition = s.Definition,
+                VideoUrl = s.VideoUrl,
+                GifUrl = s.GifUrl,
+                ThumbnailUrl = s.ThumbnailUrl,
+                CategoryId = category.Id,
+                Difficulty = s.Difficulty,
+                Tags = s.Tags ?? [],
+                IsPublished = s.IsPublished,
+            };
+            db.Signs.Add(sign);
+            signs[s.Slug] = sign;
+            addedSigns++;
+        }
+        await db.SaveChangesAsync();
+
+        // Modules et leçons
+        var modules = (await db.Modules.ToListAsync())
+            .GroupBy(m => m.Title).ToDictionary(g => g.Key, g => g.First());
+        var lessons = await db.Lessons.ToListAsync();
+        var lessonSigns = (await db.LessonSigns.Select(ls => new { ls.LessonId, ls.SignId }).ToListAsync())
+            .Select(ls => (ls.LessonId, ls.SignId)).ToHashSet();
+        var addedLessons = 0;
+
+        foreach (var m in catalog.Modules)
+        {
+            if (!modules.TryGetValue(m.Title, out var module))
+            {
+                module = new Module { Title = m.Title, Description = m.Description, Level = m.Level, SortOrder = m.SortOrder, IsPublished = true };
+                db.Modules.Add(module);
+                await db.SaveChangesAsync();
+                modules[m.Title] = module;
+            }
+
+            foreach (var l in m.Lessons)
+            {
+                var lesson = lessons.FirstOrDefault(x => x.ModuleId == module.Id && x.Title == l.Title && x.LessonType != "phrases");
+                if (lesson is null)
+                {
+                    lesson = new Lesson
+                    {
+                        Id = Guid.NewGuid(),
+                        ModuleId = module.Id,
+                        Title = l.Title,
+                        Description = l.Description,
+                        SortOrder = l.SortOrder,
+                        XpReward = l.XpReward,
+                        LessonType = string.IsNullOrEmpty(l.LessonType) ? "signs" : l.LessonType,
+                        IsPublished = true,
+                    };
+                    db.Lessons.Add(lesson);
+                    lessons.Add(lesson);
+                    addedLessons++;
+                }
+
+                var order = 0;
+                foreach (var slug in l.SignSlugs ?? [])
+                {
+                    order++;
+                    if (!signs.TryGetValue(slug, out var sign) || lessonSigns.Contains((lesson.Id, sign.Id)))
+                        continue;
+                    db.LessonSigns.Add(new LessonSign { LessonId = lesson.Id, SignId = sign.Id, SortOrder = order });
+                    lessonSigns.Add((lesson.Id, sign.Id));
+                }
+            }
+        }
+        await db.SaveChangesAsync();
+
+        Console.WriteLine($"[Seeder] Catalogue : +{addedSigns} signes, +{addedLessons} leçons");
+    }
+
+    // ── Sens et variantes vidéo (scripts/elix_meanings.py) ──────────────────────────
+
+    private static async Task SeedSignMeaningsAsync(AppDbContext db)
+    {
+        var path = FindDataFile("seed-sign-meanings.json");
+        if (path is null) return;
+
+        await using var stream = File.OpenRead(path);
+        var bySlug = await JsonSerializer.DeserializeAsync<Dictionary<string, List<SeedMeaning>>>(stream, JsonOptions);
+        if (bySlug is null) return;
+
+        var signIds = await db.Signs.ToDictionaryAsync(s => s.Slug, s => s.Id);
+
+        // Empreinte de l'existant : on ne réécrit un signe que si ses sens ont changé
+        var existing = (await db.SignMeanings
+                .Select(m => new { m.SignId, m.SortOrder, m.IsPrimary, Urls = m.Videos.OrderBy(v => v.SortOrder).Select(v => v.VideoUrl).ToList() })
+                .ToListAsync())
+            .GroupBy(m => m.SignId)
+            .ToDictionary(g => g.Key, g => string.Join("|", g.OrderBy(m => m.SortOrder).Select(m => $"{m.IsPrimary}:{string.Join(",", m.Urls)}")));
+
+        var updated = 0;
+        foreach (var (slug, meanings) in bySlug)
+        {
+            if (!signIds.TryGetValue(slug, out var signId)) continue;
+
+            var fingerprint = string.Join("|", meanings.Select(m => $"{m.IsPrimary}:{string.Join(",", m.Videos.Select(v => v.VideoUrl))}"));
+            if (existing.TryGetValue(signId, out var current) && current == fingerprint) continue;
+
+            if (existing.ContainsKey(signId))
+                await db.SignMeanings.Where(m => m.SignId == signId).ExecuteDeleteAsync();
+
+            db.SignMeanings.AddRange(meanings.Select((m, i) => new SignMeaning
+            {
+                Id = Guid.NewGuid(),
+                SignId = signId,
+                SortOrder = i,
+                IsPrimary = m.IsPrimary,
+                Definition = m.Definition,
+                DefinitionVideoUrl = m.DefinitionVideoUrl,
+                DefinitionThumbnailUrl = m.DefinitionThumbnailUrl,
+                Videos = m.Videos.Select((v, j) => new SignMeaningVideo
+                {
+                    Id = Guid.NewGuid(),
+                    SortOrder = j,
+                    VideoUrl = v.VideoUrl,
+                    ThumbnailUrl = v.ThumbnailUrl,
+                    Author = v.Author,
+                }).ToList(),
+            }));
+
+            if (++updated % 500 == 0)
+            {
+                await db.SaveChangesAsync();
+                db.ChangeTracker.Clear();
+            }
+        }
+        await db.SaveChangesAsync();
+        db.ChangeTracker.Clear();
+
+        if (updated > 0)
+            Console.WriteLine($"[Seeder] Sens et variantes : {updated} signes mis à jour");
     }
 
     private static async Task SeedBadgesAsync(AppDbContext db)
@@ -392,6 +571,64 @@ public static class DatabaseSeeder
         public string? ThumbnailUrl { get; set; }
         public string? VideoUrl { get; set; }
         public string? GifUrl { get; set; }
+    }
+
+    // ── DTOs catalogue ────────────────────────────────────────────────────────────
+
+    private sealed class SeedCatalog
+    {
+        public List<SeedCategory> Categories { get; set; } = [];
+        public List<SeedCatalogSign> Signs { get; set; } = [];
+        public List<SeedCatalogModule> Modules { get; set; } = [];
+    }
+
+    private sealed class SeedCatalogSign
+    {
+        public string Word { get; set; } = null!;
+        public string Slug { get; set; } = null!;
+        public string? Definition { get; set; }
+        public string? VideoUrl { get; set; }
+        public string? GifUrl { get; set; }
+        public string? ThumbnailUrl { get; set; }
+        public string CategorySlug { get; set; } = null!;
+        public short Difficulty { get; set; } = 1;
+        public string[]? Tags { get; set; }
+        public bool IsPublished { get; set; }
+    }
+
+    private sealed class SeedCatalogModule
+    {
+        public string Title { get; set; } = null!;
+        public string? Description { get; set; }
+        public short Level { get; set; }
+        public int SortOrder { get; set; }
+        public List<SeedCatalogLesson> Lessons { get; set; } = [];
+    }
+
+    private sealed class SeedCatalogLesson
+    {
+        public string Title { get; set; } = null!;
+        public string? Description { get; set; }
+        public int SortOrder { get; set; }
+        public int XpReward { get; set; }
+        public string? LessonType { get; set; }
+        public List<string>? SignSlugs { get; set; }
+    }
+
+    private sealed class SeedMeaning
+    {
+        public string? Definition { get; set; }
+        public string? DefinitionVideoUrl { get; set; }
+        public string? DefinitionThumbnailUrl { get; set; }
+        public bool IsPrimary { get; set; }
+        public List<SeedMeaningVideo> Videos { get; set; } = [];
+    }
+
+    private sealed class SeedMeaningVideo
+    {
+        public string VideoUrl { get; set; } = null!;
+        public string? ThumbnailUrl { get; set; }
+        public string? Author { get; set; }
     }
 
     // ── DTOs phrases ──────────────────────────────────────────────────────────────

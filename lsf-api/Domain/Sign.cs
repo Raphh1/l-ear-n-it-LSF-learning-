@@ -17,4 +17,5 @@ public class Sign
     public Category? Category { get; set; }
     public ICollection<LessonSign> LessonSigns { get; set; } = [];
     public ICollection<QuizQuestion> QuizQuestions { get; set; } = [];
+    public ICollection<SignMeaning> Meanings { get; set; } = [];
 }

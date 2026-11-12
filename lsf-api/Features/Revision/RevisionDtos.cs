@@ -12,5 +12,28 @@ public record RevisionSignDto(
     string? VideoUrl,
     string? GifUrl,
     int WrongCount,
-    int CorrectCount
+    int CorrectCount,
+    DateOnly? NextReviewAt,
+    int SrsInterval
+);
+
+public record SignStatDto(
+    int CorrectCount,
+    int WrongCount,
+    DateTime? LastAttemptAt,
+    int SrsInterval,
+    DateOnly? NextReviewAt
+);
+
+public record GlobalStatsDto(
+    int TotalSignsPracticed,
+    int TotalCorrect,
+    int TotalWrong,
+    double SuccessRate,
+    string? BestSignWord,
+    string? BestSignSlug,
+    string? HardestSignWord,
+    string? HardestSignSlug,
+    DateTime? LastPracticeAt,
+    int DueForReviewCount
 );

@@ -8,6 +8,8 @@ namespace LsfApi.Features.Auth;
 
 public class JwtService(IConfiguration config)
 {
+    public const string TokenVersionClaim = "tv";
+
     public string Generate(User user)
     {
         var secret = config["Jwt:Secret"]!;
@@ -20,6 +22,7 @@ public class JwtService(IConfiguration config)
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
             new Claim(ClaimTypes.Role, user.Role),
             new Claim("username", user.Username),
+            new Claim(TokenVersionClaim, user.TokenVersion.ToString()),
         };
 
         var expiresDays = int.Parse(config["Jwt:ExpiresInDays"] ?? "7");

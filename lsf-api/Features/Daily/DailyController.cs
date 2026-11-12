@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using LsfApi.Features.Quests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,7 +7,7 @@ namespace LsfApi.Features.Daily;
 
 [ApiController]
 [Route("api/daily")]
-public class DailyController(DailyService dailyService) : ControllerBase
+public class DailyController(DailyService dailyService, DailyQuestService questService) : ControllerBase
 {
     /// <summary>
     /// Retourne le défi du jour. Accessible sans connexion (userId = null).
@@ -31,6 +32,8 @@ public class DailyController(DailyService dailyService) : ControllerBase
     {
         var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
         var result = await dailyService.SubmitAsync(userId, req.ChosenWord);
-        return result is null ? Conflict(new { message = "Déjà joué aujourd'hui." }) : Ok(result);
+        if (result is null) return Conflict(new { message = "Déjà joué aujourd'hui." });
+        await questService.IncrementQuestAsync(userId, "daily_challenge");
+        return Ok(result);
     }
 }

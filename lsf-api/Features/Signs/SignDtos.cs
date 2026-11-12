@@ -20,8 +20,20 @@ public record SignDetailDto(
     short Difficulty,
     string[] Tags,
     int CategoryId,
-    string CategoryName
+    string CategoryName,
+    List<SignMeaningDto> Meanings
 );
+
+// Sens du mot (Elix) : le principal porte les variantes du signe, les autres sont des homonymes
+public record SignMeaningDto(
+    bool IsPrimary,
+    string? Definition,
+    string? DefinitionVideoUrl,
+    string? DefinitionThumbnailUrl,
+    List<SignVideoDto> Videos
+);
+
+public record SignVideoDto(string VideoUrl, string? ThumbnailUrl, string? Author);
 
 public record SignsQueryParams(
     int Page = 1,

@@ -90,6 +90,12 @@ namespace LsfApi.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<int?>("CorrectCount")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("DurationSeconds")
+                        .HasColumnType("integer");
+
                     b.Property<string>("GameType")
                         .IsRequired()
                         .HasColumnType("text");
@@ -105,6 +111,9 @@ namespace LsfApi.Data.Migrations
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
+
+                    b.Property<int?>("WrongCount")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -216,6 +225,38 @@ namespace LsfApi.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Modules");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.PasswordResetToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PasswordResetTokens");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.Phrase", b =>
@@ -398,6 +439,66 @@ namespace LsfApi.Data.Migrations
                     b.ToTable("Signs");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.SignMeaning", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Definition")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DefinitionThumbnailUrl")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DefinitionVideoUrl")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsPrimary")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("SignId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SignId", "SortOrder");
+
+                    b.ToTable("SignMeanings");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.SignMeaningVideo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Author")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("MeaningId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ThumbnailUrl")
+                        .HasColumnType("text");
+
+                    b.Property<string>("VideoUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MeaningId", "SortOrder");
+
+                    b.ToTable("SignMeaningVideos");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -418,6 +519,9 @@ namespace LsfApi.Data.Migrations
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("TokenVersion")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -474,6 +578,37 @@ namespace LsfApi.Data.Migrations
                     b.HasIndex("SignId");
 
                     b.ToTable("UserDailyAttempts");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.UserDailyQuest", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<string>("QuestType")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("CurrentValue")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("TargetValue")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("XpReward")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "Date", "QuestType");
+
+                    b.ToTable("UserDailyQuests");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.UserFavorite", b =>
@@ -550,6 +685,18 @@ namespace LsfApi.Data.Migrations
 
                     b.Property<DateTime>("LastAttemptAt")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateOnly?>("NextReviewAt")
+                        .HasColumnType("date");
+
+                    b.Property<double>("SrsEaseFactor")
+                        .HasColumnType("double precision");
+
+                    b.Property<int>("SrsInterval")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SrsRepetitions")
+                        .HasColumnType("integer");
 
                     b.Property<int>("WrongCount")
                         .HasColumnType("integer");
@@ -629,6 +776,17 @@ namespace LsfApi.Data.Migrations
                     b.Navigation("Sign");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.PasswordResetToken", b =>
+                {
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("PasswordResetTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.PhraseSign", b =>
                 {
                     b.HasOne("LsfApi.Domain.Phrase", "Phrase")
@@ -706,6 +864,28 @@ namespace LsfApi.Data.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("LsfApi.Domain.SignMeaning", b =>
+                {
+                    b.HasOne("LsfApi.Domain.Sign", "Sign")
+                        .WithMany("Meanings")
+                        .HasForeignKey("SignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sign");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.SignMeaningVideo", b =>
+                {
+                    b.HasOne("LsfApi.Domain.SignMeaning", "Meaning")
+                        .WithMany("Videos")
+                        .HasForeignKey("MeaningId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Meaning");
+                });
+
             modelBuilder.Entity("LsfApi.Domain.UserBadge", b =>
                 {
                     b.HasOne("LsfApi.Domain.Badge", "Badge")
@@ -740,6 +920,17 @@ namespace LsfApi.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Sign");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.UserDailyQuest", b =>
+                {
+                    b.HasOne("LsfApi.Domain.User", "User")
+                        .WithMany("DailyQuests")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -856,7 +1047,14 @@ namespace LsfApi.Data.Migrations
                 {
                     b.Navigation("LessonSigns");
 
+                    b.Navigation("Meanings");
+
                     b.Navigation("QuizQuestions");
+                });
+
+            modelBuilder.Entity("LsfApi.Domain.SignMeaning", b =>
+                {
+                    b.Navigation("Videos");
                 });
 
             modelBuilder.Entity("LsfApi.Domain.User", b =>
@@ -865,11 +1063,15 @@ namespace LsfApi.Data.Migrations
 
                     b.Navigation("DailyAttempts");
 
+                    b.Navigation("DailyQuests");
+
                     b.Navigation("Favorites");
 
                     b.Navigation("GameScores");
 
                     b.Navigation("LessonCompletions");
+
+                    b.Navigation("PasswordResetTokens");
 
                     b.Navigation("Progress");
 

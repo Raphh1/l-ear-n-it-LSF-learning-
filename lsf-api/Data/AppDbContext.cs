@@ -8,6 +8,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<User> Users => Set<User>();
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Sign> Signs => Set<Sign>();
+    public DbSet<SignMeaning> SignMeanings => Set<SignMeaning>();
+    public DbSet<SignMeaningVideo> SignMeaningVideos => Set<SignMeaningVideo>();
     public DbSet<Module> Modules => Set<Module>();
     public DbSet<Lesson> Lessons => Set<Lesson>();
     public DbSet<LessonSign> LessonSigns => Set<LessonSign>();
@@ -25,6 +27,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<Phrase> Phrases => Set<Phrase>();
     public DbSet<PhraseSign> PhraseSigns => Set<PhraseSign>();
     public DbSet<LessonPhrase> LessonPhrases => Set<LessonPhrase>();
+    public DbSet<PasswordResetToken> PasswordResetTokens => Set<PasswordResetToken>();
+    public DbSet<UserDailyQuest> UserDailyQuests => Set<UserDailyQuest>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -52,6 +56,27 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             e.HasOne(s => s.Category)
              .WithMany(c => c.Signs)
              .HasForeignKey(s => s.CategoryId);
+        });
+
+        // Sens et variantes vidéo d'un signe (Elix)
+        modelBuilder.Entity<SignMeaning>(e =>
+        {
+            e.HasKey(m => m.Id);
+            e.HasIndex(m => new { m.SignId, m.SortOrder });
+            e.HasOne(m => m.Sign)
+             .WithMany(s => s.Meanings)
+             .HasForeignKey(m => m.SignId)
+             .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<SignMeaningVideo>(e =>
+        {
+            e.HasKey(v => v.Id);
+            e.HasIndex(v => new { v.MeaningId, v.SortOrder });
+            e.HasOne(v => v.Meaning)
+             .WithMany(m => m.Videos)
+             .HasForeignKey(v => v.MeaningId)
+             .OnDelete(DeleteBehavior.Cascade);
         });
 
         // Module
@@ -233,6 +258,27 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             e.HasOne(uss => uss.Sign)
              .WithMany()
              .HasForeignKey(uss => uss.SignId);
+        });
+
+        // UserDailyQuest (clé composite UserId + Date + QuestType)
+        modelBuilder.Entity<UserDailyQuest>(e =>
+        {
+            e.HasKey(q => new { q.UserId, q.Date, q.QuestType });
+            e.HasOne(q => q.User)
+             .WithMany(u => u.DailyQuests)
+             .HasForeignKey(q => q.UserId);
+        });
+
+        // PasswordResetToken
+        modelBuilder.Entity<PasswordResetToken>(e =>
+        {
+            e.HasKey(prt => prt.Id);
+            e.HasIndex(prt => prt.Token).IsUnique();
+            e.HasIndex(prt => prt.UserId);
+            e.HasOne(prt => prt.User)
+             .WithMany(u => u.PasswordResetTokens)
+             .HasForeignKey(prt => prt.UserId)
+             .OnDelete(DeleteBehavior.Cascade);
         });
     }
 }

@@ -7,7 +7,8 @@ namespace LsfApi.Features.Scores;
 
 public class ScoreService(AppDbContext db, BadgeService badgeService)
 {
-    public async Task SubmitAsync(Guid userId, string gameType, Guid lessonId, int score)
+    public async Task SubmitAsync(Guid userId, string gameType, Guid lessonId, int score,
+        int? correctCount = null, int? wrongCount = null, int? durationSeconds = null)
     {
         db.GameScores.Add(new GameScore
         {
@@ -16,11 +17,34 @@ public class ScoreService(AppDbContext db, BadgeService badgeService)
             GameType = gameType,
             LessonId = lessonId,
             Score = score,
+            CorrectCount = correctCount,
+            WrongCount = wrongCount,
+            DurationSeconds = durationSeconds,
             PlayedAt = DateTime.UtcNow,
         });
 
         await db.SaveChangesAsync();
         await badgeService.AwardEligibleBadgesAsync(userId);
+    }
+
+    public async Task<List<GameSessionDto>> GetHistoryAsync(Guid userId, int page, int pageSize)
+    {
+        return await db.GameScores
+            .Where(gs => gs.UserId == userId)
+            .OrderByDescending(gs => gs.PlayedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Include(gs => gs.Lesson)
+            .Select(gs => new GameSessionDto(
+                gs.GameType,
+                gs.Lesson.Title,
+                gs.Score,
+                gs.CorrectCount,
+                gs.WrongCount,
+                gs.DurationSeconds,
+                gs.PlayedAt
+            ))
+            .ToListAsync();
     }
 
     public async Task<List<LeaderboardEntry>> GetLeaderboardAsync(string gameType, Guid lessonId, int top = 10)

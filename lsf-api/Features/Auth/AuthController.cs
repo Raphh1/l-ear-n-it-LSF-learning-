@@ -2,6 +2,7 @@ using LsfApi.Data;
 using LsfApi.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -9,22 +10,26 @@ namespace LsfApi.Features.Auth;
 
 [ApiController]
 [Route("api/auth")]
-public class AuthController(AppDbContext db, PasswordService passwords, JwtService jwt) : ControllerBase
+public class AuthController(AppDbContext db, PasswordService passwords, JwtService jwt, IWebHostEnvironment env) : ControllerBase
 {
     [HttpPost("register")]
+    [EnableRateLimiting("auth")]
     public async Task<IActionResult> Register(RegisterRequest req)
     {
-        if (await db.Users.AnyAsync(u => u.Email == req.Email))
+        var email = AuthCookie.NormalizeEmail(req.Email);
+        var username = req.Username.Trim();
+
+        if (await db.Users.AnyAsync(u => u.Email == email))
             return Conflict(new { error = "email_taken", message = "Cet email est déjà utilisé." });
 
-        if (await db.Users.AnyAsync(u => u.Username == req.Username))
+        if (await db.Users.AnyAsync(u => u.Username == username))
             return Conflict(new { error = "username_taken", message = "Ce nom d'utilisateur est déjà pris." });
 
         var user = new User
         {
             Id = Guid.NewGuid(),
-            Email = req.Email.ToLower(),
-            Username = req.Username,
+            Email = email,
+            Username = username,
             PasswordHash = passwords.Hash(req.Password),
         };
 
@@ -32,20 +37,31 @@ public class AuthController(AppDbContext db, PasswordService passwords, JwtServi
         db.UserProgress.Add(new UserProgress { UserId = user.Id });
         await db.SaveChangesAsync();
 
-        var token = jwt.Generate(user);
-        return Ok(new AuthResponse(token, ToDto(user)));
+        AuthCookie.Set(Response, jwt.Generate(user), env.IsDevelopment());
+        return Ok(new AuthResponse(ToDto(user)));
     }
 
     [HttpPost("login")]
+    [EnableRateLimiting("auth")]
     public async Task<IActionResult> Login(LoginRequest req)
     {
-        var user = await db.Users.FirstOrDefaultAsync(u => u.Email == req.Email.ToLower());
+        var email = AuthCookie.NormalizeEmail(req.Email);
+        var user = await db.Users.FirstOrDefaultAsync(u => u.Email == email);
 
-        if (user is null || !passwords.Verify(req.Password, user.PasswordHash))
+        // Hash vérifié même si le compte n'existe pas : temps de réponse identique (pas d'énumération des emails)
+        var valid = passwords.Verify(req.Password, user?.PasswordHash ?? PasswordService.DummyHash);
+        if (user is null || !valid)
             return Unauthorized(new { error = "invalid_credentials", message = "Email ou mot de passe incorrect." });
 
-        var token = jwt.Generate(user);
-        return Ok(new AuthResponse(token, ToDto(user)));
+        AuthCookie.Set(Response, jwt.Generate(user), env.IsDevelopment());
+        return Ok(new AuthResponse(ToDto(user)));
+    }
+
+    [HttpPost("logout")]
+    public IActionResult Logout()
+    {
+        AuthCookie.Delete(Response, env.IsDevelopment());
+        return NoContent();
     }
 
     [Authorize]
@@ -69,14 +85,17 @@ public class AuthController(AppDbContext db, PasswordService passwords, JwtServi
 
         if (user is null) return NotFound();
 
-        if (req.Email.ToLower() != user.Email && await db.Users.AnyAsync(u => u.Email == req.Email.ToLower()))
+        var email = AuthCookie.NormalizeEmail(req.Email);
+        var username = req.Username.Trim();
+
+        if (email != user.Email && await db.Users.AnyAsync(u => u.Email == email))
             return Conflict(new { error = "email_taken", message = "Cet email est déjà utilisé." });
 
-        if (req.Username != user.Username && await db.Users.AnyAsync(u => u.Username == req.Username))
+        if (username != user.Username && await db.Users.AnyAsync(u => u.Username == username))
             return Conflict(new { error = "username_taken", message = "Ce nom d'utilisateur est déjà pris." });
 
-        user.Username = req.Username;
-        user.Email = req.Email.ToLower();
+        user.Username = username;
+        user.Email = email;
 
         await db.SaveChangesAsync();
 

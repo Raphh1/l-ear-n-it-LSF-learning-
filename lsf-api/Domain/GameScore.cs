@@ -7,6 +7,9 @@ public class GameScore
     public string GameType { get; set; } = string.Empty; // quiz, vitesse, inverse, memoire, survie
     public Guid LessonId { get; set; }
     public int Score { get; set; }
+    public int? CorrectCount { get; set; }
+    public int? WrongCount { get; set; }
+    public int? DurationSeconds { get; set; }
     public DateTime PlayedAt { get; set; } = DateTime.UtcNow;
 
     public User User { get; set; } = null!;

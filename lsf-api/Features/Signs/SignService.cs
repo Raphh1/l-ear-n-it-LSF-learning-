@@ -52,8 +52,21 @@ public class SignService(AppDbContext db)
                 s.Difficulty,
                 s.Tags,
                 s.CategoryId,
-                s.Category!.Name
+                s.Category!.Name,
+                s.Meanings
+                    .OrderBy(m => m.SortOrder)
+                    .Select(m => new SignMeaningDto(
+                        m.IsPrimary,
+                        m.Definition,
+                        m.DefinitionVideoUrl,
+                        m.DefinitionThumbnailUrl,
+                        m.Videos
+                            .OrderBy(v => v.SortOrder)
+                            .Select(v => new SignVideoDto(v.VideoUrl, v.ThumbnailUrl, v.Author))
+                            .ToList()))
+                    .ToList()
             ))
+            .AsSplitQuery()
             .FirstOrDefaultAsync();
 
         return sign is null ? Result<SignDetailDto>.Fail(Error.NotFound) : Result<SignDetailDto>.Ok(sign);

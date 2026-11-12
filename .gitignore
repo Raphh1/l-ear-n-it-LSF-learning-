@@ -1,3 +1,13 @@
+# Build artifacts
+lsf-api/publish/
+
+# Corporate certificates (local only, do not commit)
+corporate-ca.pem
+root-ca.pem
+lsf-api/corporate-ca.pem
+lsf-api/root-ca.pem
+lsf-web/corporate-ca.pem
+
 # Node
 node_modules/
 npm-debug.log*
@@ -9,9 +19,21 @@ lsf-web/.next/
 lsf-web/out/
 lsf-web/build/
 
+# PWA generated files (created at build time by next-pwa)
+lsf-web/public/sw.js
+lsf-web/public/sw.js.map
+lsf-web/public/workbox-*.js
+lsf-web/public/workbox-*.js.map
+
 # .NET build artifacts
 lsf-api/obj/
 lsf-api/bin/
+lsf-api.Tests/obj/
+lsf-api.Tests/bin/
+
+# Secrets de développement — ne jamais commiter
+lsf-api/appsettings.Development.json
+lsf-api/appsettings.Production.json
 
 # TypeScript
 *.tsbuildinfo
@@ -21,5 +43,23 @@ lsf-web/next-env.d.ts
 .DS_Store
 *.pem
 *.user
+.env
 .env.local
 .env*.local
+
+# Cache des réponses Elix (scripts/elix_meanings.py)
+scripts/.elix_cache.json
+
+# Dumps de base : contiennent des données personnelles (emails, hash de mots de passe)
+*.sql
+backup*
+
+# Python
+__pycache__/
+*.pyc
+
+# Sources tierces volumineuses (Lexique 3.83, à télécharger localement)
+scripts/Lexique383.tsv
+
+# Métadonnées Windows
+*Zone.Identifier

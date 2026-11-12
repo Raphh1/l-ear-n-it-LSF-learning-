@@ -2,11 +2,18 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { Hand } from 'lucide-react';
 import { signsApi } from '@/lib/api/signs';
-import type { SignInLesson } from '@/lib/types';
+interface SignForMedia {
+  id: string;
+  word: string;
+  videoUrl: string | null;
+  gifUrl: string | null;
+  thumbnailUrl: string | null;
+}
 
 interface SignMediaProps {
-  sign: SignInLesson;
+  sign: SignForMedia;
   isPlaying?: boolean;
   onEnded?: () => void;
   loop?: boolean;
@@ -46,7 +53,7 @@ export function SignMedia({ sign, isPlaying = true, onEnded, loop = true }: Sign
   }, [isPlaying, videoSrc]);
 
   return (
-    <div className={`relative aspect-square w-full overflow-hidden ${videoSrc ? 'bg-white' : 'bg-white/5'} ${isPlaying ? 'ring-2 ring-emerald-500' : 'opacity-70'}`}>
+    <div className={`relative aspect-square w-full overflow-hidden ${videoSrc ? 'bg-white' : 'bg-paper'} ${isPlaying ? '' : 'opacity-60'}`}>
       {videoSrc ? (
         <video
           ref={videoRef}
@@ -65,7 +72,7 @@ export function SignMedia({ sign, isPlaying = true, onEnded, loop = true }: Sign
         <Image src={sign.thumbnailUrl} alt={sign.word} fill className="object-contain p-2" />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-5xl text-white/10">🤟</span>
+          <Hand className="w-14 h-14 text-ink/25" />
         </div>
       )}
     </div>

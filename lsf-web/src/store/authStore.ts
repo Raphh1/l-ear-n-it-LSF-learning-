@@ -1,29 +1,31 @@
 import { create } from 'zustand';
 import { api } from '@/lib/api';
-import type { User, AuthResponse, LoginRequest, RegisterRequest } from '@/lib/types';
+import { useProgressStore } from '@/store/progressStore';
+import type { User, LoginRequest, RegisterRequest } from '@/lib/types';
+
+interface AuthUserResponse {
+  user: User;
+}
 
 interface AuthState {
   user: User | null;
-  token: string | null;
   isLoading: boolean;
   login: (data: LoginRequest) => Promise<void>;
   register: (data: RegisterRequest) => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
   hydrate: () => Promise<void>;
   updateProfile: (data: { username: string; email: string }) => Promise<void>;
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
-  token: null,
   isLoading: false,
 
   login: async (data) => {
     set({ isLoading: true });
     try {
-      const res = await api.post<AuthResponse>('/api/auth/login', data);
-      localStorage.setItem('token', res.token);
-      set({ user: res.user, token: res.token });
+      const res = await api.post<AuthUserResponse>('/api/auth/login', data);
+      set({ user: res.user });
     } finally {
       set({ isLoading: false });
     }
@@ -32,20 +34,20 @@ export const useAuthStore = create<AuthState>((set) => ({
   register: async (data) => {
     set({ isLoading: true });
     try {
-      const res = await api.post<AuthResponse>('/api/auth/register', data);
-      localStorage.setItem('token', res.token);
-      set({ user: res.user, token: res.token });
+      const res = await api.post<AuthUserResponse>('/api/auth/register', data);
+      set({ user: res.user });
     } finally {
       set({ isLoading: false });
     }
   },
 
-  logout: () => {
-    localStorage.removeItem('token');
-    set({ user: null, token: null });
+  logout: async () => {
+    await api.post('/api/auth/logout', {}).catch(() => {});
+    set({ user: null });
+    useProgressStore.getState().reset();
   },
 
-  updateProfile: async (data: { username: string; email: string }) => {
+  updateProfile: async (data) => {
     set({ isLoading: true });
     try {
       const user = await api.put<User>('/api/auth/me', data);
@@ -56,13 +58,11 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   hydrate: async () => {
-    const token = localStorage.getItem('token');
-    if (!token) return;
     try {
       const user = await api.get<User>('/api/auth/me');
-      set({ user, token });
+      set({ user });
     } catch {
-      localStorage.removeItem('token');
+      set({ user: null });
     }
   },
 }));

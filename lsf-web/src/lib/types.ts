@@ -8,10 +8,6 @@ export interface User {
   createdAt: string;
 }
 
-export interface AuthResponse {
-  token: string;
-  user: User;
-}
 
 export interface LoginRequest {
   email: string;
@@ -108,6 +104,22 @@ export interface SignDetail {
   tags: string[];
   categoryId: number;
   categoryName: string;
+  meanings: SignMeaning[];
+}
+
+export interface SignVideo {
+  videoUrl: string;
+  thumbnailUrl: string | null;
+  author: string | null;
+}
+
+// Sens du mot (source Elix) : le principal porte les variantes du signe, les autres sont des homonymes
+export interface SignMeaning {
+  isPrimary: boolean;
+  definition: string | null;
+  definitionVideoUrl: string | null;
+  definitionThumbnailUrl: string | null;
+  videos: SignVideo[];
 }
 
 // ─── Elix ────────────────────────────────────────────────────────────────────
@@ -148,6 +160,65 @@ export interface PhraseLesson {
   title: string;
   xpReward: number;
   phrases: Phrase[];
+}
+
+// ─── Revision & SRS ──────────────────────────────────────────────────────────
+
+export interface SignStat {
+  correctCount: number;
+  wrongCount: number;
+  lastAttemptAt: string | null;
+  srsInterval: number;
+  nextReviewAt: string | null; // DateOnly as "YYYY-MM-DD"
+}
+
+export interface GlobalStats {
+  totalSignsPracticed: number;
+  totalCorrect: number;
+  totalWrong: number;
+  successRate: number;
+  bestSignWord: string | null;
+  bestSignSlug: string | null;
+  hardestSignWord: string | null;
+  hardestSignSlug: string | null;
+  lastPracticeAt: string | null;
+  dueForReviewCount: number;
+}
+
+export interface RevisionSign {
+  id: string;
+  word: string;
+  slug: string;
+  thumbnailUrl: string | null;
+  videoUrl: string | null;
+  gifUrl: string | null;
+  wrongCount: number;
+  correctCount: number;
+  nextReviewAt: string | null;
+  srsInterval: number;
+}
+
+// ─── Daily Quests ─────────────────────────────────────────────────────────────
+
+export interface DailyQuest {
+  questType: string;
+  label: string;
+  targetValue: number;
+  currentValue: number;
+  isCompleted: boolean;
+  xpReward: number;
+}
+
+// ─── Session History ──────────────────────────────────────────────────────────
+
+export interface GameSession {
+  gameType: string;
+  lessonTitle: string;
+  score: number;
+  correctCount: number | null;
+  wrongCount: number | null;
+  durationSeconds: number | null;
+  playedAt: string;
 }
 
 // ─── Pagination ───────────────────────────────────────────────────────────────

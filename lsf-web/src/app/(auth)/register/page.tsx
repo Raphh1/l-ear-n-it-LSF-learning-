@@ -16,8 +16,15 @@ import { AuthSubmitButton } from '@/components/auth/AuthSubmitButton';
 const schema = z
   .object({
     email: z.email({ error: 'Email invalide' }),
-    username: z.string().min(3, { error: 'Minimum 3 caractères' }),
-    password: z.string().min(8, { error: 'Minimum 8 caractères' }),
+    username: z
+      .string()
+      .min(3, { error: 'Minimum 3 caractères' })
+      .max(30, { error: 'Maximum 30 caractères' })
+      .regex(/^[\p{L}\p{N}._-]+$/u, { error: 'Lettres, chiffres, point, tiret ou _ uniquement' }),
+    password: z
+      .string()
+      .min(8, { error: 'Minimum 8 caractères' })
+      .max(72, { error: 'Maximum 72 caractères' }),
     confirmPassword: z.string(),
   })
   .refine((d) => d.password === d.confirmPassword, {
@@ -54,7 +61,7 @@ export default function RegisterPage() {
       footer={
         <>
           Déjà un compte ?{' '}
-          <Link href="/login" className="text-violet-400 font-medium hover:text-violet-300 transition-colors">
+          <Link href="/login" className="link">
             Se connecter
           </Link>
         </>
@@ -68,7 +75,7 @@ export default function RegisterPage() {
           <AuthFormField control={form.control} name="confirmPassword" label="Confirmer le mot de passe" placeholder="••••••••" type="password" />
 
           {error && (
-            <p className="text-sm text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-xl px-4 py-2.5">{error}</p>
+            <p className="notice notice-error">{error}</p>
           )}
 
           <AuthSubmitButton isLoading={isLoading} label="Créer mon compte" loadingLabel="Création..." />

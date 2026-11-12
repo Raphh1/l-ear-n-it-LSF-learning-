@@ -12,8 +12,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     hydrate().then(() => {
-      const token = localStorage.getItem('token');
-      if (token) {
+      // Le token vit dans un cookie httpOnly (illisible en JS) : on se fie au résultat de /me
+      if (useAuthStore.getState().user) {
         fetchProgress();
         hydrateFavorites();
       }

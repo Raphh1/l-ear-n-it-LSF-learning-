@@ -2,60 +2,60 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Tag } from 'lucide-react';
+import { Tag, Brain, Calendar, Hand } from 'lucide-react';
 import { signsApi } from '@/lib/api/signs';
-import type { ElixWordResult, SignDetail } from '@/lib/types';
+import { revisionApi } from '@/lib/api/revision';
+import { useAuthStore } from '@/store/authStore';
+import { BackLink } from '@/components/brand/BackLink';
+import { LevelMeter } from '@/components/brand/LevelMeter';
+import { VariantPicker, type PlayableVideo } from '@/components/signs/VariantPicker';
+import { OtherMeanings, toPlayable } from '@/components/signs/OtherMeanings';
+import type { SignDetail, SignStat } from '@/lib/types';
 
-const difficultyColor: Record<number, string> = {
-  1: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
-  2: 'text-amber-400 bg-amber-400/10 border-amber-400/20',
-  3: 'text-rose-400 bg-rose-400/10 border-rose-400/20',
-};
-
-const difficultyLabel: Record<number, string> = {
-  1: 'Débutant',
-  2: 'Intermédiaire',
-  3: 'Avancé',
-};
+// Vidéos du sens principal, la vidéo utilisée dans les leçons en premier
+function mainVideos(sign: SignDetail): PlayableVideo[] {
+  const primary = sign.meanings.find((m) => m.isPrimary);
+  if (!primary) {
+    return sign.videoUrl ? [{ url: sign.videoUrl, thumbnailUrl: sign.thumbnailUrl, author: null, kind: 'sign' }] : [];
+  }
+  const videos = toPlayable(primary);
+  return [...videos.filter((v) => v.url === sign.videoUrl), ...videos.filter((v) => v.url !== sign.videoUrl)];
+}
 
 export default function SignDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const router = useRouter();
+  const user = useAuthStore((s) => s.user);
   const [sign, setSign] = useState<SignDetail | null>(null);
-  const [elix, setElix] = useState<ElixWordResult | null>(null);
-  const [videoIndex, setVideoIndex] = useState(0);
+  const [stat, setStat] = useState<SignStat | null>(null);
+  const [selected, setSelected] = useState<PlayableVideo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     signsApi.getBySlug(slug)
       .then((data) => {
         setSign(data);
-        // Charger les vidéos Elix en parallèle
-        signsApi.getElixVideos(data.word).then(setElix).catch(() => null);
+        setSelected(mainVideos(data)[0] ?? null);
+        if (user) revisionApi.getSignStat(data.id).then(setStat);
       })
       .catch(() => router.push('/dictionnaire'))
       .finally(() => setIsLoading(false));
-  }, [slug, router]);
+  }, [slug, router, user]);
 
-  const videos = elix?.videos ?? [];
-  const hasMultipleVideos = videos.length > 1;
-  const currentVideo = videos[videoIndex];
-
-  // Source vidéo : priorité à Elix, fallback sur la DB
-  const videoSrc = currentVideo?.uri ?? sign?.videoUrl ?? null;
+  const videos = sign ? mainVideos(sign) : [];
+  const variantCount = videos.filter((v) => v.kind === 'sign').length;
+  const videoSrc = selected?.url ?? null;
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#0a0a1a] px-6 py-16">
-        <div className="max-w-3xl mx-auto flex flex-col gap-8">
-          <div className="h-5 w-36 rounded-lg bg-white/5 animate-pulse" />
-          <div className="h-10 w-56 rounded-lg bg-white/5 animate-pulse" />
-          <div className="aspect-video rounded-2xl bg-white/5 animate-pulse" />
-          <div className="h-4 w-full rounded-lg bg-white/5 animate-pulse" />
-          <div className="h-4 w-2/3 rounded-lg bg-white/5 animate-pulse" />
+      <div className="px-6 py-14">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.4fr_1fr]">
+          <div className="skeleton aspect-video" />
+          <div className="flex flex-col gap-4">
+            <div className="skeleton h-14 w-56" />
+            <div className="skeleton h-32" />
+          </div>
         </div>
       </div>
     );
@@ -63,145 +63,138 @@ export default function SignDetailPage() {
 
   if (!sign) return null;
 
+  const primary = sign.meanings.find((m) => m.isPrimary);
+  const otherMeanings = sign.meanings.filter((m) => !m.isPrimary);
+  const definition = primary?.definition ?? sign.definition;
+  const total = stat ? stat.correctCount + stat.wrongCount : 0;
+
   return (
-    <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-      {/* Blobs de fond */}
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-violet-700/25 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-indigo-600/20 blur-[120px]" />
+    <div className="px-6 py-14">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8">
+        <BackLink href="/dictionnaire">Retour au dictionnaire</BackLink>
 
-      <div className="relative max-w-3xl mx-auto flex flex-col gap-10">
-
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-col gap-6"
-        >
-          <Link
-            href="/dictionnaire"
-            className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors w-fit"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Retour au dictionnaire
-          </Link>
-
+        <div className="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
+          {/* Vidéo */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-5xl font-bold text-white">{sign.word}</h1>
-            <div className="flex items-center gap-3 flex-wrap">
-              <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-white/50">
-                {sign.categoryName}
-              </span>
-              <span className={`px-3 py-1 rounded-full text-xs font-medium border ${difficultyColor[sign.difficulty] ?? 'text-white/40 bg-white/5 border-white/10'}`}>
-                {difficultyLabel[sign.difficulty] ?? 'Inconnu'}
-              </span>
+            <div className="panel overflow-hidden p-2 shadow-hard-lg">
+              <div className="border-[3px] border-ink bg-white">
+                {videoSrc ? (
+                  <video key={videoSrc} src={videoSrc} controls autoPlay loop muted playsInline className="w-full" />
+                ) : sign.gifUrl ? (
+                  <div className="relative aspect-video">
+                    <Image src={sign.gifUrl} alt={sign.word} fill className="object-contain" unoptimized />
+                  </div>
+                ) : sign.thumbnailUrl ? (
+                  <div className="relative aspect-video">
+                    <Image src={sign.thumbnailUrl} alt={sign.word} fill className="object-contain" />
+                  </div>
+                ) : (
+                  <div className="flex aspect-video items-center justify-center bg-paper">
+                    <Hand className="h-24 w-24 text-ink/25" />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </motion.div>
 
-        {/* Media */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="flex flex-col gap-3"
-        >
-          <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-            {videoSrc ? (
-              <video
-                key={videoSrc}
-                src={videoSrc}
-                controls
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full"
-              />
-            ) : sign.gifUrl ? (
-              <div className="relative aspect-video">
-                <Image src={sign.gifUrl} alt={sign.word} fill className="object-contain" unoptimized />
-              </div>
-            ) : sign.thumbnailUrl ? (
-              <div className="relative aspect-video">
-                <Image src={sign.thumbnailUrl} alt={sign.word} fill className="object-contain" />
-              </div>
-            ) : (
-              <div className="aspect-video flex items-center justify-center">
-                <span className="text-8xl text-white/10">🤟</span>
-              </div>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="font-bold">
+                {selected?.kind === 'definition'
+                  ? 'Définition signée en LSF'
+                  : variantCount > 1 ? `${variantCount} façons de signer ce mot` : 'Le signe'}
+              </span>
+              {selected?.author && <span className="text-sm text-ink/70">Source : {selected.author}</span>}
+            </div>
+
+            {videos.length > 1 && (
+              <VariantPicker videos={videos} selectedUrl={videoSrc} onSelect={setSelected} />
+            )}
+
+            {variantCount > 1 && (
+              <p className="text-sm text-ink/75">
+                Les variantes viennent souvent de régions ou d&apos;usages différents : toutes sont correctes.
+                La première est celle utilisée dans les leçons.
+              </p>
             )}
           </div>
 
-          {/* Sélecteur de variantes */}
-          {hasMultipleVideos && (
-            <div className="flex items-center justify-between px-1">
-              <span className="text-xs text-white/30">
-                Variante {videoIndex + 1} / {videos.length}
-              </span>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setVideoIndex((i) => Math.max(0, i - 1))}
-                  disabled={videoIndex === 0}
-                  className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setVideoIndex((i) => Math.min(videos.length - 1, i + 1))}
-                  disabled={videoIndex === videos.length - 1}
-                  className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+          {/* Infos */}
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <h1 className="break-words font-display text-6xl font-extrabold capitalize leading-none sm:text-7xl">{sign.word}</h1>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="sticker bg-mint text-sm">{sign.categoryName}</span>
+                <LevelMeter level={sign.difficulty || 1} />
               </div>
             </div>
-          )}
 
-          {/* Source */}
-          {currentVideo?.author && (
-            <p className="text-xs text-white/20 text-right">Source : {currentVideo.author}</p>
-          )}
-        </motion.div>
+            {definition && (
+              <div className="flex flex-col gap-2">
+                <h2 className="text-sm font-bold uppercase tracking-widest">Définition</h2>
+                <p className="text-lg leading-relaxed">{definition}</p>
+              </div>
+            )}
 
-        {/* Définition */}
-        {(elix?.definition ?? sign.definition) && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="flex flex-col gap-2"
-          >
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-white/30">Définition</h2>
-            <p className="text-white/70 leading-relaxed">{elix?.definition ?? sign.definition}</p>
-          </motion.div>
-        )}
+            {sign.tags.length > 0 && (
+              <div className="flex flex-col gap-3">
+                <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+                  <Tag className="h-4 w-4" /> Tags
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {sign.tags.map((tag) => <span key={tag} className="sticker bg-white">{tag}</span>)}
+                </div>
+              </div>
+            )}
 
-        {/* Tags */}
-        {sign.tags.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="flex flex-col gap-3"
-          >
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-white/30 flex items-center gap-2">
-              <Tag className="w-3.5 h-3.5" />
-              Tags
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {sign.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 rounded-full text-xs bg-violet-500/10 border border-violet-500/20 text-violet-300"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        )}
+            {user && (
+              <div className="flex flex-col gap-3">
+                <h2 className="text-sm font-bold uppercase tracking-widest">Mes stats</h2>
+                {stat ? (
+                  <div className="flex flex-col gap-4">
+                    <div className="grid grid-cols-3 gap-3">
+                      {[
+                        { value: stat.correctCount, label: 'Correct', color: 'bg-mint' },
+                        { value: stat.wrongCount, label: 'Erreurs', color: 'bg-tomato' },
+                        { value: total === 0 ? '—' : `${Math.round((stat.correctCount / total) * 100)}%`, label: 'Réussite', color: 'bg-sun' },
+                      ].map(s => (
+                        <div key={s.label} className={`panel-flat flex flex-col items-center gap-1 py-4 ${s.color}`}>
+                          <span className="font-display text-3xl font-extrabold">{s.value}</span>
+                          <span className="text-sm font-bold">{s.label}</span>
+                        </div>
+                      ))}
+                    </div>
 
+                    {stat.nextReviewAt && (
+                      <div className="panel-flat flex items-center gap-4 px-4 py-3">
+                        <Brain className="h-6 w-6 shrink-0" />
+                        <div className="flex-1">
+                          <p className="text-sm">Prochaine révision</p>
+                          <p className="font-bold">
+                            {new Date(stat.nextReviewAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm">Intervalle</p>
+                          <p className="font-bold">{stat.srsInterval} j</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {stat.lastAttemptAt && (
+                      <p className="flex items-center gap-1 text-sm text-ink/75">
+                        <Calendar className="h-4 w-4" />
+                        Dernière pratique : {new Date(stat.lastAttemptAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <p className="panel-flat bg-paper p-4">Jamais pratiqué. Joue un jeu avec ce signe pour voir tes stats.</p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <OtherMeanings word={sign.word} meanings={otherMeanings} hasPrimary={!!primary} />
       </div>
     </div>
   );

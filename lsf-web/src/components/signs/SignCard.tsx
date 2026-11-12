@@ -2,25 +2,21 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Heart } from 'lucide-react';
+import { Heart, Play } from 'lucide-react';
 import type { SignSummary } from '@/lib/types';
 import { signsApi } from '@/lib/api/signs';
 import { useFavoriteStore } from '@/store/favoriteStore';
 import { useAuthStore } from '@/store/authStore';
 
-const difficultyColor: Record<number, string> = {
-  1: 'text-emerald-400',
-  2: 'text-amber-400',
-  3: 'text-rose-400',
-};
+interface CardSign {
+  id: string;
+  word: string;
+  slug: string;
+  difficulty: number;
+}
 
-const difficultyLabel: Record<number, string> = {
-  1: '●○○',
-  2: '●●○',
-  3: '●●●',
-};
-
-export function SignCard({ sign }: { sign: SignSummary }) {
+// Carte commune : le mot en grand, la vidéo Elix se lance au survol
+export function SignCardFrame({ sign, subtitle }: { sign: CardSign; subtitle?: string }) {
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
   const [hovered, setHovered] = useState(false);
   const { user } = useAuthStore();
@@ -35,69 +31,67 @@ export function SignCard({ sign }: { sign: SignSummary }) {
         .then((res) => {
           if (res.videos.length > 0) setVideoSrc(res.videos[0].uri);
         })
-        .catch((err) => console.error('[SignCard] Elix fetch failed:', err));
+        .catch(() => null);
     }
   }
 
-  return (
-    <Link href={`/dictionnaire/${sign.slug}`}>
-      <div
-        className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-violet-500/40 hover:scale-[1.02] transition-all duration-200 cursor-pointer"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setHovered(false)}
-      >
-        <div className="relative aspect-square flex items-center justify-center overflow-hidden">
-          {/* Vidéo au hover */}
-          {hovered && videoSrc && (
-            <video
-              src={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          )}
+  const showVideo = hovered && videoSrc;
 
-          {/* Placeholder : mot centré */}
-          {!(hovered && videoSrc) && (
-            <span className="text-2xl font-bold text-white select-none text-center px-3 capitalize">
+  return (
+    <Link
+      href={`/dictionnaire/${sign.slug}`}
+      className="panel press group flex flex-col"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className="relative aspect-square overflow-hidden border-b-[3px] border-ink bg-paper">
+        {showVideo ? (
+          <video src={videoSrc} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full bg-white object-contain" />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center p-3">
+            <span className="break-words text-center font-display text-3xl font-extrabold capitalize leading-none">
               {sign.word}
             </span>
-          )}
-        </div>
-
-        <div className="flex flex-col gap-1 p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <h3 className="text-white font-semibold text-sm">{sign.word}</h3>
-              {user && (
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleFavorite(sign.id);
-                  }}
-                  className="z-10 group/btn p-1 -m-1"
-                >
-                  <Heart 
-                    className={`w-4 h-4 transition-colors ${
-                      isFav 
-                        ? 'text-rose-500 fill-rose-500' 
-                        : 'text-white/20 group-hover/btn:text-rose-400 group-hover/btn:fill-rose-400/20'
-                    }`} 
-                  />
-                </button>
-              )}
-            </div>
-            <span className={`text-xs font-mono ${difficultyColor[sign.difficulty] ?? 'text-white/40'}`}>
-              {difficultyLabel[sign.difficulty] ?? '●○○'}
-            </span>
           </div>
-          <p className="text-white/30 text-xs">{sign.categoryName}</p>
+        )}
+        {!showVideo && (
+          <span className="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center border-2 border-ink bg-sun opacity-0 transition-opacity group-hover:opacity-100">
+            <Play className="h-4 w-4 fill-ink" />
+          </span>
+        )}
+      </div>
+
+      <div className="flex items-center justify-between gap-2 p-3">
+        <div className="min-w-0">
+          <h3 className="truncate font-display text-lg font-extrabold capitalize leading-tight">{sign.word}</h3>
+          {subtitle && <p className="truncate text-sm text-ink/70">{subtitle}</p>}
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          <span className="flex gap-0.5" title={`Difficulté ${sign.difficulty}/3`} aria-hidden>
+            {[1, 2, 3].map(n => (
+              <span key={n} className={`h-2.5 w-2.5 border-2 border-ink ${n <= (sign.difficulty || 1) ? 'bg-ink' : 'bg-white'}`} />
+            ))}
+          </span>
+          {user && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleFavorite(sign.id);
+              }}
+              className={`border-2 border-ink p-1 ${isFav ? 'bg-tomato' : 'bg-white hover:bg-tomato'}`}
+              aria-label={isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+            >
+              <Heart className={`h-4 w-4 ${isFav ? 'fill-ink' : ''}`} strokeWidth={2.5} />
+            </button>
+          )}
         </div>
       </div>
     </Link>
   );
+}
+
+export function SignCard({ sign }: { sign: SignSummary }) {
+  return <SignCardFrame sign={sign} subtitle={sign.categoryName} />;
 }

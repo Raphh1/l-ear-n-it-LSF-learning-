@@ -3,11 +3,13 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, RefreshCw, Star, Trophy, Check, X } from 'lucide-react';
+import { RefreshCw, Check, X, ArrowRight } from 'lucide-react';
 import { phrasesApi } from '@/lib/api/phrases';
 import { scoresApi } from '@/lib/api/scores';
 import { progressApi, type CompleteLessonResponse } from '@/lib/api/progress';
+import { GameEnd, GameHeader, GameProgress } from '@/components/brand/Game';
+import { Loader } from '@/components/brand/Loader';
+import { checkOrder, RULE_HINTS, type OrderCheck, type OrderRule } from '@/lib/lsfOrder';
 import type { PhraseLesson, Phrase, SignInPhrase } from '@/lib/types';
 
 // Mélange un tableau
@@ -16,7 +18,37 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 type Phase = 'playing' | 'result';
-type AnswerState = 'idle' | 'correct' | 'wrong';
+// exact = ordre de la leçon ; valid = autre ordre possible en LSF ; wrong = règle non respectée
+type AnswerState = 'idle' | OrderCheck['status'];
+
+const TILTS = ['-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2'];
+
+// Tuile d'un signe : vignette + mot, comme une pièce à poser
+function SignTile({ sign, i, size = 'md' }: { sign: SignInPhrase; i: number; size?: 'sm' | 'md' }) {
+  const box = size === 'md' ? 'h-16 w-16' : 'h-14 w-14';
+  const src = sign.thumbnailUrl ?? sign.gifUrl;
+  return (
+    <span className={`flex flex-col items-center gap-1 border-[3px] border-ink bg-white p-1.5 shadow-hard ${TILTS[i % TILTS.length]}`}>
+      <span className={`${box} overflow-hidden border-2 border-ink bg-paper`}>
+        {src ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={src}
+            data-gif={sign.gifUrl ?? undefined}
+            data-thumb={sign.thumbnailUrl ?? undefined}
+            alt={sign.word}
+            className="h-full w-full object-cover"
+            onMouseEnter={(e) => { const g = e.currentTarget.dataset.gif; if (g) e.currentTarget.src = g; }}
+            onMouseLeave={(e) => { const t = e.currentTarget.dataset.thumb; if (t) e.currentTarget.src = t; }}
+          />
+        ) : (
+          <span className="flex h-full w-full items-center justify-center font-display text-xl font-extrabold uppercase">{sign.word[0]}</span>
+        )}
+      </span>
+      <span className="font-display text-sm font-extrabold uppercase">{sign.word}</span>
+    </span>
+  );
+}
 
 function PhraseExercise({
   phrase,
@@ -27,17 +59,19 @@ function PhraseExercise({
   phrase: Phrase;
   index: number;
   total: number;
-  onResult: (correct: boolean) => void;
+  onResult: (status: OrderCheck['status']) => void;
 }) {
   const [pool, setPool] = useState<SignInPhrase[]>(() => shuffle(phrase.signs));
   const [built, setBuilt] = useState<SignInPhrase[]>([]);
   const [answerState, setAnswerState] = useState<AnswerState>('idle');
+  const [broken, setBroken] = useState<OrderRule[]>([]);
 
   // Réinitialise quand la phrase change
   useEffect(() => {
     setPool(shuffle(phrase.signs));
     setBuilt([]);
     setAnswerState('idle');
+    setBroken([]);
   }, [phrase]);
 
   function pickSign(sign: SignInPhrase) {
@@ -53,10 +87,14 @@ function PhraseExercise({
   }
 
   function checkAnswer() {
-    const correct = built.every((s, i) => s.id === phrase.signs[i].id) && built.length === phrase.signs.length;
-    setAnswerState(correct ? 'correct' : 'wrong');
-    setTimeout(() => onResult(correct), 900);
+    const result = checkOrder(built, phrase.signs);
+    setAnswerState(result.status);
+    setBroken(result.broken);
+    // Ordre exact : on enchaîne. Sinon on laisse le temps de lire l'explication.
+    if (result.status === 'exact') setTimeout(() => onResult('exact'), 900);
   }
+
+  const indicativeOrder = phrase.signs.map((s) => s.word.toUpperCase()).join(' → ');
 
   function reset() {
     setPool(shuffle(phrase.signs));
@@ -67,149 +105,101 @@ function PhraseExercise({
   const canCheck = built.length === phrase.signs.length && answerState === 'idle';
 
   return (
-    <motion.div
-      key={phrase.id}
-      initial={{ opacity: 0, x: 40 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
-      transition={{ duration: 0.3 }}
-      className="flex flex-col gap-6"
-    >
-      {/* Progression */}
+    <div key={phrase.id} className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <div className="flex justify-between text-xs text-white/30">
-          <span>Phrase {index + 1} / {total}</span>
-        </div>
-        <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-          <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
-            initial={{ width: `${(index / total) * 100}%` }}
-            animate={{ width: `${((index + 1) / total) * 100}%` }}
-            transition={{ duration: 0.4 }}
-          />
-        </div>
+        <span className="font-bold">Phrase {index + 1} / {total}</span>
+        <GameProgress value={((index + 1) / total) * 100} color="bg-ocean" />
       </div>
 
       {/* Phrase en français */}
-      <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 flex flex-col gap-2">
-        <p className="text-white/40 text-xs uppercase tracking-widest font-semibold">En français</p>
-        <p className="text-white text-lg font-semibold">{phrase.textFr}</p>
-        <p className="text-white/30 text-xs">Construis cette phrase en LSF dans le bon ordre.</p>
+      <div className="panel flex flex-col gap-2 px-6 py-5">
+        <p className="text-sm font-bold uppercase tracking-widest">En français</p>
+        <p className="font-display text-3xl font-extrabold leading-tight">« {phrase.textFr} »</p>
+        <p className="text-ink/75">
+          Construis cette phrase en LSF. Plusieurs ordres sont souvent possibles : on vérifie surtout que le temps
+          est en début de phrase et la question à la fin.
+        </p>
       </div>
 
       {/* Zone de construction */}
       <div className="flex flex-col gap-2">
-        <p className="text-white/40 text-xs uppercase tracking-widest font-semibold">Ta réponse</p>
+        <p className="text-sm font-bold uppercase tracking-widest">Ta phrase en LSF</p>
         <div
-          className={`min-h-[80px] rounded-2xl border px-4 py-3 flex flex-wrap gap-3 items-center transition-colors ${
-            answerState === 'correct'
-              ? 'border-emerald-500/50 bg-emerald-500/10'
-              : answerState === 'wrong'
-              ? 'border-rose-500/50 bg-rose-500/10'
-              : 'border-white/10 bg-white/5'
+          className={`flex min-h-28 flex-wrap items-center gap-4 border-[3px] border-dashed border-ink p-4 transition-colors ${
+            answerState === 'exact' ? 'border-solid bg-mint'
+              : answerState === 'valid' ? 'border-solid bg-sun'
+              : answerState === 'wrong' ? 'border-solid bg-tomato'
+              : 'bg-white/60'
           }`}
         >
           {built.length === 0 ? (
-            <p className="text-white/20 text-sm">Clique sur les signes ci-dessous pour construire la phrase…</p>
+            <p className="font-bold text-ink/60">Clique sur les signes ci-dessous pour les poser ici…</p>
           ) : (
             built.map((sign, i) => (
-              <motion.button
-                key={`${sign.id}-${i}`}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.15 }}
-                onClick={() => removeSign(sign)}
-                className="flex flex-col items-center gap-1 group"
-              >
-                <div className="w-14 h-14 rounded-xl overflow-hidden border border-white/20 bg-white/10 group-hover:border-rose-400/40 transition-colors relative">
-                  {sign.thumbnailUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={sign.thumbnailUrl} alt={sign.word} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="w-full h-full flex items-center justify-center text-white/30 text-xs">{sign.word[0]}</span>
-                  )}
-                  <div className="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/10 transition-colors rounded-xl" />
-                </div>
-                <span className="text-white text-xs font-medium capitalize">{sign.word}</span>
-              </motion.button>
+              <button key={`${sign.id}-${i}`} onClick={() => removeSign(sign)} title="Retirer" className="transition-transform hover:-translate-y-1">
+                <SignTile sign={sign} i={i} size="sm" />
+              </button>
             ))
           )}
         </div>
-        {answerState === 'correct' && (
-          <p className="text-emerald-400 text-sm font-medium flex items-center gap-1.5">
-            <Check className="w-4 h-4" /> Bonne réponse !
+        {answerState === 'exact' && (
+          <p className="flex items-center gap-1.5 font-display text-xl font-extrabold">
+            <Check className="h-6 w-6" strokeWidth={3} /> Parfait !
           </p>
+        )}
+        {answerState === 'valid' && (
+          <div className="flex flex-col gap-1">
+            <p className="flex items-center gap-1.5 font-display text-xl font-extrabold">
+              <Check className="h-6 w-6" strokeWidth={3} /> Ordre possible en LSF !
+            </p>
+            <p className="font-bold">L&apos;ordre proposé par la leçon : {indicativeOrder}</p>
+          </div>
         )}
         {answerState === 'wrong' && (
           <div className="flex flex-col gap-1">
-            <p className="text-rose-400 text-sm font-medium flex items-center gap-1.5">
-              <X className="w-4 h-4" /> Pas tout à fait…
+            <p className="flex items-center gap-1.5 font-display text-xl font-extrabold">
+              <X className="h-6 w-6" strokeWidth={3} /> Pas tout à fait…
             </p>
-            <p className="text-white/40 text-xs">
-              Ordre correct : {phrase.signs.map((s) => s.word).join(' → ')}
-            </p>
+            {broken.map((rule) => <p key={rule} className="font-bold">{RULE_HINTS[rule]}</p>)}
+            <p className="font-bold">Ordre proposé : {indicativeOrder}</p>
           </div>
         )}
       </div>
 
-      {/* Pool de signes disponibles */}
-      <div className="flex flex-col gap-2">
-        <p className="text-white/40 text-xs uppercase tracking-widest font-semibold">Signes disponibles</p>
-        <div className="flex flex-wrap gap-3">
-          <AnimatePresence>
-            {pool.map((sign) => (
-              <motion.button
-                key={sign.id}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.15 }}
-                onClick={() => pickSign(sign)}
-                disabled={answerState !== 'idle'}
-                className="flex flex-col items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed group"
-              >
-                <div className="w-16 h-16 rounded-xl overflow-hidden border border-white/15 bg-white/5 group-hover:border-teal-400/50 group-hover:bg-white/10 transition-all relative">
-                  {sign.thumbnailUrl || sign.gifUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={sign.thumbnailUrl ?? sign.gifUrl!}
-                      data-gif={sign.gifUrl ?? undefined}
-                      data-thumb={sign.thumbnailUrl ?? undefined}
-                      alt={sign.word}
-                      className="w-full h-full object-cover"
-                      onMouseEnter={(e) => { const g = e.currentTarget.dataset.gif; if (g) e.currentTarget.src = g; }}
-                      onMouseLeave={(e) => { const t = e.currentTarget.dataset.thumb; if (t) e.currentTarget.src = t; }}
-                    />
-                  ) : (
-                    <span className="w-full h-full flex items-center justify-center text-white/30 text-xs">{sign.word[0]}</span>
-                  )}
-                </div>
-                <span className="text-white/70 text-xs font-medium capitalize group-hover:text-white transition-colors">{sign.word}</span>
-              </motion.button>
-            ))}
-          </AnimatePresence>
+      {/* Signes disponibles */}
+      <div className="flex flex-col gap-3">
+        <p className="text-sm font-bold uppercase tracking-widest">Signes disponibles</p>
+        <div className="flex min-h-24 flex-wrap gap-4">
+          {pool.map((sign, i) => (
+            <button
+              key={sign.id}
+              onClick={() => pickSign(sign)}
+              disabled={answerState !== 'idle'}
+              className="transition-transform hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <SignTile sign={sign} i={i + 1} />
+            </button>
+          ))}
         </div>
       </div>
 
-      {/* Actions */}
-      <div className="flex gap-3">
-        <button
-          onClick={reset}
-          disabled={answerState !== 'idle'}
-          className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-sm hover:bg-white/10 hover:text-white/70 transition-all disabled:opacity-30"
-        >
-          <RefreshCw className="w-3.5 h-3.5" />
-          Réinitialiser
-        </button>
-        <button
-          onClick={checkAnswer}
-          disabled={!canCheck}
-          className="flex-1 px-6 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold hover:scale-[1.02] transition-transform disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
-        >
-          Vérifier
-        </button>
+      <div className="flex gap-4">
+        {answerState === 'valid' || answerState === 'wrong' ? (
+          <button onClick={() => onResult(answerState)} className="btn btn-ink btn-lg flex-1">
+            Suivant <ArrowRight className="h-5 w-5" strokeWidth={2.5} />
+          </button>
+        ) : (
+          <>
+            <button onClick={reset} disabled={answerState !== 'idle'} className="btn">
+              <RefreshCw className="h-5 w-5" /> Recommencer
+            </button>
+            <button onClick={checkAnswer} disabled={!canCheck} className="btn btn-ocean btn-lg flex-1">
+              Vérifier
+            </button>
+          </>
+        )}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -220,7 +210,8 @@ export default function ConstructeurPage() {
   const [lesson, setLesson] = useState<PhraseLesson | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0);      // réponses acceptées (exactes + ordres possibles)
+  const [perfect, setPerfect] = useState(0);  // dont ordre exact de la leçon
   const [phase, setPhase] = useState<Phase>('playing');
   const [completion, setCompletion] = useState<CompleteLessonResponse | null>(null);
 
@@ -231,8 +222,10 @@ export default function ConstructeurPage() {
       .finally(() => setIsLoading(false));
   }, [lessonId, router]);
 
-  function handleResult(correct: boolean) {
+  function handleResult(status: OrderCheck['status']) {
+    const correct = status !== 'wrong';
     if (correct) setScore((s) => s + 1);
+    if (status === 'exact') setPerfect((p) => p + 1);
     if (!lesson) return;
 
     if (currentIndex + 1 >= lesson.phrases.length) {
@@ -251,17 +244,12 @@ export default function ConstructeurPage() {
   const handleRestart = useCallback(() => {
     setCurrentIndex(0);
     setScore(0);
+    setPerfect(0);
     setPhase('playing');
     setCompletion(null);
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin" />
-      </div>
-    );
-  }
+  if (isLoading) return <Loader label="Préparation des phrases..." />;
 
   if (!lesson) return null;
 
@@ -277,57 +265,25 @@ export default function ConstructeurPage() {
                     'Continue à t\'entraîner !';
 
     return (
-      <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-        <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-emerald-700/20 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-teal-600/15 blur-[120px]" />
-
-        <div className="relative max-w-lg mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-col items-center gap-8 py-8"
+      <div className="px-6 py-14">
+        <div className="mx-auto max-w-xl">
+          <GameEnd
+            title={feedback}
+            color="bg-ocean text-white"
+            subtitle={<span className="font-display text-7xl font-extrabold">{score}<span className="text-4xl text-ink/50">/{total}</span></span>}
+            xp={xpEarned}
+            extra={
+              <>
+                <span className="sticker bg-white text-sm">{pct}% de bonnes réponses</span>
+                <span className="sticker bg-mint text-sm">{perfect} dans l&apos;ordre de la leçon</span>
+                {score > perfect && <span className="sticker bg-sun text-sm">{score - perfect} autre{score - perfect > 1 ? 's' : ''} ordre{score - perfect > 1 ? 's' : ''} possible{score - perfect > 1 ? 's' : ''}</span>}
+                {completion?.isFirstCompletion && <span className="sticker bg-mint">Première complétion : XP enregistrés !</span>}
+              </>
+            }
           >
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500">
-                <Trophy className="w-9 h-9 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-white">{feedback}</h2>
-            </div>
-
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-7xl font-black text-white">
-                {score}<span className="text-white/30 text-4xl">/{total}</span>
-              </span>
-              <span className="text-white/40 text-sm">{pct}% de bonnes réponses</span>
-            </div>
-
-            <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-400/10 border border-emerald-400/20">
-              <Star className="w-4 h-4 text-emerald-400" />
-              <span className="text-emerald-400 font-semibold text-sm">+{xpEarned} XP gagnés</span>
-            </div>
-            {completion?.isFirstCompletion && (
-              <span className="text-emerald-400 text-xs font-medium">
-                Première complétion — XP enregistrés !
-              </span>
-            )}
-
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-xs">
-              <button
-                onClick={handleRestart}
-                className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm font-medium hover:bg-white/10 hover:text-white transition-all"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Recommencer
-              </button>
-              <Link
-                href="/jeux"
-                className="flex items-center justify-center w-full px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold hover:scale-[1.02] transition-transform"
-              >
-                Retour aux jeux
-              </Link>
-            </div>
-          </motion.div>
+            <button onClick={handleRestart} className="btn flex-1"><RefreshCw className="h-5 w-5" /> Recommencer</button>
+            <Link href="/jeux" className="btn btn-ink flex-1">Retour aux jeux</Link>
+          </GameEnd>
         </div>
       </div>
     );
@@ -335,38 +291,16 @@ export default function ConstructeurPage() {
 
   // ─── Jeu ─────────────────────────────────────────────────────────────────────
   return (
-    <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-emerald-700/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-teal-600/15 blur-[120px]" />
-
-      <div className="relative max-w-lg mx-auto flex flex-col gap-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-col gap-1"
-        >
-          <Link
-            href="/jeux"
-            className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors w-fit"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Jeux
-          </Link>
-          <h1 className="text-2xl font-bold text-white mt-3">{lesson.title}</h1>
-          <p className="text-white/30 text-sm">Constructeur de phrases</p>
-        </motion.div>
-
-        <AnimatePresence mode="wait">
-          <PhraseExercise
-            key={currentIndex}
-            phrase={lesson.phrases[currentIndex]}
-            index={currentIndex}
-            total={lesson.phrases.length}
-            onResult={handleResult}
-          />
-        </AnimatePresence>
+    <div className="px-6 py-10">
+      <div className="mx-auto flex max-w-2xl flex-col gap-7">
+        <GameHeader title="Constructeur" color="bg-ocean text-white" right={<span className="truncate text-sm">{lesson.title}</span>} />
+        <PhraseExercise
+          key={currentIndex}
+          phrase={lesson.phrases[currentIndex]}
+          index={currentIndex}
+          total={lesson.phrases.length}
+          onResult={handleResult}
+        />
       </div>
     </div>
   );

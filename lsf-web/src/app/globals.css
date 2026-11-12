@@ -48,6 +48,24 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Nouvelle identité « ludique & graphique » : papier, encre, 4 couleurs à plat, ombres dures */
+@theme inline {
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-atkinson), system-ui, sans-serif;
+}
+
+@theme {
+  --color-paper: #fff4e2;
+  --color-ink: #161412;
+  --color-sun: #ffc83d;   /* apprendre */
+  --color-tomato: #ff5a36; /* jouer */
+  --color-ocean: #3355ff; /* phrases */
+  --color-mint: #1fb57a;  /* réviser */
+  --shadow-hard: 4px 4px 0 0 #161412;
+  --shadow-hard-sm: 2px 2px 0 0 #161412;
+  --shadow-hard-lg: 7px 7px 0 0 #161412;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -122,10 +140,227 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-paper text-ink font-body;
   }
   html {
-    @apply font-sans;
+    @apply font-body;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-ocean);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-sun);
+    color: var(--color-ink);
+  }
+}
+
+@keyframes hop {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hop { animation: none; }
+}
+
+/* ── Briques de l'identité ─────────────────────────────────────────────── */
+@layer components {
+  /* Bloc encadré : bordure épaisse + ombre dure */
+  .panel {
+    border: 3px solid var(--color-ink);
+    background: #fff;
+    box-shadow: var(--shadow-hard);
+  }
+  .panel-flat {
+    border: 3px solid var(--color-ink);
+    background: #fff;
+  }
+
+  /* Élément cliquable qui se soulève au survol et s'enfonce au clic */
+  .press {
+    transition: transform 100ms ease, box-shadow 100ms ease;
+    cursor: pointer;
+  }
+  .press:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-hard-lg);
+  }
+  .press:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+  .press:disabled, .press[aria-disabled="true"] {
+    transform: none;
+    box-shadow: var(--shadow-hard-sm);
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Boutons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 3px solid var(--color-ink);
+    padding: 0.7rem 1.4rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    line-height: 1;
+    background: #fff;
+    color: var(--color-ink);
+    box-shadow: var(--shadow-hard);
+    transition: transform 100ms ease, box-shadow 100ms ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-hard-lg); }
+  .btn:active { transform: translate(4px, 4px); box-shadow: none; }
+  .btn:disabled { transform: none; box-shadow: var(--shadow-hard-sm); opacity: 0.5; cursor: not-allowed; }
+  .btn-sm { padding: 0.45rem 0.9rem; font-size: 0.9rem; }
+  .btn-lg { padding: 1rem 2rem; font-size: 1.25rem; }
+  .btn-ink { background: var(--color-ink); color: var(--color-paper); }
+  .btn-sun { background: var(--color-sun); }
+  .btn-tomato { background: var(--color-tomato); }
+  .btn-ocean { background: var(--color-ocean); color: #fff; }
+  .btn-mint { background: var(--color-mint); }
+  .btn-ghost { background: transparent; box-shadow: none; border-color: transparent; }
+  .btn-ghost:hover { box-shadow: none; transform: none; background: #fff; border-color: var(--color-ink); }
+
+  /* Tuile de signe (motif du jeu de phrases) */
+  .tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-ink);
+    background: #fff;
+    padding: 0.35rem 0.8rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    box-shadow: var(--shadow-hard);
+  }
+
+  /* Étiquette collée de travers */
+  .sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border: 2px solid var(--color-ink);
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #fff;
+  }
+
+  /* Champs de formulaire */
+  .field {
+    width: 100%;
+    border: 3px solid var(--color-ink);
+    background: #fff;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--color-ink);
+    outline: none;
+    transition: box-shadow 100ms ease;
+  }
+  .field::placeholder { color: color-mix(in srgb, var(--color-ink) 45%, transparent); }
+  .field:focus { box-shadow: var(--shadow-hard); outline: none; }
+  .field-label {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+  }
+
+  /* Barre de progression */
+  .bar {
+    height: 1rem;
+    border: 2px solid var(--color-ink);
+    background: #fff;
+    overflow: hidden;
+  }
+  .bar > span {
+    display: block;
+    height: 100%;
+    border-right: 2px solid var(--color-ink);
+    transition: width 300ms ease;
+  }
+
+  /* Squelette de chargement : hachures plutôt que pulsation floue */
+  .skeleton {
+    border: 3px solid var(--color-ink);
+    background: repeating-linear-gradient(-45deg, #fff, #fff 8px, #f3e6cf 8px, #f3e6cf 16px);
+  }
+
+  /* Messages */
+  .notice {
+    border: 3px solid var(--color-ink);
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    background: #fff;
+  }
+  .notice-error { background: var(--color-tomato); }
+  .notice-ok { background: var(--color-mint); }
+
+  /* Lien texte */
+  .link {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+  .link:hover { background: var(--color-sun); }
+
+  /* Choix de réponse dans les jeux */
+  .choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 3px solid var(--color-ink);
+    background: #fff;
+    padding: 1rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-align: center;
+    box-shadow: var(--shadow-hard);
+    transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+  }
+  .choice:not(:disabled):hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-hard-lg); background: var(--color-paper); }
+  .choice:not(:disabled):active { transform: translate(4px, 4px); box-shadow: none; }
+  .choice:disabled { cursor: default; }
+  .choice-correct { background: var(--color-mint) !important; }
+  .choice-wrong { background: var(--color-tomato) !important; }
+  .choice-dim { opacity: 0.45; box-shadow: none; }
+
+  /* Cadre vidéo des jeux */
+  .video-frame {
+    border: 3px solid var(--color-ink);
+    background: #fff;
+    padding: 0.5rem;
+    box-shadow: var(--shadow-hard-lg);
+  }
+  .video-frame > * { border: 2px solid var(--color-ink); }
+
+  /* Chargement : trois tuiles qui sautent à tour de rôle */
+  .hop { animation: hop 0.9s ease-in-out infinite; }
+  .hop:nth-child(2) { animation-delay: 0.15s; }
+  .hop:nth-child(3) { animation-delay: 0.3s; }
+
+  /* Titre de page avec soulignement épais */
+  .page-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
   }
 }
 

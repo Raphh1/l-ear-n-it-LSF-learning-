@@ -1,52 +1,62 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, Zap, Trophy, ArrowRight, ArrowDown, ChevronRight, MessageSquareText } from 'lucide-react';
+import { ArrowRight, ArrowDown, MessageSquareText, Search, X, Hand } from 'lucide-react';
 import Link from 'next/link';
 import { modulesApi } from '@/lib/api/modules';
 import { ModuleCard } from '@/components/modules/ModuleCard';
+import { DailyModules } from '@/components/home/DailyModules';
+import { PageHeader } from '@/components/brand/PageHeader';
+import { LevelMeter } from '@/components/brand/LevelMeter';
 import type { Module } from '@/lib/types';
 
-const levelConfig: Record<number, {
-  label: string;
-  description: string;
-  tip: string;
-  gradient: string;
-  icon: React.ReactNode;
-}> = {
+const levelConfig: Record<number, { id: string; label: string; description: string }> = {
   1: {
+    id: 'debutant',
     label: 'Débutant',
     description: 'Aucune connaissance en LSF requise. Commence par les bases : alphabet, salutations, chiffres et expressions courantes.',
-    tip: 'Commence ici si tu débutes.',
-    gradient: 'from-emerald-500 to-teal-500',
-    icon: <BookOpen className="w-5 h-5" />,
   },
   2: {
+    id: 'intermediaire',
     label: 'Intermédiaire',
-    description: 'Tu maîtrises les bases ? Enrichis ton vocabulaire avec des thématiques plus variées et des constructions de phrases.',
-    tip: 'Recommandé après le niveau Débutant.',
-    gradient: 'from-violet-500 to-indigo-600',
-    icon: <Zap className="w-5 h-5" />,
+    description: 'Tu maîtrises les bases ? Enrichis ton vocabulaire avec des thématiques plus variées.',
   },
   3: {
+    id: 'avance',
     label: 'Avancé',
-    description: 'Pour ceux qui veulent aller plus loin : expressions complexes, nuances et vocabulaire spécialisé.',
-    tip: 'Pour les apprenants expérimentés.',
-    gradient: 'from-rose-500 to-orange-400',
-    icon: <Trophy className="w-5 h-5" />,
+    description: 'Pour aller plus loin : expressions complexes, nuances et vocabulaire spécialisé.',
   },
 };
 
 const steps = [
-  { num: '1', text: 'Choisis un module selon ton niveau' },
-  { num: '2', text: 'Apprends les signes leçon par leçon' },
-  { num: '3', text: 'Entraîne-toi avec les jeux interactifs' },
+  { num: '1', text: 'Choisis un module selon ton niveau', color: 'bg-sun' },
+  { num: '2', text: 'Apprends les signes leçon par leçon', color: 'bg-mint' },
+  { num: '3', text: 'Entraîne-toi avec les jeux', color: 'bg-tomato' },
 ];
+
+const navLevels = [
+  { id: 'debutant', label: 'Débutant' },
+  { id: 'intermediaire', label: 'Intermédiaire' },
+  { id: 'avance', label: 'Avancé' },
+  { id: 'phrases-section', label: 'Phrases' },
+];
+
+function SectionTitle({ title, count, children }: { title: React.ReactNode; count: number; children?: React.ReactNode }) {
+  return (
+    <div className="flex flex-col gap-2 border-b-[3px] border-ink pb-4">
+      <div className="flex flex-wrap items-center gap-3">
+        <h2 className="text-3xl font-extrabold sm:text-4xl">{title}</h2>
+        <span className="sticker bg-white">{count} module{count > 1 ? 's' : ''}</span>
+      </div>
+      {children && <p className="max-w-2xl text-ink/80">{children}</p>}
+    </div>
+  );
+}
 
 export default function ModulesPage() {
   const [modules, setModules] = useState<Module[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     modulesApi.getAll()
@@ -54,145 +64,150 @@ export default function ModulesPage() {
       .finally(() => setIsLoading(false));
   }, []);
 
+  const q = search.trim().toLowerCase();
+
   const phraseModules = modules
     .filter((m) => m.hasPhraseLessons)
+    .filter((m) => !q || m.title.toLowerCase().includes(q) || m.description?.toLowerCase().includes(q))
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
   const byLevel = (level: number) => modules
     .filter((m) => m.level === level && !m.hasPhraseLessons)
+    .filter((m) => !q || m.title.toLowerCase().includes(q) || m.description?.toLowerCase().includes(q))
     .sort((a, b) => a.sortOrder - b.sortOrder);
 
-  const levels = [1, 2, 3].filter((l) => !isLoading && byLevel(l).length > 0 || isLoading);
+  const totalResults = q ? [1, 2, 3].reduce((acc, l) => acc + byLevel(l).length, 0) + phraseModules.length : null;
 
   return (
-    <div className="min-h-screen bg-[#0a0a1a] px-6 py-16">
-      <div className="max-w-5xl mx-auto flex flex-col gap-14">
-
-        {/* Hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-col gap-4"
-        >
-          <div className="flex flex-col gap-2">
-            <h1 className="text-4xl font-bold text-white">Modules d&apos;apprentissage</h1>
-            <p className="text-white/40 text-base max-w-xl">
-              Apprends la Langue des Signes Française à ton rythme, du vocabulaire de base jusqu&apos;aux expressions avancées.
-            </p>
-          </div>
+    <div className="px-6 py-14">
+      <div className="mx-auto flex max-w-6xl flex-col gap-14">
+        <div className="flex flex-col gap-8">
+          <PageHeader kicker="Apprendre" title="Modules d'apprentissage">
+            Apprends la LSF à ton rythme, du vocabulaire de base jusqu&apos;aux expressions avancées.
+          </PageHeader>
 
           {/* Étapes */}
-          <div className="mt-2 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-0">
+          <ol className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-2">
             {steps.map((step, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="flex items-center gap-2.5">
-                  <span className="flex items-center justify-center w-7 h-7 rounded-full bg-violet-600/30 border border-violet-500/40 text-violet-300 text-xs font-bold shrink-0">
-                    {step.num}
-                  </span>
-                  <span className="text-white/50 text-sm">{step.text}</span>
-                </div>
-                {i < steps.length - 1 && (
-                  <ChevronRight className="w-4 h-4 text-white/20 shrink-0 hidden sm:block mx-2" />
-                )}
-              </div>
+              <li key={step.num} className="flex items-center gap-2">
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center border-[3px] border-ink font-display font-extrabold ${step.color}`}>
+                  {step.num}
+                </span>
+                <span className="font-bold">{step.text}</span>
+                {i < steps.length - 1 && <ArrowRight className="mx-2 hidden h-5 w-5 sm:block" strokeWidth={2.5} />}
+              </li>
             ))}
+          </ol>
+        </div>
+
+        {/* Recherche + navigation niveaux */}
+        <div className="flex flex-col gap-4">
+          <div className="relative">
+            <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2" strokeWidth={2.5} />
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Rechercher un module..."
+              className="field py-4 pl-12 pr-12 text-lg"
+            />
+            {search && (
+              <button
+                onClick={() => setSearch('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 border-2 border-ink bg-white p-1 hover:bg-sun"
+                aria-label="Effacer la recherche"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
           </div>
-        </motion.div>
+
+          {!search && (
+            <nav className="flex flex-wrap gap-3">
+              {navLevels.map((nav) => (
+                <a
+                  key={nav.id}
+                  href={`#${nav.id}`}
+                  className={`btn btn-sm ${nav.id === 'phrases-section' ? 'btn-ocean' : ''}`}
+                >
+                  {nav.id === 'phrases-section' && <MessageSquareText className="h-4 w-4" />}
+                  {nav.label}
+                </a>
+              ))}
+            </nav>
+          )}
+
+          {search && totalResults !== null && (
+            <p className="font-bold">
+              {totalResults === 0 ? 'Aucun module trouvé' : `${totalResults} module${totalResults > 1 ? 's' : ''} trouvé${totalResults > 1 ? 's' : ''}`}
+            </p>
+          )}
+        </div>
+
+        {/* Modules du jour */}
+        {!search && !isLoading && (
+          <DailyModules modules={modules} isLoading={isLoading} inline />
+        )}
 
         {/* Conseil débutant */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="flex items-start gap-4 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 px-5 py-4"
-        >
-          <span className="text-2xl shrink-0">👋</span>
-          <div className="flex flex-col gap-1">
-            <p className="text-emerald-300 font-semibold text-sm">Tu débutes en LSF ?</p>
-            <p className="text-white/50 text-sm leading-relaxed">
-              Commence par les modules <span className="text-white/70 font-medium">Débutant</span> — ils couvrent l&apos;alphabet, les salutations et les chiffres, les bases indispensables pour communiquer. Pas besoin de connaissances préalables.
-            </p>
-            <Link
-              href="#debutant"
-              className="mt-1 flex items-center gap-1 text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors w-fit"
-            >
-              Voir les modules Débutant <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+        {!search && (
+          <div className="panel flex items-start gap-4 bg-mint p-5">
+            <Hand className="h-8 w-8 shrink-0" strokeWidth={2.5} />
+            <div className="flex flex-col gap-1">
+              <p className="font-display text-xl font-extrabold">Tu débutes en LSF ?</p>
+              <p className="leading-relaxed">
+                Commence par les modules <strong>Débutant</strong> : alphabet, salutations et chiffres, les bases indispensables pour communiquer.
+                Pas besoin de connaissances préalables.
+              </p>
+              <Link href="#debutant" className="link mt-1 flex w-fit items-center gap-1">
+                Voir les modules Débutant <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
-        </motion.div>
+        )}
 
         {/* Niveaux */}
         {isLoading ? (
           <div className="flex flex-col gap-10">
             {[1, 2].map((i) => (
               <div key={i} className="flex flex-col gap-4">
-                <div className="h-5 w-32 rounded-lg bg-white/5 animate-pulse" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {Array.from({ length: 3 }).map((_, j) => (
-                    <div key={j} className="h-44 rounded-2xl bg-white/5 animate-pulse" />
-                  ))}
+                <div className="skeleton h-10 w-64" />
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {Array.from({ length: 3 }).map((_, j) => <div key={j} className="skeleton h-52" />)}
                 </div>
               </div>
             ))}
           </div>
         ) : modules.length === 0 ? (
-          <p className="text-white/30 text-center py-20">Aucun module disponible pour l&apos;instant.</p>
+          <p className="panel py-20 text-center font-bold">Aucun module disponible pour l&apos;instant.</p>
         ) : (
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-16">
             {[1, 2, 3].map((level) => {
               const items = byLevel(level);
               if (items.length === 0) return null;
               const config = levelConfig[level];
               return (
-                <motion.section
-                  key={level}
-                  id={level === 1 ? 'debutant' : level === 2 ? 'intermediaire' : 'avance'}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: level * 0.08 }}
-                  className="flex flex-col gap-5"
-                >
-                  {/* Section header */}
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-3">
-                      <div className={`flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br ${config.gradient} text-white`}>
-                        {config.icon}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <h2 className="text-white font-bold text-xl">{config.label}</h2>
-                        <span className={`text-xs font-medium px-2 py-0.5 rounded-full bg-gradient-to-r ${config.gradient} text-white opacity-80`}>
-                          {items.length} module{items.length > 1 ? 's' : ''}
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-white/40 text-sm max-w-xl pl-11">{config.description}</p>
-                  </div>
-
-                  {/* Modules grid */}
-                  <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{ visible: { transition: { staggerChildren: 0.06 } }, hidden: {} }}
+                <section key={level} id={config.id} className="flex scroll-mt-24 flex-col gap-6">
+                  <SectionTitle
+                    title={<span className="flex items-center gap-3">{config.label} <LevelMeter level={level} showLabel={false} /></span>}
+                    count={items.length}
                   >
+                    {config.description}
+                  </SectionTitle>
+
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {items.map((module, idx) => (
-                      <motion.div
-                        key={module.id}
-                        variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-                        transition={{ duration: 0.3 }}
-                        className="relative"
-                      >
+                      <div key={module.id} className="relative">
                         {level === 1 && idx === 0 && (
-                          <div className="absolute -top-2 left-4 z-10 flex items-center gap-1 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-lg">
-                            ★ Par ici pour commencer
-                          </div>
+                          <span className="tile absolute -top-4 right-4 z-10 rotate-3 bg-tomato text-sm">
+                            Commence ici !
+                          </span>
                         )}
                         <ModuleCard module={module} />
-                      </motion.div>
+                      </div>
                     ))}
-                  </motion.div>
-                </motion.section>
+                  </div>
+                </section>
               );
             })}
           </div>
@@ -200,52 +215,22 @@ export default function ModulesPage() {
 
         {/* Section Phrases */}
         {!isLoading && phraseModules.length > 0 && (
-          <motion.section
-            id="phrases-section"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="flex flex-col gap-5"
-          >
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500 text-white">
-                  <MessageSquareText className="w-5 h-5" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <h2 className="text-white font-bold text-xl">Construction de phrases</h2>
-                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white opacity-80">
-                    {phraseModules.length} module{phraseModules.length > 1 ? 's' : ''}
-                  </span>
-                </div>
-              </div>
-              <p className="text-white/40 text-sm max-w-xl pl-11">
-                Apprends à construire des phrases complètes en LSF — avec la grammaire visuo-gestuelle propre à la langue des signes.
-              </p>
-            </div>
-
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-              initial="hidden"
-              animate="visible"
-              variants={{ visible: { transition: { staggerChildren: 0.06 } }, hidden: {} }}
+          <section id="phrases-section" className="flex scroll-mt-24 flex-col gap-6">
+            <SectionTitle
+              title={<span className="flex items-center gap-3"><MessageSquareText className="h-8 w-8" strokeWidth={2.5} /> Construction de phrases</span>}
+              count={phraseModules.length}
             >
-              {phraseModules.map((module) => (
-                <motion.div
-                  key={module.id}
-                  variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <ModuleCard module={module} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.section>
-        )}
+              Construis des phrases complètes en LSF, avec la grammaire visuelle propre à la langue des signes.
+            </SectionTitle>
 
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {phraseModules.map((module) => <ModuleCard key={module.id} module={module} />)}
+            </div>
+          </section>
+        )}
       </div>
 
-      {/* Bouton pour scroller tout en bas */}
+      {/* Raccourci vers les phrases */}
       <button
         onClick={() => {
           const phraseSection = document.getElementById('phrases-section');
@@ -255,11 +240,11 @@ export default function ModulesPage() {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
           }
         }}
-        className="fixed z-50 bottom-8 right-8 flex items-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-lg hover:scale-105 transition-transform"
+        className="btn btn-ocean fixed bottom-6 right-6 z-40"
         title="Aller aux Phrases"
       >
-        <span className="font-semibold text-sm hidden sm:block">Phrases</span>
-        <ArrowDown className="w-5 h-5" />
+        <span className="hidden sm:block">Phrases</span>
+        <ArrowDown className="h-5 w-5" />
       </button>
     </div>
   );

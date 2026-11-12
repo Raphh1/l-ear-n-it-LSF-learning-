@@ -47,7 +47,7 @@ export default function LoginPage() {
       footer={
         <>
           Pas encore de compte ?{' '}
-          <Link href="/register" className="text-violet-400 font-medium hover:text-violet-300 transition-colors">
+          <Link href="/register" className="link">
             S&apos;inscrire
           </Link>
         </>
@@ -58,8 +58,14 @@ export default function LoginPage() {
           <AuthFormField control={form.control} name="email" label="Email" placeholder="vous@exemple.fr" type="email" />
           <AuthFormField control={form.control} name="password" label="Mot de passe" placeholder="••••••••" type="password" />
 
+          <div className="-mt-1 text-right">
+            <Link href="/forgot-password" className="link text-sm">
+              Mot de passe oublié ?
+            </Link>
+          </div>
+
           {error && (
-            <p className="text-sm text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-xl px-4 py-2.5">{error}</p>
+            <p className="notice notice-error">{error}</p>
           )}
 
           <AuthSubmitButton isLoading={isLoading} label="Se connecter" loadingLabel="Connexion..." />

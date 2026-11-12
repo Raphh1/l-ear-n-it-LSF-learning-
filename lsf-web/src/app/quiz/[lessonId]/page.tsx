@@ -3,8 +3,9 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ChevronLeft, Info } from 'lucide-react';
+import { Hand } from 'lucide-react';
+import { BackLink } from '@/components/brand/BackLink';
+import { Loader } from '@/components/brand/Loader';
 import { lessonsApi } from '@/lib/api/lessons';
 import { progressApi, type CompleteLessonResponse } from '@/lib/api/progress';
 import { scoresApi } from '@/lib/api/scores';
@@ -88,64 +89,38 @@ export default function QuizPage() {
   }, [lesson]);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-[#0a0a1a] px-6 py-16 flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full border-2 border-violet-500 border-t-transparent animate-spin" />
-      </div>
-    );
+    return <Loader label="Préparation du quiz..." />;
   }
 
   if (!lesson) return null;
 
   if (lesson.signs.length < 2) {
     return (
-      <div className="min-h-screen bg-[#0a0a1a] px-6 py-16 flex flex-col items-center justify-center gap-4">
-        <p className="text-white/50 text-sm">Pas assez de signes pour lancer un quiz.</p>
-        <Link href={`/lessons/${lessonId}`} className="text-violet-400 text-sm hover:text-violet-300 transition-colors">
-          Retour à la leçon
-        </Link>
+      <div className="flex flex-col items-center justify-center gap-4 px-6 py-24">
+        <p className="font-display text-2xl font-extrabold">Pas assez de signes pour lancer un quiz.</p>
+        <Link href={`/lessons/${lessonId}`} className="btn btn-ink">Retour à la leçon</Link>
       </div>
     );
   }
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-      {/* Blobs de fond */}
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-violet-700/25 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-indigo-600/20 blur-[120px]" />
-
-      <div className="relative max-w-xl mx-auto flex flex-col gap-10">
-
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-col gap-1"
-        >
-          <Link
-            href={`/lessons/${lessonId}`}
-            className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors w-fit"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Retour à la leçon
-          </Link>
-          <h1 className="text-2xl font-bold text-white mt-3">{lesson.title}</h1>
-          <p className="text-white/30 text-sm">Quiz</p>
-        </motion.div>
+    <div className="px-6 py-12">
+      <div className="mx-auto flex max-w-xl flex-col gap-8">
+        <div className="flex flex-col gap-3">
+          <BackLink href={`/lessons/${lessonId}`}>Retour à la leçon</BackLink>
+          <div className="flex items-center gap-3">
+            <span className="sticker -rotate-2 bg-tomato">Quiz</span>
+            <h1 className="text-3xl font-extrabold leading-tight">{lesson.title}</h1>
+          </div>
+        </div>
 
         {/* Conseil pratique */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="flex items-start gap-3 px-4 py-3 rounded-xl border border-violet-500/20 bg-violet-500/10"
-        >
-          <Info className="w-4 h-4 text-violet-400 mt-0.5 shrink-0" />
-          <p className="text-violet-300/80 text-sm leading-relaxed">
-            <span className="font-semibold text-violet-300">Conseil :</span> n&apos;oubliez pas de pratiquer les mouvements en même temps que vous suivez les cours et le dictionnaire — reproduire les signes à la main est essentiel pour les mémoriser.
+        <div className="panel-flat flex items-start gap-3 bg-sun px-4 py-3">
+          <Hand className="mt-0.5 h-6 w-6 shrink-0" strokeWidth={2.5} />
+          <p className="leading-relaxed">
+            <strong>Conseil :</strong> reproduis les signes avec tes mains pendant que tu joues. C&apos;est le meilleur moyen de les mémoriser.
           </p>
-        </motion.div>
+        </div>
 
         {/* Contenu */}
         {phase === 'playing' ? (

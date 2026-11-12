@@ -5,7 +5,9 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SignMedia } from '@/components/signs/SignMedia';
-import { ChevronLeft, Trophy, RefreshCw, Star, Timer } from 'lucide-react';
+import { GameEnd, GameHeader } from '@/components/brand/Game';
+import { Loader } from '@/components/brand/Loader';
+import { RefreshCw, Star, Timer } from 'lucide-react';
 import { Leaderboard } from '@/components/leaderboard/Leaderboard';
 import { lessonsApi } from '@/lib/api/lessons';
 import { scoresApi } from '@/lib/api/scores';
@@ -129,13 +131,7 @@ export default function SurviePage() {
     attemptsRef.current = [];
   }, [lesson]);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full border-2 border-cyan-500 border-t-transparent animate-spin" />
-      </div>
-    );
-  }
+  if (isLoading) return <Loader label="Prépare-toi..." />;
 
   if (!lesson || !question) return null;
 
@@ -148,58 +144,27 @@ export default function SurviePage() {
                     "Continue à t'entraîner !";
 
     return (
-      <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-        <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-cyan-700/20 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-blue-600/15 blur-[120px]" />
-
-        <div className="relative max-w-xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-col items-center gap-8 py-8"
-          >
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500">
-                <Trophy className="w-9 h-9 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-white">{feedback}</h2>
-            </div>
-
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-7xl font-black text-white">{score}</span>
-              <span className="text-white/40 text-sm">
-                bonne{score !== 1 ? 's' : ''} réponse{score !== 1 ? 's' : ''}
+      <div className="px-6 py-14">
+        <div className="mx-auto max-w-xl">
+          <GameEnd
+            title={feedback}
+            color="bg-tomato"
+            subtitle={
+              <span className="flex flex-col items-center">
+                <span className="font-display text-8xl font-extrabold leading-none">{score}</span>
+                <span>bonne{score !== 1 ? 's' : ''} réponse{score !== 1 ? 's' : ''}</span>
               </span>
-            </div>
-
-            {score > 0 && (
-              <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-amber-400/10 border border-amber-400/20">
-                <Star className="w-4 h-4 text-amber-400" />
-                <span className="text-amber-400 font-semibold text-sm">+{score * XP_PER_CORRECT} XP gagnés</span>
+            }
+            xp={score * XP_PER_CORRECT}
+            extra={
+              <div className="panel w-full max-w-sm p-4 text-left">
+                <Leaderboard game="survie" lessonId={lessonId} unit="réponses" />
               </div>
-            )}
-
-            <div className="w-full max-w-xs">
-              <Leaderboard game="survie" lessonId={lessonId} unit="réponses" />
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-xs">
-              <button
-                onClick={handleRestart}
-                className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm font-medium hover:bg-white/10 hover:text-white transition-all"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Recommencer
-              </button>
-              <Link
-                href="/jeux/survie"
-                className="flex items-center justify-center w-full px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold hover:scale-[1.02] transition-transform"
-              >
-                Changer de leçon
-              </Link>
-            </div>
-          </motion.div>
+            }
+          >
+            <button onClick={handleRestart} className="btn flex-1"><RefreshCw className="h-5 w-5" /> Recommencer</button>
+            <Link href="/jeux/survie" className="btn btn-ink flex-1">Changer de leçon</Link>
+          </GameEnd>
         </div>
       </div>
     );
@@ -209,103 +174,54 @@ export default function SurviePage() {
   const isAnswered = selectedId !== null;
   const isLow = timeLeft <= 10;
 
-  function getChoiceStyle(id: string, q: Question): string {
-    const base = 'w-full px-4 py-3 rounded-2xl border text-sm font-semibold text-left transition-all duration-150';
-    if (!isAnswered) {
-      return `${base} bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/25 cursor-pointer`;
-    }
-    if (id === q.correctId) {
-      return `${base} bg-emerald-500/15 border-emerald-500/40 text-emerald-300 cursor-default`;
-    }
-    if (id === selectedId) {
-      return `${base} bg-rose-500/15 border-rose-500/40 text-rose-300 cursor-default`;
-    }
-    return `${base} bg-white/3 border-white/5 text-white/30 cursor-default`;
+  function choiceClass(id: string, q: Question): string {
+    const base = 'choice w-full justify-start text-left';
+    if (!isAnswered) return base;
+    if (id === q.correctId) return `${base} choice-correct`;
+    if (id === selectedId) return `${base} choice-wrong`;
+    return `${base} choice-dim`;
   }
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-10 overflow-hidden">
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-cyan-700/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-blue-600/15 blur-[120px]" />
+    <div className={`min-h-[calc(100vh-4rem)] px-6 py-10 transition-colors ${isLow ? 'bg-tomato' : ''}`}>
+      <div className="mx-auto flex max-w-xl flex-col gap-6">
+        <GameHeader backHref="/jeux/survie" backLabel="Retour" title="Survie" right={<span className="flex items-center gap-1"><Star className="h-5 w-5 fill-sun" /> {score}</span>} />
 
-      <div className="relative max-w-xl mx-auto flex flex-col gap-6">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <Link
-            href="/jeux/survie"
-            className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Retour
-          </Link>
-          <span className="text-white/30 text-xs font-medium">{lesson.title}</span>
-        </div>
-
-        {/* Timer + score */}
-        <div className="flex flex-col items-center gap-3 relative">
-          {/* Bonus +5s animation */}
+        {/* Chrono */}
+        <div className="relative flex flex-col items-center gap-3">
           <AnimatePresence>
             {bonusKey > 0 && (
-              <motion.div
+              <motion.span
                 key={bonusKey}
                 initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 0, y: -48 }}
                 exit={{}}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="absolute -top-2 left-1/2 -translate-x-1/2 text-emerald-400 font-bold text-xl pointer-events-none select-none"
+                className="tile pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 select-none bg-mint text-xl"
               >
                 +{TIME_BONUS}s
-              </motion.div>
+              </motion.span>
             )}
           </AnimatePresence>
 
-          <div className={`flex items-center gap-2 transition-colors ${isLow ? 'text-rose-400' : 'text-white'}`}>
-            <Timer className={`w-5 h-5 ${isLow ? 'animate-pulse' : ''}`} />
-            <span className={`text-5xl font-black tabular-nums ${isLow ? 'animate-pulse' : ''}`}>
-              {timeLeft}
-            </span>
-            <span className="text-white/30 text-lg font-medium self-end mb-1">s</span>
+          <div className="flex items-end gap-2">
+            <Timer className="mb-2 h-7 w-7" strokeWidth={2.5} />
+            <span className="font-display text-7xl font-extrabold leading-none tabular-nums">{timeLeft}</span>
+            <span className="mb-1 font-display text-2xl font-extrabold">s</span>
           </div>
 
-          {/* Timer bar */}
-          <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
-            <motion.div
-              className={`h-full rounded-full transition-colors ${isLow ? 'bg-rose-500' : 'bg-gradient-to-r from-cyan-500 to-blue-500'}`}
-              animate={{ width: `${Math.min(100, (timeLeft / INITIAL_TIME) * 100)}%` }}
-              transition={{ duration: 0.9, ease: 'linear' }}
-            />
-          </div>
-
-          {/* Score */}
-          <div className="flex items-center gap-1.5 self-end">
-            <Star className="w-3.5 h-3.5 text-amber-400" />
-            <span className="text-amber-400 text-sm font-semibold tabular-nums">{score}</span>
+          <div className="bar h-5 w-full">
+            <span className={isLow ? 'bg-ink' : 'bg-sun'} style={{ width: `${Math.min(100, (timeLeft / INITIAL_TIME) * 100)}%`, transition: 'width 0.9s linear' }} />
           </div>
         </div>
 
-        {/* Signe à deviner */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={question.target.id}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 0.2 }}
-            className="aspect-square max-h-72 w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5"
-          >
-            <SignMedia sign={question.target} />
-          </motion.div>
-        </AnimatePresence>
+        <div key={question.target.id} className="video-frame mx-auto aspect-square w-full max-w-72">
+          <SignMedia sign={question.target} />
+        </div>
 
-        {/* Choix de mots */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           {question.choices.map((sign) => (
-            <button
-              key={sign.id}
-              onClick={() => handleSelect(sign.id)}
-              className={getChoiceStyle(sign.id, question)}
-              disabled={isAnswered}
-            >
+            <button key={sign.id} onClick={() => handleSelect(sign.id)} className={choiceClass(sign.id, question)} disabled={isAnswered}>
               {sign.word}
             </button>
           ))}

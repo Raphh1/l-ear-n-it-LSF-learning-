@@ -3,9 +3,11 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { GameEnd, GameHeader, GameProgress } from '@/components/brand/Game';
+import { Loader } from '@/components/brand/Loader';
 import { SignMedia } from '@/components/signs/SignMedia';
-import { ChevronLeft, Trophy, RefreshCw } from 'lucide-react';
+import { RefreshCw, Hand } from 'lucide-react';
 import { lessonsApi } from '@/lib/api/lessons';
 import { progressApi } from '@/lib/api/progress';
 import { scoresApi } from '@/lib/api/scores';
@@ -53,7 +55,7 @@ function MemCardFace({ card }: { card: MemoryCard }) {
   if (card.type === 'word') {
     return (
       <div className="w-full h-full flex items-center justify-center p-2">
-        <span className="text-white font-bold text-center leading-tight text-sm sm:text-base break-words">
+        <span className="break-words text-center font-display text-base font-extrabold capitalize leading-tight sm:text-xl">
           {card.sign.word}
         </span>
       </div>
@@ -79,24 +81,22 @@ function MemCard({ card, isFlipped, isMatched, onClick }: MemoryCardProps) {
       >
         {/* Face cachée */}
         <div
-          className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center"
+          className="absolute inset-0 flex items-center justify-center border-[3px] border-ink bg-tomato shadow-hard"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <span className="text-2xl opacity-30">🤟</span>
+          <Hand className="h-8 w-8" strokeWidth={2.5} />
         </div>
 
         {/* Face visible */}
         <div
-          className={`absolute inset-0 rounded-2xl border overflow-hidden transition-colors duration-300 ${
-            isMatched
-              ? 'border-emerald-500/50 bg-emerald-500/10'
-              : 'border-white/20 bg-white/8'
+          className={`absolute inset-0 overflow-hidden border-[3px] border-ink transition-colors duration-300 ${
+            isMatched ? 'bg-mint' : 'bg-white shadow-hard'
           }`}
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <MemCardFace card={card} />
           {isMatched && (
-            <div className="absolute inset-0 rounded-2xl ring-2 ring-emerald-400/60 pointer-events-none" />
+            <div className="pointer-events-none absolute inset-0 border-[5px] border-mint" />
           )}
         </div>
       </motion.div>
@@ -201,13 +201,7 @@ export default function MemoirePage() {
     setIsLocked(false);
   }, [lesson]);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
-        <div className="w-8 h-8 rounded-full border-2 border-rose-500 border-t-transparent animate-spin" />
-      </div>
-    );
-  }
+  if (isLoading) return <Loader label="Mélange des cartes..." />;
 
   if (!lesson) return null;
 
@@ -216,56 +210,30 @@ export default function MemoirePage() {
   // ─── Résultats ─────────────────────────────────────────────────────────────
   if (phase === 'result') {
     return (
-      <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-        <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-rose-700/20 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-pink-600/15 blur-[120px]" />
-
-        <div className="relative max-w-xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-col items-center gap-8 py-8"
+      <div className="px-6 py-14">
+        <div className="mx-auto max-w-xl">
+          <GameEnd
+            title="Félicitations !"
+            color="bg-tomato"
+            subtitle="Toutes les paires trouvées"
+            extra={
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  { value: moves, label: 'Coups' },
+                  { value: formatTime(seconds), label: 'Temps' },
+                  { value: totalPairs, label: 'Paires' },
+                ].map(s => (
+                  <div key={s.label} className="panel-flat flex flex-col items-center gap-1 px-5 py-4">
+                    <span className="font-display text-4xl font-extrabold">{s.value}</span>
+                    <span className="text-sm font-bold">{s.label}</span>
+                  </div>
+                ))}
+              </div>
+            }
           >
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-rose-500 to-pink-500">
-                <Trophy className="w-9 h-9 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-white">Félicitations !</h2>
-              <p className="text-white/40 text-sm">Toutes les paires trouvées</p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex flex-col items-center gap-1 px-6 py-4 rounded-2xl border border-white/10 bg-white/5">
-                <span className="text-4xl font-black text-white">{moves}</span>
-                <span className="text-white/40 text-xs">Coups</span>
-              </div>
-              <div className="flex flex-col items-center gap-1 px-6 py-4 rounded-2xl border border-white/10 bg-white/5">
-                <span className="text-4xl font-black text-white">{formatTime(seconds)}</span>
-                <span className="text-white/40 text-xs">Temps</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-rose-400/10 border border-rose-400/20">
-              <span className="text-rose-400 font-semibold text-sm">{totalPairs} paires trouvées</span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-xs">
-              <button
-                onClick={handleRestart}
-                className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm font-medium hover:bg-white/10 hover:text-white transition-all"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Recommencer
-              </button>
-              <Link
-                href={`/lessons/${lessonId}`}
-                className="flex items-center justify-center w-full px-6 py-3 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-semibold hover:scale-[1.02] transition-transform"
-              >
-                Retour à la leçon
-              </Link>
-            </div>
-          </motion.div>
+            <button onClick={handleRestart} className="btn flex-1"><RefreshCw className="h-5 w-5" /> Recommencer</button>
+            <Link href={`/lessons/${lessonId}`} className="btn btn-ink flex-1">Retour à la leçon</Link>
+          </GameEnd>
         </div>
       </div>
     );
@@ -275,75 +243,34 @@ export default function MemoirePage() {
   const matchedPairs = matched.size / 2;
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a1a] px-6 py-16 overflow-hidden">
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-rose-700/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-pink-600/15 blur-[120px]" />
+    <div className="px-6 py-10">
+      <div className="mx-auto flex max-w-3xl flex-col gap-7">
+        <GameHeader
+          backHref="/jeux/memoire"
+          backLabel="Retour"
+          title="Mémoire"
+          right={<span className="flex gap-3"><span>{formatTime(seconds)}</span><span>{moves} coups</span></span>}
+        />
 
-      <div className="relative max-w-3xl mx-auto flex flex-col gap-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex items-center justify-between"
-        >
-          <div className="flex flex-col gap-0.5">
-            <Link
-              href={`/jeux/memoire`}
-              className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors w-fit"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              Retour
-            </Link>
-            <h1 className="text-xl font-bold text-white mt-1">{lesson.title}</h1>
-          </div>
-          {/* Stats */}
-          <div className="flex items-center gap-3">
-            <div className="flex flex-col items-end">
-              <span className="text-white/70 text-sm font-semibold">{formatTime(seconds)}</span>
-              <span className="text-white/30 text-xs">Temps</span>
-            </div>
-            <div className="flex flex-col items-end">
-              <span className="text-white/70 text-sm font-semibold">{moves}</span>
-              <span className="text-white/30 text-xs">Coups</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Progress paires */}
         <div className="flex flex-col gap-2">
-          <div className="flex justify-between text-xs text-white/30">
-            <span>Paires trouvées</span>
-            <span className="text-rose-400 font-semibold">{matchedPairs} / {totalPairs}</span>
+          <div className="flex justify-between font-bold">
+            <span>{lesson.title}</span>
+            <span>{matchedPairs} / {totalPairs} paires</span>
           </div>
-          <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-            <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-rose-500 to-pink-500"
-              animate={{ width: `${(matchedPairs / totalPairs) * 100}%` }}
-              transition={{ duration: 0.4 }}
-            />
-          </div>
+          <GameProgress value={(matchedPairs / totalPairs) * 100} color="bg-mint" />
         </div>
 
-        {/* Grille */}
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="grid grid-cols-3 sm:grid-cols-4 gap-3"
-          >
-            {cards.map((card) => (
-              <MemCard
-                key={card.id}
-                card={card}
-                isFlipped={flipped.includes(card.id)}
-                isMatched={matched.has(card.id)}
-                onClick={() => handleCardClick(card.id)}
-              />
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-4">
+          {cards.map((card) => (
+            <MemCard
+              key={card.id}
+              card={card}
+              isFlipped={flipped.includes(card.id)}
+              isMatched={matched.has(card.id)}
+              onClick={() => handleCardClick(card.id)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

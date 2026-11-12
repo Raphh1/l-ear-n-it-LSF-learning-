@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Trophy, Medal } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 import { scoresApi, type LeaderboardEntry } from '@/lib/api/scores';
 
 interface LeaderboardProps {
@@ -12,7 +11,7 @@ interface LeaderboardProps {
   unit?: string;
 }
 
-const MEDALS = ['🥇', '🥈', '🥉'];
+const RANK_COLORS = ['bg-sun', 'bg-white', 'bg-tomato'];
 
 export function Leaderboard({ game, lessonId, unit = 'pts' }: LeaderboardProps) {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
@@ -27,52 +26,32 @@ export function Leaderboard({ game, lessonId, unit = 'pts' }: LeaderboardProps) 
 
   if (isLoading) {
     return (
-      <div className="flex flex-col gap-2">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <div key={i} className="h-12 rounded-xl bg-white/5 animate-pulse" />
-        ))}
+      <div className="flex w-full flex-col gap-2">
+        {Array.from({ length: 3 }).map((_, i) => <div key={i} className="skeleton h-12" />)}
       </div>
     );
   }
 
   if (entries.length === 0) {
-    return (
-      <p className="text-white/30 text-sm text-center py-4">
-        Sois le premier à te classer !
-      </p>
-    );
+    return <p className="py-4 text-center font-bold">Sois le premier à te classer !</p>;
   }
 
   return (
-    <div className="flex flex-col gap-2 w-full">
-      <div className="flex items-center gap-2 mb-1">
-        <Trophy className="w-4 h-4 text-amber-400" />
-        <span className="text-white/60 text-sm font-semibold">Classement</span>
+    <div className="flex w-full flex-col gap-2">
+      <div className="mb-1 flex items-center gap-2">
+        <Trophy className="h-5 w-5" strokeWidth={2.5} />
+        <span className="font-display text-lg font-extrabold">Classement</span>
       </div>
       {entries.map((entry, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.25, delay: i * 0.05 }}
-          className={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl border ${
-            i === 0
-              ? 'border-amber-400/30 bg-amber-400/8'
-              : 'border-white/8 bg-white/4'
-          }`}
-        >
-          <div className="flex items-center gap-3 min-w-0">
-            <span className="text-base w-5 text-center shrink-0">
-              {MEDALS[i] ?? <Medal className="w-4 h-4 text-white/30" />}
+        <div key={i} className="flex items-center justify-between gap-3 border-2 border-ink bg-white px-3 py-2">
+          <div className="flex min-w-0 items-center gap-3">
+            <span className={`flex h-7 w-7 shrink-0 items-center justify-center border-2 border-ink text-sm font-extrabold ${RANK_COLORS[i] ?? 'bg-paper'}`}>
+              {i + 1}
             </span>
-            <span className={`text-sm font-medium truncate ${i === 0 ? 'text-amber-200' : 'text-white/70'}`}>
-              {entry.username}
-            </span>
+            <span className="truncate font-bold">{entry.username}</span>
           </div>
-          <span className={`text-sm font-bold shrink-0 tabular-nums ${i === 0 ? 'text-amber-300' : 'text-white/50'}`}>
-            {entry.score} {unit}
-          </span>
-        </motion.div>
+          <span className="shrink-0 font-display font-extrabold tabular-nums">{entry.score} {unit}</span>
+        </div>
       ))}
     </div>
   );

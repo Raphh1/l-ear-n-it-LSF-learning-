@@ -532,3 +532,8 @@ Je suis au régime. | MOI RÉGIME | 1
 Un grand appartement. | APPARTEMENT GRAND | 1
 Il passe un cap. | LUI CAP PASSER | 3
 On parle de chantage. | CHANTAGE PARLER | 3
+Moi aussi, j'aime le chocolat. | MOI AUSSI CHOCOLAT AIMER | 1
+Il vient aussi demain. | DEMAIN LUI AUSSI VENIR | 1
+Le chat et le chien dorment. | CHAT ET CHIEN DORMIR | 1
+Du pain et du fromage. | PAIN ET FROMAGE | 1
+Je suis fatigué mais content. | MOI FATIGUÉ MAIS CONTENT | 1

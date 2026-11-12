@@ -24,6 +24,7 @@ Dépendances : pip install psycopg2-binary
 """
 
 import argparse
+import os
 import json
 import re
 import sys
@@ -44,7 +45,7 @@ except ImportError:
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 
-DEFAULT_DB    = "host=localhost port=5432 dbname=lsfdb user=lsfuser password=lsfpassword"
+DEFAULT_DB    = os.environ.get("LSF_DB_DSN")
 ELIX_BASE     = "https://api.elix-lsf.fr"
 ELIX_DELAY    = 0.35   # secondes entre chaque appel API (respecte le rate-limit)
 ELIX_TIMEOUT  = 10     # timeout requête en secondes
@@ -226,7 +227,7 @@ def main() -> None:
         epilog=__doc__,
     )
     parser.add_argument("words_file",          help="Chemin vers le fichier de mots (ex: words.txt)")
-    parser.add_argument("--db",  default=DEFAULT_DB, help="Chaîne de connexion PostgreSQL (libpq DSN)")
+    parser.add_argument("--db",  default=DEFAULT_DB, required=DEFAULT_DB is None, help="Chaîne de connexion PostgreSQL (libpq DSN)")
     parser.add_argument("--dry-run",  action="store_true", help="Simule sans écrire en base")
     parser.add_argument("--no-elix",  action="store_true", help="N'appelle pas Elix (insère sans vidéo/image)")
     parser.add_argument("--delay", type=float, default=ELIX_DELAY, help=f"Délai entre requêtes Elix (défaut: {ELIX_DELAY}s)")

@@ -29,7 +29,7 @@ HAND_SEED   = ROOT / "lsf-api" / "Data" / "seed-phrases.json"
 
 # Mots-outils du français non signés en LSF : ignorés lors de la liaison glose → signes
 STOP = {"ce", "cette", "cet", "ces", "ça", "de", "du", "des", "d'", "se", "s'", "en", "une", "au", "aux",
-        "à", "dans", "ne", "n'", "me", "m'", "te", "t'", "le", "la", "les", "l'", "y", "s'il", "plaît", "et"}
+        "à", "dans", "ne", "n'", "me", "m'", "te", "t'", "le", "la", "les", "l'", "y", "s'il", "plaît"}
 
 # Formes irrégulières → forme de base
 LEMMA = {"belle": "beau", "bel": "beau", "nouvelle": "nouveau", "nouvel": "nouveau", "vieille": "vieux",
@@ -39,6 +39,9 @@ LEMMA = {"belle": "beau", "bel": "beau", "nouvelle": "nouveau", "nouvel": "nouve
          "mon": "moi", "ma": "moi", "mes": "moi", "ton": "toi", "ta": "toi", "tes": "toi",
          "notre": "nous", "nos": "nous", "votre": "vous", "vos": "vous", "yeux": "œil",
          "tous": "tout", "toute": "tout", "toutes": "tout", "ans": "an", "année": "an", "weekend": "week-end"}
+
+# Mots dont la dé-suffixation donne un autre mot (mais → mai, fois → foi…)
+NO_LEMMA = {"mais", "fois", "marie", "données", "fine"}
 
 # Suffixes féminins / pluriels / participes → candidats de forme de base (testés dans l'ordre)
 SUFFIXES = [("euses", "eux"), ("euse", "eux"), ("ives", "if"), ("ive", "if"), ("ères", "er"), ("ère", "er"),
@@ -55,6 +58,8 @@ def base_form(token: str, known: set[str]) -> str | None:
         return base_form(token[2:], known)
     if token in LEMMA and LEMMA[token] in known:
         return LEMMA[token]
+    if token in NO_LEMMA:
+        return None
     for suf, rep in SUFFIXES:
         if token.endswith(suf) and len(token) > len(suf) + 1 and token[: -len(suf)] + rep in known:
             return token[: -len(suf)] + rep
@@ -75,7 +80,7 @@ def link_words(gloss: str, known: set[str]) -> tuple[list[str], list[str]]:
                 break
         else:
             t = tokens[i]
-            w = base_form(t, known)
+            w = None if t in STOP else base_form(t, known)
             if w:
                 words.append(w)
             elif t not in STOP:

@@ -22,7 +22,7 @@ from urllib.parse import urlencode, quote
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 ELIX_BASE = "https://api.elix-lsf.fr"
-OUTPUT_PATH = Path(__file__).parent.parent / "lsf-api" / "src" / "LsfApi" / "Data" / "seed-data-elix.json"
+OUTPUT_PATH = Path(__file__).parent.parent / "lsf-api" / "Data" / "seed-data-elix.json"
 DELAY_BETWEEN_REQUESTS = 0.4   # secondes entre chaque appel API
 REQUEST_TIMEOUT = 10
 

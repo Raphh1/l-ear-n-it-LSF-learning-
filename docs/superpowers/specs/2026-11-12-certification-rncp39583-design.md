@@ -87,7 +87,7 @@ Principe directeur : chaque phase produit la matière des dossiers. Rien n'est �
 ## 8. Risques et points ouverts
 
 1. **Règlement spécial de la certification** (liste des compétences éliminatoires) : non disponible, à demander au responsable pédagogique. C'est la priorité.
-2. **Licence des vidéos Elix** (environ 670 signes) : à vérifier avant toute mise en ligne publique. Prévoir un plan B (accord avec Signes de sens, autres sources, contenu limité).
+2. **Licence des vidéos Elix** (environ 670 signes, lues directement depuis le stockage d'Elix) : vérifié le 2026-11-12. Les CGU n'accordent pas de licence ouverte. Les vidéos restent la propriété de leurs auteurs, la consultation est permise via Elix, toute reproduction exige une autorisation expresse et tout usage commercial un accord des auteurs. Un passage en CC-BY-SA avait été évoqué avec Wikimedia France en 2017, sans confirmation. → Écrire à Signes de sens (contact@elix-lsf.fr) avant toute mise en ligne publique. Signes de sens est aussi une partie prenante, voire un partenaire possible. Plan B : vidéos sous licence libre (Wikimedia Commons) ou contenu limité.
 3. **Hypothèse sur le public** (majoritairement des entendants) : à confirmer par l'entretien.
 4. **Contact du milieu** : à trouver en phase 1.
 5. **Historique git** : 11 commits et beaucoup de modifications non commitées. À assainir dès maintenant.

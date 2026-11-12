@@ -32875,7 +32875,6 @@
             "signWords": [
               "elle",
               "nom",
-              "y",
               "a",
               "s",
               "m",
@@ -34721,6 +34720,74 @@
             "signWords": [
               "chantage",
               "parler"
+            ],
+            "tags": [
+              "divers"
+            ]
+          },
+          {
+            "textFr": "Moi aussi, j'aime le chocolat.",
+            "textLsf": "MOI AUSSI CHOCOLAT AIMER",
+            "difficulty": 1,
+            "signWords": [
+              "moi",
+              "aussi",
+              "chocolat",
+              "aimer"
+            ],
+            "tags": [
+              "divers"
+            ]
+          },
+          {
+            "textFr": "Il vient aussi demain.",
+            "textLsf": "DEMAIN LUI AUSSI VENIR",
+            "difficulty": 1,
+            "signWords": [
+              "demain",
+              "lui",
+              "aussi",
+              "venir"
+            ],
+            "tags": [
+              "divers"
+            ]
+          },
+          {
+            "textFr": "Le chat et le chien dorment.",
+            "textLsf": "CHAT ET CHIEN DORMIR",
+            "difficulty": 1,
+            "signWords": [
+              "chat",
+              "et",
+              "chien",
+              "dormir"
+            ],
+            "tags": [
+              "divers"
+            ]
+          },
+          {
+            "textFr": "Du pain et du fromage.",
+            "textLsf": "PAIN ET FROMAGE",
+            "difficulty": 1,
+            "signWords": [
+              "pain",
+              "et",
+              "fromage"
+            ],
+            "tags": [
+              "divers"
+            ]
+          },
+          {
+            "textFr": "Je suis fatigué mais content.",
+            "textLsf": "MOI FATIGUÉ MAIS CONTENT",
+            "difficulty": 1,
+            "signWords": [
+              "moi",
+              "fatigué",
+              "content"
             ],
             "tags": [
               "divers"

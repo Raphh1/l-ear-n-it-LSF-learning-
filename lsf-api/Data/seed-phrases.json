@@ -38,8 +38,7 @@
             "signWords": [
               "bonjour",
               "moi",
-              "nom",
-              "mari"
+              "nom"
             ]
           },
           {
@@ -1447,7 +1446,6 @@
             "signWords": [
               "toi",
               "répéter",
-              "il",
               "vous"
             ]
           },
@@ -1860,7 +1858,6 @@
             ],
             "signWords": [
               "canicule",
-              "un",
               "semaine",
               "durer"
             ]
@@ -2137,7 +2134,6 @@
             "signWords": [
               "hôtel",
               "où",
-              "il",
               "vous"
             ]
           },
@@ -2429,7 +2425,6 @@
               "moi",
               "reçu",
               "vouloir",
-              "il",
               "vous"
             ]
           },
@@ -2913,7 +2908,6 @@
             ],
             "signWords": [
               "difficile",
-              "mai",
               "utile"
             ]
           },
@@ -4654,7 +4648,6 @@
             "signWords": [
               "lui",
               "timide",
-              "mai",
               "gentil"
             ]
           },
@@ -5689,7 +5682,6 @@
               "médicament",
               "jour",
               "deux",
-              "foi",
               "prendre",
               "devoir"
             ]
@@ -6173,7 +6165,6 @@
             ],
             "signWords": [
               "premier",
-              "foi",
               "être"
             ]
           },
@@ -8661,7 +8652,6 @@
               "équipe",
               "semaine",
               "deux",
-              "foi",
               "entraîner"
             ]
           },
@@ -9125,7 +9115,6 @@
             ],
             "signWords": [
               "interview",
-              "un",
               "heure",
               "durer"
             ]
@@ -9279,8 +9268,7 @@
             ],
             "signWords": [
               "macaron",
-              "pâtisserie",
-              "fin"
+              "pâtisserie"
             ]
           },
           {
@@ -12232,7 +12220,6 @@
             "signWords": [
               "virus",
               "moi",
-              "donner",
               "supprimer"
             ]
           },
@@ -12588,7 +12575,6 @@
             "signWords": [
               "guêpe",
               "plusieurs",
-              "foi",
               "piquer",
               "pouvoir"
             ]

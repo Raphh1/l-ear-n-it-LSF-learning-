@@ -1,0 +1,70 @@
+# Lancement local de tout le projet, sans domaine ni HTTPS :
+#   ./build.sh && docker compose -f docker-compose.local.yml up -d --build
+# Puis http://localhost:8000 (port modifiable avec LSF_PORT dans .env).
+# Mêmes variables que docker-compose.yml (.env), sauf DOMAIN, inutile ici.
+services:
+  # Identique à docker-compose.yml : même conteneur, même volume, donc mêmes données
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_DB: lsfdb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d lsfdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./lsf-api
+      network: host
+    restart: unless-stopped
+    environment:
+      # Development : cookie de session sans Secure (on est en HTTP), ni HSTS ni redirection HTTPS
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Default: "Host=postgres;Port=5432;Database=lsfdb;Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
+      Jwt__Secret: ${JWT_SECRET:?JWT_SECRET manquant}
+      Jwt__Issuer: lsf-api
+      Jwt__Audience: lsf-web
+      Jwt__ExpiresInDays: 7
+      EmailSettings__SendGridApiKey: ${SENDGRID_API_KEY:-}
+      EmailSettings__FromEmail: ${EMAIL_FROM:-}
+      EmailSettings__FromName: "Learn-it LSF"
+      EmailSettings__BaseUrl: http://localhost:${LSF_PORT:-8000}
+      AllowedOrigins__0: http://localhost:${LSF_PORT:-8000}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./lsf-web
+      network: host
+    restart: unless-stopped
+    depends_on:
+      - api
+
+  # Le front appelle l'API en URL relative : il faut les servir sur la même origine
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${LSF_PORT:-8000}:80"
+    environment:
+      DOMAIN: ":80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - web
+      - api
+
+volumes:
+  pgdata:

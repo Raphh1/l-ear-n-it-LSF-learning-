@@ -1,6 +1,6 @@
 # Refonte du front : « menu de jeu vidéo »
 
-Date : 2026-11-12 · Statut : en attente de validation · Ticket : #3 (Sprint 1)
+Date : 2026-11-12 · Statut : validée le 2026-11-17 · Ticket : #3 (Sprint 1)
 Brainstorm commencé le 2026-11-02, terminé le 2026-11-12. Maquettes : `.superpowers/brainstorm/2026-11-02-refonte-jeu/` (`game-menu.html` pour les écrans G et I, `transitions.html` pour le volet diagonal, `directions-v2.html` pour le style).
 
 ## 1. Intention

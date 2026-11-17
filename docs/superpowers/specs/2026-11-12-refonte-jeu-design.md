@@ -101,19 +101,19 @@ Dictionnaire, fiche signe, favoris, profil, classement, défi du jour, révision
 - Suivi : un ticket GitHub par lot, une branche et une PR par ticket, commits conventionnels en français (voir `CONTRIBUTING.md`).
 - Tests : chaque calcul côté API (étoiles, déblocage, boss) a ses tests xUnit. Les composants clés (barre de joueur, carte de mode, écran de fin) ont leurs tests Vitest.
 
-## 8. Découpage proposé en lots (futurs tickets)
+## 8. Découpage en lots (tickets #6 à #14)
 
-| # | Lot | Contenu |
-|---|---|---|
-| 1 | Socle visuel | Jetons, polices Barlow, composants de base (bloc coupé, bouton incliné, titre condensé, barre de joueur), transition volet diagonal, layout |
-| 2 | API progression | Étoiles par leçon, état verrouillé/ouvert, boss disponible, exposés dans les endpoints modules et leçons, rétrocompatibilité des comptes |
-| 3 | Accueil | Menu principal G (connecté et visiteur), version téléphone |
-| 4 | Modules et leçons | Liste des modules, liste des leçons avec étoiles, cadenas et boss |
-| 5 | Page Jouer | Cartes de modes I avec records et difficulté |
-| 6 | Coquille de jeu | Combos, micro-animations, écran de fin animé, partagés par les 9 jeux |
-| 7 | Boss | Mode boss (3 vies), badge, bonus d'XP |
-| 8 | Autres pages | Dictionnaire, favoris, profil, classement, défi, SRS, paramètres, auth, hors ligne |
-| 9 | Nettoyage | Suppression de l'ancien style, redirection `/quiz`, vérification de l'accessibilité |
+| # | Ticket | Lot | Contenu |
+|---|---|---|---|
+| 1 | #6 | Socle visuel | Jetons, polices Barlow, composants de base (bloc coupé, bouton incliné, titre condensé, barre de joueur), transition volet diagonal, layout |
+| 2 | #7 | API progression | Étoiles par leçon, état verrouillé/ouvert, boss disponible, exposés dans les endpoints modules et leçons, rétrocompatibilité des comptes |
+| 3 | #8 | Accueil | Menu principal G (connecté et visiteur), version téléphone |
+| 4 | #9 | Modules et leçons | Liste des modules, liste des leçons avec étoiles, cadenas et boss |
+| 5 | #10 | Page Jouer | Cartes de modes I avec records et difficulté |
+| 6 | #11 | Coquille de jeu | Combos, micro-animations, écran de fin animé, partagés par les 9 jeux |
+| 7 | #12 | Boss | Mode boss (3 vies), badge, bonus d'XP |
+| 8 | #13 | Autres pages | Dictionnaire, favoris, profil, classement, défi, SRS, paramètres, auth, hors ligne |
+| 9 | #14 | Nettoyage | Suppression de l'ancien style, redirection `/quiz`, vérification de l'accessibilité |
 
 Ordre : 1 et 2 d'abord (en parallèle possible), puis 3 à 7, puis 8 et 9.
 

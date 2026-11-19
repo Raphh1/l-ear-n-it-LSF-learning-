@@ -1,5 +1,5 @@
 # Lancement local de tout le projet, sans domaine ni HTTPS :
-#   ./build.sh && docker compose -f docker-compose.local.yml up -d --build
+#   ./start-local.sh  (= ./build.sh puis docker compose -f docker-compose.local.yml up -d --build)
 # Puis http://localhost:8000 (port modifiable avec LSF_PORT dans .env).
 # Mêmes variables que docker-compose.yml (.env), sauf DOMAIN, inutile ici.
 services:

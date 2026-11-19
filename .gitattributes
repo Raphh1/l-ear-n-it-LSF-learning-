@@ -1,0 +1,2 @@
+# Les scripts shell doivent garder LF, même extraits par le git de Windows (autocrlf)
+*.sh text eol=lf
